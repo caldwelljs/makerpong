@@ -1,4 +1,13 @@
 Pong::Application.routes.draw do
+  get "players/index"
+  get "players/show"
+  get "players/new"
+  get "players/create"
+  get "players/edit"
+  get "players/update"
+  get "players/destroy"
+  get "games/create"
+  get "games/destroy"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
