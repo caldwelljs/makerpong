@@ -1,4 +1,9 @@
 Pong::Application.routes.draw do
+
+  devise_for :players
+  # resources :users do
+  #   resources :
+  get "welcome/index"
   get "players/index"
   get "players/show"
   get "players/new"
@@ -8,6 +13,8 @@ Pong::Application.routes.draw do
   get "players/destroy"
   get "games/create"
   get "games/destroy"
+
+  root 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

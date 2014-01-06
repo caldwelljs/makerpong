@@ -7,6 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+
+<% if player_signed_in? %>
+  <li><%= link_to 'My Account', player_url(Player.last.id) %></li>
+  <li><%= link_to 'Edit Profile', edit_player_registration_path %></li>
+  <li><%= link_to 'Sign out', destroy_player_session_path, method: :delete %></li>
+<% else %>
+  <li><%= link_to "Sign up", new_player_registration_path  %></li>
+  <li><%= link_to "Sign in", new_player_session_path %></li>
+<% end %>
 
 <%= yield %>
 
