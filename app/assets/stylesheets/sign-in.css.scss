@@ -1,0 +1,24 @@
+body {
+  width: 100%;
+    background: url( asset-path('assets/blurred_background.png', image) ) no-repeat center center fixed;
+
+    height: 100%;
+    // min-height: 800px; // to make it full-screen top to bottom on most screens
+    background-size: cover; //this resizes the background for any screen size
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+.full-width-row {
+  padding: 6em 0em; //give it some breathing room from the top
+
+}
+
+#player_email, #player_password {
+  background-color: transparent;
+}
+
+h2 {
+  color: #ffffff;
+}
