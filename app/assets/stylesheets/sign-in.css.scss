@@ -1,29 +1,31 @@
 body {
   width: 100%;
-    background: url( asset-path('assets/blurred_background.png', image) ) no-repeat center center fixed;
+    // background: url( asset-path('assets/blurred_background.png', image) ) no-repeat center center fixed;
     height: 100%;
     // min-height: 800px; // to make it full-screen top to bottom on most screens
     background-size: cover; //this resizes the background for any screen size
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
+  color: white;
 }
 
-  .sign-up-label label {
-  color: white;
+  // .sign-up-label label {
+  // color: white;
     
-  }
+  // }
 
 .full-width-row {
   padding: 6em 0em; //give it some breathing room from the top
   h2 {color: white;}
 }
 
-#player_email, #player_password, #player_password_confirmation {
-  background-color: transparent;
-}
+// #player_email, #player_password, #player_password_confirmation {
+//   background-color: transparent;
+//   color: white;
+// }
 
 
-h2 {
-  color: #ffffff;
+h2, h1 {
+  color: #333333;
 }

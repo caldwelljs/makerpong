@@ -1,13 +1,18 @@
 source 'https://rubygems.org'
 
+gem 'hirb'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
+
+gem 'rails_12factor', group: :production
+
 
 # Add foundations gem
 gem 'foundation-rails'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

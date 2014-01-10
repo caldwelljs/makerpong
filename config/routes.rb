@@ -4,15 +4,9 @@ Pong::Application.routes.draw do
   # resources :users do
   #   resources :
   get "welcome/index"
-  get "players/index"
-  get "players/show"
-  get "players/new"
-  get "players/create"
-  get "players/edit"
-  get "players/update"
-  get "players/destroy"
-  get "games/create"
-  get "games/destroy"
+  
+  resources :players
+  resources :games
 
   root 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.
