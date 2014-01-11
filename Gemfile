@@ -7,6 +7,8 @@ gem 'rails', '4.0.2'
 
 gem 'rails_12factor', group: :production
 
+gem 'carrierwave'
+
 
 # Add foundations gem
 gem 'foundation-rails'
