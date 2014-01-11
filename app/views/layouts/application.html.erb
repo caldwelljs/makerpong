@@ -15,11 +15,23 @@
 
   <nav class="top-bar">
     <ul class="title-area">
-      <li class="name">
-        <h1>
-          <%= link_to 'MakerPong', root_url %>
-        </h1>
-      </li>
+      
+      
+      <% if player_signed_in? %>
+        <li class="name">
+          <h1>
+            <%= link_to 'MakerPong', pages_dashboard_path %>
+          </h1>
+        </li>
+      <% else %>
+        <li class="name">
+          <h1>
+            <%= link_to 'MakerPong', root_url %>
+          </h1>
+        </li>
+      <% end %>
+
+
       <li class="toggle-topbar menu-icon">
         <a href="#">
           <span>Menu</span>
