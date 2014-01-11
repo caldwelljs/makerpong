@@ -1,5 +1,16 @@
-<h1>Players#show</h1>
 
-<h1>
-  <%= @player.name %><br>
-</h1>
+
+<div class="row">
+	<div class="small-1 columns"></div>
+	<div class="small-9 columns">
+		<h1>
+			<h1>Ranking: 1st</h1>
+		  <%= @player.name %><br>
+		  <%= image_tag @player.picture_url %>
+		  <h2>Record 22-1</h2>
+		  <%= link_to "Edit Profile", {:action => "edit"} %>
+		</h1>
+	</div>
+	<div class="small-2 columns"></div>
+</div>
+
