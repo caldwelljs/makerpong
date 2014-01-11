@@ -3,13 +3,36 @@
 <div class="row">
 	<div class="small-1 columns"></div>
 	<div class="small-9 columns">
-		<h1>
+		<div>
 			<h1>Ranking: 1st</h1>
+			<p>If the player has any title, put an icon with the title name.</p>
 		  <%= @player.name %><br>
 		  <%= image_tag @player.picture_url %>
 		  <h2>Record 22-1</h2>
 		  <%= link_to "Edit Profile", {:action => "edit"} %>
-		</h1>
+		</div>
+		
+		<h1>Profile pic - need to format to a certain size/shape. Gem? Carrierwave?</h1>
+		<h1>Player Stats</h1>
+		<p>Games played - highlight last game played</p>
+		<p>Record, win %, last 10 games played</p>
+		<p>average win margin</p>
+		<h1>Biggest Rival</h1>
+		<p>Smallest win margin of people who have played with a minimum number of games.</p>
+		<h1>Closest Match</h1>
+		<p>Person most closely matching your skill profile.</p>
+		<h1>Player Headlines</h1>
+		<p>Most recent tweets.</p>
+
+
+
+
+		<h1>Personal Games Played List</h2>
+		<<p>Video highlights?</p>
+
+
+
+
 	</div>
 	<div class="small-2 columns"></div>
 </div>
