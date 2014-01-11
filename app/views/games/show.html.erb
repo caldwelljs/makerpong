@@ -4,9 +4,13 @@
 <h3>
   Player 1 Score: <%= @game.player.name %> - <%= @game.player_score %><br>
 </h3>
+<h2>W - <%= @game.player.wins %></h2>
+<h2>L - <%= @game.player.losses %></h2>
 <h3>
   Player 2 Score: <%= @game.opponent.name %> - <%= @game.opponent_score %><br>
 </h3>
+<h2>W - <%= @game.opponent.wins %></h2>
+<h2>L - <%= @game.opponent.losses %></h2>
 
 <!-- <%= link_to "Edit Game", edit_game_path %>  -->
 
