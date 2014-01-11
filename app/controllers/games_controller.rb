@@ -13,14 +13,22 @@ class GamesController < ApplicationController
   end
 
   def create
-   @game = current_player.games.build(:opponent_id => params[:opponent_id])
+   @game = Game.new(game_params)
+   # If you want to store who created this game, write @game.user_id = current_user.id
    if @game.save
-     flash[:notice] = "Game successfully created."
-     redirect_to root_path
+     redirect_to @game
    else
-     flash[:error] = "Unable to create game."
-     redirect_to root_path
+     render 'new'
    end
+
+   # @game = games.build(:opponent_id => params[:opponent_id])
+   # if @game.save
+   #   flash[:notice] = "Game successfully created."
+   #   redirect_to root_path
+   # else
+   #   flash[:error] = "Unable to create game."
+   #   redirect_to root_path
+   # end
   end
 
   def edit
@@ -38,5 +46,10 @@ class GamesController < ApplicationController
     @game.destory
     flash[:notice] = "Consider this game destroyed."
     redirect_to root_path
+  end
+
+  private
+  def game_params
+    params.require(:game).permit(:player_id, :opponent_id, :player_score, :opponent_score)
   end
 end

@@ -17,7 +17,7 @@
     <ul class="title-area">
       <li class="name">
         <h1>
-          <%= link_to 'Ativa', root_url %>
+          <%= link_to 'MakerPong', root_url %>
         </h1>
       </li>
       <li class="toggle-topbar menu-icon">
@@ -30,7 +30,13 @@
       <ul class="right">
         <% if player_signed_in? %>
           <li>
-            <%= link_to 'My Account', player_url(Player.last.id) %>
+            <%= link_to 'Players', players_path %>
+          </li>
+          <li>
+            <%= link_to 'New Game', new_game_path %>
+          </li>
+          <li>
+            <%= link_to 'Profile', player_url(Player.last.id) %>
           </li>
           <li>
             <%= link_to 'Edit Profile', edit_player_registration_path %>
@@ -49,7 +55,13 @@
       </ul>
     </section>
   </nav>
+  <% if notice || alert %>
 
+  <p class=”notice”><%= notice %></p>
+
+  <p class=”alert”><%= alert %></p>
+
+  <% end %>
 
   <%= yield %> 
   <%= javascript_include_tag "application" %>

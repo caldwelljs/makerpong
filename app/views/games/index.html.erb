@@ -1,2 +1,8 @@
 <h1>Games index page</h1>
 <p>list of all games</p>
+
+  <% @games.each do |game| %>
+    <h4><%= game.player.name %></h4>
+  <% end %>
+
+<%= link_to 'New Game', new_game_path %>

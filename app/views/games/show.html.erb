@@ -1,0 +1,14 @@
+<h1>
+  Game Show View<br>
+</h1>
+<h3>
+  Player 1 Score: <%= @game.player_id %> - <%= @game.player_score %><br>
+</h3>
+<h3>
+  Player 2 Score: <%= @game.opponent_id %> - <%= @game.opponent_score %><br>
+</h3>
+
+<!-- <%= link_to "Edit Game", edit_game_path %>  -->
+
+<h3><%= link_to 'Log another game', new_game(:game_id => @game.id) %></h3>
+</center>
