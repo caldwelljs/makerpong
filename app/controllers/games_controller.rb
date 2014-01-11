@@ -15,11 +15,16 @@ class GamesController < ApplicationController
   def create
    @game = Game.new(game_params)
    # If you want to store who created this game, write @game.user_id = current_user.id
-   if @game.save
-     redirect_to @game
-   else
-     render 'new'
-   end
+   # if player = true && opponent = true
+     if @game.save
+       redirect_to @game
+     else
+       render 'new'
+     end
+  # else
+  #   flash[:notice] = "These are not existing players."
+  #   render 'new'
+  # end
 
    # @game = games.build(:opponent_id => params[:opponent_id])
    # if @game.save

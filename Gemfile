@@ -15,6 +15,8 @@ gem 'foundation-rails'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 
+gem 'better_errors'
+gem 'binding_of_caller'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
