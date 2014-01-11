@@ -1,0 +1,9 @@
+<%= form_for @player do |f| %>
+  <tr>
+  	<th><%= f.label(:upload_picture) %></th>
+  	<td><%= f.file_field(:picture_url) %></td>
+  </tr>
+  <div class="form-buttons">
+  	<%= submit_tag("Update profile") %>
+  </div>
+<% end %>

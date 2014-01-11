@@ -1,8 +1,12 @@
 Pong::Application.routes.draw do
 
+
+  # get "players/:id/edit" => "players#edit"
+
   devise_for :players
   # resources :users do
   #   resources :
+
   get "welcome/index"
   get "pages/dashboard"
 
