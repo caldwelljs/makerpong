@@ -2,10 +2,10 @@
 <p>list of all games</p>
 
   <% @games.each do |game| %>
-    <h4><%= game.player.name %>
+    <h4><%= game.player %>
     	<%= game.player_score %>
      vs. 
-     <%= game.opponent.name %>
+     <%= game.opponent %>
 		 <%= game.opponent_score %>
    </h4>
   <% end %>
