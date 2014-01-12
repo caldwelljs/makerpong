@@ -48,7 +48,7 @@
             <%= link_to 'New Game', new_game_path %>
           </li>
           <li>
-            <%= link_to 'Profile', player_url(Player.last.id) %>
+            <%= link_to 'Profile', player_url(current_player) %>
           </li>
           <li>
             <%= link_to 'Edit Settings', edit_player_registration_path %>

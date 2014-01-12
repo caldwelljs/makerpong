@@ -4,7 +4,7 @@ class WelcomeController < ApplicationController
 
   def dashboard
     @players = Player.all
-    @games = Game.all
+    @games = Game.all 
   end
 
 
