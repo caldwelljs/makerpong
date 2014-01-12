@@ -1,5 +1,10 @@
-<h1>Players#index</h1>
-
-  <% @players.each do |player| %>
-    <h4><%= player.name %></h4>
-  <% end %>
+<div class="full-width-row">
+  <div class="row">
+    <div class="small-4 medium-6 large-4 small-centered columns">
+      <h1>League Players</h1>
+        <% Player.power_ranking.each do |player| %>
+          <h4><%= ordinalize Player.power_ranking.find_index(player) + 1 %>  <%= link_to player.name, player %> - <%= player.win_percentage %></h4> 
+        <% end %>
+    </div>
+  </div>
+</div>

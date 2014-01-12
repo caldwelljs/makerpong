@@ -43,11 +43,6 @@ class GamesController < ApplicationController
     redirect_to root_path
   end
 
-  def dashboard 
-    @players = Player.all
-    @games = Game.all
-  end
-
 
   private
   def game_params
