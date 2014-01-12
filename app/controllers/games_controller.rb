@@ -16,13 +16,11 @@ class GamesController < ApplicationController
    @game = Game.new(game_params)
    
      if @game.save
-       @game.logstats
+       @game.logresults
        redirect_to @game
      else
        render 'new'
      end
-
-
   end
 
 

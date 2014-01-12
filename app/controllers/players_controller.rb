@@ -5,6 +5,7 @@ class PlayersController < ApplicationController
 
   def show
     @player = Player.find(params[:id])
+    @win_percentage = @player.win_percentage
   end
 
   def new
