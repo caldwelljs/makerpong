@@ -1,18 +1,48 @@
-<h1>
-  Game Show View<br>
-</h1>
-<h3>
-  Player 1 Score: <%= @game.player.name %> - <%= @game.player_score %><br>
-</h3>
-<h2>W - <%= @game.player.wins %></h2>
-<h2>L - <%= @game.player.losses %></h2>
-<h3>
-  Player 2 Score: <%= @game.opponent.name %> - <%= @game.opponent_score %><br>
-</h3>
-<h2>W - <%= @game.opponent.wins %></h2>
-<h2>L - <%= @game.opponent.losses %></h2>
 
-<!-- <%= link_to "Edit Game", edit_game_path %>  -->
 
-<h3><%= link_to 'Log another game', new_game_path %></h3>
+<div class="row">
+	<div class="small-6 large-6 small-push-2  columns">
+		<% if @game.player_score > @game.opponent_score %>
+		<h1><%= "Winner" %></h1>
+		<% else %>
+		<h1><%= "Loser" %></h1>
+		<% end %>
+	</div>
+	<div class="small-6 large-6 small-push-2 columns">
+		<% if @game.player_score < @game.opponent_score %>
+		<h1><%= "Winner" %></h1>
+		<% else %>
+		<h1><%= "Loser" %></h1>
+		<% end %>
+	</div>
+
+</div>
+
+<div class="row">
+
+	<div class="small-6 large-6 columns">
+
+
+
+		<h3>
+			Player 1 Score: <%= @game.player.name %> - <%= @game.player_score %><br>
+		</h3>
+		<h2>W - <%= @game.player.wins %></h2>
+		<h2>L - <%= @game.player.losses %></h2>
+	</div>
+
+	<div class="small-6 large-6 columns">
+
+		<h3>
+			Player 2 Score: <%= @game.opponent.name %> - <%= @game.opponent_score %><br>
+		</h3>
+		<h2>W - <%= @game.opponent.wins %></h2>
+		<h2>L - <%= @game.opponent.losses %></h2>
+
+		<!-- <%= link_to "Edit Game", edit_game_path %>  -->
+	</div>
+	<h3><%= link_to 'New Game', new_game_path %></h3>
 </center>
+
+</div>
+</div>
