@@ -1,7 +1,23 @@
 <%= form_for @player do |f| %>
   <tr>
-  	<th><%= f.label(:upload_picture) %></th>
+  	<th><%= f.label(:upload_profile_pic) %></th>
   	<td><%= f.file_field(:picture_url) %></td>
+  </tr>
+  <tr>
+  	<th><%= f.label(:upload_winning_pic1) %></th>
+  	<td><%= f.file_field(:winning_pic1) %></td>
+  </tr>
+  <tr>
+  	<th><%= f.label(:upload_winning_pic2) %></th>
+  	<td><%= f.file_field(:winning_pic2) %></td>
+  </tr>
+  <tr>
+  	<th><%= f.label(:upload_losing_pic1) %></th>
+  	<td><%= f.file_field(:losing_pic1) %></td>
+  </tr>
+  <tr>
+  	<th><%= f.label(:upload_losing_pic2) %></th>
+  	<td><%= f.file_field(:losing_pic2) %></td>
   </tr>
   <div class="form-buttons">
   	<%= submit_tag("Update profile") %>
