@@ -1,6 +1,12 @@
-<%= stylesheet_link_tag 'application' %>
-<body>
-  <div class="full-width-row sign-in">
+<% content_for :navbar do %>
+  <div class="lose-navbar">
+<% end %>
+
+<% content_for :login do %>
+  <%= "sign-in" %>
+<% end %>
+
+  <div class="full-width-row">
     <div class="row">
       <div class="small-6 medium-5 large-4 small-centered columns frame">
         <h2>Sign in</h2>

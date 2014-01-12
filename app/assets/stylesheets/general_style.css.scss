@@ -1,0 +1,30 @@
+.full-width-row {
+  padding: 6em 0em;
+  width: 100%;
+  height: 100%;
+  min-height: 800px; // to make it full-screen top to bottom on most screens
+  background-size: cover; //this resizes the background for any screen size
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background: #edeff0;
+  h2 {color: #333333;}
+}
+
+.after-game-pic{
+  width: 40em;
+  height: 25em;
+}
+
+// .sign-in {
+//   background: red;
+// }
+
+h1 {
+  font-size: 4em;
+  font-weight: bold;
+}
+
+h2, h1 {
+  color: #777777;
+}

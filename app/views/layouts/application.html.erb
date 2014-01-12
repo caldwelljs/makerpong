@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class=<%= yield :login %>>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title><%= content_for?(:title) ? yield(:title) : "MakerPong" %></title>
-
     <%= stylesheet_link_tag 'application' %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
+  
   </head>
 
-  <body>
-
-    <%= render "layouts/header" %>
-    
-    <div class="full-width-row">
-      <div class="row">
-        <div class="small-12 medium-12 large-12 columns">
-          <%= yield %>
+  <body> 
+<!--     <%= yield :navbar %> -->
+      <%= render "layouts/header" %>
+    </div>
+      <div class="full-width-row">
+        <div class="row">
+          <div class="small-12 medium-12 large-12 columns">
+            <%= yield %>
+          </div>
         </div>
-      </div>
+      </div> 
     </div> 
     <%= javascript_include_tag "application" %>
   </body>
