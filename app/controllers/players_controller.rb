@@ -39,6 +39,7 @@ class PlayersController < ApplicationController
     redirect_to root_path
   end
 
+
   def player_params
     params.require(:player).permit(:name, :picture_url, :player_id)
   end
