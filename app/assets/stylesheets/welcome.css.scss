@@ -1,14 +1,10 @@
 .home-page-featured-image  {
-  background: url( asset-path('assets/old-man-ping-pong-player.jpg', image) ) no-repeat;
-    opacity: 1;
-    width: 100%;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    opacity: 1;
-    position: absolute;
+    padding: 10px;
+    border-radius: 15px;
+    // background: url( asset-path('assets/old-man-ping-pong-player.jpg', image) ) no-repeat top;
+    // width: 100%;
+    // background-size: cover;
 }
-
 
 .sign-up-button {
   height: 50px;
@@ -19,12 +15,25 @@
   border-radius: 5px;
 }
 
-
-// On the CSS tab, set your div's margin to auto and its text-align property to center.
+.sign-up-button:hover {
+    background-color: #33CC33;
+}
 
 .homepage_link a {
   text-decoration: none;
+  hover: yellow;
 }
+
+.homelargeheading {
+  font-size: 2.5em;
+  line-height: 1.15;
+}
+
+.homeparagraph {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
 
 
 
