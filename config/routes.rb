@@ -8,7 +8,7 @@ Pong::Application.routes.draw do
   #   resources :
 
   get "welcome/index"
-  get "games/dashboard"
+  get "welcome/dashboard"
 
   
   resources :players
