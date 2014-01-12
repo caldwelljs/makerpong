@@ -5,9 +5,7 @@ class GamesController < ApplicationController
   end
 
   def show
-
     @game = Game.find(params[:id])  
-    
   end
 
   def new
@@ -16,7 +14,6 @@ class GamesController < ApplicationController
 
   def create
    @game = Game.new(game_params)
-   
      if @game.save
        @game.logresults
        redirect_to @game
@@ -24,7 +21,6 @@ class GamesController < ApplicationController
        render 'new'
      end
   end
-
 
   def edit
     @game = Game.find_by(params[:id])

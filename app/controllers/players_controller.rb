@@ -5,8 +5,10 @@ class PlayersController < ApplicationController
 
   def show
     @player = Player.find(params[:id])
+    @games = Game.all
     rankings = Player.power_ranking
     @rank = rankings.find_index(@player) + 1
+    @recent_games = Game.get_all_recent_games_for(current_player)
   end
 
   def new
@@ -38,6 +40,7 @@ class PlayersController < ApplicationController
     @player.destroy
     redirect_to root_path
   end
+
 
   def player_params
     params.require(:player).permit(:name, :picture_url, :player_id)

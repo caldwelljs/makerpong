@@ -1,81 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="en" class=<%= yield :login %>>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= content_for?(:title) ? yield(:title) : "MakerPong" %></title>
+    <%= stylesheet_link_tag 'application' %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  
+  </head>
 
-  <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
-
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "vendor/modernizr" %>
-  <%= csrf_meta_tags %>
-</head>
-
-<body>
-
-  <nav class="top-bar">
-    <ul class="title-area">
-      
-      
-      <% if player_signed_in? %>
-        <li class="name">
-          <h1>
-            <%= link_to 'MakerPong', welcome_dashboard_path %>
-          </h1>
-        </li>
-      <% else %>
-        <li class="name">
-          <h1>
-            <%= link_to 'MakerPong', root_url %>
-          </h1>
-        </li>
-      <% end %>
-
-
-      <li class="toggle-topbar menu-icon">
-        <a href="#">
-          <span>Menu</span>
-        </a>
-      </li>
-    </ul>
-    <section class="top-bar-section">
-      <ul class="right">
-        <% if player_signed_in? %>
-          <li>
-            <%= link_to 'Players', players_path %>
-          </li>
-          <li>
-            <%= link_to 'New Game', new_game_path %>
-          </li>
-          <li>
-            <%= link_to 'Profile', player_url(current_player) %>
-          </li>
-          <li>
-            <%= link_to 'Edit Settings', edit_player_registration_path %>
-          </li>
-          <li>
-            <%= link_to 'Sign out', destroy_player_session_path, method: :delete %>
-          </li>
-        <% else %>
-          <li>
-            <%= link_to "Sign up", new_player_registration_path %>
-          </li>
-          <li>
-            <%= link_to "Sign in", new_player_session_path %>
-          </li>
-        <% end %>
-      </ul>
-    </section>
-  </nav>
-  <% if notice || alert %>
-
-  <p class=”notice”><%= notice %></p>
-
-  <p class=”alert”><%= alert %></p>
-
-  <% end %>
-
-  <%= yield %> 
-  <%= javascript_include_tag "application" %>
-</body>
+  <body> 
+<!--     <%= yield :navbar %> -->
+      <%= render "layouts/header" %>
+    </div>
+      <div class="full-width-row">
+        <div class="row">
+          <div class="small-12 medium-12 large-12 columns">
+            <%= yield %>
+          </div>
+        </div>
+      </div> 
+    </div> 
+    <%= javascript_include_tag "application" %>
+  </body>
 </html>

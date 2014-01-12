@@ -6,6 +6,4 @@ class WelcomeController < ApplicationController
     @players = Player.all
     @games = Game.all 
   end
-
-
 end
