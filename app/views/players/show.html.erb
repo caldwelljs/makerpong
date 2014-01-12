@@ -19,27 +19,18 @@
 		  				<tr>
 		  					<td><%= @player.wins %></td>
 		  					<td><%= @player.losses %></td>
-		  					<td><%= @player.win_percentage %></td>
+		  					<td>
 		  			</table>
 		  <%= link_to "Edit Profile", {:action => "edit"} %>
 		
-		<h1>Profile pic - need to format to a certain size/shape. Gem? Carrierwave?</h1>
-		<h1>Player Stats</h1>
-		<p>Games played - highlight last game played</p>
-		<p>Record, win %, last 10 games played</p>
-		<p>average win margin</p>
-		<h1>Biggest Rival</h1>
-		<p>Smallest win margin of people who have played with a minimum number of games.</p>
-		<h1>Closest Match</h1>
-		<p>Person most closely matching your skill profile.</p>
-		<h1>Player Headlines</h1>
-		<p>Most recent tweets.</p>
+		<h3>Player Stats</h3>
+		<h4>Recent Game played</h4>
 
-
-
-
-		<h1>Personal Games Played List</h2>
-		<p>Video highlights?</p>
+			<% @recent_games.last(5).each do |game| %>
+					<p><%= game.player.name %> - <%= game.player_score %> vs <%= game.opponent_score %> - <%= game.opponent.name %></p>
+			<% end %>
+		
+		<p>Average win margin</p>
 
   </div>
 

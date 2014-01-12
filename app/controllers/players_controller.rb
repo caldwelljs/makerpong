@@ -5,8 +5,10 @@ class PlayersController < ApplicationController
 
   def show
     @player = Player.find(params[:id])
+    @games = Game.all
     rankings = Player.power_ranking
     @rank = rankings.find_index(@player) + 1
+    @recent_games = Game.get_all_recent_games_for(current_player)
   end
 
   def new
