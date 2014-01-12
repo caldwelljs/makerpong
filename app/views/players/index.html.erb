@@ -1,9 +1,12 @@
 <div class="full-width-row">
   <div class="row">
-    <div class="small-8 medium-8 large-8 small-centered columns">
+    <div class="small-4 medium-6 large-4 small-centered columns grab-pic">
       <h1>League Players</h1>
         <% Player.power_ranking.each do |player| %>
-          <h4><%= ordinalize Player.power_ranking.find_index(player) + 1 %>  <%= link_to player.name, player %> - <%= player.win_percentage %></h4> 
+        
+          <h4><%= ordinalize Player.power_ranking.find_index(player) + 1 %>
+					<img src=<%= player.picture_url %>>
+            <%= link_to player.name, player %> - <%= player.win_percentage %></h4> 
         <% end %>
     </div>
   </div>

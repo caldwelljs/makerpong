@@ -13,6 +13,8 @@ class Player < ActiveRecord::Base
   mount_uploader :winning_pic2, ImageUploader
   mount_uploader :losing_pic1, ImageUploader
   mount_uploader :losing_pic2, ImageUploader
+  mount_uploader :winning_pic3, ImageUploader
+  mount_uploader :losing_pic3, ImageUploader
   
   def win_percentage
     if self.wins > 0 or self.losses > 0
