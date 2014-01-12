@@ -19,16 +19,10 @@
 		  				<tr>
 		  					<td><%= @player.wins %></td>
 		  					<td><%= @player.losses %></td>
-		  					<td></td>
+		  					<td><%= @player.win_percentage %></td>
 		  			</table>
 		  <%= link_to "Edit Profile", {:action => "edit"} %>
 		
-		
-
-		<h2>Win% - <%= @player.win_percentage %></h2>
-
-
-
 		<h1>Profile pic - need to format to a certain size/shape. Gem? Carrierwave?</h1>
 		<h1>Player Stats</h1>
 		<p>Games played - highlight last game played</p>
