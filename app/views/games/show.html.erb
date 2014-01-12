@@ -6,12 +6,12 @@
 			<div class="small-6 large-6 small-push-3 columns">
 				<h1><%= "Winner" %></h1>
 			</div>
-				<img class="after-game-pic" src=<%= [@game.player.winning_pic1, @game.player.winning_pic2].sample %>>
+				<img class="after-game-pic" src=<%= [@game.player.winning_pic1, @game.player.winning_pic2, @game.player.winning_pic3].sample %>>
 			<% else %>
 			<div class="small-6 large-6 small-push-3 columns">
 				<h1><%= "Loser" %></h1>
 			</div>
-					<img class="after-game-pic" src=<%= [@game.player.losing_pic1, @game.player.losing_pic2].sample %>>
+					<img class="after-game-pic" src=<%= [@game.player.losing_pic1, @game.player.losing_pic2, @game.player.losing_pic3].sample %>>
 
 			<% end %>
 			
@@ -21,13 +21,13 @@
 			<div class="small-6 large-6 small-push-3 columns">
 				<h1><%= "Winner" %></h1>
 			</div>
-				<%= [@game.opponent.winning_pic1, @game.opponent.winning_pic2].sample %>>
+				<%= [@game.opponent.winning_pic1, @game.opponent.winning_pic2, @game.opponent.winning_pic3].sample %>>
 			<img src= class="winning-pic">
 			<% else %>
 			<div class="small-6 large-6 small-push-3 columns">
 				<h1><%= "Loser" %></h1>
 			</div>
-				<img class="after-game-pic" src=<%= [@game.opponent.losing_pic1, @game.opponent.losing_pic2].sample %>>
+				<img class="after-game-pic" src=<%= [@game.opponent.losing_pic1, @game.opponent.losing_pic2, @game.opponent.losing_pic3].sample %>>
 			<% end %>
 			
 		</div>
