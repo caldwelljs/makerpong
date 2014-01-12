@@ -6,7 +6,7 @@
   def winning_player
     Player.find(self.winner).email
   end
-    
+
   def logresults
     if self.player_score > self.opponent_score 
       self.player.wins += 1
@@ -20,5 +20,6 @@
       self.opponent.save
     end
   end
+
 
 end
