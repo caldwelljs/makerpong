@@ -1,10 +1,21 @@
+.home-page-featured-image  {
+  background: url( asset-path('assets/old-man-ping-pong-player.jpg', image) ) no-repeat;
+    opacity: 1;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    position: absolute;
+}
+
+
 .sign-up-button {
   height: 50px;
   width: 120px;
-  border-color: #6495ED;
-  background-color: #BCD2EE;
-  border-style: solid; 
-  border-width: 2px;
+  background-color: #5fcf80;
+  border-style: none; 
+  border-width: none;
   border-radius: 5px;
 }
 
@@ -14,3 +25,6 @@
 .homepage_link a {
   text-decoration: none;
 }
+
+
+
