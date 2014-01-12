@@ -6,14 +6,6 @@
   def winning_player
     Player.find(self.winner).email
   end
-
-  def dashboard 
-    @players = Player.all
-    @games = Game.all
-  end
-
-  def listallgames
-  end
     
   def logresults
     if self.player_score > self.opponent_score 

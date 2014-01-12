@@ -12,6 +12,10 @@ class Player < ActiveRecord::Base
 
 
   def win_percentage
-    @win_percentage = (self.wins.to_f / (self.wins + self.losses)).round(4)
+    @calc_win_percentage ||= (self.wins.to_f / (self.wins + self.losses)).round(4)
+  end
+
+  def self.power_ranking
+    self.all.sort {|a, b| b.win_percentage <=> a.win_percentage}
   end
 end
