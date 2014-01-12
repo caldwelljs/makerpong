@@ -9,10 +9,17 @@ class Player < ActiveRecord::Base
   has_many :opponents, through: :games
 
   mount_uploader :picture_url, ImageUploader
-
-
+  mount_uploader :winning_pic1, ImageUploader
+  mount_uploader :winning_pic2, ImageUploader
+  mount_uploader :losing_pic1, ImageUploader
+  mount_uploader :losing_pic2, ImageUploader
+  
   def win_percentage
-    @calc_win_percentage ||= (self.wins.to_f / (self.wins + self.losses)).round(4)
+    if self.wins > 0 or self.losses > 0
+      @calc_win_percentage ||= (self.wins.to_f / (self.wins + self.losses)).round(4)
+    else
+      0.00
+    end
   end
 
   def self.power_ranking
