@@ -1,11 +1,13 @@
 class GamesController < ApplicationController
-
+  
   def index
     @games = Game.all
   end
 
   def show
+
     @game = Game.find(params[:id])  
+    
   end
 
   def new
@@ -14,27 +16,15 @@ class GamesController < ApplicationController
 
   def create
    @game = Game.new(game_params)
-   # If you want to store who created this game, write @game.user_id = current_user.id
-   # if player = true && opponent = true
+   
      if @game.save
+       @game.logresults
        redirect_to @game
      else
        render 'new'
      end
-  # else
-  #   flash[:notice] = "These are not existing players."
-  #   render 'new'
-  # end
-
-   # @game = games.build(:opponent_id => params[:opponent_id])
-   # if @game.save
-   #   flash[:notice] = "Game successfully created."
-   #   redirect_to root_path
-   # else
-   #   flash[:error] = "Unable to create game."
-   #   redirect_to root_path
-   # end
   end
+
 
   def edit
     @game = Game.find_by(params[:id])
@@ -52,6 +42,12 @@ class GamesController < ApplicationController
     flash[:notice] = "Consider this game destroyed."
     redirect_to root_path
   end
+
+  def dashboard 
+    @players = Player.all
+    @games = Game.all
+  end
+
 
   private
   def game_params

@@ -20,7 +20,7 @@
       <% if player_signed_in? %>
         <li class="name">
           <h1>
-            <%= link_to 'MakerPong', pages_dashboard_path %>
+            <%= link_to 'MakerPong', games_dashboard_path %>
           </h1>
         </li>
       <% else %>
@@ -48,7 +48,7 @@
             <%= link_to 'New Game', new_game_path %>
           </li>
           <li>
-            <%= link_to 'Profile', player_url(Player.last.id) %>
+            <%= link_to 'Profile', player_url(current_player) %>
           </li>
           <li>
             <%= link_to 'Edit Settings', edit_player_registration_path %>

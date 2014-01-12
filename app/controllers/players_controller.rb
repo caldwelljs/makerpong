@@ -5,6 +5,8 @@ class PlayersController < ApplicationController
 
   def show
     @player = Player.find(params[:id])
+    rankings = Player.power_ranking
+    @rank = rankings.find_index(@player) + 1
   end
 
   def new
