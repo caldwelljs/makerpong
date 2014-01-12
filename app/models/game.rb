@@ -12,9 +12,6 @@
     @games = Game.all
   end
 
-  def listallgames
-  end
-
     
   def logstats
     if self.player_score > self.opponent_score 
@@ -29,5 +26,6 @@
       self.opponent.save
     end
   end
+
 
 end
