@@ -14,4 +14,8 @@
  *= require_tree .
  */
 
-
+.profile-pic{
+	width: 17em;
+	height: 17em;
+	border-radius: 50%;
+}
