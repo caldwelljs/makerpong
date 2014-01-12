@@ -10,21 +10,8 @@ class Player < ActiveRecord::Base
 
   mount_uploader :picture_url, ImageUploader
 
-  # has_many :inverse_games, :class_name => "Game", :foreign_key => "game_id"
-  # has_many :inverse_opponents, through: :inverse_opponents, :source => :player
 
-  # def wins
-  #   @wins = 0
-  #   if player_score > opponent_score 
-  #     player.wins += 1
-  #     opponent.losses += 1
-  #   else
-  #     player.losses += 1
-  #     opponent.wins += 1
-  #   end
-  # end
-
-  # def losses
-  # end
-
+  def win_percentage
+    @win_percentage = (self.wins.to_f / (self.wins + self.losses)).round(4)
+  end
 end

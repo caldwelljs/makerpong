@@ -14,9 +14,8 @@
 
   def listallgames
   end
-
     
-  def logstats
+  def logresults
     if self.player_score > self.opponent_score 
       self.player.wins += 1
       self.opponent.losses += 1
