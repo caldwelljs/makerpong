@@ -1,3 +1,17 @@
+// label {
+//   color: #333333;
+//   margin: 10px 0 -10px 0;
+// }
+
+h1 {
+  font-size: 4em;
+  font-weight: bold;
+}
+
+h2, h1 {
+  color: #777777;
+}
+
 .full-width-row {
   padding: 6em 0em;
   width: 100%;
@@ -11,20 +25,53 @@
   h2 {color: #008CBA;}
 }
 
+.lower_headers {
+  margin-top: 30px;
+}
+
+
+.section-titles {
+  font-size: 2.3125em;
+  color: #333333;
+  font-weight: 300;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+
 .after-game-pic{
   width: 40em;
   height: 25em;
 }
 
-// .sign-in {
-//   background: red;
-// }
-
-h1 {
-  font-size: 4em;
-  font-weight: bold;
+.pic_upload_label th {
+  margin-top: 50px;
 }
 
 h2, h1 {
   color: #008CBA;
+
+.title-pic {
+  text-align: center;
+  img {
+    width: 7em;
+    height: 7em;
+  }
+  .title-text {
+    font-size: 1.4em;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+  .title-holder {
+    font-size: 1.2em;
+    font-weight: 400;
+    margin-top: 15px;
+  }
 }
+
+
+
+
+// .sign-in {
+//   background: red;
+// }
