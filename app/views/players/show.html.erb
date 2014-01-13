@@ -1,9 +1,14 @@
-
-
-<div class="row">
-	<div class="small-2 large-2 columns"></div>
-	<div class="small-8 large-8 small-center columns">
+<div class="page-wrapping">
+	<div class="row">
+		<div class="small-5 large-5 small-centered columns">
 		
+<<<<<<< HEAD
+		<h2 class="profile-rank">Ranking: <span><%=  ordinalize @rank %></span></h2><h2 class="profile-record">Record (<%= @player.wins %> - <%= @player.losses %>)</h2>
+		    <h2 class="profile-win-percent"> Win % <%= @player.win_percentage %></h2>
+	
+				<div class="profile-pic"><%= image_tag @player.picture_url %></div>
+				<h1 class="profile-name"><%= @player.name %><br></h1>
+=======
 			<h1><%= @player.name %><br></h1>
 			
 			
@@ -11,30 +16,33 @@
 			
 		  <div class="profile-pic"><%= image_tag @player.picture_url %></div>
 		  <table class="listing" summary="Subject list">
-		  				<tr class="header">
-		  					<th>Wins</th>
-		  					<th>Losses</th>
-		  					<th>PCT</th>		  				
-		  				</tr>	  			
-		  				<tr>
-		  					<td><%= @player.wins %></td>
-		  					<td><%= @player.losses %></td>
-		  					<td><%= @player.win_percentage %></td>
-	  					</tr>	
-		  			</table>
+				<tr class="header">
+					<th>Wins</th>
+					<th>Losses</th>
+					<th>PCT</th>		  				
+				</tr>	  			
+				<tr>
+					<td><%= @player.wins %></td>
+					<td><%= @player.losses %></td>
+					<td><%= @player.win_percentage %></td>
+				</tr>	
+			</table>
 		  <%= link_to "Edit Profile", {:action => "edit"} %>
 		
 		<h3>Player Stats</h3>
 		<h4>Recent Game played</h4>
+>>>>>>> layout_edit
 
-			<% @recent_games.last(5).each do |game| %>
-					<p><%= game.player.name %> - <%= game.player_score %> vs <%= game.opponent_score %> - <%= game.opponent.name %></p>
-			<% end %>
-		
-		<p>Average win margin</p>
+				<%= link_to "Edit Profile", {:action => "edit"} %>
+				<h3>Player Stats</h3>
+				<h4>Recent Game played</h4>
 
+				<% @recent_games.last(5).each do |game| %>
+				<p><%= game.player.name %> - <%= game.player_score %> vs <%= game.opponent_score %> - <%= game.opponent.name %></p>
+				<% end %>
+				<p>Average win margin</p>
+		</div>
   </div>
+</div>	
 
-	<div class="small-2 large-2 columns"></div>
-</div>
 

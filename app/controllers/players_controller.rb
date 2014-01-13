@@ -43,6 +43,6 @@ class PlayersController < ApplicationController
 
 
   def player_params
-    params.require(:player).permit(:name, :picture_url, :player_id, :winning_pic1, :winning_pic2, :losing_pic1, :losing_pic2 )
+    params.require(:player).permit(:name, :picture_url, :player_id, :winning_pic1, :winning_pic2, :losing_pic1, :losing_pic2, :winning_pic3, :losing_pic3 )
   end
 end

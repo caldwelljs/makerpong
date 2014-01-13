@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="//use.typekit.net/ekm0lqq.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <title><%= content_for?(:title) ? yield(:title) : "MakerPong" %></title>
     <%= stylesheet_link_tag 'application' %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -12,8 +14,7 @@
 
   <body> 
 
-      <%= render "layouts/header" %>
-    </div>
+    <%= render "layouts/header" %>
       <div class="full-width-row">
         <div class="row">
           <div class="small-12 medium-12 large-12 columns">
@@ -21,7 +22,7 @@
           </div>
         </div>
       </div> 
-    </div> 
+    
     <%= javascript_include_tag "application" %>
   </body>
 </html>

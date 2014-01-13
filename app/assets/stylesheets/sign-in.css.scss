@@ -1,8 +1,3 @@
-label {
-  color: #333333;
-  margin: 10px 0 -10px 0;
-}
-
 .sign-in-text-button {
   text-align: center;
 }
@@ -25,7 +20,7 @@ label {
 //   h2 {color: #333333;}
 // }
 
-#player_name, #player_email, #player_password, #player_password_confirmation {
+#player_name, #player_email, #player_password, #player_password_confirmation, #player_current_password {
   background: hsla(0,0,0,0.13);
   border-radius: 5px;
   border: none;
