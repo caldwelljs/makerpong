@@ -55,10 +55,10 @@
 			</h3>
 			<h2>W - <%= @game.opponent.wins %></h2>
 			<h2>L - <%= @game.opponent.losses %></h2>
-
-			<!-- <%= link_to "Edit Game", edit_game_path %>  -->
 		</div>
-		<h3><%= link_to 'New Game', new_game_path %></h3>
+		<p><%= link_to 'New Game', new_game_path %></p>
+		<p><%= link_to "Edit Game", edit_game_path %></p>
+		<p><%= link_to "Games Index", games_path %></p>
 	</center>
 
 </div>

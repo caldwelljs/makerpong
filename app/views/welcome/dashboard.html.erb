@@ -3,38 +3,55 @@
 
 
 
+<div class="row">
 
-<h2>Personal stats</h2>
-  <p>Perhaps something like record in last 5 games, winning percentage and ranking</p>
-  <p>Note: More extensive stats are on the profile page.</p>
-
-<h2>Rankings - based on win %</h2> 
-  <% Player.power_ranking.first(5).each do |player| %>
-    <h4><%= ordinalize Player.power_ranking.find_index(player) + 1 %>  <%= player.name %> - <%= player.win_percentage %></h4>
-  <% end %>
+  <div class="section-titles">League Rankings</div> 
+    <% Player.power_ranking.first(5).each do |player| %>
+      <h4><%= ordinalize Player.power_ranking.find_index(player) + 1 %>  <%= player.name %> - <%= player.win_percentage %></h4>
+    <% end %>
+</div>
 
 
 
+<div class="row">
+  <div class="section-titles">League Leaders</div>
+  <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
+    <div class="title-text">King of the Hill</div>
+    <img src=<%= Player.power_ranking.first.picture_url %>>
+    <div class="title-holder"><%= Player.power_ranking.first.name %></div class="title-holder">
+  </div>
+  <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
+    <div class="title-text">Biggest Loser</div>
+    <img src=<%= Player.power_ranking.last.picture_url %>> 
+    <div class="title-holder"><%= Player.power_ranking.last.name %></div class="title-holder">
+  </div>
+  <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
+    <div class="title-text">Longest Win Streak</div>
+    <img src=<%= Player.power_ranking.first.picture_url %>>
+    <div class="title-holder"><%= Player.power_ranking.first.name %></div class="title-holder">
+  </div>
+  <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
+    <div class="title-text">Biggest Slaughter</div> 
+    <img src=<%= Player.power_ranking.first.picture_url %>>
+    <div class="title-holder"><%= Player.power_ranking.first.name %></div class="title-holder">
+  </div>
+</div>
+<div class="row">
+     <div class="section-titles">Latest Games</div>
+     
+       <% @games.last(5).reverse.each do |game| %>
+        <h4><%= game.player.name %>
+          <%= game.player_score %>
+         vs.
+         <%= game.opponent.name %>
+         <%= game.opponent_score %>
+       </h4>
+      <% end %>
+    </div>
+  </div>
+</div>
 
-<h2>League Leaders - visual corresponding to each</h2>
-  <p>King of the Hill</p>
-  <p>Biggest Loser - lowest winning %</p>
-  <p>Most Games Played </p>
-  <p>Longest Win Streak</p>
-  <p>Biggest Slaughter - both winner and loser? dunce cap for loser?</p>
-  <p>Note: visual could be something like a crown on top of their profile pic.</p>
 
- <h2>Latest Games</h2>
- 
-   <% @games.last(5).reverse.each do |game| %>
-    <h4><%= game.player.name %>
-      <%= game.player_score %>
-     vs.
-     <%= game.opponent.name %>
-     <%= game.opponent_score %>
-   </h4>
-  <% end %>
-
+<div class="bottom-links">
   <%= link_to 'Games Index', games_path %>
-
 </div>

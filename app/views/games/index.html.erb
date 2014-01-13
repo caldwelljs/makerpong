@@ -1,5 +1,4 @@
-  <h1>Games index page</h1>
-<p>list of all games</p>
+  <h1>League Games</h1>
 
   <% @games.each do |game| %>
     
@@ -8,7 +7,7 @@
      vs. 
      <%= game.opponent.name %>
 		 <%= game.opponent_score %>
-   </h4>
+   </h4><br>
   <% end %>
 
 
