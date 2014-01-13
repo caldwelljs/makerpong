@@ -2,6 +2,39 @@
 // FOUNDATION SETTINGS
 //
 
+body{
+	font-family: "proxima-nova";
+}
+h1,h2,h3,h4,h5{
+	font-family: "proxima-nova";
+}
+.profile-name{
+	color: #25252C;
+	font-size: 2.5em
+}
+.profile-rank{
+	font-size:3.5em;
+	font-weight: bold;
+	color: #25252C;
+}
+.profile-rank span{
+
+	color: #FBD300;
+}
+.profile-record{
+
+	color: #25252C;
+}
+.profile-win-percent{
+
+	color: #25252C;
+}
+.page-wrapping{
+	width: 100%;
+	background: url( asset-path('assets/gradient.jpg', image) ) no-repeat;
+	min-height: 680px; // to make it full-screen top to bottom on most screens
+	background-size: cover;
+}
 // Uncomment to use rem-calc() in your settings
 // @import "foundation/functions";
 
@@ -990,4 +1023,4 @@
 // Sticky Class
 // $topbar-sticky-class: ".sticky";
 // $topbar-arrows: true; //Set false to remove the triangle icon from the menu item
-@import 'foundation';
+ @import 'foundation';

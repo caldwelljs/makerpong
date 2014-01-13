@@ -21,8 +21,8 @@
 .profile-pic img{
 	width: 17em;
 	height: 17em;
-	border-radius: 50%;
-	border: solid 3px gray;
+	border-radius: 5px;
+
 }
 
 .grab-pic img{
