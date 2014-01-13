@@ -13,19 +13,16 @@
 
  *= require_tree .
  */
- table{
- 	width: 15em;
- 	height: 10em;
- }
 
-.profile-pic img{
+
+.profile-pic img {
 	width: 17em;
 	height: 17em;
 	border-radius: 5px;
 
 }
 
-.grab-pic img{
+.grab-pic img {
 	width: 1.5em;
 	height: 1.5em;
 	display: inline-block;
