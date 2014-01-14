@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
-  before_filter:authenticate_player!
-  before_action:configure_devise_permitted_parameters, if: :devise_controller?
+  before_filter :authenticate_player!
+  before_action :configure_devise_permitted_parameters, if: :devise_controller?
 
  
   # Prevent CSRF attacks by raising an exception.
@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 
 
   def after_sign_in_path_for(player)
-    params[:target] || welcome_dashboard_path(player.id)
+    params[:target] || welcome_dashboard_path
   end
 
   protected
