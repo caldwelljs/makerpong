@@ -3,7 +3,7 @@
 		<div class="small-5 large-5 small-centered columns">
 			<h2 class="profile-rank">Ranking: <span><%=  ordinalize @rank %></span></h2><h2 class="profile-record">Record (<%= @player.wins %> - <%= @player.losses %>)</h2>
 		    <h2 class="profile-win-percent"> Win % <%= @player.win_percentage %></h2>
-	
+				<h2 class="profile-streak"> Streak: <%= @player.streak_display %></h2>
 				<div class="profile-pic"><%= image_tag @player.picture_url %></div>
 				<h1 class="profile-name"><%= @player.name %><br></h1>
 

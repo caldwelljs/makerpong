@@ -50,8 +50,8 @@ ActiveRecord::Schema.define(version: 20140114200356) do
     t.string   "losing_pic2"
     t.string   "winning_pic3"
     t.string   "losing_pic3"
-    t.integer  "win_streak"
-    t.integer  "lose_streak"
+    t.integer  "win_streak",             default: 0
+    t.integer  "lose_streak",            default: 0
   end
 
   add_index "players", ["email"], name: "index_players_on_email", unique: true, using: :btree

@@ -6,10 +6,20 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+# player_list = [
+#   [ "John Caldwell", "john@example.com", 12345678, ],
+#   [ "France", 65447374 ],
+#   [ "Belgium", 10839905 ],
+#   [ "Netherlands", 16680000 ]
+# ]
 
+# game_list = [
+#   [ "John Caldwell", 81831000 ],
+#   [ "France", 65447374 ],
+#   [ "Belgium", 10839905 ],
+#   [ "Netherlands", 16680000 ]
+# ]
 
-
-Player.create(wins: 2)
-Player.create(wins: 1)
-Player.create(wins: 0)
-Player.create(wins: 2)
+# country_list.each do |name, population|
+#   Country.create( name: name, population: population )
+# end

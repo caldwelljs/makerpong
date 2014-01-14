@@ -25,6 +25,23 @@
     end
   end
 
+  def streak
+    if self.winner == player.id
+      self.player.win_streak += 1
+      self.player.lose_streak = 0
+      self.opponent.win_streak = 0
+      self.opponent.lose_streak += 1
+      self.player.save
+      self.opponent.save
+    else  
+      self.player.win_streak = 0
+      self.player.lose_streak += 1
+      self.opponent.win_streak += 1
+      self.opponent.lose_streak = 0
+      self.player.save
+      self.opponent.save
+    end
+  end
 
   def self.get_all_recent_games_for(player)
     # results = []
