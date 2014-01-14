@@ -1,3 +1,25 @@
+.welcome-wrap{
+  width: 100%;
+  background: url( asset-path('assets/old-man-pong.jpg', image) ) no-repeat;
+  min-height: 680px; // to make it full-screen top to bottom on most screens
+  background-size: cover;
+}
+
+
+.welcome-wrap{
+  min-height: 100%;
+  opacity: 1;
+  background-color: black;
+ 
+  width: 100%;
+  height: auto;
+  
+
+  position: fixed;
+  top: 5;
+  left: 0;
+}
+
 .welcome-pic{
   min-height: 100%;
   opacity: 1;
