@@ -1,5 +1,7 @@
 class ApplicationController < ActionController::Base
-  before_action :configure_devise_permitted_parameters, if: :devise_controller?
+  before_filter:authenticate_player!
+  before_action:configure_devise_permitted_parameters, if: :devise_controller?
+
  
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
