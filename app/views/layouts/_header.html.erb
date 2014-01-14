@@ -1,59 +1,50 @@
-<nav class="top-bar">
-  <ul class="title-area">
-    <% if player_signed_in? %>
-      <li class="name">
-        <h1>
-          <%= link_to 'MakerPong', welcome_dashboard_path %>
-        </h1>
-      </li>
-    <% else %>
-      <li class="name">
-        <h1>
-          <%= link_to 'MakerPong', root_url %>
-        </h1>
-      </li>
-    <% end %>
+<div class="nav-wrap">
+  <div class="row">
+    <div class="small-2 columns">
+  <% if player_signed_in? %>
+    
+      <h1 class="title">
+        <%= link_to 'MakerPong', welcome_dashboard_path %>
+      </h1>
+    
+  </div>
+  <% else %>
+    
+      <h1 class="name">
+        <%= link_to 'MakerPong', root_url %>
+      </h1>
+  
+  <% end %>
+  <div class = "small-2 columns">
 
+</div>
 
-    <li class="toggle-topbar menu-icon">
-      <a href="#">
-        <span>Menu</span>
-      </a>
-    </li>
-  </ul>
-  <section class="top-bar-section">
-    <ul class="right">
+  <div class = "small-8 columns">
+ 
       <% if player_signed_in? %>
-        <li>
+        <h1 class="top-right-links weird-link">
           <%= link_to 'Power Rankings', players_path %>
-        </li>
-        <li>
+        </h1>
+        <h1 class="top-right-links">
           <%= link_to 'New Game', new_game_path %>
-        </li>
-        <li>
+        </h1>
+        <h1 class="top-right-links">
           <%= link_to 'Profile', player_url(current_player) %>
-        </li>
-        <li>
+        </h1>
+        <h1 class="top-right-links">
           <%= link_to 'Edit Settings', edit_player_registration_path %>
-        </li>
-        <li>
+        </h1>
+        <h1 class="top-right-links">
           <%= link_to 'Sign out', destroy_player_session_path, method: :delete %>
-        </li>
+        </h1>
       <% else %>
-        <li>
+        <h1 class="top-right-links">
           <%= link_to "Sign up", new_player_registration_path %>
-        </li>
-        <li>
+        </h1>
+        <h1 class="top-right-links">
           <%= link_to "Sign in", new_player_session_path %>
-        </li>
+        </h1>
       <% end %>
-    </ul>
-  </section>
-</nav>
-<% if notice || alert %>
 
-<p class=”notice”><%= notice %></p>
-
-<p class=”alert”><%= alert %></p>
-
-<% end %>
+</div>
+</div>

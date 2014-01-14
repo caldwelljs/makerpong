@@ -13,10 +13,59 @@
 
  *= require_tree .
  */
-
- .top-bar{
- 	background: black;
+ .top-right-links a{
+ 	font-size: 0.3em;
+ 	display: inline-block;
+ 	font-family: "proxima-nova";
+ 	font-weight: 100;
+ 	color: white;
+  float: left;
+  height: 2em;
+ 	margin-left: 2em;
  }
+ .weird-link a{
+
+ 	padding: 0.15em;
+ }
+
+ .nav-wrap{
+ 	background: black;
+ 	padding: 0.25em;
+ }
+ .title a{
+ 	color: white;
+ 	font-size: 0.55em;
+ 	float: left;
+ 	font-family: "proxima-nova";
+
+ }
+.name a{
+	color: white;
+	font-size: 0.45em;
+	float: left;
+	font-family: "proxima-nova";
+	font-weight: 100;
+}
+.passion {
+	margin-top: 2.85em;
+	color: white;
+	font-size: 2em;
+
+	font-family: "proxima-nova";
+	font-weight: 100;
+}
+.welcome-info {
+	color: white;
+	font-size: 1.25em;
+	
+	font-family: "proxima-nova";
+	font-weight: 100;
+}
+.sign-up{
+  border-radius: 5px;
+  margin-top: 1em;
+}
+ 
 .power-wrapping {
   background-color: red;
   width: 40em;
