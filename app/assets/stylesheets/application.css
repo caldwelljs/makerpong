@@ -14,6 +14,21 @@
  *= require_tree .
  */
 
+ .top-bar{
+ 	background: black;
+ }
+.power-wrapping {
+  background-color: red;
+  width: 40em;
+  height: 50em;
+}
+
+
+
+
+.columns{
+/*	border: 1px solid green;*/
+}
 
 .profile-pic img {
 	width: 17em;

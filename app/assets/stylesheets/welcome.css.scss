@@ -1,3 +1,16 @@
+.welcome-pic{
+  min-height: 100%;
+  opacity: 1;
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  
+  /* Set up positioning */
+  position: fixed;
+  top: 10;
+  left: 0;
+}
+
 .home-page-featured-image  {
     padding: 10px;
     border-radius: 15px;

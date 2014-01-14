@@ -16,6 +16,13 @@
 //= require turbolinks
 //= require_tree .
 
-$(function(){ $(document).foundation(); 
-  $('.lose-navbar .top-bar').remove();
-});
+// $(function(){ $(document).foundation(); 
+//   $('.lose-navbar .top-bar').remove();
+
+// });
+// $( document ).ready(function() {
+//   $(".winner-page-wrapper").css("background-color", "red");
+// });
+
+
+

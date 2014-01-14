@@ -5,3 +5,74 @@
 label .pic_upload_label {
   margin-top: 5em;
 }
+
+.winner h1{
+	  font-family: "hwt-american-outline";
+	  color: white;
+	  float: left;
+	  margin-left: -0.5em;
+}
+.loser h1{
+	font-family: "hwt-american-outline";
+	color: white;
+	float: right;
+}
+.after-game-stats{
+	font-family: "proxima-nova";
+	font-weight: 800;
+	text-align: center;
+}
+.after-game-options a{
+	font-family: "proxima-nova";
+	font-weight: 800;
+	font-size: 2.5em;
+	color: white;
+}
+.after-game-options{
+	text-align: center;
+}
+
+.left-after-game-pic{
+  min-height: 100%;
+  opacity: 1;
+  /* Set up proportionate scaling */
+  width: 50%;
+  height: auto;
+  
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.right-after-game-pic{
+  min-height: 100%;
+  opacity: 1;
+  /* Set up proportionate scaling */
+  width: 50%;
+  height: auto;
+  
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.transbox
+  {
+  margin-top: 12em;
+  width: 20em;
+  height: 40em;
+  // margin:30px 50px;
+  background-color:#ffffff;
+  border:1px solid black;
+  opacity:0.6;
+  filter:alpha(opacity=60); /* For IE8 and earlier */
+  }
+
+  // .transbox h3
+  //   {
+  //   font-family: "proxima-nova";
+  //   margin:30px 40px;
+  //   font-weight:bold;
+  //   color:#000000;
+  //   }

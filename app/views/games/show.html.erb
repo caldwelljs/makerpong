@@ -1,67 +1,74 @@
 
-<div class="winner-page-wrapper loser-page-wrap">
-	<div class="row">
-		<div class="small-6 large-6 columns">
-			<% if @game.player_score > @game.opponent_score %>
-			<div class="small-6 large-6 small-push-3 columns">
-				<h1><%= "Winner" %></h1>
-			</div>
-			 
-				<img class="after-game-pic" src=<%= [@game.player.winning_pic1, @game.player.winning_pic2, @game.player.winning_pic3].sample %>>
-			<% else %>
-			<div class="small-6 large-6 small-push-3 columns">
-				<h1><%= "Loser" %></h1>
-			</div>
-					<img class="after-game-pic" src=<%= [@game.player.losing_pic1, @game.player.losing_pic2, @game.player.losing_pic3].sample %>>
 
-			<% end %>
-			
-		</div>
-		<div class="small-6 large-6  columns">
-			<% if @game.player_score < @game.opponent_score %>
-			<div class="small-6 large-6 small-push-3 columns">
-				<h1><%= "Winner" %></h1>
-			</div>
-				<%= [@game.opponent.winning_pic1, @game.opponent.winning_pic2, @game.opponent.winning_pic3].sample %>>
-			<img src= class="winning-pic">
-			<% else %>
-			<div class="small-6 large-6 small-push-3 columns">
-				<h1><%= "Loser" %></h1>
-			</div>
-				<img class="after-game-pic" src=<%= [@game.opponent.losing_pic1, @game.opponent.losing_pic2, @game.opponent.losing_pic3].sample %>>
-			<% end %>
-			
-		</div>
-		
+<div class="row">
+	<div class="small-6 large-6 columns">
+		<% if @game.player_score > @game.opponent_score %>
+		<div class="small-6 large-6 small-push-3 columns">
+			<h1><%= "Winner" %></h1>
+		</div>			
+				<img class="left-after-game-pic" src=<%= [@game.player.winning_pic1, @game.player.winning_pic2, @game.player.winning_pic3].sample %>>
+		<% else %>
+	
+				<img class="left-after-game-pic" src=<%= [@game.opponent.winning_pic1, @game.opponent.winning_pic2, @game.opponent.winning_pic3].sample %>>
+		<% end %>			
+	</div>
+	<div class="row">
+    
+	
+	</div>
+	<div class="small-6 large-6  columns">
+		<% if @game.player_score < @game.opponent_score %>
+	
+			<img class="right-after-game-pic" src=<%= [@game.player.losing_pic1, @game.player.losing_pic2, @game.player.losing_pic3].sample %>>	
+		<% else %>
+
+			<img class="right-after-game-pic" src=<%= [@game.opponent.losing_pic1, @game.opponent.losing_pic2, @game.opponent.losing_pic3].sample %>>
+		<% end %>	
+	</div>
+</div>
+<div class="row">
+	<div class="small-6 columns winner">
+	
+			<h1>Winner</h1>
+	
+	
+	</div>
+	<div class="small-6 columns loser">
+
+			<h1>Loser</h1>
+
+	
+	</div>
+</div>
+
+
+<div class="row">
+
+	<div class="small-3 columns transbox">
+		<h3 class="after-game-stats">
+			<%= @game.player.name %><br /> 
+			Score: <%= @game.player_score %>
+		</h3>
+		<h3 class="after-game-stats">Record (<%= @game.player.wins %> - <%= @game.player.losses %>)</h3>
 	</div>
 
-	<div class="row">
+	<div class="small-3 columns transbox">
 
-		<div class="small-6 large-6 columns">
-
-
-
-			<h3>
-				Player 1 Score: <%= @game.player.name %> - <%= @game.player_score %><br>
-			</h3>
-
-			<h2>W - <%= @game.player.wins %></h2>
-			<h2>L - <%= @game.player.losses %></h2>
-		</div>
-
-		<div class="small-6 large-6 columns">
-
-			<h3>
-				Player 2 Score: <%= @game.opponent.name %> - <%= @game.opponent_score %><br>
-			</h3>
-			<h2>W - <%= @game.opponent.wins %></h2>
-			<h2>L - <%= @game.opponent.losses %></h2>
-		</div>
-		<p><%= link_to 'New Game', new_game_path %></p>
+		<h3 class="after-game-stats">
+			<%= @game.opponent.name %> <br />  Score: <%= @game.opponent_score %>
+		</h3>
+		<h3 class="after-game-stats">Record (<%= @game.opponent.wins %> - <%= @game.opponent.losses %>)</h3>
+		
 		<p><%= link_to "Edit Game", edit_game_path %></p>
 		<p><%= link_to "Games Index", games_path %></p>
-	</center>
+	</div>
+</div>
+<div class="small-3 small-centered columns after-game-options ">
+	<%= link_to 'Rematch', new_game_path %>
+</div>
 
-</div>
-</div>
-</div>
+
+
+
+
+
