@@ -27,4 +27,13 @@ class Player < ActiveRecord::Base
   def self.power_ranking
     self.all.sort {|a, b| b.win_percentage <=> a.win_percentage}
   end
+
+  def self.streak
+    counter
+
+    
+  end
+
+  def win_margin
+  end
 end
