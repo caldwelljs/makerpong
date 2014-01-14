@@ -3,7 +3,7 @@ class Player < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable
-         # :validatable
+         :validatable
 
   has_many :games
   has_many :opponents, through: :games
