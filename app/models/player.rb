@@ -28,13 +28,8 @@ class Player < ActiveRecord::Base
     self.all.sort {|a, b| b.win_percentage <=> a.win_percentage}
   end
 
-  def streak_display
-    if win_streak > 0
-      "Won #{self.win_streak}"
-    else
-      "Lost #{self.lose_streak}"
-    end
-  end
+  # Conditional
+
 
   def win_margin
   end

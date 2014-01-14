@@ -5,13 +5,15 @@
   </div>
 </div>
   <div class="row">
-    <div class="small-6 medium-6 large-6 small-centered columns grab-pic">
+    <div class="small-2 medium-2 large-2 columns"></div>
+    <div class="small-8 medium-8 large-8 small-centered columns grab-pic">
       
         <% Player.power_ranking.each do |player| %>
         
           <h3 class="ranking-items"><%= ordinalize Player.power_ranking.find_index(player) + 1 %>
 					<img src=<%= player.picture_url %>>
-            <%= link_to player.name, player %> - <%= player.win_percentage %></h4> 
+            <%= link_to player.name, player %> - <%= player.win_percentage %> - <%= streak_display(player) %></h4> 
         <% end %>
     </div>
+    <div class="small-2 medium-2 large-2 columns"></div>
   </div>
