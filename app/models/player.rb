@@ -29,9 +29,7 @@ class Player < ActiveRecord::Base
   end
 
   def self.streak
-    counter
-
-    
+        
   end
 
   def win_margin

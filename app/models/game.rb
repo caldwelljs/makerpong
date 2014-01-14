@@ -11,13 +11,15 @@
     if self.player_score > self.opponent_score 
       self.player.wins += 1
       self.opponent.losses += 1
-      self.winner = player 
+      self.winner = player.id
+      self.save
       self.player.save
       self.opponent.save
     else
       self.opponent.wins += 1
       self.player.losses += 1
-      self.winner = opponent
+      self.winner = opponent.id
+      self.save
       self.player.save
       self.opponent.save
     end
