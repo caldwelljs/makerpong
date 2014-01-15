@@ -14,6 +14,29 @@
  *= require_tree .
  */
 
+.welcome_card_style {
+  padding: 20px 20px;
+  margin-right: -15px;
+  border-radius: 3px;
+  background-color: #fff;
+  border-bottom-width: 2px;
+}
+
+.text_field {
+
+  background-color : #ffffff; 
+
+}
+.sign-in-text-button {
+  text-align: center;
+  width: 200px;
+}
+
+.sign-up-button {
+  border-radius: 5px;
+  width: 200px;
+}
+
 
 .profile-pic img {
 	width: 17em;
