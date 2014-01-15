@@ -10,7 +10,6 @@
  *
  *= require_self
  *= require foundation_and_overrides
-
  *= require_tree .
  */
 
@@ -27,4 +26,8 @@
 	height: 1.5em;
 	display: inline-block;
 	border-radius: 5px;
+}
+
+.columns {
+  border: 1px solid green;
 }
