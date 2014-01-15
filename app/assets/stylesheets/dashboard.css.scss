@@ -1,4 +1,4 @@
-.dash_titles {
+.title-text {
   text-align: center;
   font-size: 2.3125em;
   color: #333333;
@@ -7,12 +7,12 @@
   margin-bottom: 0.5em;
 }
 
-.card_style {
-  padding: 20px 20px;
-  margin: 10px 0 20px 0;
-  border-radius: 3px;
-  background-color: #fff;
-  border-bottom-width: 2px;
+.title-holder {
+  color: #262626;
+  display: block;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 1.4;
+  overflow: hidden;
+  white-space: nowrap;;
 }
-
-
