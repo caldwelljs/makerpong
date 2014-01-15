@@ -2,16 +2,16 @@ Pong::Application.routes.draw do
 
 
   # get "players/:id/edit" => "players#edit"
+  root "welcome#index"
 
   devise_for :players
 
-  get "welcome/index"
-  get "welcome/dashboard"
+  get "dashboard" => 'welcome#dashboard', as: :welcome_dashboard
   
   resources :players
   resources :games
 
-  root 'welcome#index'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
