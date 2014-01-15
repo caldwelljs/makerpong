@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_filter :authenticate_player!
+  
   before_action :configure_devise_permitted_parameters, if: :devise_controller?
 
  
