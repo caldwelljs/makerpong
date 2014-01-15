@@ -1,7 +1,20 @@
 // 
 // FOUNDATION SETTINGS
 //
-
+.sign-links a{
+	font-size: 0.3em;
+	display: inline-block;
+	font-family: "proxima-nova";
+	font-weight: 100;
+	color: white;
+  float: left;
+  height: 2em;
+  margin-top: 0.25em;
+	margin-left: 2em;
+}
+.sign-up-wrapper{
+	background: white;
+}
 .power-wrapping{
   font-size: 6em;
 }
