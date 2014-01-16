@@ -19,6 +19,8 @@ class GamesController < ApplicationController
    @game = Game.new(game_params)
      if @game.save
        @game.logresults
+       @game.streak
+       @game.margin
        redirect_to @game
      else
        render 'new'
