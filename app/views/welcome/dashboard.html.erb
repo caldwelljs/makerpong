@@ -44,7 +44,7 @@
           <td>Name</td>
           <td>Win%</td>
         </tr>
-        <% Player.power_ranking.first(2).each do |player| %>
+        <% Player.power_ranking.first(5).each do |player| %>
         <tr class="league_leader_preview">
           <td>
             <%= ordinalize Player.power_ranking.find_index(player) + 1 %>

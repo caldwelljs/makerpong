@@ -1,14 +1,12 @@
 class GamesController < ApplicationController
   before_filter :authenticate_player!
-  
+
   def index
     @games = Game.all
   end
 
   def show
     @game = Game.find(params[:id])
-
-
   end
 
   def new
