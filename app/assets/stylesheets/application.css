@@ -28,16 +28,37 @@
 	border-radius: 5px;
 }
 
+
+// Unsure about how to get these pics to fit.
+// .card_pic {
+//   height: 10px:
+//   width: 10px;
+//   display: inline-block;
+//   border-radius: 5px;
+// }
+
 .columns {
   border: 1px solid green;
 }
 
 .card_style {
   padding: 20px 20px;
-  margin: 10px 0 10px 0;
+  margin: 10px 10px 10px 10px;
   border-radius: 3px;
   background-color: #fff;
+  border: solid 4px #ffffff;
   border-bottom-width: 2px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
 }
 
+.game_card_name {
+  font-size: 16px;
+  font-weight: 200;
+  padding: 10px;
+  color: #404040;
+}
 
+.card_title {
+  font-weight: 600;
+  color: #404040;
+}

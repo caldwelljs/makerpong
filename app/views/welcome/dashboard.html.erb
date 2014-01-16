@@ -4,7 +4,7 @@
     <div class="small-8 medium-8 large-8 columns">
       <div>
         <h3 class="card_title">
-          League Leaders
+          Title Holders
         </h3>
       </div>
       <div class= "leaderboard_card card_style">
@@ -38,45 +38,64 @@
           League Leaders
         </h3>
       </div>
-      <div class="power_ranking_card card_style">
-        <div class="row">
-          <% Player.power_ranking.first(2).each do |player| %>
-            <h4>
-              <%= ordinalize Player.power_ranking.find_index(player) + 1 %>  <%= player.name %> - <%= player.win_percentage %>
-            </h4>
-          <% end %>
-        </div>      
-      </div>
+      <table class="power_ranking_card card_style">
+        <tr>
+          <td>Rank</td>
+          <td>Name</td>
+          <td>Win%</td>
+        </tr>
+        <% Player.power_ranking.first(2).each do |player| %>
+        <tr class="league_leader_preview">
+          <td>
+            <%= ordinalize Player.power_ranking.find_index(player) + 1 %>
+          </td>
+          <td><%= player.name %></td>
+          <td><%= player.win_percentage %></td>
+        </tr>
+        <% end %>
+      </table>
     </div>
   </div>
   <div class="row">
-    <div class="small-8 medium-8 large-8 columns">
-      <div class= "card_title">
-        <h3>
+    <div class="small-12 medium-12 large-12 columns">
+      <div>
+        <h3 class= "card_title">
           Recent Games
         </h3>        
       </div>
-      
       <% @games.last(5).reverse.each do |game| %>
-      <div class="recent_game card_style">
-        <div class="row">
-          <h4>
-            <%= game.player.name %>
-            <%= game.player_score %>
-          vs.
-            <%= game.opponent.name %>
-            <%= game.opponent_score %>
-          </h4>
+      <div class="small-6 medium-6 large-6 columns">
+        <div class="recent_game card_style">
+          <div class="row">
+            <div class="game_card_pic small-2 medium-2 large-2 columns card_pic">
+              <img src=<%= game.player.picture_url %>>
+            </div>
+            <div class="game_card_name small-7 medium-7 large-7 columns">
+              <%= game.player.name %>
+            </div>
+            <div class="game_card_name small-3 medium-3 large-3 columns">
+              <%= game.player_score %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="game_card_pic small-2 medium-2 large-2 columns card_pic">
+              <img src=<%= game.opponent.picture_url %>>
+            </div>
+            <div class="game_card_name small-7 medium-7 large-7 columns">
+              <%= game.opponent.name %>
+            </div>
+            <div class="game_card_name small-3 medium-3 large-3 columns">
+              <%= game.opponent_score %>
+            </div>
+          </div>
         </div>
-        
       </div>
-
-
       <% end %>
-
     </div>
   </div>
 </div>
+
+
 
 <div class="row">
   <div class="bottom-links">
