@@ -1,71 +1,122 @@
-
-
-<div class="row">
-	<div class="small-6 large-6 columns">
-		<% if @game.player_score > @game.opponent_score %>
-		<div class="small-6 large-6 small-push-3 columns">
-			<h1><%= "Winner" %></h1>
-		</div>			
-				<img class="left-after-game-pic" src=<%= [@game.player.winning_pic1, @game.player.winning_pic2, @game.player.winning_pic3].sample %>>
-		<% else %>
+<style type="text/css">
+.the-win{
 	
-				<img class="left-after-game-pic" src=<%= [@game.opponent.winning_pic1, @game.opponent.winning_pic2, @game.opponent.winning_pic3].sample %>>
-		<% end %>			
-	</div>
-	<div class="row">
-    
-	
-	</div>
-	<div class="small-6 large-6  columns">
-		<% if @game.player_score < @game.opponent_score %>
-	
-			<img class="right-after-game-pic" src=<%= [@game.player.losing_pic1, @game.player.losing_pic2, @game.player.losing_pic3].sample %>>	
-		<% else %>
+  margin: 0 auto 0 auto;
 
-			<img class="right-after-game-pic" src=<%= [@game.opponent.losing_pic1, @game.opponent.losing_pic2, @game.opponent.losing_pic3].sample %>>
-		<% end %>	
-	</div>
-</div>
-<div class="row">
-	<div class="small-6 columns winner">
-	
-			<h1>Winner</h1>
-	
-	
-	</div>
-	<div class="small-6 columns loser">
-
-			<h1>Loser</h1>
-
-	
-	</div>
-</div>
-
-
-<div class="row">
-
-	<div class="small-3 columns transbox">
-		<h3 class="after-game-stats">
-			<%= @game.player.name %><br /> 
-			Score: <%= @game.player_score %>
-		</h3>
-		<h3 class="after-game-stats">Record (<%= @game.player.wins %> - <%= @game.player.losses %>)</h3>
-	</div>
-
-	<div class="small-3 columns transbox">
-
-		<h3 class="after-game-stats">
-			<%= @game.opponent.name %> <br />  Score: <%= @game.opponent_score %>
-		</h3>
-		<h3 class="after-game-stats">Record (<%= @game.opponent.wins %> - <%= @game.opponent.losses %>)</h3>
+}
+.the-loss{
 		
-		<p><%= link_to "Edit Game", edit_game_path %></p>
-		<p><%= link_to "Games Index", games_path %></p>
+	  margin:0 auto 0 auto;
+
+}
+  
+.callOut h1{
+	font: normal 2.5em ChunkFiveRegular, Georgia, Times, serif;
+	margin-top: 1em;
+	letter-spacing: 1px;
+	color: white;
+	text-shadow: 1px 0px 0px #f6f1da;
+  filter: dropshadow(color=#f6f1da, offx=1, offy=0); 
+  width: 8em;
+  margin: 0.5em auto 0 auto;
+  display: block;
+}
+
+ .left-side-after-game-wrap{
+ 		float: left;
+    width: 50%;
+  	background: black;
+ }
+ .right-side-after-game-wrap{
+ 		float: left;
+    width: 50%;
+    background-color: black;
+  
+ }
+ .after-game-wrap {
+  
+   height: 80em;
+   width: 100%;
+   background-color: black ;
+   
+}
+.winning-pic{
+	width: 25em;
+	height: 40em;
+	margin: 5em auto 0 auto;
+	display: block;
+	background: linear-gradient(black, transparent 60%)
+
+}
+.just-margin{
+	margin-top: 2.5em;
+}
+
+</style>
+
+<% content_for :javascript do %>
+	<script type="text/javascript">
+	$(document).ready(function() {
+
+		if( <%=@game.player_score %> > <%=@game.opponent_score %> )
+			{
+				var image = "<%=[@game.player.winning_pic1, @game.player.winning_pic2, @game.player.winning_pic3].sample %>"
+				var losing_image = "<%=[@game.opponent.losing_pic1, @game.opponent.losing_pic2, @game.opponent.losing_pic3].sample %>";
+			};
+    if( <%=@game.player_score %> < <%=@game.opponent_score %> )
+    	{
+    		var image = "<%=[@game.opponent.winning_pic1, @game.opponent.winning_pic2, @game.opponent.winning_pic3].sample %>";
+
+    		var losing_image = "<%=[@game.player.losing_pic1, @game.player.losing_pic2, @game.player.losing_pic3].sample %>";
+    	};
+
+	
+		// image = image.split('/');
+		// image = image[image.length-1];
+		var backgroundWinStyle = " -webkit-gradient(radial, center center, 0, center center, 440, color-stop(0, rgba(255,255,255,0)), color-stop(0.8, rgba(0,0,0,1))), -webkit-linear-gradient(black, transparent 15%),  url('" + image + "') no-repeat ";
+
+		var backgroundLossStyle = "-webkit-gradient(radial, center center, 0, center center, 440, color-stop(0, rgba(255,255,255,0)), color-stop(0.8, rgba(0,0,0,1))), -webkit-linear-gradient(black, transparent 15%), url('" + losing_image + "') no-repeat";
+		
+		$(".the-win").css({"background": backgroundWinStyle});
+		$(".the-win").css({"height": "25em"});
+		
+
+
+		$(".the-loss").css({"background": backgroundLossStyle});
+		$(".the-loss").css({"height": "25em"});
+
+	});
+	</script>
+<% end %>
+
+
+<div class="after-game-wrap callOut">
+	<div class="row">
+		<div class="small-2 small-offset-1 columns just-margin">
+			<h1>Winner</h1>
+		</div>
+		<div class="small-4 columns just-margin">
+			<h1>Loser</h1>
+		</div>
 	</div>
+  <div class="left-side-after-game-wrap the-win ">
+	    
+  	<!-- <img class="winning-pic" src=<%= @game.player.picture_url %>> -->
+  	<!-- <div class="the-win"> -->
+  		
+  	<!-- </div> -->
+  	
+  </div>
+  
+  
+  <div class="right-side-after-game-wrap the-loss">
+
+  	<!-- <img class="winning-pic" src=<%= @game.player.picture_url %>> -->
+  	
+  </div>
+	
 </div>
-<div class="small-3 small-centered columns after-game-options ">
-	<%= link_to 'Rematch', new_game_path %>
-</div>
+
 
 
 

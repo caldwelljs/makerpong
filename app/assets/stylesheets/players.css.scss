@@ -2,10 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
+.page-wrapping{
+	width: 100%;
+	background: -webkit-linear-gradient(left, #027853, #038b60, #027853);
+	min-height: 680px; // to make it full-screen top to bottom on most screens
+	background-size: cover;
+}
+.power-ranking-title{
+	color: #323232;
+	margin-top: 0.625em;
+}
 .ranking-items{
 	font-size: 1.75em;
 	font-weight: bold;
+	color: #323232;
+	a{
+		color: #323232;
+	}
 }
 .profile-rank{
 	color: #292830;

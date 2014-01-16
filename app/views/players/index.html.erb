@@ -6,17 +6,40 @@
 <div class="page-wrapping">
   <div class="row">
     <div class="small-8 medium-8 large-8 small-push-3 columns ">
-      <h1>Power Rankings</h1>
+      <h1 class="power-ranking-title">Power Rankings</h1>
     </div>
   </div>
   <div class="row">
-    <div class="small-6 medium-6 large-6 small-centered columns grab-pic">
-
+    <div class="small-8 small-centered columns grab-pic">
       <% Player.power_ranking.each do |player| %>
-
-      <h3 class="ranking-items"><%= ordinalize Player.power_ranking.find_index(player) + 1 %>
-        <img src=<%= player.picture_url %>>
-        <%= link_to player.name, player %> - <%= player.win_percentage %></h4> 
+      <table border="1">
+        <tr>
+          <td>
+            <h1 class="maker-ranking-title">AP TOP 25</h1>
+          </td>
+        </tr>
+            <tr>
+          <td>
+            a;lsdkfj
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+            <tr>
+          <td>
+            a;lsdkfj
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+        <h3 class="ranking-items"><%= ordinalize Player.power_ranking.find_index(player) + 1 %>
+          <img src=<%= player.picture_url %>>
+          <h4><%= link_to player.name, player %> - <%= player.win_percentage %></h4> 
+      </table>
         <% end %>
       </div>
     </div>

@@ -1,58 +1,4 @@
-// 
-// FOUNDATION SETTINGS
-//
-.sign-links a{
-	font-size: 0.3em;
-	display: inline-block;
-	font-family: "proxima-nova";
-	font-weight: 100;
-	color: white;
-  float: left;
-  height: 2em;
-  margin-top: 0.25em;
-	margin-left: 2em;
-}
-.sign-up-wrapper{
-	background: white;
-}
-.power-wrapping{
-  font-size: 6em;
-}
-body{
-	font-family: "proxima-nova";
-	background-color: red;
-}
-h1,h2,h3,h4,h5{
-	font-family: "proxima-nova";
-}
-.profile-name{
-	color: #25252C;
-	font-size: 2.5em
-}
-.profile-rank{
-	font-size:3.5em;
-	font-weight: bold;
-	color: #292830;
-}
-.profile-rank span{
 
-	color: #FBD300;
-}
-.profile-record{
-
-	color: #292830;
-}
-.profile-win-percent{
-  
-	color: #292830;
-}
-
-.page-wrapping{
-	width: 100%;
-	background: url( asset-path('assets/gradient.jpeg', image) ) no-repeat;
-	min-height: 680px; // to make it full-screen top to bottom on most screens
-	background-size: cover;
-}
 // Uncomment to use rem-calc() in your settings
 // @import "foundation/functions";
 
@@ -1042,3 +988,82 @@ h1,h2,h3,h4,h5{
 // $topbar-sticky-class: ".sticky";
 // $topbar-arrows: true; //Set false to remove the triangle icon from the menu item
  @import 'foundation';
+
+ // 
+// FOUNDATION SETTINGS
+//
+
+
+// .test-after-game-pic {
+// 		background-image: url('callOut_top.jpg'), url('greg-profile.png');
+// 		background-position: left top, right bottom;
+// 		background-repeat: no-repeat;
+// 	  padding-bottom: 400px;
+// 	  width: 30em;
+// }
+
+.left-after-game-pic img{
+  min-height: 90%;
+  opacity: 0;
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  // background-image: url('winner.jpg');
+  /* Set up positioning */
+  // background-position: left top, right bottom;
+  // background-repeat: no-repeat;
+  // padding-bottom: 100px
+  position: fixed;
+  top: 10;
+  left: 0;
+}
+.sign-links a{
+	font-size: 0.3em;
+	display: inline-block;
+	font-family: "proxima-nova";
+	font-weight: 100;
+	color: white;
+  float: left;
+  height: 2em;
+  margin-top: 0.25em;
+	margin-left: 2em;
+}
+.sign-up-wrapper{
+	background: white;
+}
+.power-wrapping{
+  font-size: 6em;
+}
+body{
+	font-family: "proxima-nova";
+	background-color: black;
+}
+h1,h2,h3,h4,h5{
+	font-family: "proxima-nova";
+}
+.profile-name{
+	color: #25252C;
+	font-size: 2.5em
+}
+.profile-rank{
+	font-size:3.5em;
+	font-weight: bold;
+	color: #292830;
+}
+.profile-rank span{
+
+	color: #FBD300;
+}
+.profile-record{
+
+	color: #292830;
+}
+.profile-win-percent{
+  
+	color: #292830;
+}
+
+
+a{
+	color: white;
+}
