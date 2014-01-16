@@ -22,9 +22,9 @@
           <div class="sign-up-label"><%= f.label :password_confirmation %><br />
           <%= f.password_field :password_confirmation %></div>
         
-          <div><%= f.submit "Sign up", class: "button sign-up-button" %></div>
+          <div class="sign-up-label" ><%= f.submit "Sign up", class: "button sign-up-button" %></div>
         <% end %>
-        <div class="sign-in-text-button"><%= render "devise/shared/links" %></div>
+        <%= render "devise/shared/links" %>
         
       </div>
     </div>

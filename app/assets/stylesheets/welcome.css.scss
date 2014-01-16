@@ -8,15 +8,17 @@
 
 .sign-up-button {
   height: 50px;
-  width: 120px;
-  background-color: #5fcf80;
+  width: 100%;
+  background-color: #308a4f;
   border-style: none; 
   border-width: none;
   border-radius: 5px;
+  vertical-align: middle;
+  display:inline-block;
 }
 
 .sign-up-button:hover {
-    background-color: #33CC33;
+    background-color: #76d691;
 }
 
 .homepage_link a {
@@ -25,13 +27,16 @@
 }
 
 .homelargeheading {
-  font-size: 2.5em;
+  color: #308a4f;
+  font-size: 1.5em;
   line-height: 1.15;
+  font-weight: bold;
 }
 
 .homeparagraph {
   font-size: 1em;
   line-height: 1.5;
+  
 }
 
 .title-text {
