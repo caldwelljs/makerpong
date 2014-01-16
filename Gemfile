@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'hirb'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
@@ -11,15 +9,12 @@ gem 'carrierwave'
 
 gem 'rmagick'
 
-
-
 # Add foundations gem
 
 gem 'foundation-rails'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 
-gem 'binding_of_caller'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -48,7 +43,13 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem "pry"
+group :development do
+  gem "pry"
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'hirb'
+end
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

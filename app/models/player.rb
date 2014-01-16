@@ -2,8 +2,8 @@ class Player < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable
-         # :validatable
+         :recoverable, :rememberable, :trackable,
+         :validatable
 
   has_many :games
   has_many :opponents, through: :games
@@ -26,5 +26,12 @@ class Player < ActiveRecord::Base
 
   def self.power_ranking
     self.all.sort {|a, b| b.win_percentage <=> a.win_percentage}
+  end
+
+  def self.streak
+        
+  end
+
+  def win_margin
   end
 end
