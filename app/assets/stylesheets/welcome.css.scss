@@ -6,10 +6,10 @@
   height: 100em;
 }
 .for-margin{
-  margin-top: 12em;
+  margin-top: 2em;
 }
 .sign-up-row{
-  margin-top: 6em;
+  margin-top: 2em;
 }
 .welcome-wrap{
   min-height: 100%;
@@ -38,13 +38,23 @@
   left: 0;
 }
 
-.home-page-featured-image  {
-    padding: 10px;
-    border-radius: 15px;
-    // background: url( asset-path('assets/old-man-ping-pong-player.jpg', image) ) no-repeat top;
-    // width: 100%;
-    // background-size: cover;
+.sign-up-box {
+  padding: 10px;  
+  width: 30%;
+  opacity:.9;
+  background-color: #fff;
+  border-radius: 5px;
 }
+
+
+.home-page-featured-image  {
+    padding: 0px;
+    background: url( asset-path('assets/ping-pong-game.jpg', image) ) no-repeat top;
+    height: auto;
+    width: 100%;
+    background-size: cover;
+  }
+
 
 .sign-up-button {
   height: 50px;
@@ -67,16 +77,25 @@
 }
 
 .homelargeheading {
-  color: #308a4f;
-  font-size: 1.5em;
+  color: #fffff;
+  font-size: 3.5em;
   line-height: 1.15;
   font-weight: bold;
+  font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
+  text-align: center;
+  opacity: 1;
 }
 
 .homeparagraph {
-  font-size: 1em;
-  line-height: 1.5;
-  
+  font-size: 1.5em;
+  line-height: 1.15;
+  color: black;
+  font-weight: bold;
+  font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
+  text-align: center;
+  opacity: .6;
+  background-color: #fff;
+  border-radius: 5px;
 }
 
 .title-text {
