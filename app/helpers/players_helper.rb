@@ -7,5 +7,4 @@ module PlayersHelper
       "Lost #{player.lose_streak}"
     end
   end
-
 end

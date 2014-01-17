@@ -23,4 +23,14 @@ module ApplicationHelper
   def last_name
   end
 
+  def profile_pic_display
+    if player.picture_url.empty?
+      # images/default_profile_pic_big.jpg
+      "Default"
+    else
+      # player.picture_url
+      "Filler"
+    end
+  end
+
 end
