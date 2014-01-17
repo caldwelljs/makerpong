@@ -109,21 +109,6 @@ h3{
   padding-right: 0;*/
 }
 
-.game_card_name {
-  text-align: left;
-  font-size: 16px;
-  font-weight: 350;
-  padding: 10px;
-  color: #404040;
-}
-
-.game_card_score {
-  text-align: center;
-  font-size: 16px;
-  font-weight: 350;
-  padding: 10px;
-  color: #404040;
-}
 
 .card_title {
   padding-left: 0.875em;
