@@ -1,71 +1,75 @@
-<h2>Edit Your Info</h2>
-<!-- <%= resource_name.to_s.humanize %> -->
+<div class="row">
+  <div class="small-12 medium-12 large-12 columns">     
+    <h2>Edit Your Info</h2>
+    <!-- <%= resource_name.to_s.humanize %> -->
 
-<p>You're in the right spot to update your profile, password and photos. </p>
+    <p>You're in the right spot to update your profile, password and photos. </p>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
-  <%= devise_error_messages! %>
+    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+      <%= devise_error_messages! %>
 
-  <div class="sign-up-label"><%= f.label :full_name %><br />
-  <%= f.text_field :name, :autofocus => true %></div>
+      <div class="sign-up-label"><%= f.label :full_name %><br />
+      <%= f.text_field :name, :autofocus => true %></div>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+      <div><%= f.label :email %><br />
+      <%= f.email_field :email, :autofocus => true %></div>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
 
-  <div><%= f.label :change_password %><br />
-  <%= f.password_field :password, :autocomplete => "off" %></div>
+      <div><%= f.label :change_password %><br />
+      <%= f.password_field :password, :autocomplete => "off" %></div>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+      <div><%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation %></div>
 
-  <div><%= f.label :current_password %><br />
-  <%= f.password_field :current_password %></div>
-  
-  <div><%= f.submit "Update" %></div>
-<% end %>
+      <div><%= f.label :current_password %><br />
+      <%= f.password_field :current_password %></div>
+      
+      <div><%= f.submit "Update" %></div>
+    <% end %>
 
-<h3 class="lower_headers">Manage Your Photos</h3>
+    <h3 class="lower_headers">Manage Your Photos</h3>
 
-<%= form_for @player do |f| %>
-  <tr>
-    <th><%= f.label(:upload_profile_pic, "Upload Main Profile Pic") %></th>
-    <td><%= f.file_field(:picture_url) %></td>
-  </tr>
-  <tr>
-    <th><%= f.label(:upload_winning_pic1, "Upload Celebration Pic #1") %></th>
-    <td><%= f.file_field(:winning_pic1) %></td>
-  </tr>
-  <tr>
-    <th><%= f.label(:upload_winning_pic2, "Upload Celebration Pic #2") %></th>
-    <td><%= f.file_field(:winning_pic2) %></td>
-  </tr>
-  <tr>
-    <th><%= f.label(:upload_winning_pic3, "Upload Celebration Pic #3") %></th>
-    <td><%= f.file_field(:winning_pic3) %></td>
-  </tr>
-  <tr>
-    <th><%= f.label(:upload_losing_pic1, "Upload Losing Pic #1") %></th>
-    <td><%= f.file_field(:losing_pic1) %></td>
-  </tr>
-  <tr>
-    <th><%= f.label(:upload_losing_pic2, "Upload Losing Pic #2") %></th>
-    <td><%= f.file_field(:losing_pic2) %></td>
-  </tr>
-  <tr>
-    <th><%= f.label(:upload_losing_pic3, "Upload Losing Pic #3") %></th>
-    <td><%= f.file_field(:losing_pic3) %></td>
-  </tr>
-  <div class="form-buttons">
-    <%= submit_tag("Update profile") %>
+    <%= form_for @player do |f| %>
+      <tr>
+        <th><%= f.label(:upload_profile_pic, "Upload Main Profile Pic") %></th>
+        <td><%= f.file_field(:picture_url) %></td>
+      </tr>
+      <tr>
+        <th><%= f.label(:upload_winning_pic1, "Upload Celebration Pic #1") %></th>
+        <td><%= f.file_field(:winning_pic1) %></td>
+      </tr>
+      <tr>
+        <th><%= f.label(:upload_winning_pic2, "Upload Celebration Pic #2") %></th>
+        <td><%= f.file_field(:winning_pic2) %></td>
+      </tr>
+      <tr>
+        <th><%= f.label(:upload_winning_pic3, "Upload Celebration Pic #3") %></th>
+        <td><%= f.file_field(:winning_pic3) %></td>
+      </tr>
+      <tr>
+        <th><%= f.label(:upload_losing_pic1, "Upload Losing Pic #1") %></th>
+        <td><%= f.file_field(:losing_pic1) %></td>
+      </tr>
+      <tr>
+        <th><%= f.label(:upload_losing_pic2, "Upload Losing Pic #2") %></th>
+        <td><%= f.file_field(:losing_pic2) %></td>
+      </tr>
+      <tr>
+        <th><%= f.label(:upload_losing_pic3, "Upload Losing Pic #3") %></th>
+        <td><%= f.file_field(:losing_pic3) %></td>
+      </tr>
+      <div class="form-buttons">
+        <%= submit_tag("Update profile") %>
+      </div>
+    <% end %>
+
+    <h3 class="lower_headers">Delete my account</h3>
+
+    <p><%= button_to "Delete my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %></p>
+
+    <%= link_to "Back", :back %>
   </div>
-<% end %>
-
-<h3 class="lower_headers">Delete my account</h3>
-
-<p><%= button_to "Delete my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %></p>
-
-<%= link_to "Back", :back %>
+</div>

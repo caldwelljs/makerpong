@@ -70,6 +70,7 @@
   height: 50em;
 }
 
+
 h3{
 	color: #3A3A3A;
 }
@@ -128,6 +129,15 @@ h3{
 }
 
 .game_card_name {
+  text-align: left;
+  font-size: 16px;
+  font-weight: 200;
+  padding: 10px;
+  color: #404040;
+}
+
+.game_card_score {
+  text-align: center;
   font-size: 16px;
   font-weight: 200;
   padding: 10px;
@@ -135,6 +145,7 @@ h3{
 }
 
 .card_title {
+  padding-left: 0.875em;
   font-weight: 600;
   color: #404040;
 }
