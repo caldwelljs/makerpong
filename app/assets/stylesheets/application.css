@@ -75,9 +75,6 @@ h3{
 	color: #3A3A3A;
 }
 	
-.columns{
-	/*border: 1px solid green;*/
-}
 
 .welcome_card_style {
   padding: 20px 20px;
@@ -106,12 +103,7 @@ h3{
 	border-radius: 5px;
 }
 
-.grab-pic img {
-	width: 1.5em;
-	height: 1.5em;
-	display: inline-block;
-	border-radius: 5px;
-}
+
 
 
 // Unsure about how to get these pics to fit.
@@ -123,7 +115,9 @@ h3{
 // }
 
 .columns {
-  border: 1px solid green;
+ /* border: 1px solid green;*/
+/*  padding-left: 0;
+  padding-right: 0;*/
 }
 
 .card_style {

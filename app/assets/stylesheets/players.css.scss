@@ -1,23 +1,99 @@
 // Place all the styles related to the players controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-.ranking-wrapping{
-	background: linear-gradient( #064036 4%, white 89%)
+.maker-ranking-title{
+	color: white;
+	font-size: 1.10em;
+	background-color: #064036;
+	margin: 0;
+	padding: 0.45em 0.75em 0.45em 0.75em;
 }
-.power-ranking-title{
-	color: #323232;
-	margin-top: 0.625em;
+.title-row{
+  margin: 0;
+	background-color: #064036;
+}
+.title-data{
+	width: 20em;
+	padding: 0;
+
+}
+.rank-table{
+  margin-top: 6em;
+}
+#top-ranking-box{
+	margin-top: 5em;
+
+}
+.ranking-wrapping{
+	background: linear-gradient( #064036 4%, white 89%);
+}
+.ranking-title{
+	font-size: 1.25em;
+	color: #545454;
 }
 .ranking-items{
-	font-size: 1.75em;
+	font-size: 1.45em;
 	font-weight: bold;
 
-	color: #323232;
+	color: #545454;
 	a{
-		color: #323232;
+		color: #545454;
 	}
+}
+.rank-player-name a{
+	color: #2A69BC;
+	font-weight: 800;
+	font-family: "proxima-nova";
+	font-size: 0.85em;
+	display: inline-block;
+	margin-left: 1em;
+	padding-right: 3em;
+
+}
+.rk-title{
+	margin-left: 0.9em;
+}
+.pct-title{
+	margin-left: 1.1em;
 }
 .profile-rank{
 	color: #292830;
+}
+.grab-pic img {
+	width: 1.5em;
+	height: 1.5em;
+	display: inline-block;
+	border-radius: 5px;
+}
+.rank-record{
+	font-size: 1em;
+	font-family: "Verdana";
+	margin-left: 0.4em;
+
+}
+.rank-pct{
+	font-size: 1em;
+	font-family: "Verdana";
+td span{
+	color: red;
+}
+
+}
+.sub-title{
+	font-weight: 800;
+	color: #4D4D4D;
+	background: linear-gradient(top, #D3D3D3, #E9E9E9);
+	border-bottom: 1px solid #C9C9C9;
+	padding: 0.4em;
+}
+
+.card_style-two {
+  padding: 15px 15px;
+  
+  // border-radius: 3px;
+
+  background-color: #EBEBEB;
+  // border: solid 4px #ffffff;
+  border-bottom-width: 2px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
 }
