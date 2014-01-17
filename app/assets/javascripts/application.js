@@ -27,9 +27,9 @@
 
 $(document).ready(function() {
   if (game.winner === game.player) {
-    $('#player_row').addClass('.winner_style')
+    $('.player_row').addClass('.winner_style')
   }
   else if (game.winner === game.opponent) {
-    $('#opponent_row').addClass('.winner_style')
+    $('.opponent_row').addClass('.winner_style')
   }
 });

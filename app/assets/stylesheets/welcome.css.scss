@@ -119,10 +119,11 @@
 }
 
 .leader_title_style {
-  font-size: 1.4em;
-  font-weight: 400;
-  text-align: center;
-  color: #333333;
+  // padding-left: ;
+  font-size: 1.8675em;
+  font-weight: 600;
+  text-align: left;
+  color: #404040;
   margin-bottom: 0.5em;
 }
 
@@ -183,6 +184,10 @@
   padding: 0.125em;
   border-radius: 5px;
   }
+}
+
+.winner_style {
+  color: red;
 }
 
 .table_style {
