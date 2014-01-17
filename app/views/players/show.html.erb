@@ -1,20 +1,20 @@
-<div class="page-wrapping">
-	<div class="row">
-		<div class="small-5 large-5 small-centered columns">
+<div class="row">
+  <div class="small-12 medium-12 large-12 columns">     
+  <h1>Player Profile</h1>
+		<div class="profile-pic"><%= image_tag @player.picture_url %></div>
 		<h2 class="profile-rank">Ranking: <span><%=  ordinalize @rank %></span></h2><h2 class="profile-record">Record (<%= @player.wins %> - <%= @player.losses %>)</h2>
-		    <h2 class="profile-win-percent"> Win % <%= @player.win_percentage %></h2>
-				<h2 class="profile-streak"> Streak: <%= streak_display(@player) %></h2>
-				<div class="profile-pic"><%= image_tag @player.picture_url %></div>
-				<h1 class="profile-name"><%= @player.name %><br></h1>
+			    <h2 class="profile-win-percent"> Win % <%= @player.win_percentage %></h2>
+					<h2 class="profile-streak"> Streak: <%= streak_display(@player) %></h2>
+					
+					<h1 class="profile-name"><%= @player.name %><br></h1>
 
-				<h3>Player Stats</h3>
-				<h4>Recent Game played</h4>
+					<h3>Player Stats</h3>
+					<h4>Recent Game played</h4>
 
-				<% @recent_games.last(5).each do |game| %>
-				<p><%= game.player.name %> - <%= game.player_score %> vs <%= game.opponent_score %> - <%= game.opponent.name %></p>
-				<% end %>
-		</div>
+					<% @recent_games.last(5).each do |game| %>
+					<p><%= game.player.name %> - <%= game.player_score %> vs <%= game.opponent_score %> - <%= game.opponent.name %></p>
+					<% end %>
   </div>
-</div>	
+</div>
 
 
