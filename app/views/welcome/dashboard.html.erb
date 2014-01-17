@@ -5,7 +5,7 @@
     <div class="row">
       <div class="small-8 medium-8 large-8 columns card_column">
         <div>
-          <h3 class="card_title">
+          <h3 class="card_title title_holders">
             Title Holders
           </h3>
         </div>
@@ -89,7 +89,7 @@
       <div class="small-12 medium-12 large-12 columns">
         <div>
           <h3 class= "card_title">
-            Recent Games
+            <%= link_to 'Recent Games', games_path %>
           </h3>        
         </div>
         <% @games.last(5).reverse.each do |game| %>
@@ -124,14 +124,11 @@
         </div>
         <% end %>
       </div>
+    </div>
   </div>
-
-
-
-
-
-<div class="row">
-  <div class="bottom-links">
-    <%= link_to 'Games Index', games_path %>
+  <div class="row">
+    <div class="bottom-links">
+      
+    </div>
   </div>
 </div>
