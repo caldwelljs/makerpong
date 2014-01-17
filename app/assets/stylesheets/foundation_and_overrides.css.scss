@@ -1035,7 +1035,7 @@ $table-row-font-color: #222;
 }
 body{
 	font-family: "proxima-nova";
-	background-color: #ededed;
+	background-color: #fff;
 }
 h1,h2,h3,h4,h5{
 	font-family: "proxima-nova";
@@ -1049,9 +1049,11 @@ h1,h2,h3,h4,h5{
 	font-weight: bold;
 	color: #292830;
 }
-.profile-rank span{
+.arrow{
 
-	color: #FBD300;
+	color: #74e749;
+	font-size: 0.8em;
+	margin-left: 1.25em;
 }
 .profile-record{
 
@@ -1065,4 +1067,12 @@ h1,h2,h3,h4,h5{
 
 a{
 	color: white;
+}
+.sub-title{
+	font-weight: 800;
+	color: #4D4D4D;
+	background: linear-gradient(top, #D3D3D3, #E9E9E9);
+	background: -webkit-linear-gradient(top, #D3D3D3, #E9E9E9);
+	border-bottom: 1px solid #C9C9C9;
+	padding: 0.4em;
 }

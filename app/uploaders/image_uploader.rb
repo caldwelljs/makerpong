@@ -33,12 +33,12 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :thumb do
-    process :scale => [50, 50]
+    process :resize_to_fill => [75, 75]
   end
 
   version :medium do
       # this is one interpretation of what 'medium' is, yours may be different
-    process :resize_to_fit => [200,200] # this means resize the image to 800 x 800 pixels
+    process :resize_to_fill => [800,800] # this means resize the image to 800 x 800 pixels
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

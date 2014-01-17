@@ -1,3 +1,5 @@
+
+// General and Welcome#Index styling
 .page-wrapping{
   width: 100%;
   background: -webkit-linear-gradient(left, #3A945B, #64b481, #3A945B);
@@ -15,11 +17,8 @@
   min-height: 100%;
   opacity: 1;
   background-color: black;
- 
   width: 100%;
   height: auto;
-  
-
   position: fixed;
   top: 5;
   left: 0;
@@ -106,23 +105,41 @@
   border-radius: 5px;
 }
 
-.title-text {
+
+// Dashboard styling
+
+
+.leader_title_style {
+  font-size: 1.4em;
+  font-weight: 400;
   text-align: center;
-  font-size: 2.3125em;
   color: #333333;
-  font-weight: 300;
-  margin-top: 1em;
   margin-bottom: 0.5em;
 }
 
 .title-holder {
   color: #262626;
   display: block;
-  font-size: 14px;
-  font-weight: 100;
-  line-height: 1.4;
-  overflow: hidden;
-  white-space: nowrap;;
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-top: 15px;
+  white-space: nowrap;
+}
+
+.dash-title-pic {
+  text-align: center;
+  display: inline-block;
+  img {
+    border-radius: 5px;
+    width: 7em;
+    height: 7em;
+  }
+
+
+.game-card-pic {
+    width: 7em;
+    height: 7em;
+  }
 }
 
 .league_leader_preview {
@@ -131,6 +148,40 @@
 
 .power_ranking_card {
   padding: 20px 0 20px 0;
+}
+
+.recent_game {
+  img {
+  width: 3em;
+  height: 3em;
+  padding: 0.125em;
+  border-radius: 5px;
+  }
+}
+
+.table_style {
+  border: solid 1px #666666;
+  margin: 0 auto;
+}
+
+.table-title-row {
+  background-color: #083930;
+}
+
+.table-title {
+  color: #ffffff;
+}
+
+.table_headers {
+  color: #4b4b4b;
+}
+
+.card_column {
+  padding: 0;
+}
+
+.date_row {
+  padding-bottom: 10px;
 }
 
 
