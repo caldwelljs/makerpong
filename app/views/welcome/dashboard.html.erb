@@ -9,7 +9,7 @@
             Title Holders
           </h3>
         </div>
-        <div class= "leaderboard_card card_style">
+        <div class= "leaderboard_card dash_card_style">
           <div class="row">
             <div class="small-12 medium-12 large-12 columns">
               <div class="small-3 medium-3 large-3 columns">
@@ -62,7 +62,7 @@
         </div>
       </div>
       <div class="small-4 medium-4 large-4 columns card_column">
-        <div class="power_ranking_card card_style">
+        <div class="power_ranking_card dash_card_style">
           <table class="table_style">
             <tr class="table-title-row" >
               <td class="table-title" colspan="3">League Leaders</td>
@@ -94,7 +94,7 @@
         </div>
         <% @games.last(6).reverse.each do |game| %>
         <div class="small-6 medium-6 large-6 columns card_column">
-          <div class="recent_game card_style">
+          <div class="recent_game dash_card_style">
             <div class="date_row">
               <%= game.created_at.strftime("%I:%M%p - %a, %b %Y") %>
             </div>

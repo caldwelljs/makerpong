@@ -102,32 +102,11 @@ h3{
 
 
 
-
-// Unsure about how to get these pics to fit.
-// .card_pic {
-//   height: 10px:
-//   width: 10px;
-//   display: inline-block;
-//   border-radius: 5px;
-// }
-
-
-
+/* Green Borders for Styling */
 /*.columns {*/
  /* border: 1px solid green;*/
 /*  padding-left: 0;
   padding-right: 0;*/
-}
-
-
-.card_style {
-  padding: 20px 20px;
-  margin: 10px 10px 10px 10px;
-  border-radius: 3px;
-  background-color: #fff;
-  border: solid 4px #ffffff;
-  border-bottom-width: 2px;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
 }
 
 .game_card_name {

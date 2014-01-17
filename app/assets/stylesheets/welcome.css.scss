@@ -108,6 +108,16 @@
 
 // Dashboard styling
 
+.dash_card_style {
+  padding: 20px 20px;
+  margin: 10px 10px 10px 10px;
+  border-radius: 3px;
+  background-color: #fff;
+  border: solid 4px #ffffff;
+  border-bottom-width: 2px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+
 .leader_title_style {
   font-size: 1.4em;
   font-weight: 400;
