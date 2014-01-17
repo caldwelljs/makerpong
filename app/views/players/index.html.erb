@@ -5,47 +5,79 @@
 
 <div class="ranking-wrapping">
   <div class="row">
-    <div class="small-8 medium-8 large-8 small-push-3 columns ">
-      <h1 class="power-ranking-title">Power Rankings</h1>
+    <div class="small-8 columns top-ranking-box ">
+      <div class= "card_style-two">
+        <h1 class = "ranking-title">2014 MakerSquare Ping Pong Rankings</h1>
+      </div>
     </div>
   </div>
+
   <div class="row">
-    <table border="1">
-      <tr>
-        <td>
-          <h1 class="maker-ranking-title">AP TOP 25</h1>
+    <div class="small-8 grab-pic" >
+      
+    <table>
+      <tr class= "title-row">
+        <td class="title-data" colspan="6">
+          <h1 class="maker-ranking-title">Maker Top 25</h1>
         </td>
       </tr>
-          <tr>
-        <td>
-          a;lsdkfj
+          <tr class="first-row">
+        <td class='sub-title'>
+          RK
         </td>
-        <td>
+        <td class='sub-title'>
+          Name
         </td>
-        <td>
+        <td class='sub-title'>
+          Record
+        </td>
+        <td class='sub-title'>
+          PCT
+        </td>
+        <td class='sub-title'>
+          PREV
+        </td>
+        <td class='sub-title'>
+          Trending
         </td>
       </tr>
-          <tr>
-        <td>
-          a;lsdkfj
-        </td>
-        <td>
-        </td>
-        <td>
-        </td>
-      </tr>
-<!--     <div class="small-8 small-centered columns grab-pic">
       <% Player.power_ranking.each do |player| %>
-
-        <h3 class="ranking-items"><%= ordinalize Player.power_ranking.find_index(player) + 1 %>
-          <img src=<%= player.picture_url %>>
-          <h4><%= link_to player.name, player %> - <%= player.win_percentage %></h4> 
-      </table>
-
+          <tr>
+        <td>
+          <h3 class="ranking-items">
+            <%= ordinalize Player.power_ranking.find_index(player) + 1 %>
+          </h3>
+       </td>
+        <td>
+          <h4 class="rank-player-name"><img src=<%= player.picture_url %>><%= link_to player.name, player %></h4>
+        </td>
+        <td>
+          <h4 class="rank-record"><%= player.wins %>-<%= player.losses %></h4>
+        </td> 
+        <td>
+          <h4 class="rank-pct"><%= player.win_percentage %></h4>
+        </td> 
+        <td>
+          <%=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25].sample %>
+        </td>
+        <td>
+          <%=[1,2,3,4,5,6].sample %>
+        </td>
+      </tr>
+      
+      
+        
         <% end %>
-      </div>
-    </div> -->
+        </table>
+  </div>
+  </div>
+ </div>
+      
+ 
+        
 
-</div>
+   
+
+
 
 

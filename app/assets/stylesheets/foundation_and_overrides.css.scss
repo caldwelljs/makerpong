@@ -832,7 +832,7 @@
 
 // These control the background color for the table and even rows
 // $table-bg: #fff;
-// $table-even-row-bg: #f9f9f9  ;
+$table-even-row-bg: #F3F3F3;
 
 // These control the table cell border style
 // $table-border-style: solid;
@@ -1066,4 +1066,12 @@ h1,h2,h3,h4,h5{
 
 a{
 	color: white;
+}
+.sub-title{
+	font-weight: 800;
+	color: #4D4D4D;
+	background: linear-gradient(top, #D3D3D3, #E9E9E9);
+	background: -webkit-linear-gradient(top, #D3D3D3, #E9E9E9);
+	border-bottom: 1px solid #C9C9C9;
+	padding: 0.4em;
 }
