@@ -25,7 +25,6 @@ h1 {
   margin-top: 30px;
 }
 
-
 .section-titles {
   font-size: 2.3125em;
   color: #404040;
@@ -35,16 +34,13 @@ h1 {
   text-align: center;
 }
 
-
-
 .pic_upload_label th {
   margin-top: 50px;
 }
 
 h2, h1 {
-  color: white;
+  color: #404040;
 }
-
 
 .title-pic {
   text-align: center;
@@ -54,15 +50,40 @@ h2, h1 {
     height: 7em;
   }
 
-  .title-text {
+  .leader_title_style {
     font-size: 1.4em;
     font-weight: 400;
-    margin-bottom: 15px;
   }
 
   .title-holder {
-    font-size: 1.2em;
+    font-size: 0.875rem;
     font-weight: 400;
     margin-top: 15px;
   }
+}
+
+.table_style {
+  border: solid 1px #666666;
+  margin: 0 auto;
+
+}
+
+.table-title-row {
+  background-color: #083930;
+}
+
+.table-title {
+  color: #ffffff;
+}
+
+.table_headers {
+  color: #4b4b4b;
+}
+
+.card_column {
+  padding: 0;
+}
+
+.date_row {
+  padding-bottom: 10px;
 }
