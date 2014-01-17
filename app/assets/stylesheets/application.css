@@ -21,6 +21,7 @@
   float: left;
   height: 2em;
  	margin-left: 2em;
+  padding-top: 15px;
  }
  .weird-link a {
  	padding: 0.15em;
@@ -95,10 +96,6 @@ h3{
   width: 200px;
 }
 
-.sign-up-button {
-  border-radius: 5px;
-  width: 200px;
-}
 
 .profile-pic img {
 	width: 17em;
