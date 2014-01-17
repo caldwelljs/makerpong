@@ -2,7 +2,7 @@
   belongs_to :player
   belongs_to :opponent, :class_name => "Player"
 
-  # after_save :logresults, :streak, :margin
+  after_create :logresults, :streak, :margin
 
   def winning_player
     Player.find(self.winner).email
@@ -12,15 +12,13 @@
     if self.player_score > self.opponent_score 
       self.player.wins += 1
       self.opponent.losses += 1
-      self.winner = player.id
-      self.save
+      self.update_columns(winner: player.id)
       self.player.save
       self.opponent.save
     else
       self.opponent.wins += 1
       self.player.losses += 1
-      self.winner = opponent.id
-      self.save
+      self.update_columns(winner: opponent.id)
       self.player.save
       self.opponent.save
     end
@@ -45,8 +43,8 @@
   end
 
   def margin
-    self.point_margin = self.player_score - self.opponent_score
-    self.save
+    margin_value = self.player_score - self.opponent_score
+    self.update_columns(point_margin: margin_value) 
   end
 
   def self.worst_loss
