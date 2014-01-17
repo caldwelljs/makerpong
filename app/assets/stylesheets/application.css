@@ -133,7 +133,7 @@ h3{
 .game_card_name {
   text-align: left;
   font-size: 16px;
-  font-weight: 200;
+  font-weight: 350;
   padding: 10px;
   color: #404040;
 }
@@ -141,7 +141,7 @@ h3{
 .game_card_score {
   text-align: center;
   font-size: 16px;
-  font-weight: 200;
+  font-weight: 350;
   padding: 10px;
   color: #404040;
 }
@@ -150,6 +150,12 @@ h3{
   padding-left: 0.875em;
   font-weight: 600;
   color: #404040;
+}
+
+.card_title a {
+  font-weight: 600;
+  color: #404040;
+  padding-left: -0.875em;
 }
 
 .main_card {
