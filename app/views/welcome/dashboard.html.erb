@@ -1,6 +1,6 @@
 
 <div class="row">
-  <div class="small-12 medium-12 large-12 columns">     
+  <div class="small-12 medium-12 large-12 columns main_card">     
   <h1>Dashboard</h1>
     <div class="row">
       <div class="small-8 medium-8 large-8 columns card_column">
@@ -12,49 +12,49 @@
         <div class= "leaderboard_card card_style">
           <div class="row">
             <div class="small-12 medium-12 large-12 columns">
-              <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
+              <div class="small-3 medium-3 large-3 columns">
                 <div class="leader_title_style">King of the Hill</div>
               </div>
-              <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
+              <div class="small-3 medium-3 large-3 columns">
                 <div class="leader_title_style">Biggest Loser</div>
               </div>
-              <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
+              <div class="small-3 medium-3 large-3 columns">
                 <div class="leader_title_style">Longest Streak</div>
               </div>
-              <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
+              <div class="small-3 medium-3 large-3 columns">
                 <div class="leader_title_style">Worst Loss</div>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="small-12 medium-12 large-12 columns">
-              <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
+              <div class="small-3 medium-3 large-3 columns dash-title-pic">
                 <div>
                   <img src=<%= Player.power_ranking.first.picture_url %>></div>
               </div>
-              <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
+              <div class="small-3 medium-3 large-3 columns dash-title-pic">
                 <img src=<%= Player.power_ranking.last.picture_url %>> 
               </div>
-              <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
+              <div class="small-3 medium-3 large-3 columns dash-title-pic">
                 <img src=<%= Player.win_streak_sorting.first.picture_url %>>
               </div>
-              <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
+              <div class="small-3 medium-3 large-3 columns dash-title-pic">
                 <img src=<%= worst_loss_display_pic %>>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="small-12 medium-12 large-12 columns">
-              <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
+              <div class="small-3 medium-3 large-3 columns dash-title-pic">
                 <div class="title-holder"><%= Player.power_ranking.first.name %></div class="title-holder">
               </div>
-              <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
+              <div class="small-3 medium-3 large-3 columns dash-title-pic">
                 <div class="title-holder"><%= Player.power_ranking.last.name %></div class="title-holder">
               </div>
-              <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
+              <div class="small-3 medium-3 large-3 columns dash-title-pic">
                 <div class="title-holder"><%= Player.win_streak_sorting.first.name %></div class="title-holder">
               </div>
-              <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
+              <div class="small-3 medium-3 large-3 columns dash-title-pic">
                  <div class="title-holder"><%= worst_loss_display %></div>
               </div>
             </div>

@@ -151,3 +151,9 @@ h3{
   font-weight: 600;
   color: #404040;
 }
+
+.main_card {
+  border-radius: 3px;
+  background-color: #ededed;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.3);
+}
