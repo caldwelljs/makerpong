@@ -1,4 +1,189 @@
-<div class="row">
+<div class="ranking-wrapping">
+  <% if player_signed_in? %>
+  <div class="row ">
+    <div class="small-2 nav-rowing columns">
+      <h1 class="title">
+        <%= link_to 'MakerPong', welcome_dashboard_path %>
+      </h1>
+    </div>
+    <div class= "small-8 columns">
+      <h1 class="top-right-links weird-link">
+        <%= link_to 'Power Rankings', players_path %>
+      </h1>
+      <h1 class="top-right-links">
+        <%= link_to 'New Game', new_game_path %>
+      </h1>
+      <h1 class="top-right-links">
+        <%= link_to 'Profile', player_url(current_player) %>
+      </h1>
+      <h1 class="top-right-links">
+        <%= link_to 'Edit Settings', edit_player_registration_path %>
+      </h1>
+      <h1 class="top-right-links">
+        <%= link_to 'Sign out', destroy_player_session_path, method: :delete %>
+      </h1>
+    </div>
+  </div>
+  <% else %>  
+  <div class="row">
+    <div class="small-2 columns">
+      <h1 class="title">
+        <%= link_to 'MakerPong', root_url %>
+      </h1>
+    </div>
+    <div class="small-3 small-offset-6 columns">
+      <h1 class="top-right-links">
+        <%= link_to "Sign in", new_player_session_path %>
+      </h1>
+    </div>
+  </div>
+  <% end %>
+
+
+<!-- 
+  end of nav bar -->
+
+
+
+  <div class="row ">
+    <div class="small-5  prof-name-wrap columns">
+      <!-- <div class="profile-pic"><%= image_tag @player.picture_url %></div> -->
+      <h1 class="profile-name"><%= @player.name %></h1>
+
+
+      <div class="the-border"></div>
+
+
+      <h2 class="profile-record"><span><%= @player.wins %><span>-<span><%= @player.losses %></span>, <span><%=  ordinalize @rank %></span> in Maker Division</h2>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="small-12 profile-card columns">
+   
+   
+
+
+      <!-- <div class="profile-pic"><%= image_tag @player.picture_url %></div> -->
+      <div class="row">
+        <div class="small-8 profile-table columns">
+          <table>
+            <tr class="first-row">
+              <td class='table-title'>
+                <div class="prof-pic-title">Picture</div>
+              </td>
+          <td class='table-title'>
+            <div class="prof-rank-title">Rank</div>
+          </td>
+          
+          <td class='table-title'>
+            Record
+          </td>
+          <td class='table-title'>
+            <div class="pct-title">PCT</div>
+          </td>
+          <td class='table-title'>
+            PREV
+          </td>
+          <td class='table-title'>
+            Trending
+          </td>
+        </tr>
+        <tr class='pic-row'>
+          <td>
+            <img class='new-prof-pic' src=<%= @player.picture_url %>>
+          </td>
+          <td class="table-data">
+            <h1 class="table-rank"><%=  ordinalize @rank %></h1>
+          </td>
+        </tr>
+          </table>
+          </div>
+        <div class="small-4   columns prof-last-game-date last-game-container">
+          <%= @player.games.get_all_recent_games_for(@player).last.created_at.strftime("%a, %b %Y") %>
+          <div class="time">
+            <%= @player.games.get_all_recent_games_for(@player).last.created_at.strftime("%I:%M%p") %>
+          </div>
+        </div>
+      </div>
+    
+      <div class="row">
+        <div class="small-4 small-offset-8 last-game-container  columns">
+          <div class="row last-game-brazos">
+            <h3 class="last-game">Last Game</h3>
+            <div class="small-2 small-offset-10  columns">
+
+              <h3 class="location">Brazos</h3>
+            </div>
+          </div>
+          <div class="row relative-container">
+            <h2  id=<%= "w" if @player.games.last.winner == @player.games.last.player_id %>>W</h2>
+            <h2  id=<%= "w2" if @player.games.last.winner == @player.games.last.opponent_id %>>W</h2>
+            
+              
+          
+            
+          <!--   <div class="small-3 columns score-holder ">
+              <div class="last-game-mini-score">
+                
+                -
+              </div>
+                <span class="dash"></span>
+              <div class="last-game-mini-score">
+                <%= @player.games.last.opponent_score %>
+              </div>
+            </div> -->
+            <h3 class="mini-score"><%= @player.games.last.player_score %>-<%= @player.games.last.opponent_score %></h3>
+       <!--      <div class="small-1 small-offset-1 columns w2-container ">
+             
+            </div> -->
+
+          </div>
+          <div class="row">
+
+
+            <div class="small-12  columns prof-last-game-pic">
+              <div class="prof-mini-pic"><img src=<%= @player.games.get_all_recent_games_for(@player).last.player.picture_url %>>
+              </div>
+            
+              <div class="vs">VS</div>
+              <div class="prof-oppon-pic">
+                <img src=<%= @player.games.get_all_recent_games_for(@player).last.opponent.picture_url %>>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="small-12 card-player-pos columns">
+              <h4 class="card-player-name"><%= @player.first_name %></h4>
+              <h4 class="card-opponent-name"> <%= @player.games.last.opponent.first_name %></h4>
+              <div class="mini-player-record">(<%= @player.wins %><span>-<span><%= @player.losses %>)</div>
+              <div class="mini-player-record2">(<%= @player.games.last.opponent.wins %><span>-<span><%= @player.games.last.opponent.losses %>)</div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="row">
   <div class="small-12 medium-12 large-12 columns">     
   <h1>Player Profile</h1>
 		<div class="profile-pic"><%= image_tag @player.picture_url %></div>
@@ -16,5 +201,5 @@
 					<% end %>
   </div>
 </div>
-
+ -->
 

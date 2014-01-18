@@ -1,6 +1,281 @@
 // Place all the styles related to the players controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.last-game-container{
+	border: 1px solid #D2D2D2;
+}
+.prof-name-wrap{
+	padding: 0;
+}
+.table-title {
+	font-weight: 800;
+	color: #4D4D4D;
+	background-color: #06483D;
+	padding: 0.75em;
+
+}
+.table-data{
+	background-color: white;
+	text-align: center;
+}
+.new-prof-pic{
+	height: 14.32em;
+	width: 14.32em;
+}
+.pic-row td{
+	padding: 0;
+}
+
+.table-rank{
+	font-family: "proxima-nova";
+	font-weight: bold;
+}
+.profile-table{
+	padding: 0;
+	height: 2.6em;
+}
+.prof-rank-title{
+	color: white;
+	font-family: "proxima-nova";
+	font-weight: 800;
+	width: 8em;
+	text-align: center;
+}
+.prof-pic-title{
+	color: white;
+	font-family: "proxima-nova";
+	font-weight: 800;
+	text-align: center;
+}
+.time{
+	float: right;
+	color: #3A3A3A;
+	font-weight: 400;
+}
+.last-game-brazos{
+  position: relative;
+}
+.last-game{
+	position: absolute;
+	top: 0.7em;
+	left: 6.9em;
+	font-family: "proxima-nova";
+	font-size: 1.1em;
+}
+.w-container{
+   margin-right: 0;
+
+}
+.relative-container{
+	position: relative;
+  height: 3em;
+}
+
+.mini-score{
+	position: absolute;
+	bottom: 0;
+	left: 6.72em;
+  font-family: "proxima-nova";
+	font-weight: 800;
+	font-size: 1.25em;
+	color: #717171;
+}
+#w{
+	color: green;
+	font-family: "proxima-nova";
+	font-weight: 800;
+	font-size: 1.25em;
+  position: absolute;
+	display: block;
+	bottom: 0;
+	left: 3.82em;
+
+}
+#w2{
+	color: green;
+	font-family: "proxima-nova";
+	font-weight: 800;
+	font-size: 1.25em;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	right: 4.45em;
+}
+.relative-container h2{
+	
+	display: none;
+}
+// .w2-container{
+//    margin-right: 5.75em;
+
+// }
+.w-container h2{
+   margin-right: 4em;
+   display: none;
+}
+.w2-container h2{
+   margin-right: 2em;
+   display: none;
+}
+.w2-container{
+	position: relative;
+}
+.w-none{
+	display: none;
+}
+
+
+.score-holder{
+	float: left;
+}
+.score-span{
+	margin-top: 0.5em;
+	float: left;
+	font-family: "proxima-nova";
+}
+.last-game-mini-score{
+	float: left;
+	// margin: 1em 0.25em 0 0;
+	font-family: "proxima-nova";
+	// font-weight: 800;
+	color: #717171;
+	display: block;
+	font-size: 1em;
+	padding: 0;
+}
+.second-game-mini-score{
+	float: left;
+	margin: 1em 0 0 0;
+	font-family: "proxima-nova";
+	font-weight: 800;
+	color: #717171;
+	display: block;
+	font-size: 1.25em;
+}
+.dash{
+		float: left;
+	margin: 0 0 0 1em;
+	font-family: "proxima-nova";
+	font-weight: 800;
+	color: #717171;
+}
+.prof-last-game-date{
+	background-color: #E1E1E1;
+	color: #3A3A3A;
+	font-weight: 400;
+	padding: 0.75em;
+}
+.the-border{
+  // border: 0.07em solid #56645C;
+  width: 40em;
+  // box-shadow: 0 0 10px #9ecaed
+  -webkit-box-shadow: 0 1px 11px #ffffff;
+  -moz-box-shadow: 0 1px 11px #ffffff;
+  border-top: 1px solid #fff;
+  opacity: .3;
+  filter: alpha(opacity=30);
+  float: none;
+  display: block;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  // box-shadow: 0 0 30px 10px #fff , 0 0 5px 2px rgba(0, 0, 0, 0.5) inset;
+}
+.profile-name{
+	font-weight: 800;
+	color: white;
+	font-size: 3em;
+	margin-top: 2.84em;
+	margin-bottom: 0.3em;
+}
+.profile-card{
+	background-color: white;
+	width: 100%;
+	height: 25em;
+}
+.profile-record{
+	font-weight: 800;
+	color: #FFFED4;
+	font-size: 1.15em;
+	margin-top: 1.25em;
+}
+.profile-record span{
+  margin-left: 0.25em;
+}
+.profile-pic img {
+	width: 12em;
+	height: 12em;
+	border-radius: 5px;
+	margin: 3em 0 0 3em;
+
+}
+.prof-oppon-pic{
+	margin-left: 1.5em;
+	float: left;
+}
+.prof-mini-pic{
+	margin-left: 2em;
+	float: left;
+}
+.vs{
+	display: block;
+	font-family: "proxima-nova";
+	// font-weight: 300;
+	font-size: 1.1em;
+	margin-left: 1.45em;
+	margin-top: 1.55em;
+	float: left;
+	font-weight: 800;
+	color: black;
+}
+.profile-pic{
+  margin-left: 2em;
+
+}
+.card-player-pos{
+	position: relative;
+	height: 3em;
+}
+
+.card-player-name{
+	font-family: "proxima-nova";
+	font-weight: 800;
+	color: #3A3A3A;
+	font-size: 0.9em;
+	position: absolute;
+	left: 4.45em;
+}
+.mini-player-record{
+	position: absolute;
+	left: 4.2em;
+	bottom: 0.25em;
+}
+.mini-player-record2{
+	position: absolute;
+  right: 5.35em;
+	bottom: 0.25em;
+}
+.card-opponent-name{
+	font-family: "proxima-nova";
+	font-weight: 800;
+	color: #3A3A3A;
+	font-size: 0.9em;
+	position: absolute;
+	right: 5.85em;
+}
+.after-game-column{
+  margin-top: 8em;
+  height: 18em;
+  width: 40em;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+}
+.location{
+	font-size: 0.85em;
+	float: right;
+	font-weight: 400;
+}
+
 .maker-ranking-title{
 	color: white;
 	font-size: 1.10em;
@@ -17,6 +292,7 @@
 	padding: 0;
 
 }
+
 .rank-table{
   margin-top: 6em;
 }
@@ -26,6 +302,8 @@
 }
 .ranking-wrapping{
 	background: linear-gradient( #064036 4%, white 89%);
+	height: 50em;
+
 }
 .ranking-title{
 	font-size: 1.25em;
@@ -50,6 +328,14 @@
 	padding-right: 3em;
 
 }
+.prof-last-game-pic img{
+	height: 4.5em;
+	width: 4.5em;
+	border-radius: 5px;
+}
+.prof-last-game-pic{
+  margin-top: 0;
+}
 .rk-title{
 	margin-left: 0.9em;
 }
@@ -59,6 +345,7 @@
 .profile-rank{
 	color: #292830;
 }
+
 .grab-pic img {
 	width: 1.5em;
 	height: 1.5em;

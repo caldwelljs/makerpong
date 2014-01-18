@@ -1,121 +1,90 @@
-<style type="text/css">
-.the-win{
-	
-  margin: 0 auto 0 auto;
 
-}
-.the-loss{
-		
-	  margin:0 auto 0 auto;
+<div class="ranking-wrapping after-pong-pic">
 
-}
+	<% if player_signed_in? %>
+	  <div class="row">
+	      <div class="small-2 columns">
+	        <h1 class="title">
+	          <%= link_to 'MakerPong', welcome_dashboard_path %>
+	        </h1>
+	      </div>
+	    <div class= "small-8 columns">
+	      <h1 class="top-right-links weird-link">
+	        <%= link_to 'Power Rankings', players_path %>
+	      </h1>
+	      <h1 class="top-right-links">
+	        <%= link_to 'New Game', new_game_path %>
+	      </h1>
+	      <h1 class="top-right-links">
+	        <%= link_to 'Profile', player_url(current_player) %>
+	      </h1>
+	      <h1 class="top-right-links">
+	        <%= link_to 'Edit Settings', edit_player_registration_path %>
+	      </h1>
+	      <h1 class="top-right-links">
+	        <%= link_to 'Sign out', destroy_player_session_path, method: :delete %>
+	      </h1>
+	    </div>
+	  </div>
+	<% else %>  
+	  <div class="row">
+	      <div class="small-2 columns">
+	        <h1 class="title">
+	          <%= link_to 'MakerPong', root_url %>
+	        </h1>
+	      </div>
+	      <div class="small-3 small-offset-6 columns">
+	            <h1 class="top-right-links">
+	              <%= link_to "Sign in", new_player_session_path %>
+	            </h1>
+	      </div>
+	  </div>
+	<% end %>
+
+
+<!-- a;lkdfjasdlfkjasd;f -->
+
+
+<div class="row">
+ <div class="small-12 small-centered columns after-game-column">
+  <div class="recent_game after-game-card_style">
+    <div class="date_row">
+      <%= @game.created_at.strftime("%I:%M%p - %a, %b %Y") %>
+    </div>
+    <div class="row" id="player_row">
+      <div class="game_card_pic small-2 medium-2 large-2 columns after-game-card_pic">
+        <img src=<%= @game.player.picture_url %>>
+      </div>
+      <div class="after-game_card_name small-8 medium-8 large-8 columns">
+        <%= @game.player.name %>
+        <div class="after-game_card_score small-2 medium-2 large-2 columns">
+          <%= @game.player_score %>
+        </div>
+      </div>
   
-.callOut h1{
-	font: normal 2.5em ChunkFiveRegular, Georgia, Times, serif;
-	margin-top: 1em;
-	letter-spacing: 1px;
-	color: white;
-	text-shadow: 1px 0px 0px #f6f1da;
-  filter: dropshadow(color=#f6f1da, offx=1, offy=0); 
-  width: 8em;
-  margin: 0.5em auto 0 auto;
-  display: block;
-}
-
- .left-side-after-game-wrap{
- 		float: left;
-    width: 50%;
-  	background: black;
- }
- .right-side-after-game-wrap{
- 		float: left;
-    width: 50%;
-    background-color: black;
-  
- }
- .after-game-wrap {
-  
-   height: 80em;
-   width: 100%;
-   background-color: black ;
-   
-}
-.winning-pic{
-	width: 25em;
-	height: 40em;
-	margin: 5em auto 0 auto;
-	display: block;
-	background: linear-gradient(black, transparent 60%)
-
-}
-.just-margin{
-	margin-top: 2.5em;
-}
-
-</style>
-
-<% content_for :javascript do %>
-	<script type="text/javascript">
-	$(document).ready(function() {
-
-		if( <%=@game.player_score %> > <%=@game.opponent_score %> )
-			{
-				var image = "<%=[@game.player.winning_pic1, @game.player.winning_pic2, @game.player.winning_pic3].sample %>"
-				var losing_image = "<%=[@game.opponent.losing_pic1, @game.opponent.losing_pic2, @game.opponent.losing_pic3].sample %>";
-			};
-    if( <%=@game.player_score %> < <%=@game.opponent_score %> )
-    	{
-    		var image = "<%=[@game.opponent.winning_pic1, @game.opponent.winning_pic2, @game.opponent.winning_pic3].sample %>";
-
-    		var losing_image = "<%=[@game.player.losing_pic1, @game.player.losing_pic2, @game.player.losing_pic3].sample %>";
-    	};
-
-	
-		// image = image.split('/');
-		// image = image[image.length-1];
-		var backgroundWinStyle = " -webkit-gradient(radial, center center, 0, center center, 440, color-stop(0, rgba(255,255,255,0)), color-stop(0.8, rgba(0,0,0,1))), -webkit-linear-gradient(black, transparent 15%),  url('" + image + "') no-repeat ";
-
-		var backgroundLossStyle = "-webkit-gradient(radial, center center, 0, center center, 440, color-stop(0, rgba(255,255,255,0)), color-stop(0.8, rgba(0,0,0,1))), -webkit-linear-gradient(black, transparent 15%), url('" + losing_image + "') no-repeat";
-		
-		$(".the-win").css({"background": backgroundWinStyle});
-		$(".the-win").css({"height": "25em"});
-		
-
-
-		$(".the-loss").css({"background": backgroundLossStyle});
-		$(".the-loss").css({"height": "25em"});
-
-	});
-	</script>
-<% end %>
-
-
-<div class="after-game-wrap callOut">
-	<div class="row">
-		<div class="small-2 small-offset-1 columns just-margin">
-			<h1>Winner</h1>
-		</div>
-		<div class="small-4 columns just-margin">
-			<h1>Loser</h1>
-		</div>
-	</div>
-  <div class="left-side-after-game-wrap the-win ">
-	    
-  	<!-- <img class="winning-pic" src=<%= @game.player.picture_url %>> -->
-  	<!-- <div class="the-win"> -->
-  		
-  	<!-- </div> -->
-  	
+    </div>
+    <div class="row" id="opponent_row">
+      <div class="game_card_pic small-2 medium-2 large-2 columns after-game-card_pic">
+        <img class="after-game-card_pic" src=<%= @game.opponent.picture_url %>>
+      </div>
+      <div class="after-game_card_name small-8 medium-8 large-8 columns">
+        <%= @game.opponent.name %>
+        <div class="after-game_card_score small-2 medium-2 large-2 columns">
+          <%= @game.opponent_score %>
+        </div>
+      </div>
+    
+    </div>
   </div>
-  
-  
-  <div class="right-side-after-game-wrap the-loss">
-
-  	<!-- <img class="winning-pic" src=<%= @game.player.picture_url %>> -->
-  	
-  </div>
-	
 </div>
+</div>
+
+
+
+
+
+<!-- a;sdfja;sdlfjk -->
+
 
 
 

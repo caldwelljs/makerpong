@@ -12,6 +12,9 @@
  *= require foundation_and_overrides
  *= require_tree .
  */
+ .nav-rowing{
+  padding: 0 !important;
+ }
  .top-right-links a{
  	font-size: 0.3em;
  	display: inline-block;
@@ -27,7 +30,7 @@
  }
 
  .nav-wrap{
- 	background: #083930;
+ 	background: transparent;
  	padding: 0.25em;
  }
  .title a{
@@ -97,11 +100,7 @@ h3{
   width: 200px;
 }
 
-.profile-pic img {
-	width: 17em;
-	height: 17em;
-	border-radius: 5px;
-}
+
 
 
 
@@ -115,9 +114,8 @@ h3{
 // }
 
 .columns {
- /* border: 1px solid green;*/
-/*  padding-left: 0;
-  padding-right: 0;*/
+  border: 1px solid green;
+/*  padding: 0;*/
 }
 
 .card_style {

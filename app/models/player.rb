@@ -32,4 +32,9 @@ class Player < ActiveRecord::Base
     self.all.sort {|a, b| b.win_streak <=> a.win_streak}
   end
 
+  def first_name
+    self.name = name.split
+    first = name.first 
+  end
+
 end
