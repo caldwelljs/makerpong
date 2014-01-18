@@ -2,7 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .last-game-container{
-	border: 1px solid #D2D2D2;
+	border-top: 1px solid #D2D2D2;
+	border-right: 1px solid #D2D2D2;
+	border-bottom: 1px solid #D2D2D2;
 }
 .prof-name-wrap{
 	padding: 0;
@@ -11,24 +13,38 @@
 	font-weight: 800;
 	color: #4D4D4D;
 	background-color: #06483D;
-	padding: 0.75em;
+	padding: 0.87em;
 
 }
 .table-data{
 	background-color: white;
 	text-align: center;
+	border-right: 1px solid #D2D2D2;
+}
+.trending-data{
+	background-color: white;
 }
 .new-prof-pic{
-	height: 14.32em;
-	width: 14.32em;
+	height: 13.95em;
+	width: 13.95em;
 }
 .pic-row td{
 	padding: 0;
 }
-
+.arrow{
+	font-size: 1em;
+	margin-left: 1.8em;
+}
 .table-rank{
 	font-family: "proxima-nova";
 	font-weight: bold;
+}
+.table-percent{
+	// font-family: "proxima-nova";
+	font-family:  "verdana";
+	font-size: 2em;
+	font-weight: normal;
+
 }
 .profile-table{
 	padding: 0;
@@ -38,7 +54,7 @@
 	color: white;
 	font-family: "proxima-nova";
 	font-weight: 800;
-	width: 8em;
+	width: 10em;
 	text-align: center;
 }
 .prof-pic-title{
@@ -197,18 +213,12 @@
 	font-weight: 800;
 	color: #FFFED4;
 	font-size: 1.15em;
-	margin-top: 1.25em;
+	margin-top: 2.75em;
 }
 .profile-record span{
   margin-left: 0.25em;
 }
-.profile-pic img {
-	width: 12em;
-	height: 12em;
-	border-radius: 5px;
-	margin: 3em 0 0 3em;
 
-}
 .prof-oppon-pic{
 	margin-left: 1.5em;
 	float: left;

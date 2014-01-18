@@ -40,14 +40,10 @@
   <% end %>
 
 
-<!-- 
-  end of nav bar -->
-
-
+<!-- ************* end of nav bar****************** -->
 
   <div class="row ">
     <div class="small-5  prof-name-wrap columns">
-      <!-- <div class="profile-pic"><%= image_tag @player.picture_url %></div> -->
       <h1 class="profile-name"><%= @player.name %></h1>
 
 
@@ -65,7 +61,6 @@
    
 
 
-      <!-- <div class="profile-pic"><%= image_tag @player.picture_url %></div> -->
       <div class="row">
         <div class="small-8 profile-table columns">
           <table>
@@ -76,30 +71,31 @@
           <td class='table-title'>
             <div class="prof-rank-title">Rank</div>
           </td>
-          
           <td class='table-title'>
-            Record
+            <div class="prof-rank-title">PCT</div>
           </td>
           <td class='table-title'>
-            <div class="pct-title">PCT</div>
-          </td>
-          <td class='table-title'>
-            PREV
-          </td>
-          <td class='table-title'>
-            Trending
+            <div class="prof-rank-title">Trending</div>
           </td>
         </tr>
-        <tr class='pic-row'>
+        <tr class='pic-row'>  <!-- ******** 2nd Row ****************** -->
           <td>
             <img class='new-prof-pic' src=<%= @player.picture_url %>>
           </td>
           <td class="table-data">
             <h1 class="table-rank"><%=  ordinalize @rank %></h1>
           </td>
+          <td class="table-data">
+            <h1 class="table-percent"><%= @player.win_percentage %></h1>
+          </td>
+          <td class="trending-data">
+            <h1 class="table-percent"><span class="arrow">▲</span><%=[1,2,3,4,5,6].sample %></h1>
+          </td>
         </tr>
           </table>
+<!-- ******* End of Table ********** -->
           </div>
+
         <div class="small-4   columns prof-last-game-date last-game-container">
           <%= @player.games.get_all_recent_games_for(@player).last.created_at.strftime("%a, %b %Y") %>
           <div class="time">
@@ -120,24 +116,7 @@
           <div class="row relative-container">
             <h2  id=<%= "w" if @player.games.last.winner == @player.games.last.player_id %>>W</h2>
             <h2  id=<%= "w2" if @player.games.last.winner == @player.games.last.opponent_id %>>W</h2>
-            
-              
-          
-            
-          <!--   <div class="small-3 columns score-holder ">
-              <div class="last-game-mini-score">
-                
-                -
-              </div>
-                <span class="dash"></span>
-              <div class="last-game-mini-score">
-                <%= @player.games.last.opponent_score %>
-              </div>
-            </div> -->
             <h3 class="mini-score"><%= @player.games.last.player_score %>-<%= @player.games.last.opponent_score %></h3>
-       <!--      <div class="small-1 small-offset-1 columns w2-container ">
-             
-            </div> -->
 
           </div>
           <div class="row">
