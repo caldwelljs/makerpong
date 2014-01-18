@@ -5,7 +5,7 @@
     <div class="row">
       <div class="small-8 medium-8 large-8 columns card_column">
         <div>
-          <h3 class="leader_title_style">
+          <h3 class="title_holder_section_title">
             Title Holders
           </h3>
         </div>
@@ -102,10 +102,10 @@
               <div class="game_card_pic small-2 medium-2 large-2 columns card_pic">
                 <img src=<%= game.player.picture_url %>> 
               </div>
-              <div class="game_card_player_name small-8 medium-8 large-8 columns <%= "winner_style" if game.winner == game.player.id %>">
+              <div class="game_card_player_name game_card_style small-8 medium-8 large-8 columns <%= "winner_style" if game.winner == game.player.id %>">
                 <%= game.player.name %>
               </div>
-              <div class="game_card_score small-2 medium-2 large-2 columns <%= "winner_style" if game.winner == game.player.id %>">
+              <div class="game_card_score game_card_style small-2 medium-2 large-2 columns <%= "winner_style" if game.winner == game.player.id %>">
                 <%= game.player_score %>
               </div>
             </div>
@@ -113,10 +113,10 @@
               <div class="game_card_pic small-2 medium-2 large-2 columns card_pic">
                 <img src=<%= game.opponent.picture_url %>>
               </div>
-              <div class="game_card_name small-8 medium-8 large-8 columns <%= "winner_style" if game.winner == game.opponent.id %>">
+              <div class="game_card_name game_card_style small-8 medium-8 large-8 columns <%= "winner_style" if game.winner == game.opponent.id %>">
                 <%= game.opponent.name %>
               </div>
-              <div class="game_card_score small-2 medium-2 large-2 columns <%= "winner_style" if game.winner == game.opponent.id %>">
+              <div class="game_card_score game_card_style small-2 medium-2 large-2 columns <%= "winner_style" if game.winner == game.opponent.id %>">
                 <%= game.opponent_score %>
               </div>
             </div>

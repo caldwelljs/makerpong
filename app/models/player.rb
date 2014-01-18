@@ -31,5 +31,4 @@ class Player < ActiveRecord::Base
   def self.win_streak_sorting
     self.all.sort {|a, b| b.win_streak <=> a.win_streak}
   end
-
 end

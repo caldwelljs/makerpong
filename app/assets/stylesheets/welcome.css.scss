@@ -118,12 +118,19 @@
   box-shadow: 0 1px 1px rgba(0,0,0,0.2);
 }
 
-.leader_title_style {
-  // padding-left: ;
-  font-size: 1.8675em;
+.title_holder_section_title {
+  padding-left: 15px;
+  font-size: 1.6875rem;
   font-weight: 600;
   text-align: left;
   color: #404040;
+}
+
+.leader_title_style {
+  font-size: 1.4em;
+  font-weight: 400;
+  text-align: center;
+  color: #333333;
   margin-bottom: 0.5em;
 }
 
@@ -134,39 +141,6 @@
   font-weight: 400;
   margin-top: 15px;
   white-space: nowrap;
-}
-
-.dash-title-pic {
-  text-align: center;
-  display: inline-block;
-  img {
-    border-radius: 5px;
-    width: 7em;
-    height: 7em;
-  }
-
-
-.game_card_name {
-  text-align: left;
-  font-size: 16px;
-  font-weight: 350;
-  padding: 10px;
-  color: #404040;
-  margin-top: 15px;
-}
-
-.game_card_score {
-  text-align: center;
-  font-size: 16px;
-  font-weight: 350;
-  padding: 10px;
-  color: #404040;
-}
-
-.game-card-pic {
-    width: 7em;
-    height: 7em;
-  }
 }
 
 .league_leader_preview {
@@ -184,10 +158,6 @@
   padding: 0.125em;
   border-radius: 5px;
   }
-}
-
-.winner_style {
-  color: red;
 }
 
 .table_style {
@@ -218,6 +188,36 @@
   margin-bottom: 10px;
 }
 
+.dash-title-pic {
+  text-align: center;
+  display: inline-block;
+  img {
+    border-radius: 5px;
+    width: 7em;
+    height: 7em;
+  }
 
+
+.game_card_player_name {
+  text-align: left;
+  font-size: 16px;
+  font-weight: 350;
+  color: #404040;
+  margin-top: 15px;
+}
+
+.game_card_score {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 350;
+  padding: 10px;
+  color: #404040;
+}
+
+.game-card-pic {
+    width: 7em;
+    height: 7em;
+  }
+}
 
 

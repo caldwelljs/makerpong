@@ -10,22 +10,22 @@
             <%= link_to 'MakerPong', welcome_dashboard_path %>
           </h1>
         </div>
-      <div class= "small-8 columns">
-        <h1 class="top-right-links weird-link">
+      <div class= "small-8 columns top-nav">
+        <div class="top-right-links weird-link">
           <%= link_to 'Power Rankings', players_path %>
-        </h1>
-        <h1 class="top-right-links">
+        </div>
+        <div class="top-right-links">
           <%= link_to 'New Game', new_game_path %>
-        </h1>
-        <h1 class="top-right-links">
+        </div>
+        <div class="top-right-links">
           <%= link_to 'Profile', player_url(current_player) %>
-        </h1>
-        <h1 class="top-right-links">
+        </div>
+        <div class="top-right-links">
           <%= link_to 'Edit Settings', edit_player_registration_path %>
-        </h1>
-        <h1 class="top-right-links">
+        </div>
+        <div class="top-right-links">
           <%= link_to 'Sign out', destroy_player_session_path, method: :delete %>
-        </h1>
+        </div>
       </div>
     </div>
   <% else %>  
