@@ -26,22 +26,21 @@
 
  .top-right-links { 
     & a {
-     	font-size: 1em;
+     	font-size: 1.2em;
      	display: inline-block;
      	font-family: "proxima-nova";
-     	font-weight: 100;
+     	font-weight: 400;
      	color: white;
       float: left;
       height: 2em;
      	margin-left: 3em;
-      padding-top: 15px;
-      font-weight: bold;
+      padding-top: 1em;
     }
 }
 
  .nav-wrap{
- 	background: #293c5a;
- 	padding: none;
+ 	background: transparent;
+ 	padding-top: 2em;
  }
  .title a{
  	color: white;

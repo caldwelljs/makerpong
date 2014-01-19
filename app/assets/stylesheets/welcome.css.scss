@@ -37,20 +37,55 @@
   left: 0;
 }
 
-.box {
-  padding: 10px;
-  background-color: #fff;
-  border-radius: 5px;
-  opacity: .8;
-  margin-top:20px;
-  margin-bottom:200px;
+.homepageimage {
+  background: url( asset-path('assets/matt-smash.jpg', image) ) no-repeat top;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
 }
 
-.homepageimage {
-    background: url( asset-path('assets/matt-smash.jpg', image) ) no-repeat top;
-    width: 100%;
+.darkenBackground {
+    background-color: #000000;
+    opacity: 0.7; /* Safari, Opera */
+    -moz-opacity:0.70; /* FireFox */
+    filter: alpha(opacity=70); /* IE */
+    z-index: 20;
     height: 100%;
-    background-size: cover;
+    width: 100%;
+    background-repeat:repeat;
+    position:fixed;
+    top: 0px;
+    left: 0px;
+  }
+
+.signup-box {
+  padding: 10px;
+  // background-color: #fff;
+  border-radius: 5px;
+  // opacity: .8;
+  margin-top: 8em;
+  margin-bottom: 200px;
+}
+
+.homelargeheading {
+  color: white;
+  font-size: 4em;
+  line-height: 1.15;
+  font-weight: bold;
+  font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.homeparagraph {
+  text-align: center;
+  font-weight: normal;
+  font-size: 1.3em;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  text-rendering: optimizeLegibility;
+  color: #ffffff;
+  font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
 }
 
 .sign-up-label {
@@ -59,7 +94,7 @@
   border: 2px;
   border-radius: 5px;
   font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
-  color: #686868;
+  color: white;
 }
 
 .sign-up-button {
@@ -83,26 +118,6 @@
 .homepage_link a {
   text-decoration: none;
   hover: yellow;
-}
-
-.homelargeheading {
-  color: white;
-  font-size: 4em;
-  line-height: 1.15;
-  font-weight: bold;
-  font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
-  padding-top: 50px;
-  opacity: .8;
-  text-align: center;
-}
-
-.homeparagraph {
-  font-size: 1.25em;
-  line-height: 1.15;
-  color: #686868;
-  font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
-  opacity: 1;
-  border-radius: 5px;
 }
 
 
