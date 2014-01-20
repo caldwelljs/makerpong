@@ -44,19 +44,27 @@
   background-size: cover;
 }
 
-.darkenBackground {
-    background-color: #000000;
-    opacity: 0.7; /* Safari, Opera */
-    -moz-opacity:0.70; /* FireFox */
-    filter: alpha(opacity=70); /* IE */
-    z-index: 20;
-    height: 100%;
-    width: 100%;
-    background-repeat:repeat;
-    position:fixed;
-    top: 0px;
-    left: 0px;
-  }
+
+.homelargeheading {
+  color: white;
+  text-rendering: optimizeLegibility;
+  font-size: 3em;
+  line-height: 1.15;
+  font-weight: bold;
+  font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
+  padding-top: 2.5em;
+}
+
+.homeparagraph {
+  font-weight: normal;
+  font-size: 1.3em;
+  padding-top: 1em;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  text-rendering: optimizeLegibility;
+  color: #ffffff;
+  font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
+}
 
 .signup-box {
   padding: 10px;
@@ -67,29 +75,8 @@
   margin-bottom: 200px;
 }
 
-.homelargeheading {
-  color: white;
-  font-size: 4em;
-  line-height: 1.15;
-  font-weight: bold;
-  font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
-  padding-top: 50px;
-  text-align: center;
-}
-
-.homeparagraph {
-  text-align: center;
-  font-weight: normal;
-  font-size: 1.3em;
-  line-height: 1.6;
-  margin-bottom: 1.25rem;
-  text-rendering: optimizeLegibility;
-  color: #ffffff;
-  font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
-}
-
 .sign-up-label {
-  background-color: transparent;
+  background-color: #fff;
   border-style: solid;
   border: 2px;
   border-radius: 5px;
