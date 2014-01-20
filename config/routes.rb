@@ -2,11 +2,18 @@ Pong::Application.routes.draw do
 
 
   # get "players/:id/edit" => "players#edit"
+ 
+
+  authenticated :player do
+    root :to => "welcome#dashboard", as: :welcome_dashboard
+  end
+
   root "welcome#index"
+  
 
   devise_for :players
 
-  get "dashboard" => 'welcome#dashboard', as: :welcome_dashboard
+  # get "dashboard" => 'welcome#dashboard', as: :welcome_dashboard
   
   resources :players
   resources :games
