@@ -33,8 +33,11 @@ class Player < ActiveRecord::Base
   end
 
   def first_name
-    self.name = name.split
-    first = name.first 
+    @first_name ||= name.split[0]
+  end
+
+  def last_name
+    @last_name ||= name.split[1..-1].join(" ")
   end
 
 end
