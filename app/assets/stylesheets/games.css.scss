@@ -2,10 +2,173 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.the-border-after-game{
+  // border: 0.07em solid #56645C;
+  width: 100%;
+  // box-shadow: 0 0 10px #9ecaed
+  -webkit-box-shadow: 0 1px 11px #ffffff;
+  -moz-box-shadow: 0 1px 11px #ffffff;
+  border-top: 1px solid #fff;
+  opacity: .3;
+  filter: alpha(opacity=30);
+  float: none;
+  display: block;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  // box-shadow: 0 0 30px 10px #fff , 0 0 5px 2px rgba(0, 0, 0, 0.5) inset;
+}
+.vs-after-game{
+  font-weight: 800;
+  color: white;
+  font-size: 3em;
+  width: 1em;
+  margin: 2.84em auto 0 auto;
+  display: block;
+}
+.opponent-after-game-name{
+  font-weight: 800;
+  color: white;
+  font-size: 3em;
+  margin-top: 2.84em;
+  margin-bottom: 0.3em;
+  text-align: right;
+}
 label .pic_upload_label {
   margin-top: 5em;
 }
+.who-won{
+  font-weight: 800;
+  color: #FFFED4;
+  font-size: 2.6em;
+  margin-top: 1.6em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+.final-after-game{
+  color: white;
+  font-size: 1.7em;
+  margin: 0 0 0 1.5em;
+}
+.first-row-after-game{
+  background: linear-gradient(left, black, #4E4E4E);
+  background: -webkit-linear-gradient(left, black, #4E4E4E);
+  
+}
+.first-data-after-game{
+  width: 90em;
+  height: 0.5em;
+  position: relative;
+}
+.playerscore1-after-game{
+  position: absolute;
+  right: 0.8em;
+  top: 0.74em;
+  font-weight: bold;
+  color: #252525;
+  font-size: 4.6em;
+}
+.record1-after-game{
+  position: absolute;
+  top: 2.15em;
+  left: 6.5em;
+}
+.t-after-game{
+  color: white;
+  position: absolute;
+  top: 0.25em;
+  right: 2.6em;
+  font-weight: bold;
+  font-size: 2em;
+}
+.date-after-game{
+  color: white;
+  position: absolute;
+  left: 22.8em;
+  top: 0.6em;
+  font-size: 1.3em;
+}
+.second-row-after-game{
+  // background: linear-gradient(top, white, #FEFEFE);
+  // background: -webkit-linear-gradient(top, white, #FEFEFE);
 
+}
+
+.second-data-after-game{
+  width: 90em;
+  height: 13em;
+  // background-color: black;
+  background: -webkit-linear-gradient(top, white, #FEFEFE);
+  background: linear-gradient(top, white, #FEFEFE);
+  border-bottom: 1px solid #E3E3E3;
+  position: relative;
+}
+
+.second-data-after-game img{
+  width: 8em;
+  height: 8em;
+  border-radius: 5px;
+}
+.third-data-after-game img{
+  width: 8em;
+  height: 8em;
+  border-radius: 5px;
+}
+.third-row-after-game{
+  // background: linear-gradient(top, white, #FEFEFE);
+  // background: -webkit-linear-gradient(top, white, #FEFEFE);
+  
+  border-bottom: 1px solid red;
+}
+.third-data-after-game{
+  width: 90em;
+  height: 13em;
+  // background-color: black;
+  // background: -webkit-linear-gradient(top, #F5F5F5, #FEFEFE);
+  // background: linear-gradient(top, #F5F5F5, #FEFEFE);
+  background-color: #F5F5F5;
+  position: relative;
+}
+.fourth-data-after-game{
+  height: 6.5em;
+  background-color: white;
+  position: relative;
+  border-top: 1px solid #E3E3E3;
+}
+.comment-after-game{
+  color: #2A69BC;
+  font-family: "proxima-nova";
+  font-weight: 800;
+}
+.name1-after-game{
+  font-family: "proxima-nova";
+  font-weight: 800;
+  color: #434343;
+  position: absolute;
+  top: 1em;
+  left: 4em;
+}
 .winner h1{
 	  font-family: "hwt-american-outline";
 	  color: white;
@@ -48,6 +211,16 @@ label .pic_upload_label {
   left: 0;
   background: linear-gradient(black, transparent 70%);
 }
+.after-game-row {
+  padding: 15px 15px;
+  
+  // border-radius: 3px;
+
+  background-color: #EBEBEB;
+  // border: solid 4px #ffffff;
+  border-bottom-width: 2px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
 .right-after-game-pic{
   min-height: 100%;
   opacity: 1;
@@ -60,7 +233,69 @@ label .pic_upload_label {
   top: 0;
   right: 0;
 }
+.after-game-column{
+  margin-top: 8em;
+  width: 40em;
+}
+.card_style {
+  padding: 20px 20px;
+  // margin: 10px 10px 10px 10px;
+  border-radius: 3px;
+  background-color: #fff;
+  border: solid 4px #ffffff;
+  border-bottom-width: 2px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  height: 12em;
+  width: 34em;
+}
+.after-game-card_style{
+  padding: 20px 20px;
+  // margin: 10px 10px 10px 10px;
+  border-radius: 3px;
+  background-color: #fff;
+  border: solid 4px #ffffff;
+  border-bottom-width: 2px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  height: 25em;
+  width: 100%;
+}
+.after-game_card_name {
+  text-align: left;
+  font-size: 1.8em;
+  font-weight: 700;
+  padding: 10px;
+  color: #404040;
+  margin-top: 1.2em;
+}
+.after-game_card_score{
+  font-weight: 400;
+  font-size: 1.3em;
+  float: right;
 
+}
+.after-game-title{
+  font-size: 1.25em;
+  color: #545454;
+}
+.after-pong-pic img{
+  width: 10em;
+  height: 10em;
+  display: inline-block;
+  border-radius: 5px;
+
+}
+.after-game-card_pic img {
+  height: 10em;
+  width: 10em;
+  display: inline-block;
+  border-radius: 5px;
+}
+.after-game-card_pic{
+  height: 10em;
+  width: 10em;
+  display: inline-block;
+  border-radius: 5px;
+}
 .transbox
   {
   margin-top: 12em;

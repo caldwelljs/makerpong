@@ -1,6 +1,552 @@
 // Place all the styles related to the players controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.profile-1st-table-row{
+  width: 90em;
+  height: 1em;
+  padding: 0;
+}
+.profile-1st-table-data{
+  background-color: #085145;
+  margin: 0;
+  width: 11.625em;
+  height: 1em;
+}
+.pic-title{
+  color: white;
+  font-family: "proxima-nova";
+  font-weight: 800; 
+  font-size: 1.5em;
+  text-align: center;
+  margin-top: 0.25em;
+}
+.profile-picture{
+  // height:11.625em;
+  width: 11.625em;
+}
+.profile-2nd-table-data{
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+.table-percent{
+	font-family: "proxima-nova";
+	font-weight: 700;
+	font-size: 2.25em;
+}
+.profile-last-game-table-data{
+	width: 40em;
+  // background: linear-gradient(left, black, #4E4E4E);
+  // background: -webkit-linear-gradient(left, black, #4E4E4E);
+  background-color: #0A5B4E;
+  padding: 0;
+  position: relative;
+}
+.profile-final{
+	color: white;
+	font-family: "proxima-nova";
+  font-weight: 800; 
+  font-size: 1.55em;
+  margin: 0.15em 0 0 1em;
+}
+.date-after-game-profile-page{
+  position: absolute;
+  top: 0.99em;
+  left: 11.3em;
+  color: white;
+  font-family: "proxima-nova";
+  font-weight: 300; 
+  font-size: 1.25em;
+
+}
+.profile-t{
+	position: absolute;
+  top: 0.65em;
+  right: 1.25em;
+  font-family: "proxima-nova";
+  font-weight: 800;
+  color: white;
+  font-size:1.55em
+}
+.one{
+	background-color: white;
+}
+.previous-1st-table-data{
+	padding: 0;
+	width: 50em;
+	background-color: #0A5B4E;
+}
+.profile-previous-games{
+	color: white;
+	font-family: "proxima-nova";
+  font-weight: 800;
+  font-size: 1.25em;
+  margin-left: 1em;
+}
+.previous-2nd-table-data{
+	background-color: white;
+	position: relative;
+}
+.second-table-data-date{
+	position: absolute;
+	top: 0.35em;
+	left: 1em;
+	color: #717171;
+	font-family: "proxima-nova";
+	font-weight: 800;
+	font-size: 1.25em;
+}
+.second-table-data-opponent{
+	position: absolute;
+	top: 0.35em;
+	color: #717171;
+	font-family: "proxima-nova";
+	font-weight: 800;
+	left: 8em;
+	font-size: 1.25em;
+}
+.second-table-data-result{
+	position: absolute;
+	top: 0.35em;
+	color: #717171;
+	font-family: "proxima-nova";
+	font-weight: 800;
+	right: 9em;
+	font-size: 1.25em;
+	height: 16em;
+	margin-bottom: 4em;
+}
+.second-table-data-record{
+	position: absolute;
+	top: 0.35em;
+	color: #717171;
+	font-family: "proxima-nova";
+	font-weight: 800;
+	right: 1.75em;
+	font-size: 1.25em;
+}
+.many-data{
+	position: relative;
+}
+.many-dates{
+	margin-left: 0.7em;
+}
+.many-vs{
+  position:absolute;
+  left: 9.5em;
+  color: #7A7A7A;
+  border-left: 1px solid white;
+  padding: 0.5em;
+  top: 0.25em;
+}
+.many-opponents{
+	position:absolute;
+  left: 14em;
+  color: #7A7A7A;
+}
+
+.many-pics{
+	height: 1.65em;
+	width: 1.65em;
+	border-radius: 5px;
+	position:absolute;
+	left: 12em;
+	top: 0.5em;
+}
+.many-w-l{
+	color: #0F8913;
+	font-family: "proxima-nova";
+	font-weight: 800;
+  position:absolute;
+  right: 13em;
+  border-left: 1px solid white;
+  padding: 0.5em;
+  top: 0.3em;
+}
+.many-scores{
+	position:absolute;
+  right: 10.75em;
+  color: #717171;
+  font-family: "proxima-nova";
+	font-weight: 800;
+	top: 0.81em;
+}
+.many-records{
+	position:absolute;
+  right: 3.75em;
+  color: #717171;
+	top: 0.81em;
+}
+
+
+.last-game-data{
+	background-color: white;
+	position: relative;
+	padding: 0;
+	margin: 0;
+}
+.last-game-title{
+  position: absolute;
+  top: 0.4em;
+  right: 9.5em;
+  font-family: "proxima-nova";
+  font-weight: 700;
+  color: #7C7C7C;
+}
+.last-game-player-pic{
+  height: 5em;
+  width: 5em;
+  border-radius: 5px;
+  position: absolute;
+  top: 2.25em;
+  left: 5em;
+}
+.last-game-vs{
+	font-family: "proxima-nova";
+  font-weight: 800;
+  position: absolute;
+  top: 2.25em;
+  left: 9.48em;
+}
+.last-game-opponent-pic{
+  height: 5em;
+  width: 5em;
+  border-radius: 5px;
+  position: absolute;
+  top: 2.25em;
+  right: 5em;
+}
+.last-game-player-name{
+  font-family: "proxima-nova";
+  font-weight: 800;
+  position: absolute;
+  top: 0.5em;
+  left: 4.65em;
+  font-size: 1.2em;
+}
+.last-game-opponent-name{
+  font-family: "proxima-nova";
+  font-weight: 800;
+  position: absolute;
+  top: 0.5em;
+  right: 4.65em;
+  font-size: 1.2em;
+}
+.last-game-border{
+	margin-top: 8em;
+	width: 40em;
+	border-top: 1px solid #E7E7E7;
+}
+.last-game-comment{
+  font-family: "proxima-nova";
+  font-weight: 800;
+  // position: absolute;
+  // top: 1.25em;
+  // right: 4.65em;
+  // font-size: 1.2em;
+  font-size: 1.15em;
+  margin: 0.45em 0 0 0.85em;
+  color: #2A69BC;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.last-game-container{
+	border-top: 1px solid #D2D2D2;
+	border-right: 1px solid #D2D2D2;
+	border-bottom: 1px solid #D2D2D2;
+}
+.prof-name-wrap{
+	padding: 0;
+}
+.table-title {
+	font-weight: 800;
+	color: #4D4D4D;
+	background-color: #06483D;
+	padding: 0.87em;
+
+}
+.table-data{
+	background-color: white;
+	text-align: center;
+	border-right: 1px solid #D2D2D2;
+}
+.trending-data{
+	background-color: white;
+}
+.new-prof-pic{
+	height: 13.85em;
+	width: 13.85em;
+}
+.pic-row td{
+	padding: 0;
+}
+.arrow{
+	font-size: 1em;
+	margin-left: 1.8em;
+}
+.table-rank{
+	font-family: "proxima-nova";
+	font-weight: bold;
+}
+
+.profile-table{
+	padding: 0;
+	height: 2.6em;
+}
+.prof-rank-title{
+	color: white;
+	font-family: "proxima-nova";
+	font-weight: 800;
+	width: 10em;
+	text-align: center;
+}
+.prof-pic-title{
+	color: white;
+	font-family: "proxima-nova";
+	font-weight: 800;
+	text-align: center;
+}
+.time{
+	float: right;
+	color: #3A3A3A;
+	font-weight: 400;
+}
+.last-game-brazos{
+  position: relative;
+}
+.last-game{
+	position: absolute;
+	top: 0.7em;
+	left: 6.9em;
+	font-family: "proxima-nova";
+	font-size: 1.1em;
+}
+.w-container{
+   margin-right: 0;
+
+}
+.relative-container{
+	position: relative;
+  height: 3em;
+}
+
+.mini-score{
+	position: absolute;
+	bottom: 0;
+	left: 6.72em;
+  font-family: "proxima-nova";
+	font-weight: 800;
+	font-size: 1.25em;
+	color: #717171;
+}
+#w{
+	color: #085145;
+	font-family: "proxima-nova";
+	font-weight: 800;
+	font-size: 1.25em;
+  position: absolute;
+	display: block;
+	bottom: 0;
+	left: 3.82em;
+
+}
+#w2{
+	color: #085145;
+	font-family: "proxima-nova";
+	font-weight: 800;
+	font-size: 1.25em;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	right: 4.45em;
+}
+.relative-container h2{
+	
+	display: none;
+}
+// .w2-container{
+//    margin-right: 5.75em;
+
+// }
+.w-container h2{
+   margin-right: 4em;
+   display: none;
+}
+.w2-container h2{
+   margin-right: 2em;
+   display: none;
+}
+.w2-container{
+	position: relative;
+}
+.w-none{
+	display: none;
+}
+
+
+.score-holder{
+	float: left;
+}
+.score-span{
+	margin-top: 0.5em;
+	float: left;
+	font-family: "proxima-nova";
+}
+.last-game-mini-score{
+	float: left;
+	// margin: 1em 0.25em 0 0;
+	font-family: "proxima-nova";
+	// font-weight: 800;
+	color: #717171;
+	display: block;
+	font-size: 1em;
+	padding: 0;
+}
+.second-game-mini-score{
+	float: left;
+	margin: 1em 0 0 0;
+	font-family: "proxima-nova";
+	font-weight: 800;
+	color: #717171;
+	display: block;
+	font-size: 1.25em;
+}
+.dash{
+		float: left;
+	margin: 0 0 0 1em;
+	font-family: "proxima-nova";
+	font-weight: 800;
+	color: #717171;
+}
+.prof-last-game-date{
+	background-color: #E1E1E1;
+	color: #3A3A3A;
+	font-weight: 400;
+	padding: 0.75em;
+}
+.the-border{
+  // border: 0.07em solid #56645C;
+  width: 40em;
+  // box-shadow: 0 0 10px #9ecaed
+  -webkit-box-shadow: 0 1px 11px #ffffff;
+  -moz-box-shadow: 0 1px 11px #ffffff;
+  border-top: 1px solid #fff;
+  opacity: .3;
+  filter: alpha(opacity=30);
+  float: none;
+  display: block;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  // box-shadow: 0 0 30px 10px #fff , 0 0 5px 2px rgba(0, 0, 0, 0.5) inset;
+}
+.profile-name{
+	font-weight: 800;
+	color: white;
+	font-size: 3em;
+	margin-top: 2.84em;
+	margin-bottom: 0.3em;
+}
+.profile-card{
+	background-color: white;
+	width: 100%;
+	height: 25em;
+}
+.profile-record{
+	font-weight: 800;
+	color: #FFFED4;
+	font-size: 1.5em;
+	margin-top: 2.75em;
+}
+.profile-record span{
+  margin-left: 0.25em;
+}
+
+.prof-oppon-pic{
+	margin-left: 1.5em;
+	float: left;
+}
+.prof-mini-pic{
+	margin-left: 2em;
+	float: left;
+}
+.vs{
+	display: block;
+	font-family: "proxima-nova";
+	// font-weight: 300;
+	font-size: 1.1em;
+	margin-left: 1.45em;
+	margin-top: 1.55em;
+	float: left;
+	font-weight: 800;
+	color: black;
+}
+.profile-pic{
+  margin-left: 2em;
+
+}
+.card-player-pos{
+	position: relative;
+	height: 3em;
+}
+
+.card-player-name{
+	font-family: "proxima-nova";
+	font-weight: 800;
+	color: #3A3A3A;
+	font-size: 0.9em;
+	position: absolute;
+	left: 4.45em;
+}
+.mini-player-record{
+	position: absolute;
+	left: 4.2em;
+	bottom: 0.25em;
+}
+.mini-player-record2{
+	position: absolute;
+  right: 5.35em;
+	bottom: 0.25em;
+}
+.card-opponent-name{
+	font-family: "proxima-nova";
+	font-weight: 800;
+	color: #3A3A3A;
+	font-size: 0.9em;
+	position: absolute;
+	right: 5.85em;
+}
+.after-game-column{
+  margin-top: 8em;
+  height: 18em;
+  width: 40em;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+}
+.location{
+	font-size: 0.85em;
+	float: right;
+	font-weight: 400;
+}
+
 .maker-ranking-title{
 	color: white;
 	font-size: 1.10em;
@@ -13,19 +559,136 @@
 	background-color: #064036;
 }
 .title-data{
-	width: 20em;
+	width: 25em;
 	padding: 0;
 
+}
+.last-games-column-wrapper{
+  margin-top: 2em;
+}
+.prev-game-table{
+	padding: 0;
+}
+.prev-games-row{
+	padding: 0;
+}
+.prev-games-wrapper{
+  padding: 0;
+  margin: 0;
+
+}
+.final-title-row{
+	position: relative;
+}
+.final-title-data{
+	width: 34em;
+	// background-color: #474747;
+	background: linear-gradient(45deg, black, #474747 );
+	height: 1em;
+	padding: 0.25em 0.25em 0.25em 0.75em;
+  font-size: 0.9em;
+ 
+}
+
+.total{
+	color: white;
+	font-size: 1.03em;
+	// font-family: "proxima-nova";
+	font-weight: bold;
+	position: absolute;
+	right: 1.9em;
+	top: 0.3em;
+}
+.prev-games-final-title{
+	color: white;
+  padding: 0;
+  position: absolute;
+  top: 0.28em;
+  left: 1.8em;
+}
+.prev-games-date{
+	color: white;
+	display: block;
+	margin-left: 7.5em;
+	float: left;
+	font-size: 0.85em;
+}
+.prev-games-card-pic1{
+	height: 2.25em;
+	width: 2.25em;
+	border-radius: 5px;
+	position: absolute;
+	left: 0.35em;
+	top: 0.4em;
+}
+.prev-games-data-row{
+	height: 3.25em;
+  background: -webkit-linear-gradient(top, #F5F5F5, #FEFEFE);
+	background: linear-gradient(top, #F5F5F5, #FEFEFE);
+	position: relative;
+	padding: 0;
+}
+.prev-games-comment-row{
+	height: 3.25em;
+  background-color: #F8F8F8;
+	position: relative;
+	padding: 0;
 }
 .rank-table{
   margin-top: 6em;
 }
+.comment{
+	font-weight: 800;
+	font-family: "proxima-nova";
+	color: #2A69BC;
+	font-size: 0.9em;
+	margin-left: 1em;
+}
+.prev-games-card-name{
+	font-family: "proxima-nova";
+	font-weight: 800;
+	color: #3B3B3B;
+	position: absolute;
+	top: 0.55em;
+	left: 3.25em;
+	font-size: 0.95em;
+
+}
+.record-prev-games{
+	color: #626266;
+	font-size: 1em;
+	position: absolute;
+	top: 1.65em;
+	left: 4.75em;
+}
+.player-score-prev-games{
+	position: absolute;
+	top: 1.3em;
+	right: 0.75em;
+  font-family: "proxima-nova";
+	font-weight: 800;
+}
 #top-ranking-box{
 	margin-top: 5em;
-
+  
+}
+.nav-wrapping-paper{
+  // box-shadow: 0 0 10px #9ecaed
+  -webkit-box-shadow: 0 1px 11px #ffffff;
+  -moz-box-shadow: 0 1px 11px #ffffff;
+  border-bottom: 1px solid #fff;
+  opacity: .3;
+  filter: alpha(opacity=30);
+  float: none;
+  display: block;
+  height: 1px;
+  margin: 0;
+  padding: 0;
 }
 .ranking-wrapping{
 	background: linear-gradient( #064036 4%, white 89%);
+	height: 45em;
+
 }
 .ranking-title{
 	font-size: 1.25em;
@@ -50,6 +713,14 @@
 	padding-right: 3em;
 
 }
+.prof-last-game-pic img{
+	height: 4.5em;
+	width: 4.5em;
+	border-radius: 5px;
+}
+.prof-last-game-pic{
+  margin-top: 0;
+}
 .rk-title{
 	margin-left: 0.9em;
 }
@@ -59,6 +730,7 @@
 .profile-rank{
 	color: #292830;
 }
+
 .grab-pic img {
 	width: 1.5em;
 	height: 1.5em;
@@ -96,4 +768,7 @@ td span{
   // border: solid 4px #ffffff;
   border-bottom-width: 2px;
   box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+.prev-games-table{
+	border-spacing: 0 !important;
 }
