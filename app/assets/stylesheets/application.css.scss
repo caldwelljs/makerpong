@@ -12,24 +12,35 @@
  *= require foundation_and_overrides
  *= require_tree .
  */
- .top-right-links a{
- 	font-size: 0.3em;
- 	display: inline-block;
- 	font-family: "proxima-nova";
- 	font-weight: 100;
- 	color: white;
-  float: left;
-  height: 2em;
- 	margin-left: 2em;
-  padding-top: 15px;
- }
- .weird-link a {
- 	padding: 0.15em;
- }
+
+// * {
+//   border: 1px solid red;
+//   box-sizing: border-box;
+// }
+
+@media all and (min-width: 64em) {
+ .top-nav {
+  margin-left: 10px;
+ }  
+}
+
+ .top-right-links { 
+    & a {
+     	font-size: 1.2em;
+     	display: inline-block;
+     	font-family: "proxima-nova";
+     	font-weight: 400;
+     	color: white;
+      float: left;
+      height: 2em;
+     	margin-left: 3em;
+      padding-top: 1em;
+    }
+}
 
  .nav-wrap{
- 	background: #083930;
- 	padding: none;
+ 	background: transparent;
+ 	padding-top: 2em;
  }
  .title a{
  	color: white;
@@ -107,23 +118,8 @@ h3{
  /* border: 1px solid green;*/
 /*  padding-left: 0;
   padding-right: 0;*/
-}
+//}
 
-.game_card_name {
-  text-align: left;
-  font-size: 16px;
-  font-weight: 350;
-  padding: 10px;
-  color: #404040;
-}
-
-.game_card_score {
-  text-align: center;
-  font-size: 16px;
-  font-weight: 350;
-  padding: 10px;
-  color: #404040;
-}
 
 .card_title {
   padding-left: 0.875em;

@@ -1,42 +1,41 @@
 <div class= "homepageimage">
-
-<div>
-  <h1 class="homelargeheading">Passionate about Ping Pong?
-  </h1>
-</div>
-
-  <div class="small-3 small-centered columns box">
-      
-    <p class="homeparagraph">Track your scores and see how you stack up against the competition with our free web app. Careful. It gets pretty intense.
-    </p>
-
-  <div>
-    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-    <%= devise_error_messages! %>
-
-    <div class="sign-up-label">
-      <%= f.text_field :name, :autofocus => true, :placeholder => "Full Name" %>
+    <%= render "layouts/header" %>
+    <div class="row index">
+      <div class="row">
+        <h1 class="homelargeheading">
+          Passionate about Ping Pong?
+        </h1>
+      </div>
+        <div class="small-8 medium-6 large-6 small-centered columns signup-box">
+          <p class="homeparagraph">
+            Track your scores and see how you stack up against the competition with our free web app. Careful. It gets pretty intense.
+          </p>
+        <div class="row">
+          <div class="small-10 medium-10 large-10 small-centered columns">
+            <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+            <%= devise_error_messages! %>
+            <div class="sign-up-label">
+              <%= f.text_field :name, :autofocus => true, :placeholder => "Full Name" %>
+            </div>
+            <div class="sign-up-label">
+              <%= f.email_field :email, :placeholder => "Email" %>
+            </div>
+            <div class="sign-up-label">
+              <%= f.password_field :password, :placeholder => "Password" %>
+            </div>
+            <div class="sign-up-label">
+              <%= f.password_field :password_confirmation, :placeholder => "Password Confirmation" %>
+            </div>
+            <div>
+              <%= f.submit "Sign up for MakerPong", class: "sign-up-button" %>
+            </div>
+          </div>
+        <% end %>
+        </div>
+        <div class="row foot">
+        </div>
+      </div>
     </div>
-
-    <div class="sign-up-label">
-      <%= f.email_field :email, :placeholder => "Email" %>
-    </div>
-
-    <div class="sign-up-label">
-      <%= f.password_field :password, :placeholder => "Password" %>
-    </div>
-
-    <div class="sign-up-label">
-      <%= f.password_field :password_confirmation, :placeholder => "Password Confirmation" %>
-    </div>
-
-    <div>
-      <%= f.submit "Sign up for MakerPong", class: "sign-up-button" %>
-    </div>
-  <% end %>
-</div>
-
-  </div>
 </div>
 
 

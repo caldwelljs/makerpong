@@ -57,4 +57,10 @@
     results
   end
 
+  def self.get_all_player_games(player)
+    player_game = Game.where("player_id = #{player.id} or opponent_id = #{player.id}").all
+    results = player_game.sort{ |x,y| y <=> x }
+    results
+  end
+
 end

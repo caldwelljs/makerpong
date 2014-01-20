@@ -37,20 +37,55 @@
   left: 0;
 }
 
-.box {
-  padding: 10px;
-  background-color: #fff;
-  border-radius: 5px;
-  opacity: .8;
-  margin-top:20px;
-  margin-bottom:200px;
+.homepageimage {
+  background: url( asset-path('assets/matt-smash.jpg', image) ) no-repeat top;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
 }
 
-.homepageimage {
-    background: url( asset-path('assets/matt-smash.jpg', image) ) no-repeat top;
-    width: 100%;
+.darkenBackground {
+    background-color: #000000;
+    opacity: 0.7; /* Safari, Opera */
+    -moz-opacity:0.70; /* FireFox */
+    filter: alpha(opacity=70); /* IE */
+    z-index: 20;
     height: 100%;
-    background-size: cover;
+    width: 100%;
+    background-repeat:repeat;
+    position:fixed;
+    top: 0px;
+    left: 0px;
+  }
+
+.signup-box {
+  padding: 10px;
+  // background-color: #fff;
+  border-radius: 5px;
+  // opacity: .8;
+  margin-top: 8em;
+  margin-bottom: 200px;
+}
+
+.homelargeheading {
+  color: white;
+  font-size: 4em;
+  line-height: 1.15;
+  font-weight: bold;
+  font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.homeparagraph {
+  text-align: center;
+  font-weight: normal;
+  font-size: 1.3em;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  text-rendering: optimizeLegibility;
+  color: #ffffff;
+  font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
 }
 
 .sign-up-label {
@@ -59,7 +94,7 @@
   border: 2px;
   border-radius: 5px;
   font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
-  color: #686868;
+  color: white;
 }
 
 .sign-up-button {
@@ -85,26 +120,6 @@
   hover: yellow;
 }
 
-.homelargeheading {
-  color: white;
-  font-size: 4em;
-  line-height: 1.15;
-  font-weight: bold;
-  font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
-  padding-top: 50px;
-  opacity: .8;
-  text-align: center;
-}
-
-.homeparagraph {
-  font-size: 1.25em;
-  line-height: 1.15;
-  color: #686868;
-  font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
-  opacity: 1;
-  border-radius: 5px;
-}
-
 
 // Dashboard styling
 
@@ -116,6 +131,14 @@
   border: solid 4px #ffffff;
   border-bottom-width: 2px;
   box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+
+.title_holder_section_title {
+  padding-left: 15px;
+  font-size: 1.6875rem;
+  font-weight: 600;
+  text-align: left;
+  color: #404040;
 }
 
 .leader_title_style {
@@ -133,22 +156,6 @@
   font-weight: 400;
   margin-top: 15px;
   white-space: nowrap;
-}
-
-.dash-title-pic {
-  text-align: center;
-  display: inline-block;
-  img {
-    border-radius: 5px;
-    width: 7em;
-    height: 7em;
-  }
-
-
-.game-card-pic {
-    width: 7em;
-    height: 7em;
-  }
 }
 
 .league_leader_preview {
@@ -196,6 +203,36 @@
   margin-bottom: 10px;
 }
 
+.dash-title-pic {
+  text-align: center;
+  display: inline-block;
+  img {
+    border-radius: 5px;
+    width: 7em;
+    height: 7em;
+  }
 
+
+.game_card_player_name {
+  text-align: left;
+  font-size: 16px;
+  font-weight: 350;
+  color: #404040;
+  margin-top: 15px;
+}
+
+.game_card_score {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 350;
+  padding: 10px;
+  color: #404040;
+}
+
+.game-card-pic {
+    width: 7em;
+    height: 7em;
+  }
+}
 
 

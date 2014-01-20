@@ -11,6 +11,10 @@
 					<h3>Player Stats</h3>
 					<h4>Recent Game played</h4>
 
+
+
+
+
 					<% @recent_games.last(5).each do |game| %>
 					<p><%= game.player.name %> - <%= game.player_score %> vs <%= game.opponent_score %> - <%= game.opponent.name %></p>
 					<% end %>
@@ -18,3 +22,10 @@
 </div>
 
 
+
+          <!-- Loop of all player games already sorted -->
+<!--           <% @player.games.get_all_player_games(@player).each do |game| %>
+          <p>
+          <%= game.player.name %> - <%= game.player_score %>
+          <p>
+          <% end %> -->

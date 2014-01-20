@@ -33,4 +33,8 @@ module ApplicationHelper
     end
   end
 
+  def navigation_links_to(text, path)
+    link_to text, path, class: "btn #{active_page(path)}"
+  end
+
 end

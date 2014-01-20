@@ -14,16 +14,8 @@
 
   <body> 
 
-    <%= render "layouts/header" %>
-  <!--     <div class="full-width-row">
-        <div class="row">
-          <div class="small-12 medium-12 large-12 columns"> -->
-            <%= yield %>
-     <!--      </div>
-        </div>
-      </div> 
-     -->
-   
+    <%= yield %>
+       
     <%= javascript_include_tag "application" %>
     <%= yield :javascript %>
   </body>
