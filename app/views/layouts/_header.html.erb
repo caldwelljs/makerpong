@@ -28,13 +28,13 @@
   <% else %>
     <div class="row">
         <div class="small-2 columns">
-          <h1 class="title">
+          <div class="logo">
             <%= link_to 'MakerPong', root_url %>
-          </h1>
+          </div>
         </div>
         <div class="small-3 small-offset-6 columns">
-              <div class="top-right-links">
-                <%= link_to "SIGN IN", new_player_session_path %>
+              <div class="top-right-links sign-in-button">
+                <%= link_to "SIGN IN",  new_player_session_path %>
               </div>
         </div>
     </div>

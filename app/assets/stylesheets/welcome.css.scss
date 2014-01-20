@@ -82,10 +82,18 @@
   // opacity: .8;
   margin-top: 8em;
   margin-bottom: 200px;
+
 }
 
 .sign-up-label {
   font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+#player_name, #player_email, #player_password, #player_password_confirmation, #player_current_password {
+  background: hsla(0,0,0,0.35);
+  border-radius: 5px;
+  border: none;
+  color: #ffffff;
 }
 
 .sign-up-button {
