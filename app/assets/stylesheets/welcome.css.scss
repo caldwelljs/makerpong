@@ -1,3 +1,5 @@
+
+// General and Welcome#Index styling
 .page-wrapping{
   width: 100%;
   background: -webkit-linear-gradient(left, #3A945B, #64b481, #3A945B);
@@ -6,20 +8,17 @@
   height: 100em;
 }
 .for-margin{
-  margin-top: 12em;
+  margin-top: 2em;
 }
 .sign-up-row{
-  margin-top: 6em;
+  margin-top: 2em;
 }
 .welcome-wrap{
   min-height: 100%;
   opacity: 1;
   background-color: black;
- 
   width: 100%;
   height: auto;
-  
-
   position: fixed;
   top: 5;
   left: 0;
@@ -38,12 +37,51 @@
   left: 0;
 }
 
-.home-page-featured-image  {
-    padding: 10px;
-    border-radius: 15px;
-    // background: url( asset-path('assets/old-man-ping-pong-player.jpg', image) ) no-repeat top;
-    // width: 100%;
-    // background-size: cover;
+.homepageimage {
+  background: url( asset-path('assets/matt-smash.jpg', image) ) no-repeat top;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+
+.homelargeheading {
+  color: white;
+  text-rendering: optimizeLegibility;
+  font-size: 3em;
+  line-height: 1.15;
+  font-weight: bold;
+  font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
+  padding-top: 2.5em;
+}
+
+.homeparagraph {
+  font-weight: normal;
+  font-size: 1.3em;
+  padding-top: 1em;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  text-rendering: optimizeLegibility;
+  color: #ffffff;
+  font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+.signup-box {
+  padding: 10px;
+  // background-color: #fff;
+  border-radius: 5px;
+  // opacity: .8;
+  margin-top: 8em;
+  margin-bottom: 200px;
+}
+
+.sign-up-label {
+  background-color: #fff;
+  border-style: solid;
+  border: 2px;
+  border-radius: 5px;
+  font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
+  color: white;
 }
 
 .sign-up-button {
@@ -55,6 +93,9 @@
   border-radius: 5px;
   vertical-align: middle;
   display:inline-block;
+  font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
+  color: #fff;
+  font-size: 1em;
 }
 
 .sign-up-button:hover {
@@ -66,36 +107,42 @@
   hover: yellow;
 }
 
-.homelargeheading {
-  color: #308a4f;
-  font-size: 1.5em;
-  line-height: 1.15;
-  font-weight: bold;
+
+// Dashboard styling
+
+.dash_card_style {
+  padding: 20px 20px;
+  margin: 10px 10px 10px 10px;
+  border-radius: 3px;
+  background-color: #fff;
+  border: solid 4px #ffffff;
+  border-bottom-width: 2px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
 }
 
-.homeparagraph {
-  font-size: 1em;
-  line-height: 1.5;
-  
+.title_holder_section_title {
+  padding-left: 15px;
+  font-size: 1.6875rem;
+  font-weight: 600;
+  text-align: left;
+  color: #404040;
 }
 
-.title-text {
+.leader_title_style {
+  font-size: 1.4em;
+  font-weight: 400;
   text-align: center;
-  font-size: 2.3125em;
   color: #333333;
-  font-weight: 300;
-  margin-top: 1em;
   margin-bottom: 0.5em;
 }
 
 .title-holder {
   color: #262626;
   display: block;
-  font-size: 14px;
-  font-weight: 100;
-  line-height: 1.4;
-  overflow: hidden;
-  white-space: nowrap;;
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-top: 15px;
+  white-space: nowrap;
 }
 
 .league_leader_preview {
@@ -106,6 +153,73 @@
   padding: 20px 0 20px 0;
 }
 
+.recent_game {
+  img {
+  width: 3em;
+  height: 3em;
+  padding: 0.125em;
+  border-radius: 5px;
+  }
+}
 
+.table_style {
+  border: solid 1px #666666;
+  margin: 0 auto;
+}
+
+.table-title-row {
+  background-color: #083930;
+}
+
+.table-title {
+  color: #ffffff;
+}
+
+.table_headers {
+  color: #4b4b4b;
+}
+
+.card_column {
+  padding: 0;
+}
+
+.date_row {
+  text-align: right;
+  padding-bottom: 5px;
+  border-bottom: solid 1px #A5A5A5;
+  margin-bottom: 10px;
+}
+
+.dash-title-pic {
+  text-align: center;
+  display: inline-block;
+  img {
+    border-radius: 5px;
+    width: 7em;
+    height: 7em;
+  }
+
+
+.game_card_player_name {
+  text-align: left;
+  font-size: 16px;
+  font-weight: 350;
+  color: #404040;
+  margin-top: 15px;
+}
+
+.game_card_score {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 350;
+  padding: 10px;
+  color: #404040;
+}
+
+.game-card-pic {
+    width: 7em;
+    height: 7em;
+  }
+}
 
 

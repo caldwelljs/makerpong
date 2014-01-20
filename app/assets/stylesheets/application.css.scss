@@ -12,23 +12,35 @@
  *= require foundation_and_overrides
  *= require_tree .
  */
- .top-right-links a{
- 	font-size: 0.3em;
- 	display: inline-block;
- 	font-family: "proxima-nova";
- 	font-weight: 100;
- 	color: white;
-  float: left;
-  height: 2em;
- 	margin-left: 2em;
- }
- .weird-link a {
- 	padding: 0.15em;
- }
+
+// * {
+//   border: 1px solid red;
+//   box-sizing: border-box;
+// }
+
+@media all and (min-width: 64em) {
+ .top-nav {
+  margin-left: 10px;
+ }  
+}
+
+ .top-right-links { 
+    & a {
+     	font-size: 1.2em;
+     	display: inline-block;
+     	font-family: "proxima-nova";
+     	font-weight: 400;
+     	color: white;
+      float: left;
+      height: 2em;
+     	margin-left: 2em;
+      padding-top: 1.3em;
+    }
+}
 
  .nav-wrap{
- 	background: #083930;
- 	padding: 0.25em;
+ 	background: transparent;
+ 	padding-top: 2em;
  }
  .title a{
  	color: white;
@@ -77,7 +89,7 @@ h3{
 	
 
 .welcome_card_style {
-  padding: 20px 20px;
+  padding: 10px 10px;
   margin-right: -15px;
   border-radius: 3px;
   background-color: #fff;
@@ -92,10 +104,6 @@ h3{
   width: 200px;
 }
 
-.sign-up-button {
-  border-radius: 5px;
-  width: 200px;
-}
 
 .profile-pic img {
 	width: 17em;
@@ -105,47 +113,28 @@ h3{
 
 
 
+/* Green Borders for Styling */
+/*.columns {*/
+ /* border: 1px solid green;*/
+/*  padding-left: 0;
+  padding-right: 0;*/
+//}
 
-// Unsure about how to get these pics to fit.
-// .card_pic {
-//   height: 10px:
-//   width: 10px;
-//   display: inline-block;
-//   border-radius: 5px;
-// }
-
-/*.columns {
-  border: 1px solid green;
-}*/
-
-.card_style {
-  padding: 20px 20px;
-  margin: 10px 10px 10px 10px;
-  border-radius: 3px;
-  background-color: #fff;
-  border: solid 4px #ffffff;
-  border-bottom-width: 2px;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
-}
-
-.game_card_name {
-  text-align: left;
-  font-size: 16px;
-  font-weight: 200;
-  padding: 10px;
-  color: #404040;
-}
-
-.game_card_score {
-  text-align: center;
-  font-size: 16px;
-  font-weight: 200;
-  padding: 10px;
-  color: #404040;
-}
 
 .card_title {
   padding-left: 0.875em;
   font-weight: 600;
   color: #404040;
+}
+
+.card_title a {
+  font-weight: 600;
+  color: #404040;
+  padding-left: -0.875em;
+}
+
+.main_card {
+  border-radius: 3px;
+  background-color: #ededed;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.3);
 }

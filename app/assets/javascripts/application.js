@@ -23,13 +23,3 @@
 // $( document ).ready(function() {
 //   $(".winner-page-wrapper").css("background-color", "red");
 // });
-
-
-$(document).ready(function() {
-  if (game.winner === game.player) {
-    $('#player_row').addClass('.winner_style')
-  }
-  else if (game.winner === game.opponent) {
-    $('#opponent_row').addClass('.winner_style')
-  }
-});

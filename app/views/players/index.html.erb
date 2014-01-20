@@ -1,21 +1,14 @@
-
-
-
-
-
 <div class="ranking-wrapping">
+  <%= render "layouts/header" %>
   <div class="row">
-    <div class="small-8 columns top-ranking-box ">
-      <div class= "card_style-two">
-        <h1 class = "ranking-title">2014 MakerSquare Ping Pong Rankings</h1>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="small-8 grab-pic" >
-      
-    <table>
+    <div class="small-8 grab-pic columns" >      
+    <table class="rank-table">
+      <tr class= "card_style-two">
+        <td colspan="6">
+        <h1 class = "ranking-title" >
+          2014 MakerSquare Ping Pong Rankings</h1>
+        </td>
+      </tr>
       <tr class= "title-row">
         <td class="title-data" colspan="6">
           <h1 class="maker-ranking-title">Maker Top 25</h1>
@@ -23,7 +16,7 @@
       </tr>
           <tr class="first-row">
         <td class='sub-title'>
-          RK
+          <div class="rk-title">RK</div>
         </td>
         <td class='sub-title'>
           Name
@@ -32,7 +25,7 @@
           Record
         </td>
         <td class='sub-title'>
-          PCT
+          <div class="pct-title">PCT</div>
         </td>
         <td class='sub-title'>
           PREV
@@ -58,10 +51,10 @@
           <h4 class="rank-pct"><%= player.win_percentage %></h4>
         </td> 
         <td>
-          <%=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25].sample %>
+          <span><%=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25].sample %></span>
         </td>
         <td>
-          <%=[1,2,3,4,5,6].sample %>
+          <span class="arrow">▲</span><%=[1,2,3,4,5,6].sample %>
         </td>
       </tr>
       

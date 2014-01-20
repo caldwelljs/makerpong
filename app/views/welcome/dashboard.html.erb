@@ -1,137 +1,132 @@
-
-<div class="row">
-  <div class="small-12 medium-12 large-12 columns">     
-  <h1>Dashboard</h1>
-    <div class="row">
-      <div class="small-8 medium-8 large-8 columns card_column">
-        <div>
-          <h3 class="card_title">
-            Title Holders
-          </h3>
+<div class="ranking-wrapper">
+  <%= render "layouts/header" %>
+  <div class="row">
+    <div class="small-12 medium-12 large-12 columns main_card">     
+    <h1>Dashboard</h1>
+      <div class="row">
+        <div class="small-8 medium-8 large-8 columns card_column">
+          <div>
+            <h3 class="title_holder_section_title">
+              Title Holders
+            </h3>
+          </div>
+          <div class= "leaderboard_card dash_card_style">
+            <div class="row">
+              <div class="small-12 medium-12 large-12 columns">
+                <div class="small-3 medium-3 large-3 columns">
+                  <div class="leader_title_style">King of the Hill</div>
+                </div>
+                <div class="small-3 medium-3 large-3 columns">
+                  <div class="leader_title_style">Biggest Loser</div>
+                </div>
+                <div class="small-3 medium-3 large-3 columns">
+                  <div class="leader_title_style">Longest Streak</div>
+                </div>
+                <div class="small-3 medium-3 large-3 columns">
+                  <div class="leader_title_style">Worst Loss</div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-12 medium-12 large-12 columns">
+                <div class="small-3 medium-3 large-3 columns dash-title-pic">
+                  <div>
+                    <img src=<%= Player.power_ranking.first.picture_url %>></div>
+                </div>
+                <div class="small-3 medium-3 large-3 columns dash-title-pic">
+                  <img src=<%= Player.power_ranking.last.picture_url %>> 
+                </div>
+                <div class="small-3 medium-3 large-3 columns dash-title-pic">
+                  <img src=<%= Player.win_streak_sorting.first.picture_url %>>
+                </div>
+                <div class="small-3 medium-3 large-3 columns dash-title-pic">
+                  <img src=<%= worst_loss_display_pic %>>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-12 medium-12 large-12 columns">
+                <div class="small-3 medium-3 large-3 columns dash-title-pic">
+                  <div class="title-holder"><%= Player.power_ranking.first.name %></div class="title-holder">
+                </div>
+                <div class="small-3 medium-3 large-3 columns dash-title-pic">
+                  <div class="title-holder"><%= Player.power_ranking.last.name %></div class="title-holder">
+                </div>
+                <div class="small-3 medium-3 large-3 columns dash-title-pic">
+                  <div class="title-holder"><%= Player.win_streak_sorting.first.name %></div class="title-holder">
+                </div>
+                <div class="small-3 medium-3 large-3 columns dash-title-pic">
+                   <div class="title-holder"><%= worst_loss_display %></div>
+                </div>
+              </div>
+            </div>      
+          </div>
         </div>
-        <div class= "leaderboard_card card_style">
-          <div class="row">
-            <div class="small-12 medium-12 large-12 columns">
-              <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
-                <div class="leader_title_style">King of the Hill</div>
-              </div>
-              <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
-                <div class="leader_title_style">Biggest Loser</div>
-              </div>
-              <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
-                <div class="leader_title_style">Longest Streak</div>
-              </div>
-              <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
-                <div class="leader_title_style">Worst Loss</div>
-              </div>
-            </div>
+        <div class="small-4 medium-4 large-4 columns card_column">
+          <div class="power_ranking_card dash_card_style">
+            <table class="table_style">
+              <tr class="table-title-row" >
+                <td class="table-title" colspan="3">League Leaders</td>
+              </tr>
+              <tr class="table_headers">
+                <td>Rk</td>
+                <td>Name</td>
+                <td>Win%</td>
+              </tr>
+              <% Player.power_ranking.first(5).each do |player| %>
+              <tr class="league_leader_preview">
+                <td>
+                  <%= Player.power_ranking.find_index(player) + 1 %>
+                </td>
+                <td><%= player.name %></td>
+                <td><%= player.win_percentage %></td>
+              </tr>
+              <% end %>
+            </table>
           </div>
-          <div class="row">
-            <div class="small-12 medium-12 large-12 columns">
-              <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
-                <div>
-                  <img src=<%= Player.power_ranking.first.picture_url %>></div>
-              </div>
-              <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
-                <img src=<%= Player.power_ranking.last.picture_url %>> 
-              </div>
-              <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
-                <img src=<%= Player.win_streak_sorting.first.picture_url %>>
-              </div>
-              <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
-                <img src=<%= worst_loss_display_pic %>>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="small-12 medium-12 large-12 columns">
-              <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
-                <div class="title-holder"><%= Player.power_ranking.first.name %></div class="title-holder">
-              </div>
-              <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
-                <div class="title-holder"><%= Player.power_ranking.last.name %></div class="title-holder">
-              </div>
-              <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
-                <div class="title-holder"><%= Player.win_streak_sorting.first.name %></div class="title-holder">
-              </div>
-              <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
-                 <div class="title-holder"><%= worst_loss_display %></div>
-              </div>
-            </div>
-          </div>      
         </div>
       </div>
-      <div class="small-4 medium-4 large-4 columns card_column">
-        <div class="power_ranking_card card_style">
-          <table class="table_style">
-            <tr class="table-title-row" >
-              <td class="table-title" colspan="3">League Leaders</td>
-            </tr>
-            <tr class="table_headers">
-              <td>Rk</td>
-              <td>Name</td>
-              <td>Win%</td>
-            </tr>
-            <% Player.power_ranking.first(5).each do |player| %>
-            <tr class="league_leader_preview">
-              <td>
-                <%= Player.power_ranking.find_index(player) + 1 %>
-              </td>
-              <td><%= player.name %></td>
-              <td><%= player.win_percentage %></td>
-            </tr>
-            <% end %>
-          </table>
+      <div class="row">
+        <div class="small-12 medium-12 large-12 columns">
+          <div>
+            <h3 class= "card_title">
+              <%= link_to 'Recent Games', games_path %>
+            </h3>        
+          </div>
+          <% @games.last(6).reverse.each do |game| %>
+          <div class="small-6 medium-6 large-6 columns card_column">
+            <div class="recent_game dash_card_style">
+              <div class="date_row">
+                <%= game.created_at.strftime("%I:%M%p - %a, %b %Y") %>
+              </div>
+              <div class="row player_row">
+                <div class="game_card_pic small-2 medium-2 large-2 columns card_pic">
+                  <img src=<%= game.player.picture_url %>> 
+                </div>
+                <div class="game_card_player_name game_card_style small-8 medium-8 large-8 columns <%= "winner_style" if game.winner == game.player.id %>">
+                  <%= game.player.name %>
+                </div>
+                <div class="game_card_score game_card_style small-2 medium-2 large-2 columns <%= "winner_style" if game.winner == game.player.id %>">
+                  <%= game.player_score %>
+                </div>
+              </div>
+              <div class="row opponent_row">
+                <div class="game_card_pic small-2 medium-2 large-2 columns card_pic">
+                  <img src=<%= game.opponent.picture_url %>>
+                </div>
+                <div class="game_card_name game_card_style small-8 medium-8 large-8 columns <%= "winner_style" if game.winner == game.opponent.id %>">
+                  <%= game.opponent.name %>
+                </div>
+                <div class="game_card_score game_card_style small-2 medium-2 large-2 columns <%= "winner_style" if game.winner == game.opponent.id %>">
+                  <%= game.opponent_score %>
+                </div>
+              </div>
+            </div>
+          </div>
+          <% end %>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="small-12 medium-12 large-12 columns">
-        <div>
-          <h3 class= "card_title">
-            Recent Games
-          </h3>        
-        </div>
-        <% @games.last(5).reverse.each do |game| %>
-        <div class="small-6 medium-6 large-6 columns card_column">
-          <div class="recent_game card_style">
-            <div class="date_row">
-              <%= game.created_at.strftime("%I:%M%p - %a, %b %Y") %>
-            </div>
-            <div class="row" id="player_row">
-              <div class="game_card_pic small-2 medium-2 large-2 columns card_pic">
-                <img src=<%= game.player.picture_url %>>
-              </div>
-              <div class="game_card_name small-8 medium-8 large-8 columns">
-                <%= game.player.name %>
-              </div>
-              <div class="game_card_score small-2 medium-2 large-2 columns">
-                <%= game.player_score %>
-              </div>
-            </div>
-            <div class="row" id="opponent_row">
-              <div class="game_card_pic small-2 medium-2 large-2 columns card_pic">
-                <img src=<%= game.opponent.picture_url %>>
-              </div>
-              <div class="game_card_name small-8 medium-8 large-8 columns">
-                <%= game.opponent.name %>
-              </div>
-              <div class="game_card_score small-2 medium-2 large-2 columns">
-                <%= game.opponent_score %>
-              </div>
-            </div>
-          </div>
-        </div>
-        <% end %>
-      </div>
-  </div>
-
-
-
-
-
-<div class="row">
-  <div class="bottom-links">
-    <%= link_to 'Games Index', games_path %>
   </div>
 </div>
+
