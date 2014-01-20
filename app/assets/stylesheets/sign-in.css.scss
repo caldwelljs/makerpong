@@ -18,5 +18,12 @@
   background: hsla(0,0,0,0.13);
   border-radius: 5px;
   border: none;
-  color: #333333;
+  color: #ffffff;
+}
+
+.homepageimage {
+  background: url( asset-path('assets/matt-smash.jpg', image) ) no-repeat top;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
 }
