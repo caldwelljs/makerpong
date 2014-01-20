@@ -3,7 +3,7 @@ Pong::Application.routes.draw do
 
   # get "players/:id/edit" => "players#edit"
  
-
+# The root path for logged in players will be the dashboard instead of the marketing page.
   authenticated :player do
     root :to => "welcome#dashboard", as: :welcome_dashboard
   end
