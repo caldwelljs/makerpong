@@ -8,6 +8,13 @@ h1 {
   font-weight: bold;
 }
 
+.page_title {
+  margin-top: 1em;
+  font-weight: 200;
+  font-size: 2em;
+  color: white;
+}
+
 .sign-in-bg {
   // padding: 2em 0em;
   background: url( asset-path('assets//backgroundpic1-blurr.jpg', image) ) no-repeat top;

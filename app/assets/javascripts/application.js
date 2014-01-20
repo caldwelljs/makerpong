@@ -23,3 +23,11 @@
 // $( document ).ready(function() {
 //   $(".winner-page-wrapper").css("background-color", "red");
 // });
+
+
+// Attempt for active link styling with addClass
+// $(function() {
+//   $('.top-right-links a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+// });
+
+

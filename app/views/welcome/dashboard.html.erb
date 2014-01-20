@@ -1,83 +1,15 @@
-<<<<<<< HEAD
-<div class="ranking-wrapper">
+<div class="ranking-wrapping">
   <%= render "layouts/header" %>
   <div class="row">
-    <div class="small-12 medium-12 large-12 columns main_card">     
-    <h1>Dashboard</h1>
+    <div class="small-12 medium-12 large-12 columns">     
+    <div class="page_title">Dashboard</div>
       <div class="row">
         <div class="small-8 medium-8 large-8 columns card_column">
           <div>
             <h3 class="title_holder_section_title">
               Title Holders
             </h3>
-=======
-<div class="ranking-wrapping">
- <% if player_signed_in? %>
-   <div class="row">
-       <div class="small-2 columns">
-         <h1 class="title">
-           <%= link_to 'MakerPong', welcome_dashboard_path %>
-         </h1>
-       </div>
-     <div class= "small-8 columns">
-       <h1 class="top-right-links weird-link">
-         <%= link_to 'Power Rankings', players_path %>
-       </h1>
-       <h1 class="top-right-links">
-         <%= link_to 'New Game', new_game_path %>
-       </h1>
-       <h1 class="top-right-links">
-         <%= link_to 'Profile', player_url(current_player) %>
-       </h1>
-       <h1 class="top-right-links">
-         <%= link_to 'Edit Settings', edit_player_registration_path %>
-       </h1>
-       <h1 class="top-right-links">
-         <%= link_to 'Sign out', destroy_player_session_path, method: :delete %>
-       </h1>
-     </div>
-   </div>
- <% else %>  
-   <div class="row">
-       <div class="small-2 columns">
-         <h1 class="title">
-           <%= link_to 'MakerPong', root_url %>
-         </h1>
-       </div>
-       <div class="small-3 small-offset-6 columns">
-             <h1 class="top-right-links">
-               <%= link_to "Sign in", new_player_session_path %>
-             </h1>
-       </div>
-   </div>
- <% end %>
-<div class="row">
-  <div class="small-12 medium-12 large-12 columns">     
-  <h1>Dashboard</h1>
-    <div class="row">
-      <div class="small-8 medium-8 large-8 columns card_column">
-        <div>
-          <h3 class="card_title">
-            Title Holders
-          </h3>
-        </div>
-        <div class= "leaderboard_card card_style">
-          <div class="row">
-            <div class="small-12 medium-12 large-12 columns">
-              <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
-                <div class="leader_title_style">King of the Hill</div>
-              </div>
-              <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
-                <div class="leader_title_style">Biggest Loser</div>
-              </div>
-              <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
-                <div class="leader_title_style">Longest Streak</div>
-              </div>
-              <div class="small-3 medium-3 large-3 columns grab-pic title-pic">
-                <div class="leader_title_style">Worst Loss</div>
-              </div>
-            </div>
->>>>>>> espn
+
           </div>
           <div class= "leaderboard_card dash_card_style">
             <div class="row">
