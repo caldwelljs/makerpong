@@ -13,11 +13,19 @@
  *= require_tree .
  */
 
+ /*
+  *= require font-awesome
+  */
+
 
 // * {
 //   border: 1px solid red;
 //   box-sizing: border-box;
 // }
+
+
+@import "font-awesome";
+
 
 @media all and (min-width: 64em) {
  .top-nav {
