@@ -1079,10 +1079,9 @@ h1,h2,h3,h4,h5{
 }
 
 
-a{
-	outline: 0;
-	text-decoration: none;
-}
+
+
+// Modal Styling
 .modal-bg{
   display:none;
 	position:fixed;
@@ -1092,7 +1091,7 @@ a{
 	background-color:rgba(50,50,50,0.5);
 }
 
-.button{
+.log-game-button {
 	position:relative;
 	font-size:17px;
 	background:#DA244F;
@@ -1106,10 +1105,11 @@ a{
 	-moz-transition:margin 100ms;
 	transition:margin 100ms ;	
 }
-.button:active{
+
+.log-game-button:active{
    margin: 53px 70px;
 }
-.button:hover{
+.log-game-button:hover{
 	background:#C40532;
 }
 // form{
@@ -1119,33 +1119,33 @@ a{
 // form *{
 // 	margin:10px;
 // }
-input:focus{
-	border:2px solid #5DC3A7;
-  outline:0;
-}
-input{
-	// width:240px;
-	padding:7px;
-	border:2px solid #ccc ;
-	border-radius:3px;
-}
-button{
-	float: right;
-	padding: 8px 12px;
-	margin-top: 15px;
-	background: #5DC3A7;
-	border: none;
-	color: #fff;
-	border-bottom: 3px solid #23AA84;
-	border-radius: 3px;
-	cursor: pointer;
-}
-button:active{
-	margin: 18px 10px;
-}
-button:hover{
-	background-color: #0FC491;
-}
+// input:focus{
+// 	border:2px solid #5DC3A7;
+//   outline:0;
+// }
+// input{
+// 	// width:240px;
+// 	padding:7px;
+// 	border:2px solid #ccc ;
+// 	border-radius:3px;
+// }
+// button{
+// 	float: right;
+// 	padding: 8px 12px;
+// 	margin-top: 15px;
+// 	background: #5DC3A7;
+// 	border: none;
+// 	color: #fff;
+// 	border-bottom: 3px solid #23AA84;
+// 	border-radius: 3px;
+// 	cursor: pointer;
+// }
+// button:active{
+// 	margin: 18px 10px;
+// }
+// button:hover{
+// 	background-color: #0FC491;
+// }
 #forgot-link{
 	font-size: 14px;
 	line-height: 45px;
