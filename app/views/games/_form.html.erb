@@ -1,3 +1,10 @@
+<% if @game.errors.any? %>
+  <div>
+    <% @game.errors.full_messages.each do |msg| %>
+      <div class="error_explanation"><%= msg %></div>
+    <% end %>
+  </div>
+<% end %>
 
 <%= form_for @game do |f| %>
 
@@ -12,5 +19,7 @@
   <%= f.text_field :opponent_score %><br />
 
   <%= f.submit %>
+
+  
 
 <% end %>
