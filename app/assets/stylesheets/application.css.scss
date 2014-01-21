@@ -163,13 +163,29 @@ h3{
   text-transform: uppercase;
 }
 
-
 // footer styling
 
+
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+  height: 155px; /* .push must be the same height as .footer */
+}
+
 .footer {
-  background-color: #333333;
-  padding-top: 35px;
-  padding-bottom: 10px;
+  background: #333333;
+  padding-top: 45px;
+  padding-bottom: 20px;
   font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
 }
 

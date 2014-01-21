@@ -16,12 +16,14 @@
   </head>
 
   <body class="<%= controller.controller_name %>"> 
-
+ 
+  <div class="wrapper">
     <%= yield %>
        
     <%= javascript_include_tag "application" %>
     <%= yield :javascript %>
 
+  </div>
 
 <div class="footer">
   
@@ -53,15 +55,6 @@
   
   </div>
 </div>
-
-
-
-
-
-
-
-
-
 
   </body>
 </html>
