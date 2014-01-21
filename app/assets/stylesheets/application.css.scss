@@ -129,12 +129,6 @@ h3{
 }
 
 
-
-
-
-
-
-
 // Unsure about how to get these pics to fit.
 // .card_pic {
 //   height: 10px:
@@ -166,4 +160,59 @@ h3{
   border-radius: 3px;
   background-color: #ededed;
   box-shadow: 0 10px 10px rgba(0,0,0,0.3);
+  text-transform: uppercase;
 }
+
+
+// footer styling
+
+.footer {
+  background-color: #333333;
+  padding-top: 35px;
+  padding-bottom: 10px;
+  font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+.footer a {
+  color: #999999;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #ffffff;
+}
+  
+.footer-links li{
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
+  text-transform: uppercase;
+  font-size: .9em;
+}
+
+.footer-logo {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.fa {
+  color: #999999;
+}
+
+
+.copyright {
+  font-size: .8em;
+  color: #999999;
+  padding-left: 17px;
+}
+
+.footer-social li{
+  display: inline;
+  list-style-type: none;
+  padding-right: 15px;
+}
+
+
+
+
+
