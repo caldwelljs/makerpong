@@ -300,3 +300,136 @@ label .pic_upload_label {
   //   font-weight:bold;
   //   color:#000000;
   //   }
+
+
+
+
+
+
+
+
+
+
+
+// ------------------------------------------------------------
+
+
+
+
+
+// Live Scoring Style
+// body {
+//   font-family: 'Gill Sans', sans-serif;
+//   height: 100%;
+//   padding: 0;
+// }
+
+.scorer-background {
+  background-color: #47474f;
+  min-height: 900px;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto;
+  background-size: cover; //this resizes the background for any screen size
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.navLinks {
+  display: block; 
+  margin-top: 3em;
+  margin-left: auto; 
+  margin-right: auto;
+  color: #fff;
+}
+
+.navText {
+  display: block;
+  margin-top: 3em;
+  margin-left: auto; 
+  margin-right: auto;
+  font-size: 1.25em;
+  text-align: center;
+  margin-bottom: 1em;
+  font-family: 'Gill Sans', sans-serif;
+  color: #fff;
+}
+
+.gameBlock {
+  padding-top: 1em;
+  min-height: 90%;
+}
+
+.scoreCard {
+  height: 100%;
+  width: 100%;
+  border-radius: 15px
+}
+
+.score {
+  font-size: 20em;
+  text-align: center;
+  font-family: 'Passion One', 'Gill Sans', sans-serif;
+  color: #fff;
+}
+
+.player1block {
+  background: #cd3831;
+}
+
+.player2block {
+  background: #81b5c3;
+}
+
+.changeScore {
+  font-size: 0.8em;
+  margin-top: 0.8em;
+  margin-bottom: -2em;
+  font-size: 3em;
+  font-family: 'Gill Sans', sans-serif;
+  color: #fff;
+}
+
+.player1ScoreChange {
+  text-align: left;
+}
+
+.player2ScoreChange {
+  text-align: right;
+}
+
+#increasePlayer1 {
+  margin-left: .65em;
+}
+
+#decreasePlayer1 {
+  margin-left: .75em;
+  margin-top: -2em;
+}
+
+#increasePlayer2 {
+  margin-right: .65em;
+}
+
+#decreasePlayer2 {
+  margin-right: .75em;
+  margin-top: -2em;
+}
+
+.player {
+  margin-top: 22%;
+  font-size: 1.5em;
+  text-align: center;
+  font-family: 'Gill Sans', sans-serif;
+  color: #fff;
+}
+
+.game-title {
+  font-size: 2em;
+  text-align: center;
+  font-family: 'Gill Sans', sans-serif;
+  color: #fff;
+}
+
+

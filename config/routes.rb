@@ -1,6 +1,6 @@
 Pong::Application.routes.draw do
 
-
+  get 'games/live_score', as: :live_score
   # get "players/:id/edit" => "players#edit"
  
 # The root path for logged in players will be the dashboard instead of the marketing page.
@@ -9,7 +9,6 @@ Pong::Application.routes.draw do
   end
 
   root "welcome#index"
-  
 
   devise_for :players
 
@@ -17,6 +16,7 @@ Pong::Application.routes.draw do
   
   resources :players
   resources :games
+
 
   
   # The priority is based upon order of creation: first created -> highest priority.

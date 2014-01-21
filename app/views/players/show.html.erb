@@ -38,7 +38,13 @@
             <h1 class="table-percent"><%= @player.win_percentage %></h1>
           </td>
           <td class="last-game-data">
-            <h3 class="last-game-title"><%= @player.games.last.player_score %>-<%= @player.games.last.opponent_score %></h3>
+            <h3 class="last-game-title">
+              <% if @player.games.empty? %>
+                <%= "No Games Played" %>
+              <% else %>
+                <%= @player.games.last.player_score %>-<%= @player.games.last.opponent_score %>
+              <% end %>
+            </h3>
             <img class="last-game-player-pic" src=<%= @player.games.get_all_recent_games_for(@player).last.player.picture_url %>>
             <h3 class="last-game-vs">VS</h3>
             <img class="last-game-opponent-pic" src=<%= @player.games.get_all_recent_games_for(@player).last.opponent.picture_url %>>

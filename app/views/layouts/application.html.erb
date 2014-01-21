@@ -7,12 +7,13 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-
+    <link href='http://fonts.googleapis.com/css?family=Passion+One:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,500' rel='stylesheet' type='text/css'>
     <title><%= content_for?(:title) ? yield(:title) : "MakerPong" %></title>
     <%= stylesheet_link_tag 'application' %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
-  
+    
   </head>
 
   <body class="<%= controller.controller_name %>"> 
