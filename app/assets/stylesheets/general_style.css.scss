@@ -13,6 +13,7 @@ h1 {
   font-weight: 200;
   font-size: 2em;
   color: white;
+  margin-bottom: 1em;
 }
 
 .sign-in-bg {
@@ -27,6 +28,35 @@ h1 {
   -o-background-size: cover;
   h2 {color: #008CBA;} 
 }
+
+.sign-in-fields {
+  text-align: right;
+  margin-left: 1em;
+  width: 16em;
+  display: inline-block;
+}
+
+.sign-in-link {
+  text-align: right;
+  margin-left: 1em;
+  display: inline-block;
+  width: 4em;
+}
+
+
+
+// font-size: 1em;
+//       display: inline-block;
+//       font-family: "proxima-nova";
+//       font-weight: 400;
+//       color: white;
+//       float: left;
+//       height: 2em;
+//       margin-left: 2em;
+//       padding-top: 0.8em;
+//       padding-bottom: 0.5em;
+
+
 
 .welcome-title {
   color: white;

@@ -1,191 +1,172 @@
 <div class="ranking-wrapping">
   <%= render "layouts/header" %>
-
-  <%= render 'games/form_new' %>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
-<div class="row">
-  <div class="small-5  prof-name-wrap columns">
-    <h1 class="profile-name">Dashboard</h1>
-    <div class="the-border"></div>
+  <div class="row">
+    <div class="small-5  prof-name-wrap columns">
+      <h1 class="profile-name">Dashboard</h1>
+      <div class="the-border"></div>
+    </div>
   </div>
-</div>
-
-<div class="row">
-  <div class="small-8  prof-name-wrap title-holders-column columns">
-    <table>
-    <tr>
-      <td class="title-holder-data">
-        <div class="title-holders">Title Holders</div>
-      </td>
-    </tr>
-    </table>
-    <table>
   
-    <tr>
-      <td class="king-wrap">
-        <div class="king"> King of the Hill</div>
-      </td>
-      <td class="king-wrap">
-        <div class="king">
-        Biggest Loser
-      </td>
-      <td class="king-wrap">
-        <div class="king">
-        Longest Streak
-      </td>
-      <td class="king-wrap">
-        <div class="king">
-        Worst Loss
-      </div>
-      </td>
-    </tr>
-    <tr>
-      <td class="king-wrap">
-          <div>
-            <img class="title-holder-pics" src=<%= Player.power_ranking.first.picture_url %>></div>
-        </div>
-      </td>
-      <td class="king-wrap">
-        <div>
-          <img class="title-holder-pics" src=<%= Player.power_ranking.last.picture_url %>> 
-        </div>
-      </td>
-      <td class="king-wrap">
-        <div>
-          <img class="title-holder-pics" src=<%= Player.win_streak_sorting.first.picture_url %>>
-
-        </div>
-      </td>
-      <td class="king-wrap">
-        <div>
-          <img class="title-holder-pics" src=<%= worst_loss_display_pic %>>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td class="king-wrap">
-        <div class="king"><%= Player.power_ranking.first.name %></div class="title-holder">
-      </td>
-      <td class="king-wrap">
-        <div class="king"><%= Player.power_ranking.last.name %></div>
-      </td>
-      <td class="king-wrap">
-        <div class="king">
-          <%= Player.win_streak_sorting.first.name %>
-        </div>
-      </td>
-      <td class="king-wrap">
-        <div class="king">
-          <%= worst_loss_display %>
-      </div>
-      </td>
-    </tr>
-    <tr>
-    </table>
-  </div>
-  <div class="small-4  prof-name-wrap title-holders-column columns">
-    <table>
+  <div class="row">
+    <div class="small-8  prof-name-wrap title-holders-column columns">
+      <table>
       <tr>
         <td class="title-holder-data">
-          <div class="title-holders">League Leaders</div>
+          <div class="title-holders">Title Holders</div>
         </td>
       </tr>
-    </table>
-    <table>
-      
+      </table>
+      <table>
       <tr>
         <td class="king-wrap">
+          <div class="king"> King of the Hill</div>
+        </td>
+        <td class="king-wrap">
           <div class="king">
-            RK
+          Biggest Loser
+        </td>
+        <td class="king-wrap">
+          <div class="king">
+          Longest Streak
+        </td>
+        <td class="king-wrap">
+          <div class="king">
+          Worst Loss
+        </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="king-wrap">
+            <div>
+              <img class="title-holder-pics" src=<%= Player.power_ranking.first.picture_url %>></div>
           </div>
         </td>
         <td class="king-wrap">
-        <div class="king">
-          Name
-        </div>
+          <div>
+            <img class="title-holder-pics" src=<%= Player.power_ranking.last.picture_url %>> 
+          </div>
         </td>
         <td class="king-wrap">
-        <div class="king">
-          PCT
+          <div>
+            <img class="title-holder-pics" src=<%= Player.win_streak_sorting.first.picture_url %>>
+
+          </div>
+        </td>
+        <td class="king-wrap">
+          <div>
+            <img class="title-holder-pics" src=<%= worst_loss_display_pic %>>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="king-wrap">
+          <div class="king"><%= Player.power_ranking.first.name %></div class="title-holder">
+        </td>
+        <td class="king-wrap">
+          <div class="king"><%= Player.power_ranking.last.name %></div>
+        </td>
+        <td class="king-wrap">
+          <div class="king">
+            <%= Player.win_streak_sorting.first.name %>
+          </div>
+        </td>
+        <td class="king-wrap">
+          <div class="king">
+            <%= worst_loss_display %>
         </div>
         </td>
-      </tr>  
-            <% Player.power_ranking.first(5).each do |player| %>
+      </tr>
+      <tr>
+      </table>
+    </div>
+    <div class="small-4  prof-name-wrap title-holders-column columns">
+      <table>
         <tr>
-          <td>
-            <div class="king">
-              <%= Player.power_ranking.find_index(player) + 1 %>
-            </div>
-          </td>
-          <td>
-            <div class="leage-leader-stats">
-              <%= player.name %></td>
-            </div>
-          <td>
-            <div class="leage-leader-percent">
-              <%= player.win_percentage %>
-            </div>
+          <td class="title-holder-data">
+            <div class="title-holders">League Leaders</div>
           </td>
         </tr>
-
-      <% end %>
-    </table>
-
-  </div>
-  <div class="row">
-    <div class="small-12  prof-name-wrap columns">
-        <% @games.last(9).reverse.each do |game| %>
-
-      <div class="small-4 columns last-games-column-wrapper">
-        
-          <table class="prev-games-table">
-
-          <tr class="final-title-row">
-            <td class='final-title-data'>
-              <div class="prev-games-final-title">Final</div>
-              <div class="prev-games-date"><%= game.created_at.strftime("%I:%M%p - %a, %b %Y") %></div>
-              <div class="total">T</div>
-            </td>
-          </tr>
+      </table>
+      <table>     
+        <tr>
+          <td class="king-wrap">
+            <div class="king">
+              RK
+            </div>
+          </td>
+          <td class="king-wrap">
+          <div class="king">
+            Name
+          </div>
+          </td>
+          <td class="king-wrap">
+          <div class="king">
+            PCT
+          </div>
+          </td>
+        </tr>  
+              <% Player.power_ranking.first(5).each do |player| %>
           <tr>
-            <td class='prev-games-data-row'>
-               <img class="prev-games-card-pic1" src=<%= game.player.picture_url %>> 
-               <div class="prev-games-card-name"><%= game.player.name %></div>
-               <div class="record-prev-games">(<%= game.player.wins %>-<%= game.player.losses %>)</div>
-               <div class="player-score-prev-games"><%= game.player_score %></div>
+            <td>
+              <div class="king">
+                <%= Player.power_ranking.find_index(player) + 1 %>
+              </div>
+            </td>
+            <td>
+              <div class="leage-leader-stats">
+                <%= player.name %></td>
+              </div>
+            <td>
+              <div class="leage-leader-percent">
+                <%= player.win_percentage %>
+              </div>
             </td>
           </tr>
-          <tr>
-            <td class='prev-games-data-row'>
-               <img class="prev-games-card-pic1" src=<%= game.opponent.picture_url %>> 
-               <div class="prev-games-card-name"><%= game.opponent.name %></div>
-               <div class="record-prev-games">(<%= game.opponent.wins %>-<%= game.player.losses %>)</div>
-               <div class="player-score-prev-games"><%= game.opponent_score %></div>
-            </td>
-          </tr>
-          <tr>
-            <td class='prev-games-comment-row'>
-              <h3 class="comment"><%="#{game.player.last_name} pulls away late to down #{game.opponent.last_name}" %> </h3>
-            </td>
-          </tr>
-          </table>
-        </div>
+
         <% end %>
+      </table>
+
+    </div>
+    <div class="row">
+      <div class="small-12  prof-name-wrap columns">
+          <% @games.last(9).reverse.each do |game| %>
+
+        <div class="small-4 columns last-games-column-wrapper">
+          
+            <table class="prev-games-table">
+
+            <tr class="final-title-row">
+              <td class='final-title-data'>
+                <div class="prev-games-final-title">Final</div>
+                <div class="prev-games-date"><%= game.created_at.strftime("%I:%M%p - %a, %b %Y") %></div>
+                <div class="total">T</div>
+              </td>
+            </tr>
+            <tr>
+              <td class='prev-games-data-row'>
+                 <img class="prev-games-card-pic1" src=<%= game.player.picture_url %>> 
+                 <div class="prev-games-card-name"><%= game.player.name %></div>
+                 <div class="record-prev-games">(<%= game.player.wins %>-<%= game.player.losses %>)</div>
+                 <div class="player-score-prev-games"><%= game.player_score %></div>
+              </td>
+            </tr>
+            <tr>
+              <td class='prev-games-data-row'>
+                 <img class="prev-games-card-pic1" src=<%= game.opponent.picture_url %>> 
+                 <div class="prev-games-card-name"><%= game.opponent.name %></div>
+                 <div class="record-prev-games">(<%= game.opponent.wins %>-<%= game.player.losses %>)</div>
+                 <div class="player-score-prev-games"><%= game.opponent_score %></div>
+              </td>
+            </tr>
+            <tr>
+              <td class='prev-games-comment-row'>
+                <h3 class="comment"><%="#{game.player.last_name} pulls away late to down #{game.opponent.last_name}" %> </h3>
+              </td>
+            </tr>
+            </table>
+          </div>
+          <% end %>
+    </div>
   </div>
 </div>
 

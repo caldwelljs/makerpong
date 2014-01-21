@@ -73,6 +73,7 @@
   margin-bottom: 0.75em;
   font-size: 2em;
   font-weight: 600;
+  text-align: center;
 }
 
 .signup-box {
@@ -82,13 +83,21 @@
   // opacity: .8;
   margin-top: 8em;
   margin-bottom: 200px;
+
 }
 
 .sign-up-label {
   font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
 }
 
-.sign-up-button {
+#player_name, #player_email, #player_password, #player_password_confirmation, #player_current_password {
+  background: hsla(0,0,0,0.35);
+  border-radius: 5px;
+  border: none;
+  color: #ffffff;
+}
+
+.sign-up-button{
   height: 50px;
   width: 100%;
   background-color: #308a4f;
@@ -102,13 +111,14 @@
   font-size: 1em;
 }
 
+
+
 .sign-up-button:hover {
-    background-color: #76d691;
+  background-color: #76d691;
 }
 
 .homepage_link a {
   text-decoration: none;
-  hover: yellow;
 }
 
 
