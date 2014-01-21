@@ -1,0 +1,27 @@
+
+
+
+<%= form_for @game do |f| %>
+  <div class="small-3 medium-3 large-3 columns">
+    <%= f.collection_select :player_id, Player.all, :id, :name, prompt: "Choose Player 1" %>
+  </div>
+
+  <div class="small-3 medium-3 large-3 columns">
+    <!-- <%#= f.label :player_one_score %> -->
+    <%= f.text_field :player_score, placeholder: "Player 1 Score" %>
+  </div>
+
+  <div class="small-3 medium-3 large-3 columns">
+    <%= f.collection_select :opponent_id, Player.all, :id, :name, prompt: "Choose Player 2" %>
+  </div>
+
+  <div class="small-3 medium-3 large-3 columns">
+    <!-- <%#= f.label :player_two_score %> -->
+    <%= f.text_field :opponent_score, placeholder: "Player 2 Score" %>
+  </div>
+
+  <div style="text-align: center;">
+  <%= f.submit "Add Game", class: "button success" %>
+  <%= link_to 'Back', games_path, class: "button alert" %>
+  </div>
+<% end %>

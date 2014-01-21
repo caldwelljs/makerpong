@@ -11,8 +11,8 @@
         <div class="top-right-links">
           <%= link_to 'Rankings', players_path %>
         </div>
-        <div class="top-right-links">
-          <%= link_to 'New Game', new_game_path %>
+        <div id="new-game" class="top-right-links">
+          <%= link_to 'New Game' %>
         </div>
         <div class="top-right-links">
           <%= link_to 'Profile', player_url(current_player) %>
@@ -33,9 +33,9 @@
           </div>
         </div>
         <div class="small-3 small-offset-6 columns">
-              <div class="top-right-links sign-in-button">
-                <%= link_to "SIGN IN",  new_player_session_path %>
-              </div>
+          <div class="top-right-links sign-in-button">
+            <%= link_to "SIGN IN" %>
+          </div>
         </div>
     </div>
   <% end %>
