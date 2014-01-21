@@ -1,9 +1,9 @@
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div class="sign-in-label">
+  <div class="small-2 medium-2 large-2 columns sign-in-label">
     <%= f.email_field :email, :placeholder => "Email", :autofocus => true %>
   </div>
 
-  <div class="sign-in-label">
+  <div class="small-2 medium-2 large-2 columns sign-in-label">
     <%= f.password_field :password, :placeholder => "Password" %>
   </div>
   <% if devise_mapping.rememberable? -%>
@@ -12,5 +12,7 @@
     </div>
   <% end -%>
 
-  <div ><%= f.submit "Sign in", class: "button sign-up-button" %></div>
+  <div >
+    <%= f.submit "Sign in", class: "button sign-up-button" %>
+  </div>
 <% end %>
