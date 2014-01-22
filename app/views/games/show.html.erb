@@ -1,48 +1,7 @@
 <div class="ranking-wrapping">
-<<<<<<< HEAD
-  
-=======
+
 <%= render "layouts/header" %>
->>>>>>> d285b02fa10ac2e02a5ef56d639853e5a8528600
-	<% if player_signed_in? %>
-	  <div class="row">
-	      <div class="small-2 nav-rowing columns">
-	        <div class="logo">
-	          <%= link_to 'MakerPong', welcome_dashboard_path %>
-	        </div>
-	      </div>
-	    <div class= "small-8 columns">
-	      <div class="top-right-links weird-link">
-	        <%= link_to 'Power Rankings', players_path %>
-	      </div>
-	      <div class="top-right-links">
-	        <%= link_to 'New Game', new_game_path %>
-	      </div>
-	      <div class="top-right-links">
-	        <%= link_to 'Profile', player_url(current_player) %>
-	      </div>
-	      <div class="top-right-links">
-	        <%= link_to 'Edit Settings', edit_player_registration_path %>
-	      </div>
-	      <div class="top-right-links">
-	        <%= link_to 'Sign out', destroy_player_session_path, method: :delete %>
-	      </div>
-	    </div>
-	  </div>
-	<% else %>  
-	  <div class="row">
-	      <div class="small-2 columns">
-	        <div class="logo">
-	          <%= link_to 'MakerPong', root_url %>
-	        </div>
-	      </div>
-	      <div class="small-3 small-offset-6 columns">
-	            <div class="top-right-links">
-	              <%= link_to "Sign in", new_player_session_path %>
-	            </div>
-	      </div>
-	  </div>
-	<% end %>
+
 
 <!-- a;lkdfjasdlfkjasd;f -->
 
@@ -79,11 +38,11 @@
   	 </div>
   </div>
   <div class="small-3 small-offset-1 prof-name-wrap new-game-button-column columns">
-    <button class='button' name="submit" id="submit" type="submit">Edit Game</button>
+    <button class='new-game-button' name="submit" id="submit" type="submit">Edit Game</button>
 </div>
 
 <div class="row">
-	<div class="small-12  prof-name-wrap columns">
+	<div class="small-12  prof-name-wrap main-after-game-column-wrap columns">
 		<table>
 			<tr class="first-row-after-game">
 				<td class="first-data-after-game">
