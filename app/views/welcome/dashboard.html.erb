@@ -38,36 +38,40 @@
       <tr>
         <td class="king-wrap">
             <div>
-              <img class="title-holder-pics" src=<%= Player.power_ranking.first.picture_url %>></div>
+              
+              <%= link_to(image_tag(Player.power_ranking.first.picture_url, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), Player.power_ranking.first) %>
+            </div>
+          </div>
+        </td>
+        <td class="king-wrap">
+          <div>      
+             <%= link_to(image_tag(Player.power_ranking.last.picture_url, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), Player.power_ranking.last) %>
           </div>
         </td>
         <td class="king-wrap">
           <div>
-            <img class="title-holder-pics" src=<%= Player.power_ranking.last.picture_url %>> 
+            
+            <%= link_to(image_tag(Player.win_streak_sorting.first.picture_url, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), Player.win_streak_sorting.first) %>
           </div>
         </td>
         <td class="king-wrap">
-          <div>
-            <img class="title-holder-pics" src=<%= Player.win_streak_sorting.first.picture_url %>>
-
-          </div>
-        </td>
-        <td class="king-wrap">
-          <div>
+          <div>          
             <img class="title-holder-pics" src=<%= worst_loss_display_pic %>>
           </div>
         </td>
       </tr>
       <tr>
         <td class="king-wrap">
-          <div class="king"><%= Player.power_ranking.first.name %></div class="title-holder">
+          <div class="king">
+          <%= link_to Player.power_ranking.first.name, Player.power_ranking.first %>
+          </div class="title-holder">
         </td>
         <td class="king-wrap">
-          <div class="king"><%= Player.power_ranking.last.name %></div>
+          <div class="king"><%= link_to Player.power_ranking.last.name, Player.power_ranking.last %></div>
         </td>
         <td class="king-wrap">
           <div class="king">
-            <%= Player.win_streak_sorting.first.name %>
+            <%= link_to Player.win_streak_sorting.first.name, Player.win_streak_sorting.first %>
           </div>
         </td>
         <td class="king-wrap">
@@ -114,7 +118,7 @@
             </td>
             <td>
               <div class="leage-leader-stats">
-                <%= player.name %></td>
+                <%= link_to player.name, player %></td>
               </div>
             <td>
               <div class="leage-leader-percent">
@@ -143,17 +147,19 @@
               </td>
             </tr>
             <tr>
-              <td class='prev-games-data-row'>
-                 <img class="prev-games-card-pic1" src=<%= game.player.picture_url %>> 
-                 <div class="prev-games-card-name"><%= game.player.name %></div>
+              <td class='prev-games-data-row'>   
+                <%= link_to(image_tag(game.player.picture_url, :class => "prev-games-card-pic1", :alt => "profile pic", :title => "profile pic"), game.player) %>
+                 <div class="prev-games-card-name"><%= link_to game.player.name, game.player %></div>
                  <div class="record-prev-games">(<%= game.player.wins %>-<%= game.player.losses %>)</div>
                  <div class="player-score-prev-games"><%= game.player_score %></div>
               </td>
             </tr>
             <tr>
               <td class='prev-games-data-row'>
-                 <img class="prev-games-card-pic1" src=<%= game.opponent.picture_url %>> 
-                 <div class="prev-games-card-name"><%= game.opponent.name %></div>
+                 <!-- <img class="prev-games-card-pic1" src=<%= game.opponent.picture_url %>>  -->
+                <%= link_to(image_tag(game.opponent.picture_url, :class => "prev-games-card-pic1", :alt => "profile pic", :title => "profile pic"), game.opponent) %>
+
+                 <div class="prev-games-card-name"><%= link_to game.opponent.name, game.opponent %></div>
                  <div class="record-prev-games">(<%= game.opponent.wins %>-<%= game.player.losses %>)</div>
                  <div class="player-score-prev-games"><%= game.opponent_score %></div>
               </td>
@@ -168,6 +174,6 @@
           <% end %>
     </div>
   </div>
+
 </div>
-
-
+  <%= render "layouts/footer" %>

@@ -37,23 +37,22 @@
           <td class="table-data">
             <h1 class="table-percent"><%= @player.win_percentage %></h1>
           </td>
-          <td class="last-game-data">
-            <h3 class="last-game-title">
-              <% if @player.games.empty? %>
-                <%= "No Games Played" %>
-              <% else %>
+          <% if @player.games.empty? %>
+            <div><%= "No Games Played" %></div>
+          <% else %>
+            <td class="last-game-data">
+              <h3 class="last-game-title">
                 <%= @player.games.last.player_score %>-<%= @player.games.last.opponent_score %>
-              <% end %>
-            </h3>
-            <img class="last-game-player-pic" src=<%= @player.games.get_all_recent_games_for(@player).last.player.picture_url %>>
-            <h3 class="last-game-vs">VS</h3>
-            <img class="last-game-opponent-pic" src=<%= @player.games.get_all_recent_games_for(@player).last.opponent.picture_url %>>
-            <h3 class="last-game-player-name"><%= @player.last_name %></h3>
-            <h3 class="last-game-opponent-name"><%= @player.games.last.opponent.last_name %></h3>
-            <div class="last-game-border"></div>
-            <h3 class="last-game-comment"><%= @player.games.last.opponent.last_name %> hangs on in a thriller to end 4 game skid, <%= @player.games.last.player.last_name %> stunned</h3>
-          </td>
-
+              </h3>
+              <img class="last-game-player-pic" src=<%= @player.games.get_all_recent_games_for(@player).last.player.picture_url %>>
+              <h3 class="last-game-vs">VS</h3>
+              <img class="last-game-opponent-pic" src=<%= @player.games.get_all_recent_games_for(@player).last.opponent.picture_url %>>                
+              <h3 class="last-game-player-name"><%= @player.last_name %></h3>
+              <h3 class="last-game-opponent-name"><%= link_to @player.games.last.opponent.last_name, @player.games.last.opponent    %></h3>
+              <div class="last-game-border"></div>
+              <h3 class="last-game-comment"><%= @player.games.last.opponent.last_name %> hangs on in a thriller to end 4 game skid, <%= @player.games.last.player.last_name %> stunned</h3>
+            </td>
+          <% end %>
         </tr>
       
           
@@ -85,8 +84,8 @@
               <td class="many-data">
                 <span class="many-dates"><%= game.created_at.strftime(" %a, %b %Y") %></span>
                 <span class="many-vs">VS</span>
-                <img class="many-pics" src=<%= game.opponent.picture_url %>>
-                <span class="many-opponents"> <%= game.opponent.name %></span>
+                 <%= link_to(image_tag(game.opponent.picture_url , :class => "many-pics", :alt => "profile pic", :title => "profile pic"), game.opponent) %>
+                <span class="many-opponents"> <%= link_to game.opponent.name, game.opponent %></span>
                 <span class="many-w-l">W</span>
                 <span class="many-scores"><%= game.player_score %>-<%= game.opponent_score %></span>
                 <span class="many-records"><%= game.player.wins %>-<%= game.player.losses %></span>
@@ -98,8 +97,10 @@
 
           </table>
         </div>
-
+  
   </div>
+
+  <%= render "layouts/footer" %>
 
 
 
