@@ -31,7 +31,7 @@
           </div>
         </div>
         <div class="small-1 medium-1 large-1 columns">
-          <a href="#" class="navText" id="newGame">New Game</a>
+          <a href="#" class="navText newGame" data-reveal-id="myModal">New Game</a>
           <a href="#" class="navText" id="restartGame">Restart</a>
         </div>
       </div>
@@ -58,4 +58,22 @@
         </div>
       </div>
   </div>
+</div>
+
+<div id="myModal" class="reveal-modal" data-reveal>
+  <h2>Choose Your Players</h2>
+      <div class="player_selection">
+        <div class="row">
+          <div class="game_form_fields">Player 1 Name</div>         
+          <%= collection_select(:player, :name, Player.all, :id, :name, {:prompt => true, :multiple=>true }) %>
+          <div class="game_form_fields">Player 1 Name</div>
+          <%= collection_select(:player, :name, Player.all, :id, :name, {:prompt => true, :multiple=>true }) %>
+        </div>
+        <div class="row">
+          <div class="right" style="margin-top: 20px;">
+            <button type="submit" class="button radius">Start the</button>
+          </div>
+        </div>
+      </div>
+  <a class="close-reveal-modal">&#215;</a>
 </div>

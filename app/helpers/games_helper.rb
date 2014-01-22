@@ -18,4 +18,12 @@ module GamesHelper
       Game.worst_loss.first.player.picture_url
     end
   end
+
+  # def live_score_player_dropdown
+  #   select("player", "player_id", Person.all.collect do |p| 
+  #     [ p.name, p.id ] }, {include_blank: 'None'
+  #   end
+  # end
+
+
 end
