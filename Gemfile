@@ -9,6 +9,10 @@ gem 'carrierwave'
 
 gem 'rmagick'
 
+gem 'figaro'
+
+gem 'fog'
+
 gem "font-awesome-rails"
 # Add foundations gem
 
