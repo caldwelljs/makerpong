@@ -4,12 +4,21 @@
 // }
 
 h1 {
-  font-size: 4em;
+  font-size: 1em;
   font-weight: bold;
 }
 
-.full-width-row {
-  padding: 6em 0em;
+.page_title {
+  margin-top: 1em;
+  font-weight: 200;
+  font-size: 2em;
+  color: white;
+  margin-bottom: 1em;
+}
+
+.sign-in-bg {
+  // padding: 2em 0em;
+  background: url( asset-path('assets//backgroundpic1-blurr.jpg', image) ) no-repeat top;
   width: 100%;
   height: 100%;
   min-height: 800px; // to make it full-screen top to bottom on most screens
@@ -17,8 +26,44 @@ h1 {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background: #76d691;
-  h2 {color: #008CBA;}
+  h2 {color: #008CBA;} 
+}
+
+.sign-in-fields {
+  text-align: right;
+  margin-left: 1em;
+  width: 16em;
+  display: inline-block;
+}
+
+.sign-in-link {
+  text-align: right;
+  margin-left: 1em;
+  display: inline-block;
+  width: 4em;
+}
+
+
+
+// font-size: 1em;
+//       display: inline-block;
+//       font-family: "proxima-nova";
+//       font-weight: 400;
+//       color: white;
+//       float: left;
+//       height: 2em;
+//       margin-left: 2em;
+//       padding-top: 0.8em;
+//       padding-bottom: 0.5em;
+
+
+
+.welcome-title {
+  color: white;
+  font-size: 2em;
+  font-weight: 500;
+  padding-bottom: 1em;
+  padding-left: 15px;
 }
 
 .lower_headers {
@@ -42,3 +87,18 @@ h2, h1 {
   color: #404040;
 }
 
+.game_card_style {
+  margin-top: 15px;
+}
+
+.winner_style {
+  margin-top: 15px;
+  color: red;
+}
+
+body.players{
+  background-color: #fff;
+}
+body.games{
+  background-color: #fff;
+}

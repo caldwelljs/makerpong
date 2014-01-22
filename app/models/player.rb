@@ -1,4 +1,7 @@
 class Player < ActiveRecord::Base
+  
+  validates_presence_of :name
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -31,5 +34,15 @@ class Player < ActiveRecord::Base
   def self.win_streak_sorting
     self.all.sort {|a, b| b.win_streak <=> a.win_streak}
   end
+
+
+  def first_name
+    @first_name ||= name.split[0]
+  end
+
+  def last_name
+    @last_name ||= name.split[1..-1].join(" ")
+  end
+
 
 end

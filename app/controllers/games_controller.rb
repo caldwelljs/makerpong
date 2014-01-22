@@ -18,7 +18,7 @@ class GamesController < ApplicationController
      if @game.save
        redirect_to @game
      else
-       render 'new'
+        render 'new'
      end
   end
 

@@ -25,11 +25,33 @@
 // });
 
 
+// Attempt for active link styling with addClass
+// $(function() {
+//   $('.top-right-links a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+// });
+
+
+// Click and HOver for new game dropdown
+  // $('#new-game').on('click', function () {
+  //   $(".new-game-section").slideDown('fast');
+  // })
+
+
+  // $(document).ready(function () {
+  //   $("#new-game").hover(function () {
+  //       $(".new-game-section").toggleClass("show-log");  //Toggle the active class to the area is hovered
+  //   }
+  // });
+
 $(document).ready(function() {
-  if (game.winner === game.player) {
-    $('#player_row').addClass('.winner_style')
-  }
-  else if (game.winner === game.opponent) {
-    $('#opponent_row').addClass('.winner_style')
-  }
+    $('.button').click(function(){
+    $('#modal').css('display','block');
+    $('.modal-bg').fadeIn();
+    
+    $('#close').click(function(){
+      $('.modal-bg').fadeOut();   
+      $('#modal').fadeOut();
+         return false;
+    });
+  });
 });

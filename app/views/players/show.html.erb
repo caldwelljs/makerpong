@@ -1,20 +1,106 @@
-<div class="row">
-  <div class="small-12 medium-12 large-12 columns">     
-  <h1>Player Profile</h1>
-		<div class="profile-pic"><%= image_tag @player.picture_url%></div>
-		<h2 class="profile-rank">Ranking: <span><%=  ordinalize @rank %></span></h2><h2 class="profile-record">Record (<%= @player.wins %> - <%= @player.losses %>)</h2>
-			    <h2 class="profile-win-percent"> Win % <%= @player.win_percentage %></h2>
-					<h2 class="profile-streak"> Streak: <%= streak_display(@player) %></h2>
-					
-					<h1 class="profile-name"><%= @player.name %><br></h1>
-
-					<h3>Player Stats</h3>
-					<h4>Recent Game played</h4>
-
-					<% @recent_games.last(5).each do |game| %>
-					<p><%= game.player.name %> - <%= game.player_score %> vs <%= game.opponent_score %> - <%= game.opponent.name %></p>
-					<% end %>
+<div class="ranking-wrapping">
+  <%= render "layouts/header" %>
+  <div class="row">
+    <div class="small-5  prof-name-wrap columns">
+      <h1 class="profile-name"><%= @player.name %></h1>
+      <div class="the-border"></div>
+      <h2 class="profile-record"><span><%= @player.wins %><span>-<span><%= @player.losses %></span>, <span><%=  ordinalize @rank %></span> in Maker Division</h2>
+    </div>
   </div>
-</div>
+  <div class="row">
+    <div class="small-12  prof-name-wrap columns">
+      <table>
+        <tr class="profile-1st-table-row">
+          <td class="profile-1st-table-data">
+            <h3 class="pic-title">Picture</h3>
+          </td>
+          <td class="profile-1st-table-data">
+            <h3 class="pic-title">Rank</h3>
+          </td>
+           <td class="profile-1st-table-data">
+            <h3 class="pic-title">PCT</h3>
+          </td>
+          <td class="profile-last-game-table-data">
+            <h3 class="profile-final">Last Game</h3>
+            <h3 class="date-after-game-profile-page"><%= @games.last.created_at.strftime(" %a, %b %Y \n %I:%M%p") %></h3>
+            <h3 class="profile-t">Final</h3>
+          </td>
+   
+        </tr>
+        <tr class="profile-2nd-table-row">
+          <td class="profile-2nd-table-data">
+            <img class='profile-picture' src=<%= @player.picture_url %>>
+          </td>
+          <td class="table-data">
+            <div class="table-rank"><%=  ordinalize @rank %></div>
+          </td>
+          <td class="table-data">
+            <h1 class="table-percent"><%= @player.win_percentage %></h1>
+          </td>
+          <% if @player.games.empty? %>
+            <div><%= "No Games Played" %></div>
+          <% else %>
+            <td class="last-game-data">
+              <h3 class="last-game-title">
+                <%= @player.games.last.player_score %>-<%= @player.games.last.opponent_score %>
+              </h3>
+              <img class="last-game-player-pic" src=<%= @player.games.get_all_recent_games_for(@player).last.player.picture_url %>>
+              <h3 class="last-game-vs">VS</h3>
+              <img class="last-game-opponent-pic" src=<%= @player.games.get_all_recent_games_for(@player).last.opponent.picture_url %>>
+              <h3 class="last-game-player-name"><%= @player.last_name %></h3>
+              <h3 class="last-game-opponent-name"><%= @player.games.last.opponent.last_name %></h3>
+              <div class="last-game-border"></div>
+              <h3 class="last-game-comment"><%= @player.games.last.opponent.last_name %> hangs on in a thriller to end 4 game skid, <%= @player.games.last.player.last_name %> stunned</h3>
+            </td>
+          <% end %>
+        </tr>
+      
+          
+      </table>
+      </div>
+      <!-- <div class="row"> -->
+        <div class="small-7 columns nav-rowing left">
+          <table class="nav-rowing">
+            <tr class="nav-rowing">
+              <td class="previous-1st-table-data nav-rowing">
+                <h2 class="profile-previous-games"><%= @player.first_name%>'s previous games</h2>
+              </td>
+            </tr>
+            <tr>
+              <td class="previous-2nd-table-data">
+                <h3 class="second-table-data-date">Date</h3>
+                <h3 class="second-table-data-opponent">Opponent</h3>
+                <h3 class="second-table-data-result">Result</h3>
+                <h3 class="second-table-data-record">Record</h3>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                
+              </td>
+            </tr>
+            <% @games.last(9).reverse.each do |game| %>
+              <tr>
+              <td class="many-data">
+                <span class="many-dates"><%= game.created_at.strftime(" %a, %b %Y") %></span>
+                <span class="many-vs">VS</span>
+                <img class="many-pics" src=<%= game.opponent.picture_url %>>
+                <span class="many-opponents"> <%= game.opponent.name %></span>
+                <span class="many-w-l">W</span>
+                <span class="many-scores"><%= game.player_score %>-<%= game.opponent_score %></span>
+                <span class="many-records"><%= game.player.wins %>-<%= game.player.losses %></span>
+
+              </td>
+            </tr>
+
+      <% end %>
+
+          </table>
+        </div>
+  
+  </div>
+
+  <%= render "layouts/footer" %>
+
 
 

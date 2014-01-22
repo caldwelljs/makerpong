@@ -9,6 +9,7 @@ gem 'carrierwave'
 
 gem 'rmagick'
 
+gem "font-awesome-rails"
 # Add foundations gem
 
 gem 'foundation-rails'
@@ -42,6 +43,8 @@ group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
 end
+
+gem "font-awesome-rails"
 
 group :development do
   gem "pry"

@@ -1,14 +1,7 @@
-
-
-
-
-
 <div class="ranking-wrapping">
-
-
+  <%= render "layouts/header" %>
   <div class="row">
-    <div class="small-8 grab-pic columns" >
-      
+    <div class="small-8 grab-pic columns" >      
     <table class="rank-table">
       <tr class= "card_style-two">
         <td colspan="6">
@@ -49,7 +42,7 @@
           </h3>
        </td>
         <td>
-          <h4 class="rank-player-name"><img src=<%= player.picture_url %>><%= link_to player.name, player %></h4>
+           <h4 class="rank-player-name"><%= link_to (image_tag(player.picture_url)), player %><%= link_to player.name, player %></h4>
         </td>
         <td>
           <h4 class="rank-record"><%= player.wins %>-<%= player.losses %></h4>
@@ -71,7 +64,9 @@
         </table>
   </div>
   </div>
+
  </div>
+ <%= render "layouts/footer" %>
       
  
         

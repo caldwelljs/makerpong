@@ -4,15 +4,17 @@
   width: 100%;
   background: -webkit-linear-gradient(left, #3A945B, #64b481, #3A945B);
   min-height: 680px; // to make it full-screen top to bottom on most screens
-  
   height: 100em;
 }
+
 .for-margin{
-  margin-top: 12em;
+  margin-top: 2em;
 }
+
 .sign-up-row{
-  margin-top: 6em;
+  margin-top: 2em;
 }
+
 .welcome-wrap{
   min-height: 100%;
   opacity: 1;
@@ -37,15 +39,65 @@
   left: 0;
 }
 
-.home-page-featured-image  {
-    padding: 10px;
-    border-radius: 15px;
-    // background: url( asset-path('assets/old-man-ping-pong-player.jpg', image) ) no-repeat top;
-    // width: 100%;
-    // background-size: cover;
+.homepageimage {
+  background: url( asset-path('assets/matt-smash.jpg', image) ) no-repeat top;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
 }
 
-.sign-up-button {
+
+.homelargeheading {
+  color: white;
+  text-rendering: optimizeLegibility;
+  font-size: 3em;
+  line-height: 1.15;
+  font-weight: bold;
+  font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
+  padding-top: 2.5em;
+}
+
+.homeparagraph {
+  font-weight: normal;
+  font-size: 1.3em;
+  padding-top: 1em;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  text-rendering: optimizeLegibility;
+  color: #ffffff;
+  font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+.home-new-acct {
+  color: #fff;
+  margin-bottom: 0.75em;
+  font-size: 2em;
+  font-weight: 600;
+  text-align: center;
+}
+
+.signup-box {
+  padding: 10px;
+  // background-color: #fff;
+  border-radius: 5px;
+  // opacity: .8;
+  margin-top: 8em;
+  margin-bottom: 200px;
+
+}
+
+.sign-up-label {
+  font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
+#player_name, #player_email, #player_password, #player_password_confirmation, #player_current_password {
+  background: hsla(0,0,0,0.35);
+  border-radius: 5px;
+  border: none;
+  color: #ffffff;
+}
+
+.sign-up-button{
   height: 50px;
   width: 100%;
   background-color: #308a4f;
@@ -54,32 +106,55 @@
   border-radius: 5px;
   vertical-align: middle;
   display:inline-block;
+  font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
+  color: #fff;
+  font-size: 1em;
 }
 
+
+
 .sign-up-button:hover {
-    background-color: #76d691;
+  background-color: #76d691;
 }
+
 
 .homepage_link a {
   text-decoration: none;
-  hover: yellow;
 }
 
-.homelargeheading {
-  color: #308a4f;
-  font-size: 1.5em;
-  line-height: 1.15;
-  font-weight: bold;
-}
+a.about_link:link {color:#FF0000;}
 
-.homeparagraph {
-  font-size: 1em;
-  line-height: 1.5;
-  
-}
+
+// .about_link a:link {
+//   color: red;
+// }
+
+// .about_link a:hover {
+//   color: #2f353e;
+// }
+
+
 
 
 // Dashboard styling
+
+.dash_card_style {
+  padding: 20px 20px;
+  margin: 10px 10px 10px 10px;
+  border-radius: 3px;
+  background-color: #fff;
+  border: solid 4px #ffffff;
+  border-bottom-width: 2px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+
+.title_holder_section_title {
+  padding-left: 15px;
+  font-size: 1.6875rem;
+  font-weight: 600;
+  text-align: left;
+  color: #404040;
+}
 
 .leader_title_style {
   font-size: 1.4em;
@@ -96,22 +171,6 @@
   font-weight: 400;
   margin-top: 15px;
   white-space: nowrap;
-}
-
-.dash-title-pic {
-  text-align: center;
-  display: inline-block;
-  img {
-    border-radius: 5px;
-    width: 7em;
-    height: 7em;
-  }
-
-
-.game-card-pic {
-    width: 7em;
-    height: 7em;
-  }
 }
 
 .league_leader_preview {
@@ -158,6 +217,104 @@
   border-bottom: solid 1px #A5A5A5;
   margin-bottom: 10px;
 }
+
+.dash-title-pic {
+  text-align: center;
+  display: inline-block;
+  img {
+    border-radius: 5px;
+    width: 7em;
+    height: 7em;
+  }
+
+
+.game_card_player_name {
+  text-align: left;
+  font-size: 16px;
+  font-weight: 350;
+  color: #404040;
+  margin-top: 15px;
+}
+
+.game_card_score {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 350;
+  padding: 10px;
+  color: #404040;
+}
+
+.game-card-pic {
+    width: 7em;
+    height: 7em;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.title-holders-column{
+  margin-top: 4em;
+}
+.title-holder-data{
+  width: 60em;
+  background-color: #0A5B4E;
+  
+}
+.title-holders{
+  color: white;
+  font-family: "proxima-nova";
+  font-weight: 800;
+  text-align: center;
+  font-size: 1.4em;
+}
+
+.king-wrap{
+  width: 15em;
+  background-color: white;
+}
+.king{
+  text-align: center;
+  font-family: "proxima-nova";
+  font-weight: 800;
+  color: #4D4D4D;
+  font-size: 1.17em;
+}
+.title-holder-pics{
+  border-radius: 5px;
+}
+.leage-leader-stats{
+  text-align: center;
+  font-family: "proxima-nova";
+  font-weight: 700;
+  color: #4D4D4D;
+  font-size: 1em;
+}
+.leage-leader-percent{
+  text-align: center;
+  font-family: "proxima-nova";
+  font-weight: 700;
+  color: #4D4D4D;
+  font-size: 1em;
+}
+
+
+
+
+
 
 
 

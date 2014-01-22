@@ -1,14 +1,49 @@
-  <h1>League Games</h1>
+<div class="ranking-wrapping">
+  <%= render "layouts/header" %>    
+    <div class="row">
+      <div class="small-12 medium-12 large-12 columns">
+        <div>
+          <h3 class= "card_title">
+            <%= link_to 'Recent Games', games_path %>
+          </h3>        
+        </div>
+        <% @games.each do |game| %>
+        <div class="small-6 medium-6 large-6 columns card_column">
+          <div class="recent_game dash_card_style">
+            <div class="date_row">
+              <%= game.created_at.strftime("%I:%M%p - %a, %b %Y") %>
+            </div>
+            <div class="row player_row">
+              <div class="game_card_pic small-2 medium-2 large-2 columns card_pic">
+                <img src=<%= game.player.picture_url %>> 
+              </div>
+              <div class="game_card_player_name small-8 medium-8 large-8 columns <%= "winner_style" if game.winner == game.player.id %>">
+                <%= game.player.name %>
+              </div>
+              <div class="game_card_score small-2 medium-2 large-2 columns <%= "winner_style" if game.winner == game.player.id %>">
+                <%= game.player_score %>
+              </div>
+            </div>
+            <div class="row opponent_row">
+              <div class="game_card_pic small-2 medium-2 large-2 columns card_pic">
+                <img src=<%= game.opponent.picture_url %>>
+              </div>
+              <div class="game_card_name small-8 medium-8 large-8 columns <%= "winner_style" if game.winner == game.opponent.id %>">
+                <%= game.opponent.name %>
+              </div>
+              <div class="game_card_score small-2 medium-2 large-2 columns <%= "winner_style" if game.winner == game.opponent.id %>">
+                <%= game.opponent_score %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
 
-  <% @games.each do |game| %>
-    
-    <h4><%= game.player.name %>
-    	<%= game.player_score %>
-     vs. 
-     <%= game.opponent.name %>
-		 <%= game.opponent_score %>
-   </h4><br>
-  <% end %>
+</div>
 
 
 <%= link_to 'New Game', new_game_path %>
+
+<%= render "layouts/footer" %>

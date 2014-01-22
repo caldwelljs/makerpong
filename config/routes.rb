@@ -2,11 +2,20 @@ Pong::Application.routes.draw do
 
 
   # get "players/:id/edit" => "players#edit"
+ 
+# The root path for logged in players will be the dashboard instead of the marketing page.
+  authenticated :player do
+    root :to => "welcome#dashboard", as: :welcome_dashboard
+  end
+
   root "welcome#index"
+
+  get "about" => 'welcome#about', as: :welcome_about
+  get "ranking" => 'welcome#ranking', as: :welcome_ranking
 
   devise_for :players
 
-  get "dashboard" => 'welcome#dashboard', as: :welcome_dashboard
+  # get "dashboard" => 'welcome#dashboard', as: :welcome_dashboard
   
   resources :players
   resources :games

@@ -14,9 +14,26 @@
 //   h2 {color: #333333;}
 // }
 
-#player_name, #player_email, #player_password, #player_password_confirmation, #player_current_password {
-  background: hsla(0,0,0,0.13);
-  border-radius: 5px;
-  border: none;
-  color: #333333;
+.homepageimage {
+  background: url( asset-path('assets/backgroundpic1-blurr.jpg', image) ) no-repeat top;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.remember-me label {
+  color: #fff;
+  font-weight: 200;
+  display: inline-block;
+  width: 8em;
+}
+
+.forgot-password-top-link {
+  width: 7em;
+}
+
+.password-reset-link {
+  margin-left: 6em;
+  font-weight: 200;
+  font-size: 0.875em;
 }
