@@ -9,7 +9,9 @@ Pong::Application.routes.draw do
   end
 
   root "welcome#index"
-  
+
+  get "about" => 'welcome#about', as: :welcome_about
+  get "ranking" => 'welcome#ranking', as: :welcome_ranking
 
   devise_for :players
 
