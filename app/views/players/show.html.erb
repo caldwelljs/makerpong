@@ -1,6 +1,8 @@
 <div class="ranking-wrapping">
   <%= render "layouts/header" %>
-  <div class="row">
+  <div class="row">  
+
+    <script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <div class="small-5  prof-name-wrap columns">
       <h1 class="profile-name"><%= @player.name %></h1>
       <div class="the-border"></div>
@@ -20,11 +22,19 @@
            <td class="profile-1st-table-data">
             <h3 class="pic-title">PCT</h3>
           </td>
+
+
+<!-- ********* Last Game ********** -->
+
           <td class="profile-last-game-table-data">
             <h3 class="profile-final">Last Game</h3>
             <h3 class="date-after-game-profile-page"><%= @games.last.created_at.strftime(" %a, %b %Y \n %I:%M%p") %></h3>
             <h3 class="profile-t">Final</h3>
           </td>
+<!-- ******** Last Game ********* -->
+
+
+
    
         </tr>
         <tr class="profile-2nd-table-row">
@@ -37,6 +47,9 @@
           <td class="table-data">
             <h1 class="table-percent"><%= @player.win_percentage %></h1>
           </td>
+
+
+ <!-- ********* Last Game ********** -->         
           <td class="last-game-data">
             <h3 class="last-game-title"><%= @player.games.last.player_score %>-<%= @player.games.last.opponent_score %></h3>
             <img class="last-game-player-pic" src=<%= @player.games.get_all_recent_games_for(@player).last.player.picture_url %>>
@@ -47,7 +60,7 @@
             <div class="last-game-border"></div>
             <h3 class="last-game-comment"><%= @player.games.last.opponent.last_name %> hangs on in a thriller to end 4 game skid, <%= @player.games.last.player.last_name %> stunned</h3>
           </td>
-
+          <!-- ********* Last Game ********** -->
         </tr>
       
           

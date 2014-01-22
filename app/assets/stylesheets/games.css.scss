@@ -1,9 +1,66 @@
 // Place all the styles related to the games controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.form-wrapper{
+  position:relative;
+}
+.choose-player-one{
+  margin-right: 2em;
+}
 
+.choose-player-two{
+  margin-right: 2em;
+}
+.player-one-score{
+  margin-right: 1.4em;
+  margin-left: 1.15em;
+}
+.player-two-score{
+  margin-right: 1.4em;
+  margin-left: 1.15em;
+  margin-bottom: 0;
+}
+.log-game-title{
+  font-family: "proxima-nova";
+  font-weight: 800;
+  color: white;
+  font-size: 1.4em; 
+  margin-left: 1em;
 
+  text-align: center;
 
+}
+.log-new-game{
+  background-color: #cd3831;
+  color: white;
+
+}
+.log-game-submit input{
+  width: 12em;
+  height: 4em;
+  background-color: #8EBDC9;
+  color: white;
+  margin-left: 5.25em;
+}
+
+.new-game-button{
+  padding: 8px 12px;
+  margin-top: 40px;
+  background: #5DC3A7;
+  border: none;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.new-game-button:active{
+  // margin: 18px 10px;
+}
+.new-game-button:hover{
+  background-color: #0FC491;
+}
+.new-gamed-button-column{
+   height: 50em;
+}
 
 
 

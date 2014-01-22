@@ -1055,6 +1055,9 @@ h1,h2,h3,h4,h5{
 	font-weight: bold;
 	color: #292830;
 }
+.hey{
+	background-color: black;
+}
 .arrow{
 
 	color: #74e749;
@@ -1183,10 +1186,10 @@ button:hover{
 	z-index:101;
 	border-radius:3px;
 	width:340px;
-	height:260px;
+	height:400px;
 	margin-top:-130px;
 	margin-left:-170px;
-	border-bottom: 3px solid #5DC3A7;
+	border-bottom: px solid #5DC3A7;
 	box-shadow:0 0 10px 0 rgba(0,0,0,0.3);
 }
 
@@ -1198,16 +1201,50 @@ button:hover{
 	border-radius:3px;
 }
 #close{
-	float: right;
-	color: #fff;
+  float: right;
+	color: black;
 	font-family: serif;
-	font-size: 15px;
+
+
 }
 #close:hover{
 	color: #000;
 }
 
-
+// .form-wrap{
+// 	  display:none;
+// 		position:fixed;
+// 		left:0;right:0;
+// 		top:0;bottom:0;
+// 		z-index:100;
+// 		background-color:black;
+// }
+#show-form{
+	  
+    display:block;
+  	position:absolute;
+  	background-color:#47474f;
+  	top:50%; 
+  	left:50%;
+  	z-index:101;
+  	border-radius:3px;
+  	width:340px;
+  	height:480px;
+  	margin-top:-130px;
+  	margin-left:-170px;
+  	box-shadow:0 0 10px 0 rgba(0,0,0,0.3);
+}
+.form-wrap {
+	  display: none;
+    z-index: 102;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: auto;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.7); /*can be anything, of course*/
+}
 
 
 
