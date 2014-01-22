@@ -7,4 +7,53 @@ module PlayersHelper
       "Lost #{player.lose_streak}"
     end
   end
+
+
+  def player_opponent(game, player)
+    if game.player.id == player.id 
+      game.opponent
+    else
+      game.player
+    end 
+  end
+
+  def player_opponent_pic(game, player)
+    if game.player.id == player.id 
+      game.opponent.picture_url
+    else
+      game.player.picture_url
+    end 
+  end
+
+  def player_opponent_name(game, player)
+    if game.player.id == player.id 
+      game.opponent.name
+    else
+      game.player.name 
+    end 
+  end
+
+  def player_score(game, player)
+    if game.player.id == player.id 
+      game.opponent_score
+    else
+      game.player_score
+    end 
+  end
+
+  def player_opponent_score(game, player)
+    if game.opponent.id == player.id 
+      game.opponent_score
+    else
+      game.player_score
+    end 
+  end
+
+  def game_winner_label(game, player)
+    if game.winner == player.id
+      "L"
+    else
+      "W"
+    end
+  end
 end

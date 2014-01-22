@@ -144,6 +144,9 @@
         position:absolute;
   left: 14em;
   color: #7A7A7A;
+  a {
+    color: #7A7A7A;
+  }
 }
 
 .many-pics{
@@ -232,7 +235,12 @@
   top: 0.5em;
   right: 4.65em;
   font-size: 1.2em;
+  color: #000000;
+  a {
+    color: #333333;
+  }
 }
+
 .last-game-border{
         margin-top: 8em;
         width: 40em;
