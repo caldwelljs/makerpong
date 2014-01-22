@@ -7,6 +7,7 @@ class WelcomeController < ApplicationController
   def dashboard
     @players = Player.all
     @games = Game.all 
+    @game = Game.new() # for the new game form
   end
 
   def new

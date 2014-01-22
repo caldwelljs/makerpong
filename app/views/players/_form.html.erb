@@ -1,19 +1,19 @@
 
 <div class="log-new-game">Log New Game</div>
 <%= form_for @games do |f| %>
+<div class="form-wrapper">
    <span><a href="#close" id="close">&#215;</a>
-  <%= f.collection_select :player_id, Player.all, :id, :name, prompt: "Choose Player 1" %>
+   	<div class="choose-player-one"><%= f.collection_select :player_id, Player.all, :id, :name, prompt: "Choose Player 1" %></div>
 
-  <%= f.collection_select :opponent_id, Player.all, :id, :name, prompt: "Choose Player 2" %>
+   	<div class="choose-player-two"><%= f.collection_select :opponent_id, Player.all, :id, :name, prompt: "Choose Player 2" %></div>
 
-  <%= f.label :player_one_score %>
-  <%= f.text_field :player_score %><br />
+   	<%= f.label :player_one_score %>
+   	<div class="player-one-score"><%= f.text_field :player_score %></div><br />
 
-  <%= f.label :player_two_score %>
-  <%= f.text_field :opponent_score %><br />
+   	<%= f.label :player_two_score %>
+   	<div class="player-two-score"><%= f.text_field :opponent_score %><br /></div>
 
-  <%= f.submit %>
-
+   	<div class="log-game-submit"><%= f.submit %></div>
 <% end %>
-
+</div>
 <script class="cssdeck" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>

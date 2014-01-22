@@ -1,6 +1,7 @@
 <div class="ranking-wrapping">
   <%= render "layouts/header" %>
   <div class="row">
+
     <div class="small-12 medium-12 large-12 columns">         
       <div class="page_title">Log a new game</div>
       <div class="form-wrap">
@@ -9,10 +10,11 @@
         </div>
        </div>
       <h3><%= link_to 'Back', games_path %></h3>
-    </div>
-  </div>
+ 
+    
+
 </div>
-<button class='button' name="submit" id="submit" type="submit">Play Game</button>
+<button class='new-game-button' name="submit" id="submit" type="submit">Play Game</button>
 
 
 
@@ -24,4 +26,10 @@
 
 
 
+
+
+
+</div>
+
+  <%= render "layouts/footer" %>
 

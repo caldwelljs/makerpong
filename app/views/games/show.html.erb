@@ -1,41 +1,45 @@
 <div class="ranking-wrapping">
+<<<<<<< HEAD
   
+=======
+<%= render "layouts/header" %>
+>>>>>>> d285b02fa10ac2e02a5ef56d639853e5a8528600
 	<% if player_signed_in? %>
 	  <div class="row">
 	      <div class="small-2 nav-rowing columns">
-	        <h1 class="title">
+	        <div class="logo">
 	          <%= link_to 'MakerPong', welcome_dashboard_path %>
-	        </h1>
+	        </div>
 	      </div>
 	    <div class= "small-8 columns">
-	      <h1 class="top-right-links weird-link">
+	      <div class="top-right-links weird-link">
 	        <%= link_to 'Power Rankings', players_path %>
-	      </h1>
-	      <h1 class="top-right-links">
+	      </div>
+	      <div class="top-right-links">
 	        <%= link_to 'New Game', new_game_path %>
-	      </h1>
-	      <h1 class="top-right-links">
+	      </div>
+	      <div class="top-right-links">
 	        <%= link_to 'Profile', player_url(current_player) %>
-	      </h1>
-	      <h1 class="top-right-links">
+	      </div>
+	      <div class="top-right-links">
 	        <%= link_to 'Edit Settings', edit_player_registration_path %>
-	      </h1>
-	      <h1 class="top-right-links">
+	      </div>
+	      <div class="top-right-links">
 	        <%= link_to 'Sign out', destroy_player_session_path, method: :delete %>
-	      </h1>
+	      </div>
 	    </div>
 	  </div>
 	<% else %>  
 	  <div class="row">
 	      <div class="small-2 columns">
-	        <h1 class="title">
+	        <div class="logo">
 	          <%= link_to 'MakerPong', root_url %>
-	        </h1>
+	        </div>
 	      </div>
 	      <div class="small-3 small-offset-6 columns">
-	            <h1 class="top-right-links">
+	            <div class="top-right-links">
 	              <%= link_to "Sign in", new_player_session_path %>
-	            </h1>
+	            </div>
 	      </div>
 	  </div>
 	<% end %>
@@ -160,7 +164,7 @@
 <!-- </div> -->
 </div>
 
-
+<%= render "layouts/footer" %>
 
 
 

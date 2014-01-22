@@ -31,8 +31,21 @@
 // });
 
 
+// Click and HOver for new game dropdown
+  // $('#new-game').on('click', function () {
+  //   $(".new-game-section").slideDown('fast');
+  // })
+
+
+  // $(document).ready(function () {
+  //   $("#new-game").hover(function () {
+  //       $(".new-game-section").toggleClass("show-log");  //Toggle the active class to the area is hovered
+  //   }
+  // });
+
 $(document).ready(function() {
-    $('.button').click(function(){
+    $('.new-game-button').click(function(){
+
 		$('.form-wrap').fadeIn().css('display','block');
     $('#close').click(function(){
     	// $('.modal-bg').fadeOut();		
@@ -44,6 +57,7 @@ $(document).ready(function() {
     	$(this).removeClass('active');
 	});
 });
+
 
 
 

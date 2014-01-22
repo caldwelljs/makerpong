@@ -2,11 +2,19 @@
   belongs_to :player
   belongs_to :opponent, :class_name => "Player"
 
-  after_create :logresults, :streak, :margin
+  validates :player_id, :opponent_id, :player_score, :opponent_score, presence: true
+  validates :player_score, :opponent_score, numericality: true
+  # validates_uniqueness_of :player_id != :opponent_id
 
-  def winning_player
-    Player.find(self.winner).email
+  validate :fields_player_id_and_opponent_id_are_different
+
+  def fields_player_id_and_opponent_id_are_different
+    if self.player_id == self.opponent_id
+      errors.add(:player, "must be different from Opponent. You don't honestly think I'd believe you played yourself!")
+    end
   end
+
+  after_create :logresults, :streak, :margin
 
   def logresults
     if self.player_score > self.opponent_score 

@@ -48,19 +48,23 @@
             <h1 class="table-percent"><%= @player.win_percentage %></h1>
           </td>
 
+          <% if @player.games.empty? %>
+            <div><%= "No Games Played" %></div>
+          <% else %>
+            <td class="last-game-data">
+              <h3 class="last-game-title">
+                <%= @player.games.last.player_score %>-<%= @player.games.last.opponent_score %>
+              </h3>
+              <img class="last-game-player-pic" src=<%= @player.games.get_all_recent_games_for(@player).last.player.picture_url %>>
+              <h3 class="last-game-vs">VS</h3>
+              <img class="last-game-opponent-pic" src=<%= @player.games.get_all_recent_games_for(@player).last.opponent.picture_url %>>
+              <h3 class="last-game-player-name"><%= @player.last_name %></h3>
+              <h3 class="last-game-opponent-name"><%= @player.games.last.opponent.last_name %></h3>
+              <div class="last-game-border"></div>
+              <h3 class="last-game-comment"><%= @player.games.last.opponent.last_name %> hangs on in a thriller to end 4 game skid, <%= @player.games.last.player.last_name %> stunned</h3>
+            </td>
+          <% end %>
 
- <!-- ********* Last Game ********** -->         
-          <td class="last-game-data">
-            <h3 class="last-game-title"><%= @player.games.last.player_score %>-<%= @player.games.last.opponent_score %></h3>
-            <img class="last-game-player-pic" src=<%= @player.games.get_all_recent_games_for(@player).last.player.picture_url %>>
-            <h3 class="last-game-vs">VS</h3>
-            <img class="last-game-opponent-pic" src=<%= @player.games.get_all_recent_games_for(@player).last.opponent.picture_url %>>
-            <h3 class="last-game-player-name"><%= @player.last_name %></h3>
-            <h3 class="last-game-opponent-name"><%= @player.games.last.opponent.last_name %></h3>
-            <div class="last-game-border"></div>
-            <h3 class="last-game-comment"><%= @player.games.last.opponent.last_name %> hangs on in a thriller to end 4 game skid, <%= @player.games.last.player.last_name %> stunned</h3>
-          </td>
-          <!-- ********* Last Game ********** -->
         </tr>
       
           
@@ -105,8 +109,10 @@
 
           </table>
         </div>
-
+  
   </div>
+
+  <%= render "layouts/footer" %>
 
 
 

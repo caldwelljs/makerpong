@@ -22,25 +22,25 @@ h1,h2,h3,h4,h5{
 // 		color: #25252C;
 // }
 
-.profile-rank span{
-
+.profile-rank span {
 	color: #FBD300;
 }
-.profile-record{
 
+.profile-record {
 	color: #25252C;
 }
 
-.profile-win-percent{
-
+.profile-win-percent {
 	color: #25252C;
 }
+
 .page-wrapping{
 	width: 100%;
 	background: url( asset-path('assets/gradient.jpg', image) ) no-repeat;
 	min-height: 680px; // to make it full-screen top to bottom on most screens
 	background-size: cover;
 }
+
 // Uncomment to use rem-calc() in your settings
 // @import "foundation/functions";
 

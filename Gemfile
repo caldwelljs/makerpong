@@ -44,6 +44,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem "font-awesome-rails"
+
 group :development do
   gem "pry"
   gem 'better_errors'

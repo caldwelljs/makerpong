@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script type="text/javascript" src="//use.typekit.net/ekm0lqq.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
     <title><%= content_for?(:title) ? yield(:title) : "MakerPong" %></title>
     <%= stylesheet_link_tag 'application' %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -13,10 +16,15 @@
   </head>
 
   <body class="<%= controller.controller_name %>"> 
-
+ 
+  <div class="wrapper">
     <%= yield %>
        
     <%= javascript_include_tag "application" %>
     <%= yield :javascript %>
+
+  </div>
+
+
   </body>
 </html>

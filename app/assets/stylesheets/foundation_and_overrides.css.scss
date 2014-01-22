@@ -324,7 +324,6 @@ $success-color: #43AC6A;
 // $form-label-pointer: pointer;
 // $form-label-font-size: rem-calc(14);
 // $form-label-font-weight: normal;
-$form-label-font-color: lighten(#000, 0%);
 // $form-label-bottom-margin: rem-calc(8);
 // $input-font-family: inherit;
 // $input-font-color: rgba(0,0,0,0.75);
@@ -1085,25 +1084,7 @@ h1,h2,h3,h4,h5{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-body{
- /* background-color:#292B2C;*/
- font-family: 'PT Sans', sans-serif;
-}
-a{
-	outline: 0;
-	text-decoration: none;
-}
+// Modal Styling
 .modal-bg{
   display:none;
 	position:fixed;
@@ -1113,7 +1094,7 @@ a{
 	background-color:rgba(50,50,50,0.5);
 }
 
-.button{
+.log-game-button {
 	position:relative;
 	font-size:17px;
 	background:#DA244F;
@@ -1123,51 +1104,51 @@ a{
 	color:#fff;
 	cursor:pointer;
 	float:right;
-	margin:50px 70px;
  	-webkit-transition:margin 100ms;
 	-moz-transition:margin 100ms;
 	transition:margin 100ms ;	
 }
-.button:active{
+
+.log-game-button:active{
    margin: 53px 70px;
 }
-.button:hover{
+.log-game-button:hover{
 	background:#C40532;
 }
-form{
-	display:block;
-	margin:30px;
-}
-form *{
-	margin:10px;
-}
-input:focus{
-	border:2px solid #5DC3A7;
-  outline:0;
-}
-input{
-	width:240px;
-	padding:7px;
-	border:2px solid #ccc ;
-	border-radius:3px;
-}
-button{
-	float: right;
-	padding: 8px 12px;
-	margin-top: 15px;
-	background: #5DC3A7;
-	border: none;
-	color: #fff;
-	border-bottom: 3px solid #23AA84;
-	border-radius: 3px;
-	cursor: pointer;
-}
-button:active{
-	margin: 18px 10px;
-}
-button:hover{
-	background-color: #0FC491;
-}
+// form{
+// 	display:block;
+// 	margin:30px;
+// }
+// form *{
+// 	margin:10px;
+// }
+// input:focus{
+// 	border:2px solid #5DC3A7;
+//   outline:0;
+// }
+// input{
+// 	// width:240px;
+// 	padding:7px;
+// 	border:2px solid #ccc ;
+// 	border-radius:3px;
+// }
+// button{
+// 	float: right;
+// 	padding: 8px 12px;
+// 	margin-top: 15px;
+// 	background: #5DC3A7;
+// 	border: none;
+// 	color: #fff;
+// 	border-bottom: 3px solid #23AA84;
+// 	border-radius: 3px;
+// 	cursor: pointer;
+// }
+// button:active{
+// 	margin: 18px 10px;
+// }
+// button:hover{
+// 	background-color: #0FC491;
+// }
 #forgot-link{
 	font-size: 14px;
 	line-height: 45px;
@@ -1209,6 +1190,7 @@ button:hover{
 }
 #close:hover{
 	color: #000;
+
 }
 
 // .form-wrap{
@@ -1245,6 +1227,7 @@ button:hover{
     left: 0px;
     background: rgba(0, 0, 0, 0.7); /*can be anything, of course*/
 }
+
 
 
 
