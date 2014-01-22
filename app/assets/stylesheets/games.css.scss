@@ -324,17 +324,6 @@ label .pic_upload_label {
 //   padding: 0;
 // }
 
-.scorer-background {
-  background-color: #47474f;
-  min-height: 900px;
-  height: auto !important;
-  height: 100%;
-  margin: 0 auto;
-  background-size: cover; //this resizes the background for any screen size
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-}
 
 .navLinks {
   display: block; 
@@ -343,6 +332,7 @@ label .pic_upload_label {
   margin-right: auto;
   color: #fff;
 }
+
 
 .navText {
   display: block;
@@ -356,37 +346,39 @@ label .pic_upload_label {
   color: #fff;
 }
 
-.gameBlock {
-  padding-top: 1em;
-  min-height: 90%;
-}
-
 .scoreCard {
   height: 100%;
   width: 100%;
-  border-radius: 15px
-}
-
-.score {
+  border-radius: 15px;
   font-size: 20em;
   text-align: center;
   font-family: 'Passion One', 'Gill Sans', sans-serif;
   color: #fff;
 }
 
-.player1block {
-  background: #cd3831;
+
+.scorer-background {
+  background-color: #47474f;
+  min-height: 900px;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto;
+  background-size: cover; //this resizes the background for any screen size
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 
-.player2block {
-  background: #81b5c3;
+.container {
+  min-height:100%;
+  padding: 1em 0 0 0;
+  width: 100%;
 }
 
 .changeScore {
-  font-size: 0.8em;
+  font-size: 2em;
   margin-top: 0.8em;
   margin-bottom: -2em;
-  font-size: 3em;
   font-family: 'Gill Sans', sans-serif;
   color: #fff;
 }
@@ -405,7 +397,7 @@ label .pic_upload_label {
 
 #decreasePlayer1 {
   margin-left: .75em;
-  margin-top: -2em;
+  margin-top: -1.5em;
 }
 
 #increasePlayer2 {
@@ -414,8 +406,18 @@ label .pic_upload_label {
 
 #decreasePlayer2 {
   margin-right: .75em;
-  margin-top: -2em;
+  margin-top: -1.5em;
 }
+
+
+.player1block {
+  background: #cd3831;
+}
+
+.player2block {
+  background: #81b5c3;
+}
+
 
 .player {
   margin-top: 22%;
