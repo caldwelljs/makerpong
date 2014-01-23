@@ -1,49 +1,13 @@
 <div class="ranking-wrapping">
+
 <%= render "layouts/header" %>
-	<% if player_signed_in? %>
-	  <div class="row">
-	      <div class="small-2 nav-rowing columns">
-	        <div class="logo">
-	          <%= link_to 'MakerPong', welcome_dashboard_path %>
-	        </div>
-	      </div>
-	    <div class= "small-8 columns">
-	      <div class="top-right-links weird-link">
-	        <%= link_to 'Power Rankings', players_path %>
-	      </div>
-	      <div class="top-right-links">
-	        <%= link_to 'New Game', new_game_path %>
-	      </div>
-	      <div class="top-right-links">
-	        <%= link_to 'Profile', player_url(current_player) %>
-	      </div>
-	      <div class="top-right-links">
-	        <%= link_to 'Edit Settings', edit_player_registration_path %>
-	      </div>
-	      <div class="top-right-links">
-	        <%= link_to 'Sign out', destroy_player_session_path, method: :delete %>
-	      </div>
-	    </div>
-	  </div>
-	<% else %>  
-	  <div class="row">
-	      <div class="small-2 columns">
-	        <div class="logo">
-	          <%= link_to 'MakerPong', root_url %>
-	        </div>
-	      </div>
-	      <div class="small-3 small-offset-6 columns">
-	            <div class="top-right-links">
-	              <%= link_to "Sign in", new_player_session_path %>
-	            </div>
-	      </div>
-	  </div>
-	<% end %>
+
 
 <!-- a;lkdfjasdlfkjasd;f -->
 
 <div class="row">
-  <div class="small-5  prof-name-wrap columns">
+
+	  <div class="small-5  prof-name-wrap columns">
     <h1 class="profile-name"><%= @game.player.name %> </h1>
     <!-- <h1 class="vs-after-game">VS</h1> -->
   </div>
@@ -60,14 +24,25 @@
 	</div>
 </div>
 
-<div class="row">
-  <div class="small-3 small-centered  prof-name-wrap columns">
+<div class="row new-game">
+  <div class="small-4 small-offset-4  prof-name-wrap columns">
+  <% if @game.player_score > @game.opponent_score %>
   	<h2 class="who-won"><%= @game.player.first_name %> wins!</h2>
+  	<% else %>
+  	<h2 class="who-won"><%= @game.opponent.first_name %> wins!</h2>
+  	<% end %>
+  	<div class="form-wrap">
+  		<div id="show-form">
+  	   <%= render 'form' %>
+  	  </div>
+  	 </div>
   </div>
+  <div class="small-3 small-offset-1 prof-name-wrap new-game-button-column columns">
+    <button class='new-game-button' name="submit" id="submit" type="submit">Edit Game</button>
 </div>
 
 <div class="row">
-	<div class="small-12  prof-name-wrap columns">
+	<div class="small-12  prof-name-wrap main-after-game-column-wrap columns">
 		<table>
 			<tr class="first-row-after-game">
 				<td class="first-data-after-game">
@@ -95,7 +70,19 @@
 			</tr>
 			<tr class="fourth-row-after-game">
 				<td class="fourth-data-after-game">
-				  <h3 class="comment-after-game"><%= @game.player.last_name%>'s backhand overpowering, <%= @game.opponent.last_name %> continues downward spiral</h3>
+				  <h3 class="comment-after-game">
+				  	<% if @game.player_score > @game.opponent_score %>
+				  	<%= @game.player.last_name%>'s
+						<% else %>
+						<%= @game.opponent.last_name%>'s
+						<% end %>
+				  	 backhand overpowering,
+				  	 <% if @game.player_score < @game.opponent_score %>
+				  	 <%= @game.player.last_name%>
+				  	 <% else %>
+						<%= @game.opponent.last_name%>'s
+						<% end %>
+				   continues downward spiral</h3>
 			  </td>
 			</tr>
 		</table>

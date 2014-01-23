@@ -1,6 +1,31 @@
+
+
 <div class="ranking-wrapping">
-  <%= render "layouts/header" %>    
+
+  <%= render "layouts/header" %> 
     <div class="row">
+    
+
+
+
+
+<!-- ****************** New Game Button ************* -->
+<div class="row">
+  <div class="form-wrap">
+    <div id="show-form">
+      <%= render 'form' %>
+    </div>
+  </div>
+  <h3><%= link_to 'Back', games_path %></h3>
+</div>
+<button class='button' name="submit" id="submit" type="submit">Play Game</button>
+<!-- ****************** New Game Button ************* -->
+
+
+
+
+
+
       <div class="small-12 medium-12 large-12 columns">
         <div>
           <h3 class= "card_title">

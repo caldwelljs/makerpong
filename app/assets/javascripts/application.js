@@ -44,14 +44,23 @@
   // });
 
 $(document).ready(function() {
-    $('.button').click(function(){
-    $('#modal').css('display','block');
-    $('.modal-bg').fadeIn();
-    
+    $('.new-game-button').click(function(){
+
+		$('.form-wrap').fadeIn().css('display','block');
     $('#close').click(function(){
-      $('.modal-bg').fadeOut();   
-      $('#modal').fadeOut();
+    	// $('.modal-bg').fadeOut();		
+    	$('.form-wrap').fadeOut();
          return false;
     });
-  });
+	});
+    $('.top-right-links a.active').on('click', function(){
+    	$(this).removeClass('active');
+	});
 });
+
+
+
+
+
+
+
