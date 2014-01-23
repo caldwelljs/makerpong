@@ -8,7 +8,7 @@
   padding: 0;
 }
 .profile-1st-table-data{
-  background-color: #085145;
+  background-color: #47474f;
   margin: 0;
   width: 11.625em;
   height: 1em;
@@ -39,7 +39,7 @@
         width: 40em;
   // background: linear-gradient(left, black, #4E4E4E);
   // background: -webkit-linear-gradient(left, black, #4E4E4E);
-  background-color: #0A5B4E;
+  background-color: #47474f;
   padding: 0;
   position: relative;
 }
@@ -75,7 +75,7 @@
 .previous-1st-table-data{
         padding: 0;
         width: 50em;
-        background-color: #0A5B4E;
+        background-color: #47474f;
 }
 .profile-previous-games{
         color: white;
@@ -318,6 +318,15 @@
 
 }
 
+.ordinalize-profile-rank {
+        font-family: "proxima-nova";
+        font-weight: bold;
+        font-size: 4em;
+        color: #47474f;
+        text-align: center;
+
+}
+
 .profile-table{
         padding: 0;
         height: 2.6em;
@@ -469,13 +478,7 @@
   padding: 0;
   // box-shadow: 0 0 30px 10px #fff , 0 0 5px 2px rgba(0, 0, 0, 0.5) inset;
 }
-.profile-name{
-        font-weight: 800;
-        color: white;
-        font-size: 3em;
-        margin-top: 2.84em;
-        margin-bottom: 0.3em;
-}
+
 .profile-card{
         background-color: white;
         width: 100%;
@@ -489,6 +492,15 @@
 }
 .profile-record span{
   margin-left: 0.25em;
+}
+
+.profile-top-chart {
+        font-family: "proxima-nova";
+        font-weight: bold;
+        font-size: 2em;
+        color: #47474f;
+        text-align: center;
+
 }
 
 .prof-oppon-pic{
@@ -561,13 +573,15 @@
 .maker-ranking-title{
         color: white;
         font-size: 1.10em;
-        background-color: #064036;
+        // background-color: #064036;
+        background-color: #47474f;
         margin: 0;
         padding: 0.45em 0.75em 0.45em 0.75em;
 }
 .title-row{
   margin: 0;
         background-color: #064036;
+
 }
 .title-data{
         width: 25em;
@@ -575,7 +589,7 @@
 
 }
 .last-games-column-wrapper{
-  margin-top: 2em;
+  margin-top: 0em;
 }
 .prev-game-table{
         padding: 0;
@@ -593,32 +607,33 @@
 }
 .final-title-data{
         width: 34em;
-        // background-color: #474747;
-        background: linear-gradient(45deg, black, #474747 );
+        background-color: #474747;
+        // background: linear-gradient(45deg, black, #474747 );
+        // background: #81b5c3;
         height: 1em;
         padding: 0.25em 0.25em 0.25em 0.75em;
-  font-size: 0.9em;
+        font-size: 0.9em;
  
 }
 
-.total{
-        color: white;
-        font-size: 1.03em;
-        // font-family: "proxima-nova";
-        font-weight: bold;
-        position: absolute;
-        right: 1.9em;
-        top: 0.3em;
-}
-.prev-games-final-title{
-        color: white;
-  padding: 0;
-  position: absolute;
-  top: 0.28em;
-  left: 1.8em;
-}
+// .total{
+//         color: #fff;
+//         font-size: 1.03em;
+//         // font-family: "proxima-nova";
+//         // font-weight: bold;
+//         position: absolute;
+//         right: 1.9em;
+//         top: 0.3em;
+// }
+// .prev-games-final-title{
+//   color: #fff;
+//   padding: 0;
+//   position: absolute;
+//   top: 0.28em;
+//   left: 1.8em;
+// }
 .prev-games-date{
-        color: white;
+        color: #fff;
         display: block;
         margin-left: 7.5em;
         float: left;
@@ -641,43 +656,58 @@
 }
 .prev-games-comment-row{
         height: 3.25em;
-  background-color: #F8F8F8;
+        background-color: #F8F8F8;
         position: relative;
         padding: 0;
 }
 .rank-table{
-  margin-top: 6em;
+  margin-top: 2em;
+  border-spacing: 0 !important;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px #888888;
+  
 }
 .comment{
-        font-weight: 800;
+        font-weight: 500;
         font-family: "proxima-nova";
-        color: #2A69BC;
+        color: #81b5c3;
         font-size: 0.9em;
         margin-left: 1em;
 }
 .prev-games-card-name{
         font-family: "proxima-nova";
-        font-weight: 800;
-        color: #3B3B3B;
+        font-weight: 500;
+        color: #47474f;
         position: absolute;
         top: 0.55em;
         left: 3.25em;
         font-size: 0.95em;
-
 }
+
+.prev-games-card-name a {
+    color: #47474f;
+}
+
+.prev-games-card-name a:hover {
+      border-bottom: solid 1px #47474f;
+
+    }
+
+
+
 .record-prev-games{
         color: #626266;
         font-size: 1em;
         position: absolute;
-        top: 1.65em;
+        top: 1.95em;
         left: 4.75em;
 }
 .player-score-prev-games{
         position: absolute;
         top: 1.3em;
         right: 0.75em;
-  font-family: "proxima-nova";
-        font-weight: 800;
+        font-family: "proxima-nova";
+        font-weight: 500;
 }
 #top-ranking-box{
         margin-top: 5em;
@@ -696,10 +726,32 @@
   margin: 0;
   padding: 0;
 }
-.ranking-wrapping{
-        background: linear-gradient( #3c3d42 4%, white 89%);
-        height: 45em;
 
+
+
+.profile-rank-small-header {
+  background: #47474f;
+  color: #fff;
+  font-size: .8em;
+  text-align: center;
+  height: 40px;
+}
+
+
+
+
+
+
+.ranking-wrapping{
+        // background: linear-gradient( #81b5c3 4%, white 89%);
+        // background: #fff;
+        // background: #f5efe6;
+        // background: #47474f;
+        // background: #81b5c3;
+        // background: #E8E8E8;
+        // background: linear-gradient( #E8E8E8 4%, white 89%);
+        background: linear-gradient( #3c3d42 4%, white 89%);
+        // height: 45em;
 }
 .ranking-title{
         font-size: 1.25em;
@@ -714,16 +766,20 @@
                 color: #545454;
         }
 }
-.rank-player-name a{
-        color: #2A69BC;
+.rank-player-name a {
+        color: #47474f;
         font-weight: 500;
         font-family: "proxima-nova";
         font-size: 0.75em;
         display: inline-block;
         margin-left: 1em;
-        padding-right: 3em;
+        // padding-right: 3em;
+  }
 
-}
+.rank-player-name a:hover {
+        border-bottom: solid 1px #47474f;
+  }
+
 .prof-last-game-pic img{
         height: 4.5em;
         width: 4.5em;
@@ -780,6 +836,9 @@ td span{
   border-bottom-width: 2px;
   box-shadow: 0 1px 1px rgba(0,0,0,0.2);
 }
-.prev-games-table{
+.table-style{
         border-spacing: 0 !important;
+        border-radius: 5px;
+        border-style: none;
+        box-shadow: 5px 5px 5px #888888;
 }

@@ -1,8 +1,9 @@
-<div class="nav-wrap">
+
   <% if player_signed_in? %>
+  <header class="signedin-nav">
     <div class="row">
         <div class="small-2 columns">
-          <div class="logo">
+          <div class="signedin-logo">
             <%= link_to 'MakerPong', welcome_dashboard_path %>
           </div>
         </div>
@@ -27,7 +28,9 @@
         </div>
       </div>
     </div>
+    </header>
   <% else %>
+  <div class="nav-wrap">
     <div class="row">
         <div class="small-2 columns">
           <div class="logo">
@@ -60,5 +63,6 @@
       <% end -%>
     </div>
   <% end %>
+  </div>
   <% end %>
-</div>
+

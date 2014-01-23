@@ -4,11 +4,70 @@
     <div class="small-5  prof-name-wrap columns">
       <h1 class="profile-name"><%= @player.name %></h1>
       <div class="the-border"></div>
-      <h2 class="profile-record"><span><%= @player.wins %><span>-<span><%= @player.losses %></span>, <span><%=  ordinalize @rank %></span> in League</h2>
+
+      <!-- <h2 class="profile-record"><span><%= @player.wins %><span>-<span><%= @player.losses %></span>, <span><%=  ordinalize @rank %></span> in League</h2> -->
     </div>
   </div>
+
+
   <div class="row">
-    <div class="small-12  prof-name-wrap columns">
+    <div class="small-12 prof-name-wrap columns">
+    
+      <table class="table-style">
+      <tr>
+        <td rowspan="4">
+        <img class='profile-picture' src=<%= @player.picture_url %>>
+        </td>
+
+        <td colspan="2" class="profile-rank-small-header">
+          Rank
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan= "2" class="ordinalize-profile-rank">
+          <%= ordinalize @rank %>
+        </td>
+
+      </tr>
+     <tr>
+      
+        <td class="profile-rank-small-header">
+          Record
+        </td>
+
+        <td class="profile-rank-small-header">
+          Win %
+        </td>
+      
+    </tr>
+
+    <tr>
+      
+        <td class="profile-top-chart">
+          <%= @player.wins %>-<%= @player.losses %>
+        </td>
+
+        <td class="profile-top-chart">
+          <%= @player.win_percentage %>
+        </td>
+      
+    </tr>
+
+</table>
+ 
+  </div>
+</div>
+
+
+
+
+<div class="row">
+    <div class="small-12 prof-name-wrap columns">
+
+
+
+
       <table>
         <tr class="profile-1st-table-row">
           <td class="profile-1st-table-data">
@@ -57,7 +116,7 @@
           <% end %>
         </tr>  
       </table>
-    </div>
+ </div>
     <div class="small-7 columns nav-rowing left">
       <table class="nav-rowing">
         <tr class="nav-rowing">
