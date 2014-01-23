@@ -22,7 +22,10 @@
 // }
 
 
-
+table {
+  margin: 5px;
+  border-radius: 5px;
+}
 
 @media all and (min-width: 64em) {
  .top-nav {
@@ -38,13 +41,41 @@
   font-family: "proxima-nova";
 }
 
+// .signedin-logo {
+//   & a {
+//              font-size: 2em;
+//              display: inline-block;
+//              font-family: "proxima-nova";
+//              font-weight: 600;
+//              color: #81b5c3;
+//       float: left;
+//       height: 2em;
+//       margin-left: 2em;
+//       padding-top: 0.8em;
+//       // padding-bottom: 0.5em;
+//     }
+// }
+
+.signedin-logo a {
+      font-size: 2em;
+      font-family: "proxima-nova";
+      font-weight: 600;
+      // color: #81b5c3;
+      // color: #cd3831;
+      color: #fff;
+      float: left;
+  }
+
+
+
+
  .top-right-links { 
     & a {
-     	font-size: 1em;
-     	display: inline-block;
-     	font-family: "proxima-nova";
-     	font-weight: 400;
-     	color: white;
+             font-size: 1em;
+             display: inline-block;
+             font-family: "proxima-nova";
+             font-weight: 400;
+             color: white;
       float: left;
       height: 2em;
       margin-left: 2em;
@@ -53,8 +84,22 @@
     }
 
     a:hover {
-      border-bottom: solid 2px #cd3831;
+      // border-bottom: solid 2px #cd3831;
+      border-bottom: solid 1px #fff;
+
     }
+}
+
+.signedin-nav {
+  background: #47474f;
+  // background: #0265b0;
+  // background: #0066cc;
+  // background: #cd3831; 
+  // background: #0D4F8B; 
+  // background: #308a4f;
+  // background: #81b5c3;
+
+  padding: 50px 0px 25px 0px;
 }
 
 .active {
@@ -62,41 +107,41 @@
 }
 
 .nav-wrap{
- 	background: transparent;
- 	padding-top: 2em;
+         background: transparent;
+         padding-top: 2em;
 }
 
  // .title a{
- // 	color: white;
- // 	font-size: 0.55em;
- // 	float: left;
- // 	font-family: "proxima-nova";
+ //         color: white;
+ //         font-size: 0.55em;
+ //         float: left;
+ //         font-family: "proxima-nova";
 
  // }
 
 .name a {
-	color: white;
-	font-size: 0.45em;
-	float: left;
-	font-family: "proxima-nova";
-	font-weight: 100;
+        color: white;
+        font-size: 0.45em;
+        float: left;
+        font-family: "proxima-nova";
+        font-weight: 100;
 }
 
 .passion {
-	margin-top: 2.85em;
-	color: white;
-	font-size: 2em;
+        margin-top: 2.85em;
+        color: white;
+        font-size: 2em;
 
-	font-family: "proxima-nova";
-	font-weight: 100;
+        font-family: "proxima-nova";
+        font-weight: 100;
 }
 
 .welcome-info {
-	color: white;
-	font-size: 1.25em;
-	
-	font-family: "proxima-nova";
-	font-weight: 100;
+        color: white;
+        font-size: 1.25em;
+        
+        font-family: "proxima-nova";
+        font-weight: 100;
 }
 
 .sign-up {
@@ -114,8 +159,8 @@
 
 
 h3{
-	color: #3A3A3A;
-}	
+        color: #3A3A3A;
+}        
 
 .welcome_card_style {
   padding: 10px 10px;
@@ -186,9 +231,9 @@ html, body {
 }
 
 .footer {
-  background: #333333;
-  padding-top: 45px;
-  padding-bottom: 20px;
+  background: #47474f;
+  padding-top: 35px;
+  padding-bottom: 5px;
   font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
 }
 
@@ -230,8 +275,6 @@ html, body {
   list-style-type: none;
   padding-right: 15px;
 }
-
-
 
 
 

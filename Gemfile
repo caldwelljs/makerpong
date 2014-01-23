@@ -13,13 +13,11 @@ gem 'figaro'
 
 gem 'fog'
 
-gem "font-awesome-rails"
 # Add foundations gem
-
 gem 'foundation-rails'
-# Use sqlite3 as the database for Active Record
-gem 'pg'
 
+# Use pg as the database for Active Record
+gem 'pg'
 
 gem 'unf'
 # Use SCSS for stylesheets

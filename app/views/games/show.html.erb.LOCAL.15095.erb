@@ -13,14 +13,16 @@
   </div>
   <div class="small-2 prof-name-wrap columns">
      <h1 class="vs-after-game">vs</h1>
-
   </div>
-  <div class="row">
-  	<div class="small-12  prof-name-wrap columns">
-  		<div class="the-border-after-game"></div>
-  	</div>
+  <div class="small-5  prof-name-wrap columns">
+   <h1 class="opponent-after-game-name"><%= @game.opponent.name %></h1>
   </div>
-
+</div>
+<div class="row">
+	<div class="small-12  prof-name-wrap columns">
+		<div class="the-border-after-game"></div>
+	</div>
+</div>
 
 <div class="row new-game">
   <div class="small-4 small-offset-4  prof-name-wrap columns">
@@ -87,42 +89,45 @@
 	</div>
 </div>
 
-  <!-- <div class="row">
-   <div class="small-12 small-centered columns after-game-column">
-    <div class="recent_game after-game-card_style">
-      <div class="date_row">
-        <%= @game.created_at.strftime("%I:%M%p - %a, %b %Y") %>
+<!-- <div class="row">
+ <div class="small-12 small-centered columns after-game-column">
+  <div class="recent_game after-game-card_style">
+    <div class="date_row">
+      <%= @game.created_at.strftime("%I:%M%p - %a, %b %Y") %>
+    </div>
+    <div class="row" id="player_row">
+      <div class="game_card_pic small-2 medium-2 large-2 columns after-game-card_pic">
+        <img src=<%= @game.player.picture_url %>>
       </div>
-      <div class="row" id="player_row">
-        <div class="game_card_pic small-2 medium-2 large-2 columns after-game-card_pic">
-          <img src=<%= @game.player.picture_url %>>
+      <div class="after-game_card_name small-8 medium-8 large-8 columns">
+        <%= @game.player.name %>
+        <div class="after-game_card_score small-2 medium-2 large-2 columns">
+          <%= @game.player_score %>
         </div>
-        <div class="after-game_card_name small-8 medium-8 large-8 columns">
-          <%= @game.player.name %>
-          <div class="after-game_card_score small-2 medium-2 large-2 columns">
-            <%= @game.player_score %>
-          </div>
+      </div>
+  
+    </div>
+    <div class="row" id="opponent_row">
+      <div class="game_card_pic small-2 medium-2 large-2 columns after-game-card_pic">
+        <img class="after-game-card_pic" src=<%= @game.opponent.picture_url %>>
+      </div>
+      <div class="after-game_card_name small-8 medium-8 large-8 columns">
+        <%= @game.opponent.name %>
+        <div class="after-game_card_score small-2 medium-2 large-2 columns">
+          <%= @game.opponent_score %>
         </div>
+      </div>
     
-      </div>
-      <div class="row" id="opponent_row">
-        <div class="game_card_pic small-2 medium-2 large-2 columns after-game-card_pic">
-          <img class="after-game-card_pic" src=<%= @game.opponent.picture_url %>>
-        </div>
-        <div class="after-game_card_name small-8 medium-8 large-8 columns">
-          <%= @game.opponent.name %>
-          <div class="after-game_card_score small-2 medium-2 large-2 columns">
-            <%= @game.opponent_score %>
-          </div>
-        </div>
-      
-      </div>
-    </div> -->
-  <!-- </div> -->
-  </div>
+    </div>
+  </div> -->
+<!-- </div> -->
+</div>
 
-  <%= render "layouts/footer" %>
+<%= render "layouts/footer" %>
 
+
+
+<!-- a;sdfja;sdlfjk -->
 
 
 

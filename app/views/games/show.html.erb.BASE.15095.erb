@@ -1,0 +1,151 @@
+<div class="ranking-wrapping">
+<%= render "layouts/header" %>
+	<% if player_signed_in? %>
+	  <div class="row">
+	      <div class="small-2 nav-rowing columns">
+	        <div class="logo">
+	          <%= link_to 'MakerPong', welcome_dashboard_path %>
+	        </div>
+	      </div>
+	    <div class= "small-8 columns">
+	      <div class="top-right-links weird-link">
+	        <%= link_to 'Power Rankings', players_path %>
+	      </div>
+	      <div class="top-right-links">
+	        <%= link_to 'New Game', new_game_path %>
+	      </div>
+	      <div class="top-right-links">
+	        <%= link_to 'Profile', player_url(current_player) %>
+	      </div>
+	      <div class="top-right-links">
+	        <%= link_to 'Edit Settings', edit_player_registration_path %>
+	      </div>
+	      <div class="top-right-links">
+	        <%= link_to 'Sign out', destroy_player_session_path, method: :delete %>
+	      </div>
+	    </div>
+	  </div>
+	<% else %>  
+	  <div class="row">
+	      <div class="small-2 columns">
+	        <div class="logo">
+	          <%= link_to 'MakerPong', root_url %>
+	        </div>
+	      </div>
+	      <div class="small-3 small-offset-6 columns">
+	            <div class="top-right-links">
+	              <%= link_to "Sign in", new_player_session_path %>
+	            </div>
+	      </div>
+	  </div>
+	<% end %>
+
+<!-- a;lkdfjasdlfkjasd;f -->
+
+<div class="row">
+  <div class="small-5  prof-name-wrap columns">
+    <h1 class="profile-name"><%= @game.player.name %> </h1>
+    <!-- <h1 class="vs-after-game">VS</h1> -->
+  </div>
+  <div class="small-2 prof-name-wrap columns">
+     <h1 class="vs-after-game">vs</h1>
+  </div>
+  <div class="small-5  prof-name-wrap columns">
+   <h1 class="opponent-after-game-name"><%= @game.opponent.name %></h1>
+  </div>
+</div>
+<div class="row">
+	<div class="small-12  prof-name-wrap columns">
+		<div class="the-border-after-game"></div>
+	</div>
+</div>
+
+<div class="row">
+  <div class="small-3 small-centered  prof-name-wrap columns">
+  	<h2 class="who-won"><%= @game.player.first_name %> wins!</h2>
+  </div>
+</div>
+
+<div class="row">
+	<div class="small-12  prof-name-wrap columns">
+		<table>
+			<tr class="first-row-after-game">
+				<td class="first-data-after-game">
+					<h2 class="final-after-game">Final</h2>
+					<h2 class="date-after-game"><%= @game.created_at.strftime(" %a, %b %Y \n %I:%M%p") %></h2>
+					<h2 class="t-after-game">T</h2>
+				</td>
+			</tr>
+			<tr class="second-row-after-game">
+				<td class="second-data-after-game">
+					<img class="hello" src=<%= @game.player.picture_url %>>
+					<h2 class="name1-after-game"><%= @game.player.name %></h2>
+					<h2 class="record1-after-game">(<%= @game.player.wins %>-<%= @game.player.losses %>)</h2>
+					<h1 class="playerscore1-after-game"><%= @game.player_score %></h1>
+				</td>
+			</tr>
+			<tr class="third-row-after-game">
+				<td class="third-data-after-game">
+					<img src=<%= @game.opponent.picture_url %>>
+					<h2 class="name1-after-game"><%= @game.opponent.name %></h2>
+					<h2 class="record1-after-game">(<%= @game.opponent.wins %>-<%= @game.opponent.losses %>)</h2>
+					<h1 class="playerscore1-after-game"><%= @game.opponent_score %></h1>
+
+				</td>
+			</tr>
+			<tr class="fourth-row-after-game">
+				<td class="fourth-data-after-game">
+				  <h3 class="comment-after-game"><%= @game.player.last_name%>'s backhand overpowering, <%= @game.opponent.last_name %> continues downward spiral</h3>
+			  </td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+<!-- <div class="row">
+ <div class="small-12 small-centered columns after-game-column">
+  <div class="recent_game after-game-card_style">
+    <div class="date_row">
+      <%= @game.created_at.strftime("%I:%M%p - %a, %b %Y") %>
+    </div>
+    <div class="row" id="player_row">
+      <div class="game_card_pic small-2 medium-2 large-2 columns after-game-card_pic">
+        <img src=<%= @game.player.picture_url %>>
+      </div>
+      <div class="after-game_card_name small-8 medium-8 large-8 columns">
+        <%= @game.player.name %>
+        <div class="after-game_card_score small-2 medium-2 large-2 columns">
+          <%= @game.player_score %>
+        </div>
+      </div>
+  
+    </div>
+    <div class="row" id="opponent_row">
+      <div class="game_card_pic small-2 medium-2 large-2 columns after-game-card_pic">
+        <img class="after-game-card_pic" src=<%= @game.opponent.picture_url %>>
+      </div>
+      <div class="after-game_card_name small-8 medium-8 large-8 columns">
+        <%= @game.opponent.name %>
+        <div class="after-game_card_score small-2 medium-2 large-2 columns">
+          <%= @game.opponent_score %>
+        </div>
+      </div>
+    
+    </div>
+  </div> -->
+<!-- </div> -->
+</div>
+
+<%= render "layouts/footer" %>
+
+
+
+<!-- a;sdfja;sdlfjk -->
+
+
+
+
+
+
+
+

@@ -9,4 +9,3 @@ CarrierWave.configure do |config|
   # see https://github.com/jnicklas/carrierwave#using-amazon-s3
   # for more optional configuration
 end
-

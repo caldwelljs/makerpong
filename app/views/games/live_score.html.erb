@@ -1,0 +1,59 @@
+<div class="scorer-background">
+  <div class="row small-offset-1">
+    <%= render "layouts/header" %>
+  </div>
+  <div class="row gameBlock">  
+    <div class="small-5 medium-5 medium-5 small-offset-1 columns playerCard">
+      <div class="changeScore leftScoreChange" id="increasePlayer1">
+        <div>+</div>
+      </div>
+      <div class="scoreCard player1block" id="player_1_score">
+        <div class="score">0</div>
+      </div>
+      <div class="changeScore leftScoreChange" id="decreasePlayer1">
+        <div>-</div>
+      </div>
+    </div>
+    <div class="small-5 medium-5 large-5 columns playerCard">
+      <div class="changeScore player2ScoreChange" id="increasePlayer2">
+        <div>+</div>
+      </div>
+      <div class="scoreCard player2block" id="player_2_score">
+        <div class="score">0</div>
+      </div>
+      <div class="changeScore player2ScoreChange" id="decreasePlayer2">
+        <div>-</div>
+      </div>
+    </div>
+    <div class="small-1 medium-1 large-1 columns playerCard">
+      <div class="navLinks">
+        New Game
+      </div>
+      <div class="navLinks">
+        Restart
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-5 medium-5 large-5 small-offset-1 columns">
+      <p class="player" id="player1">
+        Player 1
+      </p>
+    </div>
+    <div class="small-5 medium-5 large-5 columns">
+      <p class="player" id="player2">
+        Player 2
+      </p>
+    </div>
+    <div class="small-1 medium-1 large-1 columns">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-12 medium-12 large-12 columns">
+      <h3 class="game-title">
+        Ping Pong Matchup
+      </h3>
+    </div>
+  </div>
+</div>

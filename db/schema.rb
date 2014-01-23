@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140123215808) do
+ActiveRecord::Schema.define(version: 20140116231602) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,7 +28,6 @@ ActiveRecord::Schema.define(version: 20140123215808) do
   end
 
   create_table "players", force: true do |t|
-    t.string   "picture_url"
     t.string   "phone"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -52,6 +51,7 @@ ActiveRecord::Schema.define(version: 20140123215808) do
     t.string   "losing_pic3"
     t.integer  "win_streak",             default: 0
     t.integer  "lose_streak",            default: 0
+    t.string   "picture_url"
     t.string   "name"
   end
 
