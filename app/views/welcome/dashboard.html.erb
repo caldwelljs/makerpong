@@ -1,23 +1,33 @@
 <div class="ranking-wrapping">
   <%= render "layouts/header" %>
-  <div class="row">
+  <!-- <div class="row">
     <div class="small-5  prof-name-wrap columns">
       <h1 class="profile-name">Dashboard</h1>
       <div class="the-border"></div>
     </div>
-  </div>
+  </div> -->
   
   <div class="row">
     <div class="small-8  prof-name-wrap title-holders-column columns">
-      <table>
+<!--       <table>
       <tr>
         <td class="title-holder-data">
           <div class="title-holders">Title Holders</div>
         </td>
-      </tr>
-      </table>
-      <table>
+      </tr>=
+      </table> -->
+      
+
+    <table>
       <tr>
+        <td colspan="4">
+        <h1 class="title-holders">Title Holders</h1>
+        </td>
+      </tr>
+
+
+      <tr>
+        
         <td class="king-wrap">
           <div class="king"> King of the Hill</div>
         </td>
@@ -84,14 +94,19 @@
       </table>
     </div>
     <div class="small-4  prof-name-wrap title-holders-column columns">
-      <table>
+      <!-- <table>
         <tr>
           <td class="title-holder-data">
             <div class="title-holders">League Leaders</div>
           </td>
         </tr>
-      </table>
-      <table>     
+      </table> -->
+      <table> 
+      <tr>
+        <td colspan="3">
+        <h1 class="title-holders">League Leaders</h1>
+        </td>
+      </tr>    
         <tr>
           <td class="king-wrap">
             <div class="king">
@@ -131,14 +146,18 @@
       </table>
 
     </div>
+    
     <div class="row">
       <div class="small-12  prof-name-wrap columns">
+      <h1 class="title-holders">Latest Results</h1>
           <% @games.last(9).reverse.each do |game| %>
+        
 
         <div class="small-4 columns last-games-column-wrapper">
           
+        
             <table class="prev-games-table">
-
+          
             <tr class="final-title-row">
               <td class='final-title-data'>
                 <div class="prev-games-final-title">Final</div>
@@ -170,6 +189,10 @@
               </td>
             </tr>
             </table>
+      
+
+
+
           </div>
           <% end %>
     </div>

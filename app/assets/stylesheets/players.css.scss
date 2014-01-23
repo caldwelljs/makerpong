@@ -575,7 +575,7 @@
 
 }
 .last-games-column-wrapper{
-  margin-top: 2em;
+  margin-top: 0em;
 }
 .prev-game-table{
         padding: 0;
@@ -697,9 +697,13 @@
   padding: 0;
 }
 .ranking-wrapping{
-        background: linear-gradient( #3c3d42 4%, white 89%);
-        height: 45em;
-
+        // background: linear-gradient( #81b5c3 4%, white 89%);
+        // background: #fff;
+        // background: #f5efe6;
+        // background: #47474f;
+        // background: #81b5c3;
+        // background: #E8E8E8;
+        background: linear-gradient( #E8E8E8 4%, white 89%);
 }
 .ranking-title{
         font-size: 1.25em;

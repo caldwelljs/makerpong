@@ -22,7 +22,10 @@
 // }
 
 
-
+table {
+  margin: 5px;
+  border-radius: 5px;
+}
 
 @media all and (min-width: 64em) {
  .top-nav {
@@ -37,6 +40,34 @@
   float: left;
   font-family: "proxima-nova";
 }
+
+// .signedin-logo {
+//   & a {
+//              font-size: 2em;
+//              display: inline-block;
+//              font-family: "proxima-nova";
+//              font-weight: 600;
+//              color: #81b5c3;
+//       float: left;
+//       height: 2em;
+//       margin-left: 2em;
+//       padding-top: 0.8em;
+//       // padding-bottom: 0.5em;
+//     }
+// }
+
+.signedin-logo a {
+      font-size: 2em;
+      font-family: "proxima-nova";
+      font-weight: 600;
+      // color: #81b5c3;
+      // color: #cd3831;
+      color: #fff;
+      float: left;
+  }
+
+
+
 
  .top-right-links { 
     & a {
@@ -53,8 +84,22 @@
     }
 
     a:hover {
-      border-bottom: solid 2px #cd3831;
+      // border-bottom: solid 2px #cd3831;
+      border-bottom: solid 1px #fff;
+
     }
+}
+
+.signedin-nav {
+  background: #47474f;
+  // background: #0265b0;
+  // background: #0066cc;
+  // background: #cd3831; 
+  // background: #0D4F8B; 
+  // background: #308a4f;
+  // background: #81b5c3;
+
+  padding: 50px 0px 25px 0px;
 }
 
 .active {
@@ -186,9 +231,9 @@ html, body {
 }
 
 .footer {
-  background: #333333;
-  padding-top: 45px;
-  padding-bottom: 20px;
+  background: #47474f;
+  padding-top: 35px;
+  padding-bottom: 5px;
   font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
 }
 
