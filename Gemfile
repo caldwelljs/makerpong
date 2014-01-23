@@ -9,11 +9,9 @@ gem 'carrierwave'
 
 gem 'rmagick'
 
-gem "font-awesome-rails"
 # Add foundations gem
-
 gem 'foundation-rails'
-# Use sqlite3 as the database for Active Record
+# Use pg as the database for Active Record
 gem 'pg'
 
 # Use SCSS for stylesheets

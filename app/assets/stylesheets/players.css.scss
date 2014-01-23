@@ -126,6 +126,15 @@
         right: 1.75em;
         font-size: 1.25em;
 }
+
+.no-games-played {
+  color: #cd3831;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 400;
+  padding-top: 1.5em;
+}
+
 .many-data{
         position: relative;
 }
@@ -158,14 +167,20 @@
         top: 0.5em;
 }
 .many-w-l{
-        color: #0F8913;
-        font-family: "proxima-nova";
-        font-weight: 800;
+  
+  font-family: "proxima-nova";
+  font-weight: 800;
   position:absolute;
   right: 13em;
   border-left: 1px solid white;
   padding: 0.5em;
   top: 0.3em;
+  .winner {
+    color: #0F8913;
+  }
+  .loser {
+    color: #cd3831;
+  }
 }
 .many-scores{
         position:absolute;

@@ -8,6 +8,13 @@ module PlayersHelper
     end
   end
 
+  def check_games_played
+    if @player.games.empty?
+      "No Games Played"
+    else
+      "Run Code"
+    end
+  end
 
   def player_opponent(game, player)
     if game.player.id == player.id 
