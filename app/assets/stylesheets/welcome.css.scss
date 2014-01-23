@@ -260,7 +260,7 @@ a.about_link:link {color:#FF0000;}
   
 }
 .title-holders{
-  color: #cd3831;
+  color: #fff;
   font-family: "proxima-nova";
   font-weight: 600;
   text-align: center;
@@ -273,6 +273,12 @@ a.about_link:link {color:#FF0000;}
   font-weight: 600;
   color: #47474f;
   font-size: 1.1em;
+}
+
+.title-holders-header {
+  background: #cd3831;
+  // background: gray;
+  color: #fff;
 }
 
 .king-wrap{

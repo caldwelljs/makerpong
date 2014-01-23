@@ -469,13 +469,7 @@
   padding: 0;
   // box-shadow: 0 0 30px 10px #fff , 0 0 5px 2px rgba(0, 0, 0, 0.5) inset;
 }
-.profile-name{
-        font-weight: 800;
-        color: white;
-        font-size: 3em;
-        margin-top: 2.84em;
-        margin-bottom: 0.3em;
-}
+
 .profile-card{
         background-color: white;
         width: 100%;
@@ -593,9 +587,9 @@
 }
 .final-title-data{
         width: 34em;
-        // background-color: #474747;
+        background-color: #474747;
         // background: linear-gradient(45deg, black, #474747 );
-        background: #81b5c3;
+        // background: #81b5c3;
         height: 1em;
         padding: 0.25em 0.25em 0.25em 0.75em;
         font-size: 0.9em;
@@ -715,7 +709,9 @@
         // background: #47474f;
         // background: #81b5c3;
         // background: #E8E8E8;
-        background: linear-gradient( #E8E8E8 4%, white 89%);
+        // background: linear-gradient( #E8E8E8 4%, white 89%);
+        background: linear-gradient( #3c3d42 4%, white 89%);
+        // height: 45em;
 }
 .ranking-title{
         font-size: 1.25em;
@@ -799,6 +795,6 @@ td span{
 .table-style{
         // border-spacing: 0 !important;
         border-radius: 5px;
-        border-width: 0px;
+        border-style: none;
         box-shadow: 5px 5px 5px #888888;
 }

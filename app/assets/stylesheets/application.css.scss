@@ -58,7 +58,7 @@ table {
 
 .signedin-logo a {
       font-size: 2em;
-      font-family: "proxima-nova";
+      font-family: "proxima-nova";  
       font-weight: 600;
       // color: #81b5c3;
       // color: #cd3831;
@@ -91,13 +91,14 @@ table {
 }
 
 .signedin-nav {
-  background: #47474f;
+  //background: #47474f;
   // background: #0265b0;
   // background: #0066cc;
   // background: #cd3831; 
   // background: #0D4F8B; 
   // background: #308a4f;
   // background: #81b5c3;
+  background: transparent;
 
   padding: 50px 0px 25px 0px;
 }
