@@ -64,6 +64,7 @@
   <h2>Choose Your Players</h2>
       <div class="player_selection">
         <div class="row">
+
           <div class="game_form_fields">Player 1 Name</div>         
           <%= collection_select(:player, :name, Player.all, :id, :name, {:prompt => true, :multiple=>true }) %>
           <div class="game_form_fields">Player 1 Name</div>
@@ -76,4 +77,9 @@
         </div>
       </div>
   <a class="close-reveal-modal">&#215;</a>
+</div>
+
+
+<div style="display: none;">
+  <%= render 'form' %>
 </div>

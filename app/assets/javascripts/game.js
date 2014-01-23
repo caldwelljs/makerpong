@@ -7,18 +7,20 @@
     var player1set = 0;
     var player2set = 0;
 
-    var player1name = "Player 1"
-    var player2name = "Player 2"
-
   // Player clicks 'New Game' and set usernames
   
   $('.newGame').click(function (e) {
     e.preventDefault();
-    var player1name = prompt("What is Player 1's name")
-    $('#player1').text(player1name);
-    var player2name = prompt("What is Player 2's name")
-    $('#player2').text(player2name);  
+    $('#myModal').foundation('reveal', 'open');
+    // var player1name = prompt("What is Player 1's name")
+    // $('#player1').text(player1name);
+    // var player2name = prompt("What is Player 2's name")
+    // $('#player2').text(player2name);  
 
+    $('.close-reveal-modal').click(function (e) {    
+      e.preventDefault();
+      $('#myModal').foundation('reveal', 'close');
+    });
 
 
   // Click restart game - player scores set to 0

@@ -9,6 +9,10 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
   end
 
+  def live_score
+    @game = Game.new
+  end
+
   def new
     @game = Game.new
   end
