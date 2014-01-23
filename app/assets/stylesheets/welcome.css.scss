@@ -252,7 +252,7 @@ a.about_link:link {color:#FF0000;}
 
 
 .title-holders-column{
-  margin-top: 4em;
+  margin-top: 2em;
 }
 .title-holder-data{
   width: 60em;
@@ -260,11 +260,11 @@ a.about_link:link {color:#FF0000;}
   
 }
 .title-holders{
-  color: #cd3831;
+  color: #fff;
   font-family: "proxima-nova";
   font-weight: 600;
   text-align: center;
-  font-size: 1.8em;
+  font-size: 1.5em;
 }
 
 .title-holder-title {
@@ -273,6 +273,12 @@ a.about_link:link {color:#FF0000;}
   font-weight: 600;
   color: #47474f;
   font-size: 1.1em;
+}
+
+.title-holders-header {
+  // background: #cd3831;
+  background: #47474f;
+  color: #fff;
 }
 
 .king-wrap{
