@@ -25,6 +25,7 @@
 table {
   margin: 5px;
   border-radius: 5px;
+  border-width: 0px;
 }
 
 @media all and (min-width: 64em) {
@@ -62,6 +63,7 @@ table {
       font-weight: 600;
       // color: #81b5c3;
       // color: #cd3831;
+      // color: #47474f;
       color: #fff;
       float: left;
   }
@@ -76,6 +78,7 @@ table {
              font-family: "proxima-nova";
              font-weight: 400;
              color: white;
+             // color: #47474f;
       float: left;
       height: 2em;
       margin-left: 2em;
@@ -93,13 +96,13 @@ table {
 .signedin-nav {
   //background: #47474f;
   // background: #0265b0;
-  // background: #0066cc;
+  // background: #fff;
   // background: #cd3831; 
   // background: #0D4F8B; 
   // background: #308a4f;
   // background: #81b5c3;
   background: transparent;
-
+  // opacity: 1;
   padding: 50px 0px 25px 0px;
 }
 
