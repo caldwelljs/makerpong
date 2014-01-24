@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 
 
   def after_sign_in_path_for(player)
-    params[:target] || welcome_dashboard_path
+    params[:target] || player
   end
 
   protected

@@ -1,12 +1,8 @@
 <div class="ranking-wrapping">
-
-<%= render "layouts/header" %>
-
-
+  <%= render "layouts/header" %>
 <!-- a;lkdfjasdlfkjasd;f -->
 
-<div class="row">
-
+  <div class="row">
 	  <div class="small-5  prof-name-wrap columns">
     <h1 class="profile-name"><%= @game.player.name %> </h1>
     <!-- <h1 class="vs-after-game">VS</h1> -->
@@ -20,7 +16,7 @@
   		<div class="the-border-after-game"></div>
   	</div>
   </div>
-
+  </div>
 
 <div class="row new-game">
   <div class="small-4 small-offset-4  prof-name-wrap columns">
@@ -37,6 +33,7 @@
   </div>
   <div class="small-3 small-offset-1 prof-name-wrap new-game-button-column columns">
     <button class='new-game-button' name="submit" id="submit" type="submit">Edit Game</button>
+</div>
 </div>
 
 <div class="row">
@@ -122,7 +119,6 @@
   </div>
 
   <%= render "layouts/footer" %>
-
 
 
 
