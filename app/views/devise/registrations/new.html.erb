@@ -1,30 +1,49 @@
-
-<%= render "layouts/header" %>
-  <div class="sign-in-bg">
+<div class= "sign-in-bg">
+  <%= render "layouts/header" %>
     <div class="row">
-      <div class="small-6 medium-5 large-4 small-centered columns frame">
-        <h2>Sign up</h2>
-        
-        <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+      <div class="small-6 medium-6 large-6 columns">
+        <div class="homelargeheading">
+          Passionate about Ping Pong?
+        </div>
+        <div>
+          <p class="homeparagraph">
+            Track your scores and see how you stack up against the competition with our free web app. Careful. It gets pretty intense.
+          </p> 
+        </div>
+      </div>
+      <div class="small-5 medium-5 large-5 columns signup-box">
+        <div class="home-new-acct">Create a New Account</div>
+        <div class="error_explanation">
+          <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
           <%= devise_error_messages! %>
-
-          <div class="sign-up-label"><%= f.label :full_name %><br />
-          <%= f.text_field :name, :autofocus => true %></div>
-        
-          <div class="sign-up-label"><%= f.label :email %><br />
-          <%= f.email_field :email %></div>
-        
-          <div class="sign-up-label"><%= f.label :password %><br />
-          <%= f.password_field :password %></div>
-        
-          <div class="sign-up-label"><%= f.label :password_confirmation %><br />
-          <%= f.password_field :password_confirmation %></div>
-        
-          <div class="sign-up-label" ><%= f.submit "Sign up", class: "button sign-up-button" %></div>
+        </div>
+        <div class="sign-up-label">
+          <%= f.text_field :name, :autofocus => true, :placeholder => "Full Name" %>
+        </div>
+        <div class="sign-up-label">
+          <%= f.email_field :email, :placeholder => "Email" %>
+        </div>
+        <div class="sign-up-label">
+          <%= f.password_field :password, :placeholder => "Password" %>
+        </div>
+        <div class="sign-up-label">
+          <%= f.password_field :password_confirmation, :placeholder => "Password Confirmation" %>
+        </div>
+        <div>
+          <%= f.submit "Sign up for MakerPong", class: "sign-up-button" %>
+        </div>
         <% end %>
-        <%= render "devise/shared/links" %>
-        
       </div>
     </div>
-  </div>
-<%= render "layouts/footer" %>
+
+</div>
+
+ <%= render "layouts/footer" %>
+
+
+
+  
+
+
+
+
