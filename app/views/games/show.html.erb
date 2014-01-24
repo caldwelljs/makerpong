@@ -5,14 +5,15 @@
   <div class="row">
 	  <div class="small-5  prof-name-wrap columns">
     <h1 class="profile-name"><%= @game.player.name %> </h1>
+          <div class="the-border-after-game"></div>
     <!-- <h1 class="vs-after-game">VS</h1> -->
   </div>
   <div class="small-2 prof-name-wrap columns">
      <h1 class="vs-after-game">vs</h1>
-
   </div>
   <div class="row">
-  	<div class="small-12  prof-name-wrap columns">
+  	<div class="small-5  prof-name-wrap columns">
+      <h1 class="profile-name"><%= @game.opponent.name %> </h1>
   		<div class="the-border-after-game"></div>
   	</div>
   </div>
@@ -21,9 +22,9 @@
 <div class="row new-game">
   <div class="small-4 small-offset-4  prof-name-wrap columns">
   <% if @game.player_score > @game.opponent_score %>
-  	<h2 class="who-won"><%= @game.player.first_name %> wins!</h2>
+  	<h2 class="who-won"><%= @game.player.last_name %> wins!</h2>
   	<% else %>
-  	<h2 class="who-won"><%= @game.opponent.first_name %> wins!</h2>
+  	<h2 class="who-won"><%= @game.opponent.last_name %> wins!</h2>
   	<% end %>
   	<div class="form-wrap">
   		<div id="show-form">
