@@ -1049,7 +1049,7 @@ h1,h2,h3,h4,h5{
 	color: #fff;
 	font-size: 3em;
   // font-family: "FS Albert Web Bold","Helvetica Neue",Arial,sans-serif;
-  font-family: Georgia, serif;
+  font-family: "proxima-nova";
   text-shadow: 1px 1px 1px #fff;
   font-weight: 800;
   font-size: 3em;
@@ -1191,8 +1191,10 @@ h1,h2,h3,h4,h5{
 }
 #close{
   float: right;
-	color: black;
+	color: white;
 	font-family: serif;
+	margin: -4em 0.25em 0 0;
+
 
 
 }

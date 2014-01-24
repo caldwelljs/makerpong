@@ -16,11 +16,11 @@
 
   <div class="choose-player-two"><%= f.collection_select :opponent_id, Player.all, :id, :name, prompt: "Choose Player 2" %></div>
 
-  <%= f.label :player_one_score %>
+  <div class="player-one-score-label"><%= f.label :player_one_score %></div> 
   <div class="player-one-score"><%= f.text_field :player_score %></div><br />
 
-  <%= f.label :player_two_score %>
-  <div class="player-two-score"><%= f.text_field :opponent_score %><br /></div>
+  <div class="player-two-score-label"><%= f.label :player_two_score %></div>
+  <div class="player-one-score"><%= f.text_field :opponent_score %><br /></div>
 
   <div class="log-game-submit"><%= f.submit %></div>
 
