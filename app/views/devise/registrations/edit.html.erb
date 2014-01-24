@@ -6,7 +6,7 @@
       <div class="page_title">Edit Your Info</div>
       <!-- <%= resource_name.to_s.humanize %> -->
 
-      <p>You're in the right spot to update your profile, password and photos. </p>
+      <p class="edit-profile-text">You're in the right spot to update your profile, password and photo.</p>
 
       <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
         <%= devise_error_messages! %>
@@ -33,11 +33,11 @@
         <div><%= f.submit "Update" %></div>
       <% end %>
 
-      <h3 class="lower_headers">Manage Your Photos</h3>
+      <h3 class="lower_headers">Update your photo</h3>
 
       <%= form_for @player do |f| %>
         <tr>
-          <th><%= f.label(:upload_profile_pic, "Upload Main Profile Pic") %></th>
+          <th><%= f.label(:upload_profile_pic, "Upload your profile pic") %></th>
           <td><%= f.file_field(:picture_url) %></td>
         </tr>
 <!--         <tr>
@@ -68,6 +68,7 @@
           <%= submit_tag("Update profile") %>
         </div>
       <% end %>
+
       <%= link_to "Back", :back %>
     </div>
 

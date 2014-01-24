@@ -21,6 +21,15 @@
 //   box-sizing: border-box;
 // }
 
+.error_explanation {
+  color: #cd3831;
+  padding: 0.25em;
+  h2 {
+    font-size: 1.5em;
+    color: #cd3831;
+  }
+}
+
 .paddle img{
   position: absolute;
   width: 1.55em;
@@ -235,6 +244,13 @@ h3{
   box-shadow: 0 10px 10px rgba(0,0,0,0.3);
   text-transform: uppercase;
 }
+
+.edit-profile-text {
+  color: #fff;
+  font-size: 1em;
+  font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
+}
+
 
 // footer styling
 
