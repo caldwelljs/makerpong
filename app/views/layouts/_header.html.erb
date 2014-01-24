@@ -2,9 +2,11 @@
   <% if player_signed_in? %>
   <header class="signedin-nav">
     <div class="row">
-        <div class="small-2 prof-name-wrap columns">
+        <div class="small-2  columns">
+          <div class="paddle"><%= image_tag "p-paddle.png" %></div>
           <div class="signedin-logo">
             <%= link_to 'MakerPong', welcome_dashboard_path %>
+            
           </div>
         </div>
       <div class= "small-8 columns top-nav">

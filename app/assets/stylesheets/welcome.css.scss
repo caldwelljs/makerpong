@@ -82,10 +82,30 @@
   border-radius: 5px;
   // opacity: .8;
   margin-top: 8em;
-  margin-bottom: 200px;
+  margin-bottom: 250px;
 
 }
-
+.crown{
+  font-size:1.3em;
+  color: gold;
+}
+.skull{
+  font-size: 1.55em;
+  position: absolute;
+  top: 0.05;
+  left: 0;
+}
+.up-arrow{
+  color: green;
+  font-size: 1.5em;
+}
+.frown-face{
+  color: red;
+  font-size: 1.5em;
+}
+.fa-thumbs-down{
+  color: red;
+}
 .sign-up-label {
   font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
 }
@@ -274,6 +294,7 @@ a.about_link:link {color:#FF0000;}
   font-weight: 600;
   color: #47474f;
   font-size: 1.1em;
+  position: relative;
 }
 
 .title-holders-header {

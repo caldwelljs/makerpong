@@ -21,7 +21,11 @@
 //   box-sizing: border-box;
 // }
 
-
+.paddle img{
+  position: absolute;
+  width: 1.55em;
+  left: 0;
+}
 
 table {
   margin: 5px;
@@ -70,8 +74,12 @@ table {
       // color: #47474f;
       color: #D1413C;
       float: left;
+      width: 17em;
+      margin-left: 0.38em;
   }
-
+.signedin-logo{
+  position: relative;
+}
 
 
 
