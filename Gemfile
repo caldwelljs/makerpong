@@ -19,7 +19,7 @@ gem 'foundation-rails'
 # Use pg as the database for Active Record
 gem 'pg'
 
-gem 'rails_serve_static_assets'
+gem 'rails_on_heroku'
 
 gem 'unf'
 # Use SCSS for stylesheets
