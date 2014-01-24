@@ -50,18 +50,7 @@
         </div>
       </div>
     </div>
-    <div class="row">
-      <% if devise_mapping.rememberable? -%>
-        <div class="small-6 medium-6 large-6 small-offset-6 remember-me">
-          <%= f.check_box :remember_me %> <%= f.label :remember_me %>
-        <!-- </div> -->
-      <% end -%>
-      <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-        <!-- <div class="small-3 medium-3 large-3 forgot-password-top-link"> -->
-          <%= link_to "Forgot your password?", new_password_path(resource_name), class: "password-reset-link" %><br />
-        </div>
-      <% end -%>
-    </div>
+
   <% end %>
   </div>
   <% end %>

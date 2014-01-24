@@ -57,9 +57,9 @@ module PlayersHelper
 
   def game_winner_label(game, player)
     if game.winner == player.id
-      content_tag(:div, "L", class: "loser")
-    else
       content_tag(:div, "W", class: "winner")
+    else
+      content_tag(:div, "L", class: "loser")
     end
   end
 end
