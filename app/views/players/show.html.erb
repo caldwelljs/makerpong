@@ -115,26 +115,30 @@
               <h3 class="last-game-title">
                 <%= @games.get_all_recent_games_for(@player).first.player_score %>-<%= @games.get_all_recent_games_for(@player).first.opponent_score %>
               </h3>
-              
-              <% if @games.get_all_recent_games_for(@player).first.player.picture_url.present? %>  
-                <%= link_to image_tag(@games.get_all_recent_games_for(@player).first.player.picture_url), @games.get_all_recent_games_for(@player).first.player, class: "last-game-player-pic" %>
-              <% else %>    
-                <%= image_tag "defaultpic.jpg", class: "last-game-player-pic", alt: "Player Pic" %>
-              <% end %>
+                <% if @games.get_all_recent_games_for(@player).first.player.picture_url.present? %>  
+                  <%= link_to image_tag(@games.get_all_recent_games_for(@player).first.player.picture_url), @games.get_all_recent_games_for(@player).first.player, class: "last-game-player-pic" %>
+                <% else %>    
+                  <%= link_to image_tag("defaultpic.jpg"), @games.get_all_recent_games_for(@player).first.player, class: "last-game-player-pic", alt: "Player Pic" %>
+                <% end %>
 
-              <img class="last-game-player-pic" src=<%= @games.get_all_recent_games_for(@player).first.player.picture_url %>>
               <h3 class="last-game-vs">VS</h3>
                 <div class="last-game-opponent-pic">
                   <% if @games.get_all_recent_games_for(@player).first.opponent.picture_url.present? %>  
                     <%= link_to image_tag(@games.get_all_recent_games_for(@player).first.opponent.picture_url), @games.get_all_recent_games_for(@player).first.opponent %>
                   <% else %>    
-                    <%= image_tag "defaultpic.jpg", alt: "Player Pic" %>
+                    <%= link_to image_tag("defaultpic.jpg"), @games.get_all_recent_games_for(@player).first.opponent, alt: "Player Pic" %>
                   <% end %>
                 </div>
-              <h3 class="last-game-player-name"><%= @games.get_all_recent_games_for(@player).first.player.last_name %>
-              <h3 class="last-game-opponent-name"><%= link_to @games.get_all_recent_games_for(@player).first.opponent.last_name, @games.get_all_recent_games_for(@player).first.opponent %></h3>
+              <h3 class="last-game-player-name">
+                <%= link_to @games.get_all_recent_games_for(@player).first.player.last_name, @games.get_all_recent_games_for(@player).first.player %>
+              </h3>
+              <h3 class="last-game-opponent-name">
+                <%= link_to @games.get_all_recent_games_for(@player).first.opponent.last_name, @games.get_all_recent_games_for(@player).first.opponent %>
+              </h3>
               <div class="last-game-border"></div>
-              <h3 class="last-game-comment"><%= @player.games.last.opponent.last_name %> hangs on in a thriller to end 4 game skid, <%= @player.games.last.player.last_name %> stunned</h3>
+              <h3 class="last-game-comment">
+                <%= @player.games.last.opponent.last_name %> hangs on in a thriller to end 4 game skid, <%= @player.games.last.player.last_name %> stunned
+              </h3>
             </td>
           <% end %>
         </tr>  
@@ -170,24 +174,19 @@
               <td class="many-data">
                 <span class="many-dates"><%= game.created_at.strftime(" %a, %b %d %Y") %></span>
                 <span class="many-vs">VS</span>
+                <% if player_opponent(game, @player).picture_url.present? %>  
                   <%= link_to(image_tag(player_opponent(game, @player).picture_url , :class => "many-pics", :alt => "profile pic", :title => "profile pic"), game.opponent) %>
-
-
-
-
-                 <%= link_to(image_tag(player_opponent(game, @player).picture_url , :class => "many-pics", :alt => "profile pic", :title => "profile pic"), game.opponent) %>
-
-
-
-
+                <% else %>    
+                  <%= link_to(image_tag("defaultpic.jpg", :class => "many-pics", :alt => "profile pic", :title => "profile pic"), player_opponent(game, @player)) %>
+                <% end %>
 
                 <span class="many-opponents"> 
-                  <%= player_opponent(game, @player).name %> 
+                  <%= link_to(player_opponent(game, @player).name, player_opponent(game, @player)) %>
                 </span>
                 <span class="many-w-l">
                   <%= game_winner_label(game, @player) %>
                 </span>
-                <span class="many-scores"><%= player_score(game, @player) %>-<%= player_opponent_score(game, @player) %></span>
+                <span class="many-scores"><%= player_opponent_score(game, @player) %>-<%= player_score(game, @player) %></span>
               </td>
             </tr>
           <% end %>

@@ -152,9 +152,9 @@
 .many-opponents{
         position:absolute;
   left: 14em;
-  color: #7A7A7A;
+  color: #333333;
   a {
-    color: #7A7A7A;
+    color: #333333;
   }
 }
 
@@ -240,15 +240,20 @@
   font-weight: 800;
   position: absolute;
   top: 0.5em;
-  left: 4.65em;
+  left: 4.7em;
   font-size: 1.2em;
+  a {
+    color: #333333;
+  }
 }
+
+
 .last-game-opponent-name{
   font-family: "proxima-nova";
   font-weight: 800;
   position: absolute;
   top: 0.5em;
-  right: 4.65em;
+  right: 4.25em;
   font-size: 1.2em;
   color: #000000;
   a {
