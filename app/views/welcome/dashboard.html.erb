@@ -9,88 +9,70 @@
   
   <div class="row">
     <div class="small-8  prof-name-wrap title-holders-column columns">
-<!--       <table>
-      <tr>
-        <td class="title-holder-data">
-          <div class="title-holders">Title Holders</div>
-        </td>
-      </tr>=
-      </table> -->
-      
-
-    <table class="table-style">
-      <tr>
-        <td colspan="4" class = "title-holders-header">
-        <h1 class="title-holders">Title Holders</h1>
-        </td>
-      </tr>
-
-
-      <tr>
-        
-        <td class="king-wrap">
-          <div class="title-holder-title"><span class="crown">♕</span> King of the Hill</div>
-        </td>
-        <td class="king-wrap">
-          <div class="title-holder-title">
-          <span class="skull">☠</span> Biggest Loser
-        </td>
-        <td class="king-wrap">
-          <div class="title-holder-title">
-          <span class="up-arrow">⬆</span> Longest Streak
-        </td>
-        <td class="king-wrap">
-          <div class="title-holder-title">
-         <i class="fa fa-thumbs-down"></i> Worst Loss
-        </div>
-        </td>
-      </tr>
-      <tr>
-        <td class="king-wrap">
+      <table class="table-style">
+        <tr>
+          <td colspan="4" class = "title-holders-header">
+          <h1 class="title-holders">Title Holders</h1>
+          </td>
+        </tr>
+        <tr>
+          <td class="king-wrap">
+            <div class="title-holder-title">
+              <span class="crown">♕</span> King of the Hill</div>
+          </td>
+          <td class="king-wrap">
+            <div class="title-holder-title"><span class="skull">☠</span>Biggest Loser</div>
+          </td>
+          <td class="king-wrap">
+            <div class="title-holder-title"><span class="up-arrow">⬆</span>Longest Streak</div>
+          </td>
+          <td class="king-wrap">
+            <div class="title-holder-title"><i class="fa fa-thumbs-down"></i> Worst Loss</div>
+          </td>
+        </tr>
+        <tr>
+          <td class="king-wrap">
             <div>
-              
               <%= link_to(image_tag(Player.power_ranking.first.picture_url, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), Player.power_ranking.first) %>
             </div>
+          </td>
+          <td class="king-wrap">
+            <div>      
+               <%= link_to(image_tag(Player.power_ranking.last.picture_url, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), Player.power_ranking.last) %>
+            </div>
+          </td>
+          <td class="king-wrap">
+            <div>              
+              <%= link_to(image_tag(Player.win_streak_sorting.first.picture_url, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), Player.win_streak_sorting.first) %>
+            </div>
+          </td>
+          <td class="king-wrap">
+            <div>          
+              <%= link_to(image_tag(worst_loss_display_pic, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), Game.worst_loss.first) %>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="king-wrap">
+            <div class="king">
+            <%= link_to Player.power_ranking.first.name, Player.power_ranking.first %>
+            </div class="title-holder">
+          </td>
+          <td class="king-wrap">
+            <div class="king"><%= link_to Player.power_ranking.last.name, Player.power_ranking.last %></div>
+          </td>
+          <td class="king-wrap">
+            <div class="king">
+              <%= link_to Player.win_streak_sorting.first.name, Player.win_streak_sorting.first %>
+            </div>
+          </td>
+          <td class="king-wrap">
+            <div class="king">
+              <%= worst_loss_display %>
           </div>
-        </td>
-        <td class="king-wrap">
-          <div>      
-             <%= link_to(image_tag(Player.power_ranking.last.picture_url, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), Player.power_ranking.last) %>
-          </div>
-        </td>
-        <td class="king-wrap">
-          <div>
-            
-            <%= link_to(image_tag(Player.win_streak_sorting.first.picture_url, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), Player.win_streak_sorting.first) %>
-          </div>
-        </td>
-        <td class="king-wrap">
-          <div>          
-            <img class="title-holder-pics" src=<%= worst_loss_display_pic %>>
-          </div>
-        </td>
-      </tr>
-      <tr>
-        <td class="king-wrap">
-          <div class="king">
-          <%= link_to Player.power_ranking.first.name, Player.power_ranking.first %>
-          </div class="title-holder">
-        </td>
-        <td class="king-wrap">
-          <div class="king"><%= link_to Player.power_ranking.last.name, Player.power_ranking.last %></div>
-        </td>
-        <td class="king-wrap">
-          <div class="king">
-            <%= link_to Player.win_streak_sorting.first.name, Player.win_streak_sorting.first %>
-          </div>
-        </td>
-        <td class="king-wrap">
-          <div class="king">
-            <%= worst_loss_display %>
-        </div>
-        </td>
-      </tr>
-      <tr>
+          </td>
+        </tr>
+        <tr>
       </table>
     </div>
     <div class="small-4  prof-name-wrap title-holders-column columns">
