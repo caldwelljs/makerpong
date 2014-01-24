@@ -81,56 +81,49 @@
       </table>
     </div>
     <div class="small-4  prof-name-wrap title-holders-column columns">
-      <!-- <table>
-        <tr>
-          <td class="title-holder-data">
-            <div class="title-holders">League Leaders</div>
-          </td>
-        </tr>
-      </table> -->
-      <table class="table-style"> 
+    <table class="table-style"> 
+    <tr>
+      <td colspan="3" class = "title-holders-header">
+      <h1 class="title-holders">League Leaders</h1>
+      </td>
+    </tr>    
       <tr>
-        <td colspan="3" class = "title-holders-header">
-        <h1 class="title-holders">League Leaders</h1>
+        <td class="king-wrap">
+          <div class="title-holder-title">
+            Rank
+          </div>
         </td>
-      </tr>    
+        <td class="king-wrap">
+        <div class="title-holder-title">
+          Name
+        </div>
+        </td>
+        <td class="king-wrap">
+        <div class="title-holder-title">
+          %
+        </div>
+        </td>
+      </tr>  
+            <% Player.power_ranking.first(5).each do |player| %>
         <tr>
-          <td class="king-wrap">
-            <div class="title-holder-title">
-              Rank
+          <td>
+            <div class="king">
+              <%= Player.power_ranking.find_index(player) + 1 %>
             </div>
           </td>
-          <td class="king-wrap">
-          <div class="title-holder-title">
-            Name
-          </div>
+          <td>
+            <div class="league-leader-stats">
+              <%= link_to player.name, player %></td>
+            </div>
+          <td>
+            <div class="league-leader-percent">
+              <%= player.win_percentage %>
+            </div>
           </td>
-          <td class="king-wrap">
-          <div class="title-holder-title">
-            %
-          </div>
-          </td>
-        </tr>  
-              <% Player.power_ranking.first(5).each do |player| %>
-          <tr>
-            <td>
-              <div class="king">
-                <%= Player.power_ranking.find_index(player) + 1 %>
-              </div>
-            </td>
-            <td>
-              <div class="league-leader-stats">
-                <%= link_to player.name, player %></td>
-              </div>
-            <td>
-              <div class="league-leader-percent">
-                <%= player.win_percentage %>
-              </div>
-            </td>
-          </tr>
+        </tr>
 
-        <% end %>
-      </table>
+      <% end %>
+    </table>
 
     </div>
     
