@@ -151,13 +151,8 @@
       <div class="small-12  prof-name-wrap columns">
       <h1 class="title-holders">Latest Results</h1>
           <% @games.last(9).reverse.each do |game| %>
-        
-
         <div class="small-4 columns last-games-column-wrapper">
-          
-        
-            <table class="table-style">
-          
+          <table class="table-style">
             <tr class="final-title-row">
               <td class='final-title-data'>
                 <div class="prev-games-final-title"></div>
@@ -168,7 +163,7 @@
             <tr>
               <td class='prev-games-data-row'>   
                 <%= link_to(image_tag(game.player.picture_url, :class => "prev-games-card-pic1", :alt => "profile pic", :title => "profile pic"), game.player) %>
-                 <div class="prev-games-card-name"><%= link_to game.player.name, game.player %></div>
+                 <div class="prev-games-card-name <%= "winner_style" if game.winner == game.player.id %>"><%= link_to game.player.name, game.player %></div>
                  <div class="record-prev-games">(<%= game.player.wins %>-<%= game.player.losses %>)</div>
                  <div class="player-score-prev-games"><%= game.player_score %></div>
               </td>
@@ -177,10 +172,15 @@
               <td class='prev-games-data-row'>
                  <!-- <img class="prev-games-card-pic1" src=<%= game.opponent.picture_url %>>  -->
                 <%= link_to(image_tag(game.opponent.picture_url, :class => "prev-games-card-pic1", :alt => "profile pic", :title => "profile pic"), game.opponent) %>
-
-                 <div class="prev-games-card-name"><%= link_to game.opponent.name, game.opponent %></div>
-                 <div class="record-prev-games">(<%= game.opponent.wins %>-<%= game.player.losses %>)</div>
-                 <div class="player-score-prev-games"><%= game.opponent_score %></div>
+                  <div class="prev-games-card-name">
+                    <%= link_to game.opponent.name, game.opponent %>
+                  </div>
+                  <div class="record-prev-games">
+                    (<%= game.opponent.wins %>-<%= game.player.losses %>)
+                  </div>
+                  <div class="player-score-prev-games">
+                    <%= game.opponent_score %>
+                  </div>
               </td>
             </tr>
             <tr>

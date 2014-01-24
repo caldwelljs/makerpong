@@ -18,11 +18,7 @@
       <table class="table-style">
       <tr>
         <td rowspan="4">
-          <% if @player.picture_url.present? %>  
-            <%= image_tag @player.picture_url, size: "300x300" %>
-          <% else %>    
-            <%= image_tag "defaultpic.jpg", size: "300x300", alt: "Player Pic" %>
-          <% end %>
+          <%= image_tag @player.picture_url, size: "300x300" %>  
         </td>
 
         <td colspan="2" class="profile-rank-small-header">
@@ -91,11 +87,7 @@
         </tr>
         <tr class="profile-2nd-table-row">
           <td class="profile-2nd-table-data">
-            <% if @player.picture_url.present? %>  
-              <%= image_tag @player.picture_url, size: "300x300", class: "profile-picture" %>
-            <% else %>    
-              <%= image_tag "defaultpic.jpg", size: "300x300", alt: "Player Pic" %>
-            <% end %>
+            <%= image_tag @player.picture_url, size: "300x300", class: "profile-picture" %>
           </td>
           <td class="table-data">
             <div class="table-rank"><%= ordinalize @rank %></div>
@@ -115,19 +107,10 @@
               <h3 class="last-game-title">
                 <%= @games.get_all_recent_games_for(@player).first.player_score %>-<%= @games.get_all_recent_games_for(@player).first.opponent_score %>
               </h3>
-                <% if @games.get_all_recent_games_for(@player).first.player.picture_url.present? %>  
-                  <%= link_to image_tag(@games.get_all_recent_games_for(@player).first.player.picture_url), @games.get_all_recent_games_for(@player).first.player, class: "last-game-player-pic" %>
-                <% else %>    
-                  <%= link_to image_tag("defaultpic.jpg"), @games.get_all_recent_games_for(@player).first.player, class: "last-game-player-pic", alt: "Player Pic" %>
-                <% end %>
-
+                <%= link_to image_tag(@games.get_all_recent_games_for(@player).first.player.picture_url), @games.get_all_recent_games_for(@player).first.player, class: "last-game-player-pic" %>
               <h3 class="last-game-vs">VS</h3>
-                <div class="last-game-opponent-pic">
-                  <% if @games.get_all_recent_games_for(@player).first.opponent.picture_url.present? %>  
-                    <%= link_to image_tag(@games.get_all_recent_games_for(@player).first.opponent.picture_url), @games.get_all_recent_games_for(@player).first.opponent %>
-                  <% else %>    
-                    <%= link_to image_tag("defaultpic.jpg"), @games.get_all_recent_games_for(@player).first.opponent, alt: "Player Pic" %>
-                  <% end %>
+                <div class="last-game-opponent-pic">  
+                  <%= link_to image_tag(@games.get_all_recent_games_for(@player).first.opponent.picture_url), @games.get_all_recent_games_for(@player).first.opponent %>
                 </div>
               <h3 class="last-game-player-name">
                 <%= link_to @games.get_all_recent_games_for(@player).first.player.last_name, @games.get_all_recent_games_for(@player).first.player %>
@@ -174,12 +157,7 @@
               <td class="many-data">
                 <span class="many-dates"><%= game.created_at.strftime(" %a, %b %d %Y") %></span>
                 <span class="many-vs">VS</span>
-                <% if player_opponent(game, @player).picture_url.present? %>  
                   <%= link_to(image_tag(player_opponent(game, @player).picture_url , :class => "many-pics", :alt => "profile pic", :title => "profile pic"), game.opponent) %>
-                <% else %>    
-                  <%= link_to(image_tag("defaultpic.jpg", :class => "many-pics", :alt => "profile pic", :title => "profile pic"), player_opponent(game, @player)) %>
-                <% end %>
-
                 <span class="many-opponents"> 
                   <%= link_to(player_opponent(game, @player).name, player_opponent(game, @player)) %>
                 </span>
