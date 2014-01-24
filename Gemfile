@@ -9,6 +9,8 @@ gem 'carrierwave'
 
 gem 'rmagick'
 
+gem 'unicorn'
+
 gem 'figaro'
 
 gem 'fog'
