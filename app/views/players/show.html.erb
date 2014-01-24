@@ -78,7 +78,7 @@
               <% if @player.games.empty? %>
                 <%=  %>
               <% else %>
-                <%= @games.get_all_recent_games_for(@player).first.created_at.strftime(" %a, %b %d %Y - %I:%M%p") %>
+                <%= @games.get_all_recent_games_for(@player).first.created_at.strftime(" %a, %b %d %Y") %>
               <% end %>
             </h3>
             <h3 class="profile-t">Final</h3>
