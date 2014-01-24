@@ -33,14 +33,14 @@
         <div><%= f.submit "Update" %></div>
       <% end %>
 
-      <h3 class="lower_headers">Manage Your Photos</h3>
+      <h3 class="lower_headers">Add or change your profile photo</h3>
 
       <%= form_for @player do |f| %>
         <tr>
-          <th><%= f.label(:upload_profile_pic, "Upload Main Profile Pic") %></th>
+          <th><%= f.label(:upload_profile_pic, "Upload your profile pic.") %></th>
           <td><%= f.file_field(:picture_url) %></td>
         </tr>
-        <tr>
+        <!-- <tr>
           <th><%= f.label(:upload_winning_pic1, "Upload Celebration Pic #1") %></th>
           <td><%= f.file_field(:winning_pic1) %></td>
         </tr>
@@ -63,13 +63,13 @@
         <tr>
           <th><%= f.label(:upload_losing_pic3, "Upload Losing Pic #3") %></th>
           <td><%= f.file_field(:losing_pic3) %></td>
-        </tr>
+        </tr> -->
         <div class="form-buttons">
           <%= submit_tag("Update profile") %>
         </div>
       <% end %>
       <h3 class="lower_headers">
-        Delete my account
+        Delete your account (if you must)
       </h3>
       <p>
         <%= button_to "Delete my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>
