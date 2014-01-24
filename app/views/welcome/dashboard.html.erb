@@ -38,12 +38,12 @@
           </td>
           <td class="king-wrap">
             <div>      
-               <%= link_to(image_tag(Player.power_ranking.last.picture_url, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), Player.power_ranking.last) %>
+               <%= link_to(image_tag(Player.order( 'losses DESC' ).first.picture_url, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), Player.order( 'losses DESC' ).first) %>
             </div>
           </td>
           <td class="king-wrap">
             <div>              
-              <%= link_to(image_tag(Player.win_streak_sorting.first.picture_url, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), Player.win_streak_sorting.first) %>
+              <%= link_to(image_tag(Player.order( 'win_streak DESC' ).first.picture_url, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), Player.order( 'win_streak DESC' ).first) %>
             </div>
           </td>
           <td class="king-wrap">
@@ -55,15 +55,17 @@
         <tr>
           <td class="king-wrap">
             <div class="king">
-            <%= link_to Player.power_ranking.first.name, Player.power_ranking.first %>
-            </div class="title-holder">
-          </td>
-          <td class="king-wrap">
-            <div class="king"><%= link_to Player.power_ranking.last.name, Player.power_ranking.last %></div>
+            <%= link_to Player.power_ranking.first.last_name, Player.power_ranking.first %> - <%= Player.power_ranking.first.win_percentage %>
+            </div>
           </td>
           <td class="king-wrap">
             <div class="king">
-              <%= link_to Player.win_streak_sorting.first.name, Player.win_streak_sorting.first %>
+              <%= link_to Player.order( 'losses DESC' ).first.last_name, Player.order( 'losses DESC' ).first %> - <%= Player.order( 'losses DESC' ).first.losses %> Tot. losses
+            </div>
+          </td>
+          <td class="king-wrap">
+            <div class="king">
+              <%= link_to Player.order( 'win_streak DESC').first.last_name, Player.order( 'win_streak DESC' ).first %> - <%= Player.order( 'win_streak DESC').first.win_streak %> wins
             </div>
           </td>
           <td class="king-wrap">

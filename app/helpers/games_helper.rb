@@ -1,9 +1,10 @@
 module GamesHelper
   
+
   def worst_loss_display
     if Game.all.empty?
-    	"No Games Played" 
-    elsif	Game.worst_loss.first.point_margin > 0
+      "No Games Played" 
+    elsif Game.worst_loss.first.point_margin > 0
       "#{Game.worst_loss.first.opponent.name} by #{Game.worst_loss.first.point_margin}"
     elsif Game.worst_loss.first.point_margin < 0
       "#{Game.worst_loss.first.player.name} by #{Game.worst_loss.first.point_margin}"
