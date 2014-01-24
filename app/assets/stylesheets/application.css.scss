@@ -30,6 +30,19 @@
   }
 }
 
+.paddle img{
+  position: absolute;
+  width: 1.55em;
+  left: 0;
+}
+
+.paddle-sign-up-page img{
+  position: absolute;
+  width: 0.8em;
+  left: -0.85em;
+  top: 0.055;
+
+}
 table {
   margin: 5px;
   border-radius: 5px;
@@ -43,11 +56,16 @@ table {
 }
 
 .logo {
-  color: white;
-  font-size: 3em;
+  color: #D1413C;
+  font-size: 2.25em;
   font-weight: 600;
   float: left;
-  font-family: "proxima-nova";
+  font-family: "hotel-open";
+  margin-left: 1em;
+  position: relative;
+}
+.logo a {
+  color: #D1413C;
 }
 
 // .signedin-logo {
@@ -67,15 +85,19 @@ table {
 
 .signedin-logo a {
       font-size: 2em;
-      font-family: "proxima-nova";  
+       font-family: "hotel-open";
       font-weight: 600;
       // color: #81b5c3;
       // color: #cd3831;
       // color: #47474f;
-      color: #fff;
+      color: #D1413C;
       float: left;
+      width: 17em;
+      margin-left: 0.38em;
   }
-
+.signedin-logo{
+  position: relative;
+}
 
 
 
@@ -233,20 +255,21 @@ html, body {
   height: 100%;
 }
 .wrapper {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
+  // min-height: 100%;
+  // height: auto !important;
+  // height: 100%;
+  // margin: 0 auto -155px; /* the bottom margin is the negative value of the footer's height */
 }
 .footer, .push {
-  height: 155px; /* .push must be the same height as .footer */
+  // height: 155px; /* .push must be the same height as .footer */
 }
 
 .footer {
   background: #47474f;
-  padding-top: 35px;
+  padding-top: 20px;
   padding-bottom: 5px;
   font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
+  // margin-bottom: -4em;
 }
 
 .footer a {
@@ -269,6 +292,7 @@ html, body {
 .footer-logo {
   font-weight: bold;
   font-size: 1.1em;
+  margin: 0;
 }
 
 .fa {

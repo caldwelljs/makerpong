@@ -13,3 +13,10 @@ test:
   pool: 5
   port: 5432
   host: localhost
+
+  production:
+    adapter: postgresql
+    encoding: unicode
+    database: pong-development
+
+    
