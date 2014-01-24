@@ -30,12 +30,7 @@
         <td class='sub-title'>
           <div class="pct-title">PCT</div>
         </td>
-        <td class='sub-title'>
-          PREV
-        </td>
-        <td class='sub-title'>
-          Trending
-        </td>
+        
       </tr>
       <% Player.power_ranking.each do |player| %>
           <tr>
@@ -53,12 +48,7 @@
         <td>
           <h4 class="rank-pct"><%= player.win_percentage %></h4>
         </td> 
-        <td>
-          <span><%=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25].sample %></span>
-        </td>
-        <td>
-          <span class="arrow">▲</span><%=[1,2,3,4,5,6].sample %>
-        </td>
+        
       </tr>
       
       
