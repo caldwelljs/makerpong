@@ -18,3 +18,5 @@ test:
     adapter: postgresql
     encoding: unicode
     database: pong-development
+
+    

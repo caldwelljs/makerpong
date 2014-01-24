@@ -27,6 +27,13 @@
   left: 0;
 }
 
+.paddle-sign-up-page img{
+  position: absolute;
+  width: 0.8em;
+  left: -0.85em;
+  top: 0.055;
+
+}
 table {
   margin: 5px;
   border-radius: 5px;
@@ -41,10 +48,12 @@ table {
 
 .logo {
   color: #D1413C;
-  font-size: 2.75em;
+  font-size: 2.25em;
   font-weight: 600;
   float: left;
   font-family: "hotel-open";
+  margin-left: 1em;
+  position: relative;
 }
 .logo a {
   color: #D1413C;
