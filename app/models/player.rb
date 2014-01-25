@@ -43,5 +43,4 @@ class Player < ActiveRecord::Base
     @last_name ||= name.split[1..-1].join(" ")
   end
 
-
 end
