@@ -143,7 +143,7 @@
           <% @games.get_all_recent_games_for(@player).first(10).each do |game| %>
             <tr>
               <td class="many-data">
-                <span class="many-dates"><%= game.created_at.strftime(" %a, %b %d %Y") %></span>
+                <span class="many-dates"><%= game.created_at.strftime(" %I %M %a, %b %d %Y") %></span>
                 <span class="many-vs">VS</span>
                   <%= link_to(image_tag(player_opponent(game, @player).picture_url , :class => "many-pics", :alt => "profile pic", :title => "profile pic"), game.opponent) %>
                 <span class="many-opponents"> 
