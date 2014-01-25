@@ -1122,6 +1122,32 @@ h1,h2,h3,h4,h5{
 .log-game-button:hover{
 	background:#C40532;
 }
+
+.update-button {
+   background: #165592;
+   color: #fff;
+   border-spacing: 0 !important;
+   border-radius: 5px;
+   border-style: none;
+   box-shadow: 2px 2px 2px #888888;
+   font-size: 14px;
+   font-family: "proxima-nova";
+   text-decoration: none;
+   vertical-align: middle;
+   padding: 11.5px 23px;
+   // margin-left: 0.75em;
+   // margin-right: 8em;
+  .update-button:hover {
+    border-top-color: #28597a;
+    background: #28597a;
+    color: #ccc;
+  }
+  .update-button:active {
+    border-top-color: #1b435e;
+    background: #1b435e;
+  }
+}
+
 // form{
 // 	display:block;
 // 	margin:30px;
