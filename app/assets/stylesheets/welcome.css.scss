@@ -1,51 +1,44 @@
 
 // General and Welcome#Index styling
 
+.log-game-form {
+  padding-top: 2em;
+}
+
 .dash-first-col{
-  position: relative;
+  // position: relative;
 }
 .dash-second-col{
-  position: relative;
+  // position: relative;
 }
 .choose-player-1{
   width: 9em;
-  position: absolute;
-  right: 11em;
-  bottom: 0.35em;
+  float: left;
+  // position: absolute;
+  // right: 11em;
+  // bottom: 0.35em;
 }
 .choose-player-2{
   width: 9em;
-  position: absolute;
-  right: 0em;
-  bottom: 0.35em;
+  float: left;
+  margin-left: 2em;
+  // position: absolute;
+  // right: 0em;
+  // bottom: 0.35em;
 }
 .player1-score-field{
   float: left;
   width: 9em;
-  margin-left: 4.7em;
+  // margin-left: 4.7em;
 }
 .player2-score-field{
   width: 9em;
-  float: right;
+  float: left;
+  margin-left: 2em;
 }
 .log-a-game-button  {
    // border-top: 1px solid #96d1f8;
    background: #165592;
-   
-
-   // background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
-   // background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
-   // background: -moz-linear-gradient(top, #3e779d, #65a9d7);
-   // background: -ms-linear-gradient(top, #3e779d, #65a9d7);
-   // background: -o-linear-gradient(top, #3e779d, #65a9d7);
-   padding: 11.5px 23px;
-   // -webkit-border-radius: 8px;
-   // -moz-border-radius: 8px;
-   // border-radius: 8px;
-   // -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
-   // -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-   // box-shadow: rgba(0,0,0,1) 0 1px 0;
-   // text-shadow: rgba(0,0,0,.4) 0 1px 0;
    color: white;
    border-spacing: 0 !important;
    border-radius: 5px;
@@ -53,12 +46,11 @@
    box-shadow: 2px 2px 2px #888888;
    font-size: 14px;
    font-family: "proxima-nova";
-
    text-decoration: none;
    vertical-align: middle;
-   float: right;
-   margin-right: 8em;
-  
+   padding: 11.5px 23px;
+   margin-left: 7em
+   // margin-right: 8em;
    }
 .log-a-game-button:hover {
    border-top-color: #28597a;
