@@ -11,7 +11,7 @@
   </div>
   
   <div class="row">
-    <div class="small-8  prof-name-wrap title-holders-column columns">
+    <div class="small-7  prof-name-wrap title-holders-column columns">
       <table class="table-style">
         <tr>
           <td colspan="4" class = "title-holders-header">
@@ -57,6 +57,7 @@
             </div>
           </td>
         </tr>
+
         <!-- Title Holders Table Player Names -->
         <tr>
           <td class="king-wrap">
@@ -82,111 +83,110 @@
         </tr>
         <tr>
       </table>
-    </div>
-    <div class="small-4  prof-name-wrap title-holders-column columns">
-      <!-- <table>
-        <tr>
-          <td class="title-holder-data">
-            <div class="title-holders">League Leaders</div>
-          </td>
-        </tr>
-      </table> -->
-      <table class="table-style"> 
-      <tr>
-        <td colspan="3" class = "title-holders-header">
-        <h1 class="title-holders">League Leaders</h1>
-        </td>
-      </tr>    
-        <tr>
-          <td class="king-wrap">
-            <div class="title-holder-title">
-              Rank
+
+ 
+        <h1 class="title-holders">Latest Results</h1>
+            <% @games.last(9).reverse.each do |game| %>
+          <div class="small-4 columns last-games-column-wrapper">
+            <table class="table-style">
+              <tr class="final-title-row">
+                <td class='final-title-data'>
+                  <div class="prev-games-final-title"></div>
+                  <div class="prev-games-date"><%= game.created_at.strftime("%a, %b %d %Y") %></div>
+                  <div class="total"></div>
+                </td>
+              </tr>
+              <tr>
+                <td class='prev-games-data-row'>   
+                  <%= link_to(image_tag(game.player.picture_url, :class => "prev-games-card-pic1", :alt => "profile pic", :title => "profile pic"), game.player) %>
+                   <div class="prev-games-card-name"
+                      <%= "winner_style" if game.winner == game.player.id %>><%= link_to game.player.name, game.player %></div>
+                   <div class="record-prev-games">(<%= game.player.wins %>-<%= game.player.losses %>)</div>
+                   <div class="player-score-prev-games"><%= game.player_score %></div>
+                </td>
+              </tr>
+              <tr>
+                <td class='prev-games-data-row'>
+                   <!-- <img class="prev-games-card-pic1" src=<%= game.opponent.picture_url %>>  -->
+                  <%= link_to(image_tag(game.opponent.picture_url, :class => "prev-games-card-pic1", :alt => "profile pic", :title => "profile pic"), game.opponent) %>
+                    <div class="prev-games-card-name">
+                      <%= link_to game.opponent.name, game.opponent %>
+                    </div>
+                    <div class="record-prev-games">
+                      (<%= game.opponent.wins %>-<%= game.player.losses %>)
+                    </div>
+                    <div class="player-score-prev-games">
+                      <%= game.opponent_score %>
+                    </div>
+                </td>
+              </tr>
+              <tr>
+                <td class='prev-games-comment-row'>
+                  <h3 class="comment"><%="#{game.player.last_name} pulls away late to down #{game.opponent.last_name}" %> </h3>
+                </td>
+              </tr>
+              </table>
+        
+
+
+
             </div>
-          </td>
-          <td class="king-wrap">
-          <div class="title-holder-title">
-            Name
-          </div>
-          </td>
-          <td class="king-wrap">
-          <div class="title-holder-title">
-            %
-          </div>
-          </td>
-        </tr>  
-              <% Player.power_ranking.first(5).each do |player| %>
-          <tr>
-            <td>
-              <div class="king">
-                <%= Player.power_ranking.find_index(player) + 1 %>
-              </div>
-            </td>
-            <td>
-              <div class="league-leader-stats">
-                <%= link_to player.name, player %></td>
-              </div>
-            <td>
-              <div class="league-leader-percent">
-                <%= player.win_percentage %>
-              </div>
+            <% end %>
+
+
+    </div>
+        <div class="small-5  grab-pic columns" >      
+        <table class="rank-table">
+          
+          <tr class= "title-row">
+            <td class="title-holders-header" colspan="6">
+              <h1 class="title-holders">MakerSquare Players </h1>
             </td>
           </tr>
-
-        <% end %>
-      </table>
-
+              <tr class="first-row">
+            <td class='sub-title'>
+              <div class="rk-title">RK</div>
+            </td>
+            <td class='sub-title'>
+              
+            </td>
+            <td class='sub-title'>
+              Record
+            </td>
+            <td class='sub-title'>
+              <div class="pct-title">PCT</div>
+            </td>
+            
+          </tr>
+          <% Player.power_ranking.each do |player| %>
+              <tr>
+            <td>
+              <h3 class="ranking-items">
+                <%= ordinalize Player.power_ranking.find_index(player) + 1 %>
+              </h3>
+           </td>
+            <td>
+               <h4 class="rank-player-name"><%= link_to (image_tag(player.picture_url)), player %><%= link_to player.name, player %></h4>
+            </td>
+            <td>
+              <h4 class="rank-record"><%= player.wins %>-<%= player.losses %></h4>
+            </td> 
+            <td>
+              <h4 class="rank-pct"><%= player.win_percentage %></h4>
+            </td> 
+            
+          </tr>
+          
+            <% end %>
+            </table>
+      </div>
     </div>
+  </div>
+        
+
     
     <div class="row">
-      <div class="small-12  prof-name-wrap columns">
-      <h1 class="title-holders">Latest Results</h1>
-          <% @games.last(9).reverse.each do |game| %>
-        <div class="small-4 columns last-games-column-wrapper">
-          <table class="table-style">
-            <tr class="final-title-row">
-              <td class='final-title-data'>
-                <div class="prev-games-final-title"></div>
-                <div class="prev-games-date"><%= game.created_at.strftime("%a, %b %d %Y") %></div>
-                <div class="total"></div>
-              </td>
-            </tr>
-            <tr>
-              <td class='prev-games-data-row'>   
-                <%= link_to(image_tag(game.player.picture_url, :class => "prev-games-card-pic1", :alt => "profile pic", :title => "profile pic"), game.player) %>
-                 <div class="prev-games-card-name"
-                    <%= "winner_style" if game.winner == game.player.id %>><%= link_to game.player.name, game.player %></div>
-                 <div class="record-prev-games">(<%= game.player.wins %>-<%= game.player.losses %>)</div>
-                 <div class="player-score-prev-games"><%= game.player_score %></div>
-              </td>
-            </tr>
-            <tr>
-              <td class='prev-games-data-row'>
-                 <!-- <img class="prev-games-card-pic1" src=<%= game.opponent.picture_url %>>  -->
-                <%= link_to(image_tag(game.opponent.picture_url, :class => "prev-games-card-pic1", :alt => "profile pic", :title => "profile pic"), game.opponent) %>
-                  <div class="prev-games-card-name">
-                    <%= link_to game.opponent.name, game.opponent %>
-                  </div>
-                  <div class="record-prev-games">
-                    (<%= game.opponent.wins %>-<%= game.player.losses %>)
-                  </div>
-                  <div class="player-score-prev-games">
-                    <%= game.opponent_score %>
-                  </div>
-              </td>
-            </tr>
-            <tr>
-              <td class='prev-games-comment-row'>
-                <h3 class="comment"><%="#{game.player.last_name} pulls away late to down #{game.opponent.last_name}" %> </h3>
-              </td>
-            </tr>
-            </table>
       
-
-
-
-          </div>
-          <% end %>
-    </div>
   </div>
 </div>
 </div>
