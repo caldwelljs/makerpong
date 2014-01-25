@@ -1,5 +1,6 @@
 <div class="ranking-wrapping">
   <%= render "layouts/header" %>
+
   <div class="row">
     <div class="small-12 dash-first-col  prof-name-wrap columns">
 <!--   -->
@@ -10,19 +11,20 @@
        
         <div class="choose-player-1"><%= f.collection_select :player_id, Player.all, :id, :name, prompt: "Choose Player 1" %></div>
         <div class="choose-player-2"><%= f.collection_select :opponent_id, Player.all, :id, :name, prompt: "Choose Player 2" %></div>
-      <% end %>
+
     </div>
 <div class="row">
   <div class="small-5 dash-second-col  small-offset-7 columns">
-    <%= form_for @game do |f| %>
+ 
      <div class="player1-score-field" ><%= f.text_field :player_score %></div> 
      <div class="player2-score-field" ><%= f.text_field :opponent_score %></div> 
-     <button class="log-a-game-button">Log a Game</button>
+     <%= f.submit :class => "log-a-game-button" %>
     <% end %>
 
   </div>
   
 </div>
+
   <!-- <div class="row">
     <div class="small-12 columns">   
       <div class="small-2 columns">
