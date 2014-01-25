@@ -3,39 +3,39 @@
 
 .log-game-form {
   padding-top: 2em;
+  margin-left: 2em;
 }
 
 .dash-first-col{
   // position: relative;
 }
+
 .dash-second-col{
   // position: relative;
 }
-.choose-player-1{
+
+.choose-player{
   width: 9em;
   float: left;
+
   // position: absolute;
   // right: 11em;
   // bottom: 0.35em;
 }
-.choose-player-2{
+.choose-player{
   width: 9em;
   float: left;
-  margin-left: 2em;
   // position: absolute;
   // right: 0em;
   // bottom: 0.35em;
 }
-.player1-score-field{
+
+.player-score-field{
   float: left;
-  width: 9em;
-  // margin-left: 4.7em;
+  width: 3em;
+  margin-left: 0.7em;
 }
-.player2-score-field{
-  width: 9em;
-  float: left;
-  margin-left: 2em;
-}
+
 .log-a-game-button  {
    // border-top: 1px solid #96d1f8;
    background: #165592;
@@ -49,7 +49,8 @@
    text-decoration: none;
    vertical-align: middle;
    padding: 11.5px 23px;
-   margin-left: 7em
+   margin-left: 3.75em;
+   margin-bottom: -1em;
    // margin-right: 8em;
    }
 .log-a-game-button:hover {
@@ -404,6 +405,8 @@ a.about_link:link {color:#FF0000;}
 }
 
 .title-holder-pics{
+  height:7em;
+  width:7em;
   border-radius: 5px;
 }
 .league-leader-stats{
