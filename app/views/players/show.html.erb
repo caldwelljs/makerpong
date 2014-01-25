@@ -14,52 +14,43 @@
       <button class="log-a-game-button">Log Game</button>
     </div>
    </div>
-
-
   <div class="row">
     <div class="small-12 prof-name-wrap columns">
-    
       <table class="table-style">
-      <tr>
-        <td rowspan="4">
-          <%= image_tag @player.picture_url, size: "300x300" %>  
-        </td>
-
-        <td colspan="2" class="profile-rank-small-header">
-          Rank
-        </td>
-      </tr>
-
-      <tr>
-        <td colspan= "2" class="ordinalize-profile-rank">
-          <%= ordinalize @rank %>
-        </td>
-
-      </tr>
-     <tr>
-      
-        <td class="profile-rank-small-header">
-          Record
-        </td>
-
-        <td class="profile-rank-small-header">
-          Win %
-        </td>
-      
-    </tr>
-
-    <tr>
-        <td class="profile-top-chart">
-          <%= @player.wins %>-<%= @player.losses %>
-        </td>
-        <td class="profile-top-chart">
-          <%= @player.win_percentage %>
-        </td>
-    </tr>
-</table>
+        <tr>
+          <td rowspan="4">
+            <%= image_tag @player.picture_url, size: "300x300" %>  
+          </td>
+          <td colspan="2" class="profile-rank-small-header">
+            Rank
+          </td>
+        </tr>
+        <tr>
+          <td colspan= "2" class="ordinalize-profile-rank">
+            <%= ordinalize @rank %>
+          </td>
+        </tr>
+        <tr>
+          <td class="profile-rank-small-header">
+            Record
+          </td>
+          <td class="profile-rank-small-header">
+            Win %
+          </td>
+        </tr>
+        <tr>
+          <td class="profile-top-chart">
+            <%= @player.wins %>-<%= @player.losses %>
+          </td>
+          <td class="profile-top-chart">
+            <%= @player.win_percentage %>
+          </td>
+        </tr>
+      </table>
+    </div>
   </div>
-</div>
-<div class="row">
+<!-- ********* Last Game ********** -->
+  <div class="row">
     <div class="small-12 prof-name-wrap columns">
       <table>
         <tr class="profile-1st-table-row">
@@ -69,17 +60,13 @@
           <td class="profile-1st-table-data">
             <h3 class="pic-title">Rank</h3>
           </td>
-           <td class="profile-1st-table-data">
+          <td class="profile-1st-table-data">
             <h3 class="pic-title">PCT</h3>
           </td>
-
-
-<!-- ********* Last Game ********** -->
-
           <td class="profile-last-game-table-data">
             <h3 class="profile-final">Last Game</h3>
             <h3 class="date-after-game-profile-page">
-              <% if @player.games.empty? %>
+              <% if check_games(@player) %>
                 <%=  %>
               <% else %>
                 <%= @games.get_all_recent_games_for(@player).first.created_at.strftime(" %a, %b %d %Y") %>
@@ -87,7 +74,6 @@
             </h3>
             <h3 class="profile-t">Final</h3>
           </td>
-<!-- ******** Last Game ********* -->
         </tr>
         <tr class="profile-2nd-table-row">
           <td class="profile-2nd-table-data">
@@ -100,7 +86,7 @@
             <h1 class="table-percent"><%= @player.win_percentage %></h1>
           </td>
 
-          <% if @player.games.empty? %>
+          <% if check_games(@player) %>
             <td class="last-game-data">
               <div class="no-games-played">  
                 No Games Played
@@ -123,9 +109,7 @@
                 <%= link_to @games.get_all_recent_games_for(@player).first.opponent.last_name, @games.get_all_recent_games_for(@player).first.opponent %>
               </h3>
               <div class="last-game-border"></div>
-              <h3 class="last-game-comment">
-                <%= @player.games.last.opponent.last_name %> hangs on in a thriller to end 4 game skid, <%= @player.games.last.player.last_name %> stunned
-              </h3>
+
             </td>
           <% end %>
         </tr>  
@@ -149,7 +133,7 @@
           <td>         
           </td>
         </tr>
-        <% if @player.games.empty? %>
+        <% if check_games(@player) %>
           <tr>
             <td class="many-data">
               No Games Played
