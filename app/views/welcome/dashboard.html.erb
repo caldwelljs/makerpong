@@ -59,20 +59,20 @@
         <tr>
           <td class="king-wrap">
             <span class="crown">♕</span>
-            <div class="title-holder-title">
-               King of the Hill</div>
+            
           </td>
-          <td class="king-wrap">
+
+          <td class="king-wrap ">
             <span class="skull">☠</span>
-            <div class="title-holder-title">Biggest Loser</div>
+            
           </td>
           <td class="king-wrap">
             <span class="up-arrow">⬆</span>
-            <div class="title-holder-title">Longest Streak</div>
+            
           </td>
           <td class="king-wrap">
             <i class="fa fa-thumbs-down"></i>
-            <div class="title-holder-title"> Worst Loss</div>
+            
           </td>
         </tr>
         <!-- Title Holders Table Pictures of Players -->
@@ -81,21 +81,26 @@
             <div>
               <%= link_to(image_tag(Player.power_ranking.first.picture_url, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), Player.power_ranking.first) %>
             </div>
+            <div class="title-holder-title">
+               King of the Hill</div>
           </td>
           <td class="king-wrap">
             <div>      
                <%= link_to(image_tag(Player.order( 'losses DESC' ).first.picture_url, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), Player.order( 'losses DESC' ).first) %>
             </div>
+            <div class="title-holder-title">Biggest Loser</div>
           </td>
           <td class="king-wrap">
             <div>              
               <%= link_to(image_tag(Player.order( 'win_streak DESC' ).first.picture_url, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), Player.order( 'win_streak DESC' ).first) %>
             </div>
+            <div class="title-holder-title">Longest Streak</div>
           </td>
           <td class="king-wrap">
             <div>          
               <%= link_to(image_tag(worst_loss_display_pic, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), Game.worst_loss.first) %>
             </div>
+            <div class="title-holder-title"> Worst Loss</div>
           </td>
         </tr>
 
