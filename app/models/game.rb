@@ -56,7 +56,7 @@
   end
 
   def self.worst_loss
-    self.all.sort {|a, b| b.point_margin <=> a.point_margin}
+    self.all.sort {|a, b| b.point_margin.abs <=> a.point_margin.abs}
   end
 
   def self.get_all_recent_games_for(player)

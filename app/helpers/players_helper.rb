@@ -62,4 +62,10 @@ module PlayersHelper
       content_tag(:div, "L", class: "loser")
     end
   end
+
+  def check_games(player)
+    # Game.where("player_id = #{player.id} or opponent_id = #{player.id}").empty?
+    Game.find(:all, :conditions => ['player_id = ? or opponent_id = ?', player.id, player.id]).empty?
+  end
+
 end

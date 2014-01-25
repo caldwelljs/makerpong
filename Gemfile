@@ -9,6 +9,8 @@ gem 'carrierwave'
 
 gem 'rmagick'
 
+gem 'unicorn'
+
 gem 'figaro'
 
 gem 'fog'
@@ -54,7 +56,7 @@ gem "font-awesome-rails"
 
 group :development do
   gem "pry"
-  gem 'better_errors'
+
   gem 'binding_of_caller'
   gem 'hirb'
 end
