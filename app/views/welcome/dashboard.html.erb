@@ -129,9 +129,8 @@
             <% end %>
             </table>
       </div>
-    </div>
-
-    
+    </div>   
+<!-- Latest Results -->
     <div class="row">
       <div class="small-12  prof-name-wrap columns">
       <h1 class="title-holders">Latest Results</h1>
@@ -162,7 +161,7 @@
                     <%= link_to game.opponent.name, game.opponent %>
                   </div>
                   <div class="record-prev-games">
-                    (<%= game.opponent.wins %>-<%= game.player.losses %>)
+                    (<%= game.opponent.wins %>-<%= game.opponent.losses %>)
                   </div>
                   <div class="player-score-prev-games">
                     <%= game.opponent_score %>
