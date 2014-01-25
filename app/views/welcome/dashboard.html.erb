@@ -15,7 +15,7 @@
           <h1 class="title-holders">Title Holders</h1>
           </td>
         </tr>
-        <!-- Title Holders Table Labels of Titles -->
+<!-- Title Holders Table Labels of Titles -->
         <tr>
           <td class="king-wrap">
             <div class="title-holder-title">
@@ -31,7 +31,7 @@
             <div class="title-holder-title"><i class="fa fa-thumbs-down"></i> Worst Loss</div>
           </td>
         </tr>
-        <!-- Title Holders Table Pictures of Players -->
+<!-- Title Holders Table Pictures of Players -->
         <tr>
           <td class="king-wrap">
             <div>
@@ -54,7 +54,7 @@
             </div>
           </td>
         </tr>
-        <!-- Title Holders Table Player Names -->
+<!-- Title Holders Table Player Names -->
         <tr>
           <td class="king-wrap">
             <div class="king">
@@ -73,7 +73,7 @@
           </td>
           <td class="king-wrap">
             <div class="king">
-              <%= worst_loss_display %>
+              <%= worst_loss_display %> by <%= Game.worst_loss.first.point_margin %>
           </div>
           </td>
         </tr>
@@ -81,52 +81,50 @@
       </table>
     </div>
     <div class="small-4  prof-name-wrap title-holders-column columns">
-    <table class="table-style"> 
-    <tr>
-      <td colspan="3" class = "title-holders-header">
-      <h1 class="title-holders">League Leaders</h1>
-      </td>
-    </tr>    
-      <tr>
-        <td class="king-wrap">
-          <div class="title-holder-title">
-            Rank
-          </div>
-        </td>
-        <td class="king-wrap">
-        <div class="title-holder-title">
-          Name
-        </div>
-        </td>
-        <td class="king-wrap">
-        <div class="title-holder-title">
-          %
-        </div>
-        </td>
-      </tr>  
-            <% Player.power_ranking.first(5).each do |player| %>
+      <table class="table-style"> 
         <tr>
-          <td>
-            <div class="king">
-              <%= Player.power_ranking.find_index(player) + 1 %>
+          <td colspan="3" class = "title-holders-header">
+          <h1 class="title-holders">League Leaders</h1>
+          </td>
+        </tr>    
+        <tr>
+          <td class="king-wrap">
+            <div class="title-holder-title">
+              Rank
             </div>
           </td>
-          <td>
-            <div class="league-leader-stats">
-              <%= link_to player.name, player %></td>
-            </div>
-          <td>
-            <div class="league-leader-percent">
-              <%= player.win_percentage %>
+          <td class="king-wrap">
+            <div class="title-holder-title">
+              Name
             </div>
           </td>
-        </tr>
-
-      <% end %>
-    </table>
-
+          <td class="king-wrap">
+            <div class="title-holder-title">
+              %
+            </div>
+          </td>
+        </tr>  
+        <% Player.power_ranking.first(5).each do |player| %>
+          <tr>
+            <td>
+              <div class="king">
+                <%= Player.power_ranking.find_index(player) + 1 %>
+              </div>
+            </td>
+            <td>
+              <div class="league-leader-stats">
+                <%= link_to player.name, player %></td>
+              </div>
+            <td>
+              <div class="league-leader-percent">
+                <%= player.win_percentage %>
+              </div>
+            </td>
+          </tr>
+        <% end %>
+      </table>
     </div>
-    
+<!-- Latest Results Table -->
     <div class="row">
       <div class="small-12  prof-name-wrap columns">
       <h1 class="title-holders">Latest Results</h1>
@@ -157,7 +155,7 @@
                     <%= link_to game.opponent.name, game.opponent %>
                   </div>
                   <div class="record-prev-games">
-                    (<%= game.opponent.wins %>-<%= game.player.losses %>)
+                    (<%= game.opponent.wins %>-<%= game.opponent.losses %>)
                   </div>
                   <div class="player-score-prev-games">
                     <%= game.opponent_score %>

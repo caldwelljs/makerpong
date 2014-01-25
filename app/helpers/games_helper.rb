@@ -5,9 +5,9 @@ module GamesHelper
     if Game.all.empty?
       "No Games Played" 
     elsif Game.worst_loss.first.point_margin > 0
-      "#{Game.worst_loss.first.opponent.name} by #{Game.worst_loss.first.point_margin}"
+      Game.worst_loss.first.opponent.last_name
     elsif Game.worst_loss.first.point_margin < 0
-      "#{Game.worst_loss.first.player.name} by #{Game.worst_loss.first.point_margin}"
+      Game.worst_loss.first.player.last_name
     end
   end
 
