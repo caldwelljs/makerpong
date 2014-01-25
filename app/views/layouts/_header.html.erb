@@ -43,7 +43,7 @@
       <div class= "small-8 columns top-nav">
         <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
         <div class="sign-in-fields">
-          <%= f.email_field :email, :placeholder => "Email", :autofocus => true %>
+          <%= f.email_field :email, :placeholder => "Email", :autofocus => true, :autocomplete => :off %>
         </div>
         <div class="sign-in-fields">
           <%= f.password_field :password, :placeholder => "Password" %>
