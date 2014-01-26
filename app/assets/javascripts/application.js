@@ -59,8 +59,20 @@ $(document).ready(function() {
 });
 
 
+('#load-pic').
+
+// var addPic = 
+// $('.pic.empty').append('<div><%= link_to "Click Edit Profile to add a profile picture", edit_player_registration %></div>');
+
+// $('#profile-pic').hover(function(){
+//   $('#update-msg').toggle();
+// });
 
 
-
-
-
+// $( "li" ).hover(
+//   function() {
+//     $( this ).append( $( "<span> ***</span>" ) );
+//   }, function() {
+//     $( this ).find( "span:last" ).remove();
+//   }
+// );
