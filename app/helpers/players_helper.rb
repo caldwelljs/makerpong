@@ -72,4 +72,10 @@ module PlayersHelper
     Player.order('lower(name)').all
   end
 
+  def check_pic(player)
+    if player.picture_url.present? == false && player == current_player
+      content_tag(:div, content_tag(:p, "Click here to Add a Profile Picture"), class: "strong")
+    end
+  end
+
 end

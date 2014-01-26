@@ -17,9 +17,11 @@
   <div class="row">
     <div class="small-12 prof-name-wrap columns">
       <table class="table-style">
-        <tr>
+        <tr id="pic-row">
+          <%= check_pic(@player) %>
           <td rowspan="4">
-            <%= image_tag @player.picture_url, size: "300x300" %>  
+            <%= image_tag @player.picture_url, size: "300x300", id: "profile-pic" %>  
+            <div id="update-msg" class="hide"> Update Pic </div>
           </td>
           <td colspan="2" class="profile-rank-small-header">
             Rank
@@ -47,6 +49,7 @@
           </td>
         </tr>
       </table>
+
     </div>
   </div>
 <!-- ********* Last Game ********** -->
