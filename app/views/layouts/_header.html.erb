@@ -2,14 +2,14 @@
   <% if player_signed_in? %>
   <header class="signedin-nav">
     <div class="row">
-        <div class="small-2  columns">
+        <div class="large-2  columns">
           <div class="paddle"><%= image_tag "p-paddle.png" %></div>
           <div class="signedin-logo">
             <%= link_to 'MakerPong', welcome_dashboard_path %>
             
           </div>
         </div>
-      <div class= "small-8 columns top-nav">
+      <div class= "large-8 columns top-nav">
         <div class="top-right-links">
           <%= link_to 'Dashboard', welcome_dashboard_path %>
         </div>
@@ -34,13 +34,13 @@
   <% else %>
   <div class="nav-wrap">
     <div class="row">
-        <div class="small-2 columns">
+        <div class="large-2 columns">
           <div class="logo">
             <div class="paddle-sign-up-page"><%= image_tag "p-paddle.png" %></div>
             <%= link_to 'MakerPong', welcome_dashboard_path %>
           </div>
         </div>
-      <div class= "small-8 columns top-nav">
+      <div class= "large-8 columns top-nav">
         <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
         <div class="sign-in-fields">
           <%= f.email_field :email, :placeholder => "Email", :autofocus => true %>

@@ -1,37 +1,52 @@
 <div class="ranking-wrapping">
   <%= render "layouts/header" %>
   <div class="row">
-    <div class="small-12  prof-name-wrap columns">
- <button class="log-a-game-button">Log Game</button>
+    <div class="large-8 columns dash-first-col  prof-name-wrap columns">
       <h1 class="profile-name">League MakerSquare</h1>
-     
       <div class="the-border"></div>
-
+    </div>
+    <div class="large-4 columns">
+      <div class="log-game-form">
+        <div class="log-game-title">Log a Game</div>
+          <%= form_for @game do |f| %>
+            <div class="choose-player"><%= f.collection_select :player_id, Player.all, :id, :name, prompt: "Choose Player 1" %></div>
+            <div class="player-score-field" ><%= f.text_field :opponent_score %></div> 
+          <% end %>
+        <%= form_for @game do |f| %>
+        <div class="choose-player"><%= f.collection_select :opponent_id, Player.all, :id, :name, prompt: "Choose Player 2" %></div>
+        <div class="player-score-field" ><%= f.text_field :player_score %></div>
+        <button class="log-a-game-button">Submit</button>
+        <% end %>
+      </div>
     </div>
   </div>
-  
   <div class="row">
-    <div class="small-7  prof-name-wrap title-holders-column columns">
+    <div class="large-7 medium-7 prof-name-wrap title-holders-column columns">
       <table class="table-style">
         <tr>
           <td colspan="4" class = "title-holders-header">
-          <h1 class="title-holders">Title Holders</h1>
+            <h1 class="title-holders">Title Holders</h1>
           </td>
         </tr>
         <!-- Title Holders Table Labels of Titles -->
         <tr>
           <td class="king-wrap">
+            <span class="crown">♕</span>
             <div class="title-holder-title">
-              <span class="crown">♕</span> King of the Hill</div>
+               King of the Hill
+            </div>
           </td>
           <td class="king-wrap">
-            <div class="title-holder-title"><span class="skull">☠</span>Biggest Loser</div>
+            <span class="skull">☠</span>
+            <div class="title-holder-title">Biggest Loser</div>
           </td>
           <td class="king-wrap">
-            <div class="title-holder-title"><span class="up-arrow">⬆</span>Longest Streak</div>
+            <span class="up-arrow">⬆</span>
+            <div class="title-holder-title">Longest Streak</div>
           </td>
           <td class="king-wrap">
-            <div class="title-holder-title"><i class="fa fa-thumbs-down"></i> Worst Loss</div>
+            <i class="fa fa-thumbs-down"></i>
+            <div class="title-holder-title"> Worst Loss</div>
           </td>
         </tr>
         <!-- Title Holders Table Pictures of Players -->
@@ -57,9 +72,7 @@
             </div>
           </td>
         </tr>
-
-        
-        <!-- Title Holders Table Player Names -->
+<!-- Title Holders Table Player Names -->
         <tr>
           <td class="king-wrap">
             <div class="king">
@@ -78,66 +91,16 @@
           </td>
           <td class="king-wrap">
             <div class="king">
-              <%= worst_loss_display %>
-          </div>
+              <%= worst_loss_display %> by <%= Game.worst_loss.first.point_margin.abs %>
+            </div>
           </td>
         </tr>
-        <tr>
       </table>
-        <div class="small-5  grab-pic columns" >      
-        <table class="rank-table">
-          
-          <tr class= "title-row">
-            <td class="title-holders-header" colspan="6">
-              <h1 class="title-holders">MakerSquare Players </h1>
-            </td>
-          </tr>
-              <tr class="first-row">
-            <td class='sub-title'>
-              <div class="rk-title">RK</div>
-            </td>
-            <td class='sub-title'>
-              
-            </td>
-            <td class='sub-title'>
-              Record
-            </td>
-            <td class='sub-title'>
-              <div class="pct-title">PCT</div>
-            </td>
-            
-          </tr>
-          <% Player.power_ranking.each do |player| %>
-              <tr>
-            <td>
-              <h3 class="ranking-items">
-                <%= ordinalize Player.power_ranking.find_index(player) + 1 %>
-              </h3>
-           </td>
-            <td>
-               <h4 class="rank-player-name"><%= link_to (image_tag(player.picture_url)), player %><%= link_to player.name, player %></h4>
-            </td>
-            <td>
-              <h4 class="rank-record"><%= player.wins %>-<%= player.losses %></h4>
-            </td> 
-            <td>
-              <h4 class="rank-pct"><%= player.win_percentage %></h4>
-            </td> 
-            
-          </tr>
-          
-            <% end %>
-            </table>
-      </div>
-    </div>
-
-    
-    <div class="row">
-      <div class="small-12  prof-name-wrap columns">
+<!-- Latest Results Table -->
       <h1 class="title-holders">Latest Results</h1>
-          <% @games.last(9).reverse.each do |game| %>
-        <div class="small-4 columns last-games-column-wrapper">
-          <table class="table-style">
+        <% @games.last(8).reverse.each do |game| %>
+        <div class="small-12 large-6 columns last-games-column-wrapper">
+          <table class="table-style left">
             <tr class="final-title-row">
               <td class='final-title-data'>
                 <div class="prev-games-final-title"></div>
@@ -148,41 +111,79 @@
             <tr>
               <td class='prev-games-data-row'>   
                 <%= link_to(image_tag(game.player.picture_url, :class => "prev-games-card-pic1", :alt => "profile pic", :title => "profile pic"), game.player) %>
-                 <div class="prev-games-card-name"
-                    <%= "winner_style" if game.winner == game.player.id %>><%= link_to game.player.name, game.player %></div>
-                 <div class="record-prev-games">(<%= game.player.wins %>-<%= game.player.losses %>)</div>
-                 <div class="player-score-prev-games"><%= game.player_score %></div>
+                <div class="prev-games-card-name"
+                  <%= "winner_style" if game.winner == game.player.id %>><%= link_to game.player.name, game.player %></div>
+                <div class="record-prev-games">(<%= game.player.wins %>-<%= game.player.losses %>)</div>
+                <div class="player-score-prev-games"><%= game.player_score %></div>
               </td>
             </tr>
             <tr>
               <td class='prev-games-data-row'>
                  <!-- <img class="prev-games-card-pic1" src=<%= game.opponent.picture_url %>>  -->
                 <%= link_to(image_tag(game.opponent.picture_url, :class => "prev-games-card-pic1", :alt => "profile pic", :title => "profile pic"), game.opponent) %>
-                  <div class="prev-games-card-name">
-                    <%= link_to game.opponent.name, game.opponent %>
-                  </div>
-                  <div class="record-prev-games">
-                    (<%= game.opponent.wins %>-<%= game.player.losses %>)
-                  </div>
-                  <div class="player-score-prev-games">
-                    <%= game.opponent_score %>
-                  </div>
+                <div class="prev-games-card-name">
+                  <%= link_to game.opponent.name, game.opponent %>
+                </div>
+                <div class="record-prev-games">
+                  (<%= game.opponent.wins %>-<%= game.opponent.losses %>)
+                </div>
+                <div class="player-score-prev-games">
+                  <%= game.opponent_score %>
+                </div>
               </td>
             </tr>
             <tr>
               <td class='prev-games-comment-row'>
-                <h3 class="comment"><%="#{game.player.last_name} pulls away late to down #{game.opponent.last_name}" %> </h3>
+  <!--               <h3 class="comment">
+                  <%="#{game.player.last_name} pulls away late to down #{game.opponent.last_name}" %>
+                </h3> -->
               </td>
             </tr>
-            </table>
-      
-
-
-
-          </div>
+          </table>
+        </div>
+        <% end %>
+      </div>
+      <div class="large-5 grab-pic columns" >      
+        <table class="rank-table">
+          <tr class= "title-row">
+            <td class="title-holders-header" colspan="6">
+              <h1 class="title-holders">MakerSquare Players </h1>
+            </td>
+          </tr>
+          <tr class="first-row">
+            <td class='sub-title'>
+              <div class="rk-title">RK</div>
+            </td>
+            <td class='sub-title'></td>
+            <td class='sub-title'>
+              Record
+            </td>
+            <td class='sub-title'>
+              <div class="pct-title">PCT</div>
+            </td>           
+          </tr>
+          <% Player.power_ranking.each do |player| %>
+          <tr>
+            <td>
+              <h3 class="ranking-items">
+                <%= ordinalize Player.power_ranking.find_index(player) + 1 %>
+              </h3>
+           </td>
+            <td>
+               <h4 class="rank-player-name"><%= link_to (image_tag(player.picture_url)), player %><%= link_to player.last_name, player %></h4>
+            </td>
+            <td>
+              <h4 class="rank-record"><%= player.wins %>-<%= player.losses %></h4>
+            </td> 
+            <td>
+              <h4 class="rank-pct"><%= player.win_percentage %></h4>
+            </td> 
+          </tr>
           <% end %>
+        </table>
+      </div>
     </div>
   </div>
 </div>
-</div>
-  <%= render "layouts/footer" %>
+
+<%= render "layouts/footer" %>

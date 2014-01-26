@@ -1,24 +1,44 @@
 
 // General and Welcome#Index styling
 
-.log-a-game-button {
+.log-game-form {
+  padding-top: 2em;
+  margin-left: 2em;
+}
+
+.dash-first-col{
+  // position: relative;
+}
+
+.dash-second-col{
+  // position: relative;
+}
+
+.choose-player{
+  width: 9em;
+  float: left;
+
+  // position: absolute;
+  // right: 11em;
+  // bottom: 0.35em;
+}
+.choose-player{
+  width: 9em;
+  float: left;
+  // position: absolute;
+  // right: 0em;
+  // bottom: 0.35em;
+}
+
+.player-score-field{
+  float: left;
+  width: 3em;
+  margin-left: 0.7em;
+}
+
+.log-a-game-button  {
    // border-top: 1px solid #96d1f8;
    background: #165592;
-   
-
-   // background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
-   // background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
-   // background: -moz-linear-gradient(top, #3e779d, #65a9d7);
-   // background: -ms-linear-gradient(top, #3e779d, #65a9d7);
-   // background: -o-linear-gradient(top, #3e779d, #65a9d7);
-   padding: 11.5px 23px;
-   // -webkit-border-radius: 8px;
-   // -moz-border-radius: 8px;
-   // border-radius: 8px;
-   // -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
-   // -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-   // box-shadow: rgba(0,0,0,1) 0 1px 0;
-   // text-shadow: rgba(0,0,0,.4) 0 1px 0;
    color: white;
    border-spacing: 0 !important;
    border-radius: 5px;
@@ -26,11 +46,12 @@
    box-shadow: 2px 2px 2px #888888;
    font-size: 14px;
    font-family: "proxima-nova";
-
    text-decoration: none;
    vertical-align: middle;
-   float: right;
-   margin-top: 5em;
+   padding: 11.5px 23px;
+   margin-left: 3.75em;
+   margin-bottom: -1em;
+   // margin-right: 8em;
    }
 .log-a-game-button:hover {
    border-top-color: #28597a;
@@ -137,18 +158,21 @@
 
 }
 .crown{
-  font-size:1.3em;
+  font-size:3em;
   color: gold;
+  margin-left: 1.2em;
 }
 .skull{
-  font-size: 1.55em;
-  position: absolute;
-  top: 0.05;
-  left: 0;
+  font-size:3em;
+  // position: absolute;
+  // top: 0.05;
+  // left: 0;
+  margin-left: 1.2em;
 }
 .up-arrow{
   color: green;
-  font-size: 1.5em;
+  font-size: 2em;
+  margin-left: 1.85em;
 }
 .frown-face{
   color: red;
@@ -156,6 +180,8 @@
 }
 .fa-thumbs-down{
   color: red;
+  font-size:2em;
+  margin-left: 1.6em;
 }
 .sign-up-label {
   font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
@@ -379,6 +405,8 @@ a.about_link:link {color:#FF0000;}
 }
 
 .title-holder-pics{
+  height:7em;
+  width:7em;
   border-radius: 5px;
 }
 .league-leader-stats{
