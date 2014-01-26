@@ -11,6 +11,7 @@
 .log-game-form {
   padding-top: 2em;
   margin-left: 2em;
+
 }
 
 .dash-first-col{
@@ -45,7 +46,8 @@
 
 .log-a-game-button  {
    // border-top: 1px solid #96d1f8;
-   background: #165592;
+   background-color: rgba(255,255,255,0.3);
+ 
    color: white;
    border-spacing: 0 !important;
    border-radius: 5px;
@@ -57,13 +59,13 @@
    vertical-align: middle;
    padding: 11.5px 23px;
    margin-left: 3.75em;
-   margin-bottom: -1em;
+   margin-bottom: 1em;
    // margin-right: 8em;
    }
 .log-a-game-button:hover {
    border-top-color: #28597a;
-   background: #28597a;
-   color: #ccc;
+   background-color: rgba(255,255,255,0.6);
+   color: grey;
    }
 .log-a-game-button:active {
    border-top-color: #1b435e;
@@ -167,7 +169,14 @@
 .crown{
   font-size:3.75em;
   color: gold;
-  margin-left: 0.95em;
+  margin: 0 0 0 0.69em;
+ 
+}
+.title-holder-pics{
+  height:7em;
+  width:7em;
+  border-radius: 5px;
+  margin: 0 0 1.2em 1em;
 }
 .skull{
 
@@ -190,6 +199,7 @@
   color: red;
   font-size:3em;
   margin-left: 0.95em;
+  margin-top: -0.2em;
 }
 .sign-up-label {
   font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
@@ -391,6 +401,7 @@ a.about_link:link {color:#FF0000;}
 .king-wrap{
   width: 15em;
   background-color: white;
+
 }
 .king{
   text-align: center;
@@ -412,11 +423,7 @@ a.about_link:link {color:#FF0000;}
   border-bottom: solid 1px #47474f;
 }
 
-.title-holder-pics{
-  height:7em;
-  width:7em;
-  border-radius: 5px;
-}
+
 .league-leader-stats{
   text-align: center;
   font-family: "proxima-nova";

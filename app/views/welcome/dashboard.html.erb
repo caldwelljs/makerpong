@@ -7,12 +7,12 @@
     </div>
     <div class="large-4 columns">
       <div class="log-game-form">
-        <div class="log-game-title">Log Game<div class="blue-paddle"><%= image_tag "blue-p-paddle.png" %></div></div>
+        <div class="log-game-title">Log Game<div class="blue-paddle"></div></div>
           <%= form_for @game do |f| %>
             <div class="choose-player"><%= f.collection_select :player_id, Player.all, :id, :name, prompt: "Choose Player 1" %></div>
             <div class="player-score-field" ><%= f.text_field :opponent_score %></div> 
         <div class="choose-player"><%= f.collection_select :opponent_id, Player.all, :id, :name, prompt: "Choose Player 2" %></div>
-        <div class="player-score-field" ><%= f.text_field :player_score %></div>
+        <div class="player-score-field" ><%= f.text_field :player_score, :name => "score" %></div>
         <button class="log-a-game-button">Submit</button>
         <% end %>
       </div>
@@ -29,21 +29,21 @@
         <!-- Title Holders Table Labels of Titles -->
         <tr>
           <td class="king-wrap">
-            <span class="crown">♕</span>
+            
             <div class="title-holder-title">
                King of the Hill
             </div>
           </td>
           <td class="king-wrap">
-            <span class="skull">☠</span>
+            
             <div class="title-holder-title">Biggest Loser</div>
           </td>
           <td class="king-wrap">
-            <span class="up-arrow">⬆</span>
+            
             <div class="title-holder-title">Longest Streak</div>
           </td>
           <td class="king-wrap">
-            <i class="fa fa-thumbs-down"></i>
+            
             <div class="title-holder-title"> Worst Loss</div>
           </td>
         </tr>
@@ -53,20 +53,24 @@
             <div>
               <%= link_to(image_tag(Player.power_ranking.first.picture_url, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), Player.power_ranking.first) %>
             </div>
+            <span class="crown">♕</span>
           </td>
           <td class="king-wrap">
             <div>      
                <%= link_to(image_tag(Player.order( 'losses DESC' ).first.picture_url, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), Player.order( 'losses DESC' ).first) %>
+               <span class="skull">☠</span>
             </div>
           </td>
           <td class="king-wrap">
             <div>              
               <%= link_to(image_tag(Player.order( 'win_streak DESC' ).first.picture_url, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), Player.order( 'win_streak DESC' ).first) %>
+              <span class="up-arrow">⬆</span>
             </div>
           </td>
           <td class="king-wrap">
             <div>          
               <%= link_to(image_tag(worst_loss_display_pic, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), worst_loss_player) %>
+              <i class="fa fa-thumbs-down"></i>
             </div>
           </td>
         </tr>
@@ -76,6 +80,7 @@
             <div class="king">
             <%= link_to Player.power_ranking.first.last_name, Player.power_ranking.first %> - <%= Player.power_ranking.first.win_percentage %>
             </div>
+
           </td>
           <td class="king-wrap">
             <div class="king">
