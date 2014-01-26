@@ -1,53 +1,53 @@
 // Place all the styles related to the games controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 .form-wrapper{
   position:relative;
 }
+
 .choose-player-one{
   margin-top: 2em;
   margin-right: 2em;
-  margin-left: 2em;
+
 }
 
 .choose-player-two{
   margin-right: 2em;
-  margin-left: 2em;
 }
+
 .player-one-score-label label{
   color: white;
-  margin-left: 2.5em;
   margin-top: 0.65em;
 }
+
 .player-two-score-label label{
   color: white;
-  margin-left: 2.5em;
 }
+
 .player-one-score{
   margin: 0.75em 2em 0.25em 2em;
 }
+
 .player-two-score{
   margin-right: 1.4em;
   margin-left: 1.15em;
   margin-bottom: 0;
 }
+
 .log-game-title{
-  font-family: "proxima-nova";
-  font-weight: 800;
-  color: white;
-  font-size: 1.75em; 
-  margin-left: 0.3em;
-  margin-top: 1.25em;
-
-
-  text-align: center;
-
+  font-family: "hotel-open";
+  color: #A9EAED;
+  font-size: 1.6em; 
+  margin: 1.25em 0 0.75em 0.3em;
 }
+
 .log-new-game{
   background-color: #cd3831;
   color: white;
-
+  margin-left: 2em;
 }
+
 .log-game-submit input{
   width: 12em;
   height: 4em;
