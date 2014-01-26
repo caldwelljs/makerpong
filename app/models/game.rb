@@ -14,7 +14,7 @@
     end
   end
 
-  after_create :logresults, :streak, :margin
+  after_create :logresults, :streak, :margin, :win_percent
 
   def logresults
     if self.player_score > self.opponent_score 
@@ -58,9 +58,10 @@
   def win_percent
     @player_win_percentage ||= (self.player.wins.to_f / (self.player.wins + self.player.losses)).round(4)
     self.player.win_percent = @player_win_percentage    
-    
     @opponent_win_percentage ||= (self.opponent.wins.to_f / (self.opponent.wins + self.opponent.losses)).round(4)
     self.opponent.win_percent = @opponent_win_percentage
+    self.player.save
+    self.opponent.save
   end
 
   def self.worst_loss

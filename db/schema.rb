@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140123215808) do
+ActiveRecord::Schema.define(version: 20140126020956) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,31 +28,32 @@ ActiveRecord::Schema.define(version: 20140123215808) do
   end
 
   create_table "players", force: true do |t|
-    t.string   "picture_url"
     t.string   "phone"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                                          default: "",  null: false
+    t.string   "encrypted_password",                             default: "",  null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",                                  default: 0,   null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.integer  "wins",                   default: 0
-    t.integer  "losses",                 default: 0
+    t.integer  "wins",                                           default: 0
+    t.integer  "losses",                                         default: 0
     t.string   "winning_pic1"
     t.string   "winning_pic2"
     t.string   "losing_pic1"
     t.string   "losing_pic2"
     t.string   "winning_pic3"
     t.string   "losing_pic3"
-    t.integer  "win_streak",             default: 0
-    t.integer  "lose_streak",            default: 0
+    t.integer  "win_streak",                                     default: 0
+    t.integer  "lose_streak",                                    default: 0
+    t.string   "picture_url"
     t.string   "name"
+    t.decimal  "win_percentage",         precision: 4, scale: 4, default: 0.0
   end
 
   add_index "players", ["email"], name: "index_players_on_email", unique: true, using: :btree
