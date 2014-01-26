@@ -2,7 +2,7 @@
   <%= render "layouts/header" %>
   <div class="row">
 
-    <div class="small-12 medium-12 large-12 columns">     
+    <div class="small-8 medium-8 large-8 columns">     
       <div class="page_title">Edit Your Info</div>
       <!-- <%= resource_name.to_s.humanize %> -->
 
@@ -30,7 +30,7 @@
         <div class="sign-up-label"><%= f.label :current_password %>
         <%= f.password_field :current_password %></div>
         
-        <div><%= f.submit "Update" %></div>
+        <div><%= f.submit "Update", class: "button update-button" %></div>
       <% end %>
 
       <h3 class="lower_headers">Update your photo</h3>
@@ -65,7 +65,7 @@
           <td><%= f.file_field(:losing_pic3) %></td>
         </tr> -->
         <div class="form-buttons">
-          <%= submit_tag("Update profile") %>
+          <%= f.submit "Update profile", class: "button update-button" %>
         </div>
       <% end %>
 

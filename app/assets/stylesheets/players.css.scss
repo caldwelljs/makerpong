@@ -676,12 +676,13 @@
         padding: 0;
 }
 .prev-games-comment-row{
-        height: 1em;
-        background-color: #F8F8F8;
-        position: relative;
-        padding: 0;
+  height: 1em;
+  background-color: #F8F8F8;
+  position: relative;
+  padding: 0;
 }
 .rank-table{
+  width: 95%; 
   margin-top: 2em;
   border-spacing: 0 !important;
   border-radius: 5px;
@@ -689,11 +690,11 @@
   
 }
 .comment{
-        font-weight: 500;
-        font-family: "proxima-nova";
-        color: #81b5c3;
-        font-size: 0.9em;
-        margin-left: 1em;
+  font-weight: 500;
+  font-family: "proxima-nova";
+  color: #81b5c3;
+  font-size: 0.9em;
+  margin-left: 1em;
 }
 .prev-games-card-name {
   font-family: "proxima-nova";
@@ -705,35 +706,34 @@
 }
 
 .prev-games-card-name a {
-    color: #47474f;
+  color: #47474f;
   }
 
-
 .prev-games-card-name a:hover {
-      border-bottom: solid 1px #47474f;
-
+  border-bottom: solid 1px #47474f;
 }
-
-
 
 .record-prev-games{
-        color: #626266;
-        font-size: 1em;
-        position: absolute;
-        top: 1.95em;
-        left: 4.75em;
+  color: #626266;
+  font-size: 1em;
+  position: absolute;
+  top: 1.95em;
+  left: 4.75em;
 }
+
 .player-score-prev-games{
-        position: absolute;
-        top: 1.3em;
-        right: 0.75em;
-        font-family: "proxima-nova";
-        font-weight: 500;
+  position: absolute;
+  top: 1.3em;
+  right: 0.75em;
+  font-family: "proxima-nova";
+  font-weight: 500;
 }
+
 #top-ranking-box{
-        margin-top: 5em;
+  margin-top: 5em;
   
 }
+
 .nav-wrapping-paper{
   // box-shadow: 0 0 10px #9ecaed
   -webkit-box-shadow: 0 1px 11px #ffffff;
@@ -748,8 +748,6 @@
   padding: 0;
 }
 
-
-
 .profile-rank-small-header {
   background: #47474f;
   color: #fff;
@@ -758,108 +756,116 @@
   height: 40px;
 }
 
-
-
-
-
-
 .ranking-wrapping{
-        // background: linear-gradient( #81b5c3 4%, white 89%);
-        // background: #fff;
-        // background: #f5efe6;
-        // background: #47474f;
-        // background: #81b5c3;
-        // background: #E8E8E8;
-        // background: linear-gradient( #E8E8E8 4%, white 89%);
-        background: linear-gradient( #3c3d42 4%, white 89%);
-        // height: 45em;
+  // background: linear-gradient( #81b5c3 4%, white 89%);
+  // background: #fff;
+  // background: #f5efe6;
+  // background: #47474f;
+  // background: #81b5c3;
+  // background: #E8E8E8;
+  // background: linear-gradient( #E8E8E8 4%, white 89%);
+  background: linear-gradient( #3c3d42 4%, white 89%);
+  // height: 45em;
 }
 .ranking-title{
-        font-size: 1.25em;
-        color: #545454;
+  font-size: 1.25em;
+  color: #545454;
 }
-.ranking-items{
-        font-size: 1.45em;
-        font-weight: bold;
-
-        color: #545454;
-        a{
-                color: #545454;
-        }
-}
-.rank-player-name a {
-        color: #47474f;
-        font-weight: 500;
-        font-family: "proxima-nova";
-        font-size: 0.75em;
-        display: inline-block;
-        margin-left: 1em;
-        // padding-right: 3em;
-  }
-
-.rank-player-name a:hover {
-        border-bottom: solid 1px #47474f;
-  }
 
 .prof-last-game-pic img{
-        height: 4.5em;
-        width: 4.5em;
-        border-radius: 5px;
+  height: 4.5em;
+  width: 4.5em;
+  border-radius: 5px;
 }
+
 .prof-last-game-pic{
   margin-top: 0;
 }
-.rk-title{
-        margin-left: 0.9em;
-}
-.pct-title{
-        margin-left: 1.1em;
-}
+
+// .rk-title{
+//         margin-left: 0.9em;
+// }
+// .pct-title{
+//         margin-left: 1.1em;
+// }
+
 .profile-rank{
-        color: #292830;
+  color: #292830;
 }
 
 .grab-pic img {
-        width: 2.5em;
-        height: 2.5em;
-        display: inline-block;
-        border-radius: 5px;
+  width: 2.5em;
+  height: 2.5em;
+  display: inline-block;
+  border-radius: 5px;
 }
+
+
+// Players Index Styles ----------------------------------------
+
+
+.rank-player-name a {
+  color: #47474f;
+  font-weight: 500;
+  font-family: "proxima-nova";
+  font-size: 0.75em;
+  display: inline-block;
+  margin-left: 1em;
+  // padding-right: 3em;
+  }
+
+.players-list {
+  color: #47474f;
+}
+
+.rank-player-name a:hover {
+  border-bottom: solid 1px #47474f;
+}
+
+
+.ranking-items{
+  font-size: 1em;
+  // font-weight: 500;
+  font-family: "Verdana";
+  a{
+    color: #47474f;
+  }
+}
+
 .rank-record{
-        font-size: 1em;
-        font-family: "Verdana";
-        margin-left: 0.4em;
-
+  font-size: 1em;
+  font-family: "Verdana";
+  margin-left: 0.4em;
 }
+
 .rank-pct{
-        font-size: 1em;
-        font-family: "Verdana";
-td span{
-        color: red;
+  font-size: 1em;
+  font-family: "Verdana";
+    td span{
+      color: red;
+  }
 }
 
-}
 .sub-title{
-        font-weight: 800;
-        color: #4D4D4D;
-        background: linear-gradient(top, #D3D3D3, #E9E9E9);
-        border-bottom: 1px solid #C9C9C9;
-        padding: 0.4em;
+  font-weight: 800;
+  color: #4D4D4D;
+  background: linear-gradient(top, #D3D3D3, #E9E9E9);
+  border-bottom: 1px solid #C9C9C9;
+  padding: 0.4em;
 }
 
 .card_style-two {
-  padding: 15px 15px;
-  
+  padding: 15px 15px; 
   // border-radius: 3px;
-
   background-color: #EBEBEB;
   // border: solid 4px #ffffff;
   border-bottom-width: 2px;
   box-shadow: 0 1px 1px rgba(0,0,0,0.2);
 }
+
 .table-style{
-        border-spacing: 0 !important;
-        border-radius: 5px;
-        border-style: none;
-        box-shadow: 5px 5px 5px #888888;
+  border-spacing: 0 !important;
+  border-radius: 5px;
+  border-style: none;
+  box-shadow: 5px 5px 5px #888888;
 }
