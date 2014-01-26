@@ -59,6 +59,8 @@ $(document).ready(function() {
 });
 
 
+('#load-pic').
+
 // var addPic = 
 // $('.pic.empty').append('<div><%= link_to "Click Edit Profile to add a profile picture", edit_player_registration %></div>');
 

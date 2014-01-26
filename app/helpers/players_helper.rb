@@ -74,7 +74,7 @@ module PlayersHelper
 
   def check_pic(player)
     if player.picture_url.present? == false && player == current_player
-      content_tag(:div, content_tag(:p, "Click here to Add a Profile Picture"), class: "strong")
+      render "form_upload_pic"
     end
   end
 
