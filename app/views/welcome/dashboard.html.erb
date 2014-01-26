@@ -58,7 +58,7 @@
           </td>
           <td class="king-wrap">
             <div>      
-               <%= link_to(image_tag(Player.order( 'losses DESC' ).first.picture_url, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), Player.order( 'losses DESC' ).first) %>
+               <%= link_to(image_tag(Player.power_ranking.last.picture_url, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), Player.power_ranking.last) %>
             </div>
           </td>
           <td class="king-wrap">
@@ -81,7 +81,7 @@
           </td>
           <td class="king-wrap">
             <div class="king">
-              <%= link_to Player.order( 'losses DESC' ).first.last_name, Player.order( 'losses DESC' ).first %> - <%= Player.order( 'losses DESC' ).first.losses %> Tot. losses
+              <%= link_to Player.power_ranking.last.last_name, Player.power_ranking.last %> - <%= Player.power_ranking.last.win_percentage %>
             </div>
           </td>
           <td class="king-wrap">
