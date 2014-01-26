@@ -72,4 +72,10 @@ module PlayersHelper
     Player.order('lower(name)').all
   end
 
+  def check_pic(player)
+    if player.picture_url.present? == false && player == current_player
+      render "form_upload_pic"
+    end
+  end
+
 end
