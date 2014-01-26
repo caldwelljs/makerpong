@@ -11,8 +11,6 @@
           <%= form_for @game do |f| %>
             <div class="choose-player"><%= f.collection_select :player_id, Player.all, :id, :name, prompt: "Choose Player 1" %></div>
             <div class="player-score-field" ><%= f.text_field :opponent_score %></div> 
-          <% end %>
-        <%= form_for @game do |f| %>
         <div class="choose-player"><%= f.collection_select :opponent_id, Player.all, :id, :name, prompt: "Choose Player 2" %></div>
         <div class="player-score-field" ><%= f.text_field :player_score %></div>
         <button class="log-a-game-button">Submit</button>
