@@ -184,7 +184,7 @@
   // position: absolute;
   // top: 0.05;
   // left: 0;
-  margin-left: 0.95em;
+  margin-left: 0.8em;
 }
 .up-arrow{
   color: green;
@@ -215,7 +215,7 @@
 .sign-up-button{
   height: 50px;
   width: 100%;
-  background-color: #C53B32;
+  background-color: #D44B48;
   border-style: none; 
   border-width: none;
   border-radius: 5px;
@@ -226,8 +226,26 @@
   font-size: 1em;
   margin-bottom: 4.4em;
 }
+.sign-in-link input{
+  background-color: rgba(255,255,255,0.3);
+  color: white;
+  border-radius: 5px;
+  width: 7em;
+  height: 2em;
+  border: none;
+  font-family: "proxima-nova";
+}
+.sign-in-link input:hover{
+  background-color: rgba(255,255,255,0.6);
+  cursor: pointer;
+  
+}
+.sign-in-link{
+  float: right;
+  margin-top: 0.35em;
 
 
+}
 
 .sign-up-button:hover {
   background-color: #76d691;
