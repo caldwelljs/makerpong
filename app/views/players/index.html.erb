@@ -1,50 +1,45 @@
 <div class="ranking-wrapping">
   <%= render "layouts/header" %>
-
   <div class="row">
     <div class="small-12  prof-name-wrap columns">
-      <button class="log-a-game-button">Log Game</button>
-      <h1 class="profile-name">Power Rankings</h1>
+
+      <h1 class="profile-name">League Players</h1>
 
       <div class="the-border"></div>
-        
     </div>
   </div>
-
   <div class="row">
-    <div class="small-8 small-centered grab-pic columns" >      
+    <div class="large-8 small-8 small-centered grab-pic columns" >      
     <table class="rank-table">
-      
       <tr class= "title-row">
         <td class="title-holders-header" colspan="6">
           <h1 class="title-holders">MakerSquare Players </h1>
         </td>
       </tr>
-          <tr class="first-row">
-        <td class='sub-title'>
-          <div class="rk-title">RK</div>
-        </td>
+      <tr class="first-row">
         <td class='sub-title'>
           
+        </td>
+        <td class='sub-title'>
+          <div class="rk-title">Rank</div>
         </td>
         <td class='sub-title'>
           Record
         </td>
         <td class='sub-title'>
-          <div class="pct-title">PCT</div>
-        </td>
-        
+          <div class="pct-title">Win%</div>
+        </td>  
       </tr>
-      <% Player.power_ranking.each do |player| %>
-          <tr>
+      <% players_alphabetical.each do |player| %>
+          <tr class="players-list">
+        <td>
+           <h4 class="rank-player-name"><%= link_to (image_tag(player.picture_url)), player %><%= link_to player.name, player %></h4>
+        </td>
         <td>
           <h3 class="ranking-items">
             <%= ordinalize Player.power_ranking.find_index(player) + 1 %>
           </h3>
        </td>
-        <td>
-           <h4 class="rank-player-name"><%= link_to (image_tag(player.picture_url)), player %><%= link_to player.name, player %></h4>
-        </td>
         <td>
           <h4 class="rank-record"><%= player.wins %>-<%= player.losses %></h4>
         </td> 

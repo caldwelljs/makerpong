@@ -21,7 +21,7 @@
           <%= f.text_field :name, :autofocus => true, :placeholder => "Full Name" %>
         </div>
         <div class="sign-up-label">
-          <%= f.email_field :email, :placeholder => "Email" %>
+          <%= f.email_field :email, :placeholder => "Email", :autocomplete => :off %>
         </div>
         <div class="sign-up-label">
           <%= f.password_field :password, :placeholder => "Password" %>
@@ -29,7 +29,7 @@
         <div class="sign-up-label">
           <%= f.password_field :password_confirmation, :placeholder => "Password Confirmation" %>
         </div>
-        <div>
+        <div class="sign-up-button-contain">
           <%= f.submit "Sign up for MakerPong", class: "sign-up-button" %>
         </div>
         <% end %>

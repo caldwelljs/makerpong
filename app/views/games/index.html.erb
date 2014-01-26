@@ -1,40 +1,16 @@
-
-
 <div class="ranking-wrapping">
-
   <%= render "layouts/header" %> 
     <div class="row">
-    
-
-
-
-
-<!-- ****************** New Game Button ************* -->
-<div class="row">
-  <div class="form-wrap">
-    <div id="show-form">
-      <%#= render 'form' %>
-    </div>
-  </div>
-</div>
-
-
-<button class='new-game-button' name="submit" id="submit" type="submit">Log a Game</button>
-<!-- ****************** New Game Button ************* -->
-
-
-
-
 
 
       <div class="small-12 medium-12 large-12 columns">
         <div>
-          <h3 class= "card_title">
-            Recent Games
+          <h3 class= "profile-name">
+            Game History
           </h3>        
         </div>
         <% @games.each do |game| %>
-        <div class="small-6 medium-6 large-6 columns card_column">
+        <div class="small-10 medium-6 large-6 columns left card_column">
           <div class="recent_game dash_card_style">
             <div class="date_row">
               <%= game.created_at.strftime("%I:%M%p - %a, %b %Y") %>

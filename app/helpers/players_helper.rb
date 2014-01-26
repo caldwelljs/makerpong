@@ -68,4 +68,14 @@ module PlayersHelper
     Game.find(:all, :conditions => ['player_id = ? or opponent_id = ?', player.id, player.id]).empty?
   end
 
+  def players_alphabetical
+    Player.order('lower(name)').all
+  end
+
+  def check_pic(player)
+    if player.picture_url.present? == false && player == current_player
+      render "form_upload_pic"
+    end
+  end
+
 end

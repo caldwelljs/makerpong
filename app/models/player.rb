@@ -30,6 +30,10 @@ class Player < ActiveRecord::Base
     self.all.sort {|a, b| b.win_percentage <=> a.win_percentage}
   end
 
+  def biggest_loser
+    Game.find(:all, :conditions => ['self.win_percentage > 0'])
+  end
+
   def self.win_streak_sorting
     self.all.sort {|a, b| b.win_streak <=> a.win_streak}
   end
