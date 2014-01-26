@@ -68,7 +68,7 @@
           </td>
           <td class="king-wrap">
             <div>          
-              <%= link_to(image_tag(worst_loss_display_pic, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), Game.worst_loss.first) %>
+              <%= link_to(image_tag(worst_loss_display_pic, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), worst_loss_player) %>
             </div>
           </td>
         </tr>
@@ -91,7 +91,7 @@
           </td>
           <td class="king-wrap">
             <div class="king">
-              <%= worst_loss_display %> by <%= Game.worst_loss.first.point_margin.abs %>
+              <%= link_to worst_loss_player.last_name, worst_loss_player %> by <%= Game.worst_loss.first.point_margin.abs %>
             </div>
           </td>
         </tr>
