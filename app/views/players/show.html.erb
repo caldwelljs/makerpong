@@ -10,18 +10,22 @@
 
       <!-- <h2 class="profile-record"><span><%= @player.wins %><span>-<span><%= @player.losses %></span>, <span><%=  ordinalize @rank %></span> in League</h2> -->
     </div>
-    <div class="small-3  prof-name-wrap columns">
-      <button class="log-a-game-button">Log Game</button>
-    </div>
-   </div>
+  
+  <!-- Log a game -->
+  <div class="small-3  prof-name-wrap columns">
+    <button class="log-a-game-button">Log Game</button>
+</div>
+
+ <!-- Top Profile Overview -->
   <div class="row">
     <div class="small-12 prof-name-wrap columns">
-      <table class="table-style">
+      <table class="table-style-profile">
         <tr>
           <td rowspan="4">
             <%= image_tag @player.picture_url, size: "300x300" %>  
           </td>
-          <td colspan="2" class="profile-rank-small-header">
+          
+          <td colspan="2" class="profile-rank-small-header profile-rank-table-right">
             Rank
           </td>
         </tr>
@@ -54,17 +58,8 @@
     <div class="small-12 prof-name-wrap columns">
       <table>
         <tr class="profile-1st-table-row">
-          <td class="profile-1st-table-data">
-            <h3 class="pic-title">Picture</h3>
-          </td>
-          <td class="profile-1st-table-data">
-            <h3 class="pic-title">Rank</h3>
-          </td>
-          <td class="profile-1st-table-data">
-            <h3 class="pic-title">PCT</h3>
-          </td>
           <td class="profile-last-game-table-data">
-            <h3 class="profile-final">Last Game</h3>
+          
             <h3 class="date-after-game-profile-page">
               <% if check_games(@player) %>
                 <%=  %>
@@ -72,19 +67,10 @@
                 <%= @games.get_all_recent_games_for(@player).first.created_at.strftime(" %a, %b %d %Y") %>
               <% end %>
             </h3>
-            <h3 class="profile-t">Final</h3>
+        
           </td>
         </tr>
         <tr class="profile-2nd-table-row">
-          <td class="profile-2nd-table-data">
-            <%= image_tag @player.picture_url, size: "300x300", class: "profile-picture" %>
-          </td>
-          <td class="table-data">
-            <div class="table-rank"><%= ordinalize @rank %></div>
-          </td>
-          <td class="table-data">
-            <h1 class="table-percent"><%= @player.win_percentage %></h1>
-          </td>
 
           <% if check_games(@player) %>
             <td class="last-game-data">
@@ -161,6 +147,7 @@
     </div>
   </div>
 </div>
+
 <%= render "layouts/footer" %>
 
 

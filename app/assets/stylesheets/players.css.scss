@@ -48,16 +48,17 @@
         font-family: "proxima-nova";
   font-weight: 800; 
   font-size: 1.55em;
-  margin: 0.15em 0 0 1em;
+  // margin: 0.15em 0 0 1em;
 }
 .date-after-game-profile-page{
-  position: absolute;
-  top: 0.99em;
-  left: 12em;
+  // position: absolute;
+  // top: 1.3em;
+  // left: 12em;
+  text-align: center;
   color: white;
   font-family: "proxima-nova";
-  font-weight: 300; 
-  font-size: 1.25em;
+  font-weight: 500; 
+  font-size: 1.5em;
 
 }
 .profile-t{
@@ -221,8 +222,8 @@
   left: 5em;
 }
 .last-game-vs{
-        font-family: "proxima-nova";
-  font-weight: 800;
+  font-family: "proxima-nova";
+  font-weight: 00;
   position: absolute;
   top: 2.25em;
   left: 9.48em;
@@ -279,23 +280,6 @@
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .last-game-container{
         border-top: 1px solid #D2D2D2;
         border-right: 1px solid #D2D2D2;
@@ -341,9 +325,10 @@
 .ordinalize-profile-rank {
         font-family: "proxima-nova";
         font-weight: bold;
-        font-size: 4em;
+        font-size: 4.5em;
         color: #47474f;
         text-align: center;
+        background: #E0E0E0;
 
 }
 
@@ -517,9 +502,10 @@
 .profile-top-chart {
         font-family: "proxima-nova";
         font-weight: bold;
-        font-size: 2em;
+        font-size: 2.5em;
         color: #47474f;
         text-align: center;
+        background: #E0E0E0;
 
 }
 
@@ -749,19 +735,17 @@
 }
 
 
-
 .profile-rank-small-header {
   background: #47474f;
   color: #fff;
-  font-size: .8em;
+  font-size: 1.2em;
   text-align: center;
   height: 40px;
 }
 
-
-
-
-
+.profile-rank-table-right {
+  width: 25em;
+}
 
 .ranking-wrapping{
         // background: linear-gradient( #81b5c3 4%, white 89%);
@@ -863,3 +847,15 @@ td span{
         border-style: none;
         box-shadow: 5px 5px 5px #888888;
 }
+
+.table-style-profile {
+        border-spacing: 0 !important;
+        border-radius: 5px;
+        border-style: none;
+        // box-shadow: 5px 5px 5px #888888;
+        margin-top: 2em;
+        background: transparent;
+  }
+
+
+
