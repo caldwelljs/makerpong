@@ -61,9 +61,7 @@
           <td class="profile-last-game-table-data">
           
           <h2 class="profile-last-game-title">Last Game</h2  
-        
           </td>
-
           <td class="profile-last-game-table-top-middle">
             <h3 class="date-after-game-profile-page">
               <% if check_games(@player) %>
@@ -72,47 +70,40 @@
                 <%= @games.get_all_recent_games_for(@player).first.created_at.strftime(" %a, %b %d %Y") %>
               <% end %>
             </h3>
-
           </td>
-               
-
           <td class="profile-last-game-table-top-right">
-            
-
           </td>
-
         </tr>
-        
-
       <tr class="profile-2nd-table-row">
-        
         <td>
           <div>
               <h3 class="last-game-player-name">
-                <%= link_to @games.get_all_recent_games_for(@player).first.player.last_name, @games.get_all_recent_games_for(@player).first.player %>
+                <% if check_games(@player) %>
+                  <%= %>
+                <% else %>
+                  <%= link_to @games.get_all_recent_games_for(@player).first.player.last_name, @games.get_all_recent_games_for(@player).first.player %>
+                <% end %>
               </h3>
             </div>
         </td>
-
          <td>
             <div>
               <h3 class="last-game-vs">VS.</h3>
             </div>
         </td>
-
          <td>
         <div>
           <h3 class="last-game-opponent-name">
-                <%= link_to @games.get_all_recent_games_for(@player).first.opponent.last_name, @games.get_all_recent_games_for(@player).first.opponent %>
+            <% if check_games(@player) %>
+              <%= %>
+            <% else %>
+              <%= link_to @games.get_all_recent_games_for(@player).first.opponent.last_name, @games.get_all_recent_games_for(@player).first.opponent %>
+            <% end %>
               </h3>
           </div>
         </td>
-
       </tr>
-
-
         <tr class="profile-3rd-table-row">
-
           <% if check_games(@player) %>
             <td class="last-game-data">
               <div class="no-games-played">  
@@ -120,8 +111,6 @@
               <div class="last-game-border"></div>
             </td>
           <% else %>
-
-
           <td class="profile-last-game-bottom-left">
 
               <div>
@@ -129,8 +118,6 @@
               </div>
 
           </td>
-
-
           <td class="last-game-data">
             
             <div>
