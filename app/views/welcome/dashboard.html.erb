@@ -1,11 +1,11 @@
 <div class="ranking-wrapping">
   <%= render "layouts/header" %>
   <div class="row">
-    <div class="large-8 columns dash-first-col  prof-name-wrap columns">
+    <div class="large-7 columns dash-first-col  prof-name-wrap columns">
       <h1 class="profile-name">League MakerSquare</h1>
       <div class="the-border"></div>
     </div>
-    <div class="large-4 columns">
+    <div class="large-5 columns">
       <div class="log-game-form">
         <div class="log-game-title">Log Game<div class="blue-paddle"></div></div>
           <%= form_for @game do |f| %>
@@ -108,7 +108,7 @@
 
 
       <h1 class="title-holders">Latest Games</h1>
-        <% @games.last(8).reverse.each do |game| %>
+        <% @games.last(14).reverse.each do |game| %>
         <div class="small-12 large-6 columns last-games-column-wrapper">
           <table class="table-style left">
             <tr class="final-title-row">
@@ -172,7 +172,7 @@
               <div class="pct-title">PCT</div>
             </td>           
           </tr>
-          <% Player.power_ranking.each do |player| %>
+          <% Player.power_ranking.first(20).each do |player| %>
           <tr>
             <td>
               <h3 class="ranking-items">
