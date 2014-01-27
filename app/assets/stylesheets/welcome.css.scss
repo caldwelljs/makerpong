@@ -1,5 +1,20 @@
 
 // General and Welcome#Index styling
+.dash-last-game-score{
+  background: white;
+  text-align: center;
+  font-size: 2.5em;
+  font-family: proxima-nova;
+  font-weight: 800;
+}
+.dash-last-game-pic1 {
+  background: white;
+}
+.dash-last-game-pic1 img{
+  width: 12em;
+  height: 12em;
+  border-radius: 5px;
+}
 .dash-last-game-opponent-name{
   font-family: proxima-nova;
   font-weight: 800;
@@ -173,7 +188,7 @@
   font-size: 3em;
   line-height: 1.15;
   font-weight: bold;
-  font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
+  font-family: "proxima-nova", "Helvetica Neue", helvetica, arial, sans-serif;
   padding-top: 2.5em;
 }
 
@@ -185,7 +200,7 @@
   margin-bottom: 1.25rem;
   text-rendering: optimizeLegibility;
   color: #ffffff;
-  font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
+  font-family: "proxima-nova", "Helvetica Neue", helvetica, arial, sans-serif;
 }
 
 .home-new-acct {
@@ -260,7 +275,7 @@
   border-radius: 5px;
   vertical-align: middle;
   display:inline-block;
-  font-family: "Proxima Nova", "Helvetica Neue", helvetica, arial, sans-serif;
+  font-family: "proxima-nova", "Helvetica Neue", helvetica, arial, sans-serif;
   color: #fff;
   font-size: 1em;
   margin-bottom: 4.4em;
