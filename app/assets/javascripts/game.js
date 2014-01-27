@@ -15,7 +15,7 @@
     // var player1name = prompt("What is Player 1's name")
     // $('#player1').text(player1name);
     // var player2name = prompt("What is Player 2's name")
-    // $('#player2').text(player2name);  
+    // $('#player2').text(player2name); 
 
     $('.close-reveal-modal').click(function (e) {    
       e.preventDefault();
