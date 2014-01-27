@@ -10,9 +10,10 @@
         <div class="log-game-title">Log Game<div class="blue-paddle"></div></div>
           <%= form_for @game do |f| %>
             <div class="choose-player"><%= f.collection_select :player_id, Player.all, :id, :name, prompt: "Choose Player 1" %></div>
-            <div class="player-score-field" ><%= f.text_field :opponent_score %></div> 
+             <div class="player-score-field" ><%= f.text_field :player_score %></div>
         <div class="choose-player"><%= f.collection_select :opponent_id, Player.all, :id, :name, prompt: "Choose Player 2" %></div>
-        <div class="player-score-field" ><%= f.text_field :player_score %></div>
+        <div class="player-score-field" ><%= f.text_field :opponent_score %></div>
+        
         <button class="log-a-game-button">Submit</button>
         <% end %>
       </div>
@@ -33,36 +34,39 @@
     </td>
     <td>
      <% if @games.last.player_score < @games.last.opponent_score %>
-    <h2 class="mr-winner"><%= @games.last.player.last_name %> wins!</h2>
-    <% else %>
     <h2 class="mr-winner"><%= @games.last.opponent.last_name %> wins!</h2>
+    <% else %>
+    <h2 class="mr-winner"><%= @games.last.player.last_name %> wins!</h2>
     <% end %>
-
-
-
-
-
-
     </td>
     <td class="last-game-create-dash">
       <%= @games.last.created_at.strftime(" %a, %b %d %Y") %>
     </td>
   </tr>
-   
   <tr>
     <td class="dash-last-game-player-name">
-      <%= @games.last.player.last_name %>
+      <% if @games.last.player_score > @games.last.opponent_score %>
+        <%= @games.last.player.last_name %>
+      <% else %>
+        <%= @games.last.opponent.last_name %>
+      <% end %>
     </td>
     <td class="dash-vs">
       VS
     </td>
 
+
+<!-- *********************************************** -->
     <td class="dash-last-game-opponent-name">
-      <%= @games.last.opponent.last_name %>
+      <% if @games.last.player_score < @games.last.opponent_score %>
+        <%= @games.last.player.last_name %>
+      <% else %>
+        <%= @games.last.opponent.last_name %>
+      <% end %>
     </td>
   </tr>
   <tr>
-<!--     <% if @games.last.player_score < @games.last.opponent_score %>
+ <% if @games.last.player_score > @games.last.opponent_score %>
     <td class="dash-last-game-pic1">
       <img src=<%= [@games.last.player.winning_pic1, @games.last.player.winning_pic2, @games.last.player.winning_pic3].sample %>>
     </td>
@@ -70,23 +74,27 @@
     <td class="dash-last-game-pic1">
     <img src=<%= [@games.last.opponent.winning_pic1, @games.last.opponent.winning_pic2, @games.last.opponent.winning_pic3].sample %>>
     </td>
-    <% end %> -->
-  <td class="dash-last-game-pic1">
+    <% end %>
+<!--   <td class="dash-last-game-pic1">
     <img src=<%= @games.last.player.picture_url %>>
-  </td>
+  </td> -->
 
 
 
  <td class="dash-last-game-score">
-      <%= @games.last.player_score %> - <%= @games.last.opponent_score %>
+      <% if @games.last.player_score > @games.last.opponent_score %>
+          <%= @games.last.player_score %> - <%= @games.last.opponent_score %>
+        <% else %>
+          <%= @games.last.opponent_score %> - <%= @games.last.player_score %>
     </td>
+    <% end %>
 
-    <td class="dash-last-game-pic1">
+  <!--  <td class="dash-last-game-pic1">
       <img src=<%= @games.last.opponent.picture_url %>>
-    </td>
+    </td> -->
 
 
-<!--  <% if @games.last.player_score > @games.last.opponent_score %>
+ <% if @games.last.player_score < @games.last.opponent_score %>
    <td class="dash-last-game-pic1">
      
      
@@ -98,7 +106,7 @@
        <img src=<%= [@games.last.opponent.losing_pic1, @games.last.opponent.losing_pic2, @games.last.opponent.losing_pic3].sample %>>
    </td>
      <% end %> 
- -->
+
 
   <td>
     
