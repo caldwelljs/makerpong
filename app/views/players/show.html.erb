@@ -188,7 +188,7 @@
               </td>
               <td>
                  <div>
-                  <%= link_to(image_tag(player_opponent(game, @player).picture_url , :class => "many-pics", :alt => "profile pic", :title => "profile pic"), game.opponent) %>
+                  <%= link_to(image_tag(player_opponent(game, @player).picture_url , :class => "many-pics", :alt => "profile pic", :title => "profile pic"), player_opponent(game, @player)) %>
                 </div>
               <div class="many-opponents">  
                   <%= link_to(player_opponent(game, @player).name, player_opponent(game, @player)) %>
