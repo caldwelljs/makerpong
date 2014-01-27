@@ -375,8 +375,19 @@ label .pic_upload_label {
   //   color:#000000;
   //   }
 
-.game_index_name {
+  .game_index_name {
+    margin-top: 15px;
+  }
+
+.game_index_name a {
   margin-top: 15px;
+  color: #47474f;
+  font-weight: 500;
+  font-family: "proxima-nova";
+}
+
+.game_index_name a:hover {
+  border-bottom: solid 1px #47474f;
 }
 
 .game_index_score {

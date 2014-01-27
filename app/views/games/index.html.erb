@@ -18,10 +18,10 @@
             </div>
             <div class="row player_row">
               <div class="game_card_pic small-2 medium-2 large-2 columns card_pic">
-                <img src=<%= game.player.picture_url %>> 
+                <%= link_to image_tag(game.player.picture_url), game.player %>
               </div>
               <div class="game_index_name small-8 medium-8 large-8 columns <%= "winner_style" if game.winner == game.player.id %>">
-                <%= game.player.name %>
+                <%= link_to game.player.name, game.player %>
               </div>
               <div class="game_index_score small-2 medium-2 large-2 columns <%= "winner_style" if game.winner == game.player.id %>">
                 <%= game.player_score %>
@@ -29,10 +29,10 @@
             </div>
             <div class="row opponent_row">
               <div class="game_card_pic small-2 medium-2 large-2 columns card_pic">
-                <img src=<%= game.opponent.picture_url %>>
+                <%= link_to image_tag(game.opponent.picture_url),game.opponent %>
               </div>
               <div class="game_index_name small-8 medium-8 large-8 columns <%= "winner_style" if game.winner == game.opponent.id %>">
-                <%= game.opponent.name %>
+                <%= link_to game.opponent.name, game.opponent %>
               </div>
               <div class="game_index_score small-2 medium-2 large-2 columns <%= "winner_style" if game.winner == game.opponent.id %>">
                 <%= game.opponent_score %>
