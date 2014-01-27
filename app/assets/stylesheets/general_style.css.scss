@@ -131,7 +131,14 @@ h2, h1 {
 .winner_style {
   margin-top: 15px;
   color: red;
+  font-family: "proxima-nova";
+  font-weight: 500;
   a {color: red;}
+}
+
+
+ .winner_style a:hover {
+  border-bottom: solid 1px #47474f;
 }
 
 body.players{
