@@ -22,5 +22,11 @@ class WelcomeController < ApplicationController
        render 'new'
      end
   end
+
+    private
+  def game_params
+    params.require(:game).permit(:player_id, :opponent_id, :player_score, :opponent_score)
+  end
+
   
 end

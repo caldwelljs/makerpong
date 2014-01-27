@@ -1,6 +1,45 @@
 
 // General and Welcome#Index styling
-
+.dash-last-game-opponent-name{
+  font-family: proxima-nova;
+  font-weight: 800;
+  text-align: center;
+  font-size: 1.7em;
+}
+.dash-vs{
+  font-family: proxima-nova;
+  font-weight: 800;
+  text-align: center;
+  font-size: 1.7em;
+}
+.dash-last-game-player-name{
+  font-family: proxima-nova;
+  font-weight: 800;
+  text-align: center;
+  font-size: 1.7em;
+}
+.last-game-create-dash{
+  color: white;
+  text-align: center;
+}
+.mr-winner{
+  color: white;
+  font-size: 1.6em;
+  font-family: proxima-nova;
+  font-weight: 800;
+  margin: 0;
+  text-align: center;
+}
+.dash-last-game{
+  width: 100%;
+  background-color: #47474F;
+}
+.dash-last-game-title{
+  color: white;
+  font-family: proxima-nova;
+  font-size: 1.4em;
+  text-align: center;
+}
 
 .blue-paddle img{
   position: absolute;
