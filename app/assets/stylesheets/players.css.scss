@@ -35,18 +35,22 @@
     margin-left: auto;
     margin-right: auto;
     background: #fff;
-    width: 90%;
+    width: 100%;
     border-spacing: 0 !important;
 }
 
-.profile-recent-games-table {
-    width: 60em;
-
-    display: block;
+.profile-recent-games-table {   
+    display: table;
     margin-left: auto;
     margin-right: auto;
+    width: 70%;
+    border-spacing: 0 !important;
+    background: #fff;
 
 }
+
+
+
 
 .profile-last-game-table-data{
         // width: 30%;
@@ -82,11 +86,16 @@
 }
 
 
-// .profile-last-game-bottom-left {
+.profile-last-game-bottom-left {
 //   display: block;
 //   margin-left: auto;
 //   margin-right: auto;
-// }
+     background-color: white;
+}
+
+.profile-last-game-bottom-right {
+    background-color: white;
+}
 
 .date-after-game-profile-page{
   text-align: center;
@@ -108,9 +117,6 @@
   
 }
 
-.profile-3rd-table-row {
-  // height: 12em;
-}
 
 .profile-t{
         position: absolute;
@@ -126,58 +132,81 @@
 }
 .previous-1st-table-data{
         padding: 0;
-        width: 60em;
         background-color: #47474f;
 }
 .profile-previous-games{
-        color: white;
-        font-family: "proxima-nova";
-  font-weight: 800;
+  color: white;
+  font-family: "proxima-nova";
+  font-weight: 500;
   font-size: 1.25em;
-  margin-left: 1em;
+  padding-left: 2.2em;
 }
+
+
 .previous-2nd-table-data{
         background-color: white;
         position: relative;
 }
 .second-table-data-date{
-        position: absolute;
-        top: 0.35em;
-        left: 1em;
+        // position: absolute;
+        // top: 0.35em;
+        // left: 1em;
         color: #717171;
         font-family: "proxima-nova";
         font-weight: 800;
-        font-size: 1.25em;
+        font-size: 1em;
+        padding-left: 2.5em;
 }
 .second-table-data-opponent{
-        position: absolute;
-        top: 0.35em;
+        // position: absolute;
+        // top: 0.35em;
         color: #717171;
         font-family: "proxima-nova";
         font-weight: 800;
-        left: 8em;
-        font-size: 1.25em;
+        // left: 8em;
+        font-size: 1em;
+        text-align: center;
 }
-.second-table-data-result{
-        position: absolute;
-        top: 0.35em;
+.second-table-data-result {
         color: #717171;
         font-family: "proxima-nova";
-        font-weight: 800;
-        right: 9em;
-        font-size: 1.25em;
-        height: 16em;
-        margin-bottom: 4em;
+        font-weight: 800;  
+        font-size: 1em;
+        text-align: center;
 }
+   
 .second-table-data-record{
-        position: absolute;
-        top: 0.35em;
         color: #717171;
         font-family: "proxima-nova";
         font-weight: 800;
-        right: 1.75em;
-        font-size: 1.25em;
+        font-size: 1em;
 }
+
+
+
+
+
+.profile-recent-games-date-column {
+  width: 35%;
+}
+
+.profile-recent-games-vs-column {
+  width: 5%;
+}
+
+.profile-recent-games-opponent-column {
+  width: 30%;
+}
+
+.profile-recent-games-result-column {
+  width: 30%;
+}
+
+
+
+
+
+
 
 .no-games-played {
   color: #cd3831;
@@ -190,43 +219,71 @@
 .many-data{
         position: relative;
 }
-.many-dates{
-        margin-left: 0.7em;
+.many-dates {
+  // margin-left: 0.7em;
+  font-family: "proxima-nova";
+  font-weight: 500;
+  font-size: 1em;
+  color: #7A7A7A;
+  padding-left: 2.5em;
 }
 .many-vs{
-  position:absolute;
-  left: 9.5em;
+  // position:absolute;
+  // left: 9.5em;
   color: #7A7A7A;
-  border-left: 1px solid white;
-  padding: 0.5em;
-  top: 0.25em;
+  font-family: "proxima-nova";
+  font-weight: 500;
+  font-size: 1em;
+  text-align: center;
+  // border-left: 1px solid white;
+  // padding: 0.5em;
+  // top: 0.25em;
 }
 .many-opponents{
-        position:absolute;
-  left: 14em;
-  color: #333333;
-  a {
-    color: #333333;
+  // position:absolute;
+  // left: 14em;
+  text-align: center;
   }
+
+.many-opponents a { 
+  color: #47474f;
+  font-weight: 500;
+  font-family: "proxima-nova";
+  font-size: .9em;
+  display: inline-block;
+  margin-left: 1em;
+  padding-top: .5em;
+  }
+
+
+.many-opponents a:hover {
+  border-bottom: solid 1px #47474f;
 }
 
+
+
 .many-pics{
-        height: 1.65em;
-        width: 1.65em;
+        height: 3em;
+        width: 3em;
         border-radius: 5px;
-        position:absolute;
-        left: 12em;
-        top: 0.5em;
+        display: block;
+        margin-left: auto;
+        margin-right:auto;
+        // position:absolute;
+        // left: 12em;
+        // top: 0.5em;
 }
 .many-w-l{
   
   font-family: "proxima-nova";
-  font-weight: 800;
-  position:absolute;
-  right: 13em;
-  border-left: 1px solid white;
-  padding: 0.5em;
-  top: 0.3em;
+  font-weight: 700;
+  font-size: 1.1em;
+  text-align: center;
+  // position:absolute;
+  // right: 13em;
+  // border-left: 1px solid white;
+  // padding: 0.5em;
+  // top: 0.3em;
   .winner {
     color: #0F8913;
   }
@@ -235,12 +292,15 @@
   }
 }
 .many-scores{
-        position:absolute;
-  right: 10.75em;
+  // position:absolute;
+  // right: 10.75em;
   color: #717171;
   font-family: "proxima-nova";
-        font-weight: 800;
-        top: 0.81em;
+  font-weight: 500;
+  font-size: 1em;
+  text-align: center;
+  padding-top: .7em;
+  // top: 0.81em;
 }
 .many-records{
         position:absolute;
@@ -262,7 +322,7 @@
   // top: 1em;
   text-align: center;
   // padding: 20px;
-  font-size: 3em;
+  font-size: 5em;
   font-family: "proxima-nova";
   font-weight: 700;
   color: #7C7C7C;
@@ -271,14 +331,16 @@
 .last-game-vs{
   font-family: "proxima-nova";
   font-weight: 700;
-  font-size: 2.5em;
+  font-size: 3em;
   text-align: center;
+  padding-bottom:.75em;
   // position: absolute;
   // top: 2.75em;
   // left: 15em;
 }
 .last-game-pic-player img {
-  width: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 5px;
   display: block;
   margin-left: auto;
@@ -289,8 +351,8 @@
 }
 
 .last-game-pic-opponent img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   border-radius: 5px;
   display: block;
   margin-left: auto;
@@ -308,7 +370,7 @@
   // position: absolute;
   // top: 0.5em;
   // left: 6em;
-  font-size: 1.5em;
+  font-size: 3em;
   a {
     color: #333333;
   }
@@ -322,7 +384,7 @@
   // position: absolute;
   // top: 0.5em;
   // right: 6em;
-  font-size: 1.5em;
+  font-size: 3em;
   color: #000000;
   a {
     color: #333333;
@@ -937,9 +999,11 @@
         border-style: none;
         // box-shadow: 5px 5px 5px #888888;
         margin-top: 2em;
-        background: transparent;
+        // background: transparent;
+        background: #fff;
   }
 
  .table-style-profile img {
   width: 300px;
+  height: 300px;
  } 

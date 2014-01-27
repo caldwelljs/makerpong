@@ -67,16 +67,26 @@
               <% if check_games(@player) %>
                 <%=  %>
               <% else %>
-                <%= @games.get_all_recent_games_for(@player).first.created_at.strftime(" %a, %b %d %Y") %>
+                <%= @games.get_all_recent_games_for(@player).first.created_at.strftime(" %a, %b %d, %Y") %>
               <% end %>
             </h3>
           </td>
           <td class="profile-last-game-table-top-right">
           </td>
         </tr>
-      <tr class="profile-2nd-table-row">
-        <td>
-          <div>
+      
+        <tr class="profile-2nd-table-row">
+          <% if check_games(@player) %>
+            <td class="last-game-data">
+              <div class="no-games-played">  
+                No Games Played
+              <div class="last-game-border"></div>
+            </td>
+          <% else %>
+
+          <td class="profile-last-game-bottom-left">
+              
+              <div>
               <h3 class="last-game-player-name">
                 <% if check_games(@player) %>
                   <%= %>
@@ -85,42 +95,24 @@
                 <% end %>
               </h3>
             </div>
-        </td>
-         <td>
-            <div>
-              <h3 class="last-game-vs">VS.</h3>
-            </div>
-        </td>
-         <td>
-        <div>
-          <h3 class="last-game-opponent-name">
-            <% if check_games(@player) %>
-              <%= %>
-            <% else %>
-              <%= link_to @games.get_all_recent_games_for(@player).first.opponent.last_name, @games.get_all_recent_games_for(@player).first.opponent %>
-            <% end %>
-              </h3>
-          </div>
-        </td>
-      </tr>
-        <tr class="profile-3rd-table-row">
-          <% if check_games(@player) %>
-            <td class="last-game-data">
-              <div class="no-games-played">  
-                No Games Played
-              <div class="last-game-border"></div>
-            </td>
-          <% else %>
-          <td class="profile-last-game-bottom-left">
+
 
               <div>
                 <%= link_to image_tag(@games.get_all_recent_games_for(@player).first.player.picture_url), @games.get_all_recent_games_for(@player).first.player, class: "last-game-pic-player" %>
               </div>
 
           </td>
+          
           <td class="last-game-data">
             
+             <div>
+              <h3 class="last-game-vs">VS.</h3>
+            </div>
+
+
             <div>
+              
+
               <h3 class="last-game-title">
                 <%= @games.get_all_recent_games_for(@player).first.player_score %>-<%= @games.get_all_recent_games_for(@player).first.opponent_score %>
               </h3>
@@ -130,66 +122,101 @@
 
           </td>
 
-          <td>
+          <td class="profile-last-game-bottom-right">
           
-          
+            <div>
+              <h3 class="last-game-opponent-name">
+                <% if check_games(@player) %>
+                <%= %>
+                <% else %>
+                <%= link_to @games.get_all_recent_games_for(@player).first.opponent.last_name, @games.get_all_recent_games_for(@player).first.opponent %>
+              <% end %>
+              </h3>
+          </div>
+
+
           <div>
             
             <%= link_to image_tag(@games.get_all_recent_games_for(@player).first.opponent.picture_url), @games.get_all_recent_games_for(@player).first.opponent, class: "last-game-pic-opponent" %>
-
           </div>
-
         </td>
-
           <% end %>
         </tr> 
-
-
-
       </table>
-
-
  </div>
-    <div class="small-12 columns nav-rowing">
-      <table class="nav-rowing profile-recent-games-table">
-        <tr class="nav-rowing">
-          <td class="previous-1st-table-data nav-rowing">
+
+
+<!-- Recent Games Table -->
+
+    <div class="small-12 columns prof-name-wrap">
+      <table class="profile-recent-games-table">
+        <tr>
+          <td colspan="4" class="previous-1st-table-data">
             <h2 class="profile-previous-games"><%= @player.first_name%>'s recent games</h2>
           </td>
         </tr>
+
+
         <tr>
-          <td class="previous-2nd-table-data">
+          
+          <td class="profile-recent-games-date-column">
             <h3 class="second-table-data-date">Date</h3>
-            <h3 class="second-table-data-opponent">Opponent</h3>
+          </td>
+          
+          <td class="profile-recent-games-vs-column">
+            
+          </td>
+         
+          <td class="profile-recent-games-opponent-column">  
+           <h3 class="second-table-data-opponent">Opponent</h3>
+          </td>
+          
+
+          <td class="profile-recent-games-result-column">                        
             <h3 class="second-table-data-result">Result</h3>
           </td>
+        
+
         </tr>
-        <tr>
-          <td>         
-          </td>
-        </tr>
+
+
         <% if check_games(@player) %>
           <tr>
-            <td class="many-data">
+            <td colspan="4">
               No Games Played
             </td>
           </tr>
         <% else %>
           <% @games.get_all_recent_games_for(@player).first(10).each do |game| %>
             <tr>
-              <td class="many-data">
-                <span class="many-dates"><%= game.created_at.strftime(" %a, %b %d %Y") %></span>
-                <span class="many-vs">VS</span>
-
-                  <%= link_to(image_tag(player_opponent(game, @player).picture_url , :class => "many-pics", :alt => "profile pic", :title => "profile pic"), game.opponent) %>
-                <span class="many-opponents"> 
-                  <%= link_to(player_opponent(game, @player).name, player_opponent(game, @player)) %>
-                </span>
-                <span class="many-w-l">
-                  <%= game_winner_label(game, @player) %>
-                </span>
-                <span class="many-scores"><%= player_opponent_score(game, @player) %>-<%= player_score(game, @player) %></span>
+              <td>
+                <div class="many-dates"> <%= game.created_at.strftime(" %a, %b %d, %Y") %></div>
               </td>
+
+              <td>
+                <div class="many-vs">VS.</div>
+
+              </td>
+
+              <td>
+                 <div>
+                  <%= link_to(image_tag(player_opponent(game, @player).picture_url , :class => "many-pics", :alt => "profile pic", :title => "profile pic"), game.opponent) %>
+                </div>
+
+              <div class="many-opponents">  
+                  <%= link_to(player_opponent(game, @player).name, player_opponent(game, @player)) %>
+                </div>
+
+              </td>
+
+              <td>
+                <div class="many-w-l">
+                  <%= game_winner_label(game, @player) %>
+                </div>
+                <div class="many-scores"><%= player_opponent_score(game, @player) %>-<%= player_score(game, @player) %></div>
+
+              </td>
+                
             </tr>
           <% end %>
         <% end %>
