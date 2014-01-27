@@ -203,13 +203,20 @@
 .homeparagraph {
   font-weight: normal;
   font-size: 1.3em;
-  padding-top: 1em;
+  padding: 1em;
   line-height: 1.6;
+  margin-top: 1em;
   margin-bottom: 1.25rem;
   text-rendering: optimizeLegibility;
-  color: #ffffff;
+  color: #333333;
   font-family: "proxima-nova", "Helvetica Neue", helvetica, arial, sans-serif;
+  background: #fff;
+  opacity: .6;
+  border-radius: 5px;
+  width: 85%;
 }
+
+
 
 .home-new-acct {
   color: #fff;
