@@ -53,6 +53,7 @@
       </table>
     </div>
   </div>
+
 <!-- ********* Last Game ********** -->
   <div class="row">
     <div class="small-12 prof-name-wrap">
@@ -145,7 +146,7 @@
           <% end %>
         </tr> 
       </table>
- </div>
+   </div>
 
 
 <!-- Recent Games Table -->
@@ -157,31 +158,19 @@
             <h2 class="profile-previous-games"><%= @player.first_name%>'s recent games</h2>
           </td>
         </tr>
-
-
         <tr>
-          
           <td class="profile-recent-games-date-column">
             <h3 class="second-table-data-date">Date</h3>
           </td>
-          
           <td class="profile-recent-games-vs-column">
-            
           </td>
-         
           <td class="profile-recent-games-opponent-column">  
            <h3 class="second-table-data-opponent">Opponent</h3>
           </td>
-          
-
-          <td class="profile-recent-games-result-column">                        
+          <td class="profile-recent-games-result-column">                       
             <h3 class="second-table-data-result">Result</h3>
           </td>
-        
-
         </tr>
-
-
         <% if check_games(@player) %>
           <tr>
             <td colspan="4">
@@ -194,31 +183,23 @@
               <td>
                 <div class="many-dates"> <%= game.created_at.strftime(" %a, %b %d, %Y") %></div>
               </td>
-
               <td>
                 <div class="many-vs">VS.</div>
-
               </td>
-
               <td>
                  <div>
                   <%= link_to(image_tag(player_opponent(game, @player).picture_url , :class => "many-pics", :alt => "profile pic", :title => "profile pic"), game.opponent) %>
                 </div>
-
               <div class="many-opponents">  
                   <%= link_to(player_opponent(game, @player).name, player_opponent(game, @player)) %>
                 </div>
-
               </td>
-
               <td>
                 <div class="many-w-l">
                   <%= game_winner_label(game, @player) %>
                 </div>
                 <div class="many-scores"><%= player_opponent_score(game, @player) %>-<%= player_score(game, @player) %></div>
-
               </td>
-                
             </tr>
           <% end %>
         <% end %>

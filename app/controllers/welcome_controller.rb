@@ -22,5 +22,4 @@ class WelcomeController < ApplicationController
        render 'new'
      end
   end
-  
 end
