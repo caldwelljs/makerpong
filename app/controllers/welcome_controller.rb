@@ -7,7 +7,7 @@ class WelcomeController < ApplicationController
   def dashboard
     @players = Player.all
     @games = Game.all 
-    @game = Game.new # for the new game form
+    @game = Game.new() # for the new game form
   end
 
   def new
@@ -17,8 +17,10 @@ class WelcomeController < ApplicationController
   def create
    @game = Game.new(game_params)
      if @game.save
-       redirect_to welcome_dashboard_path
+       redirect_to @game
+     else
+       render 'new' 
      end
   end
-end
 
+end
