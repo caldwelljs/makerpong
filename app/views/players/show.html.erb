@@ -63,15 +63,12 @@
           
           <td class="profile-last-game-table-data">
           
-          <h2 class="profile-last-game-title">Last Game</h2  
+          
           </td>
           <td class="profile-last-game-table-top-middle">
             <h3 class="date-after-game-profile-page">
-              <% if check_games(@player) %>
-                <%=  %>
-              <% else %>
-                <%= @games.get_all_recent_games_for(@player).first.created_at.strftime(" %a, %b %d, %Y") %>
-              <% end %>
+              <h2 class="profile-last-game-title">Last Game</h2>
+              
             </h3>
           </td>
           <td class="profile-last-game-table-top-right">
@@ -109,7 +106,7 @@
           <td class="last-game-data">
             
              <div>
-              <h3 class="last-game-vs">VS.</h3>
+              <h3 class="last-game-vs">VS</h3>
             </div>
 
 
@@ -119,8 +116,15 @@
               <h3 class="last-game-title">
                 <%= @games.get_all_recent_games_for(@player).first.player_score %>-<%= @games.get_all_recent_games_for(@player).first.opponent_score %>
               </h3>
-            </div>
-
+                <span class="big-date" >
+                  <% if check_games(@player) %>
+                    <%=  %>
+                  <% else %>
+                    <%= @games.get_all_recent_games_for(@player).first.created_at.strftime(" %a, %b %d, %Y") %>
+                  <% end %>
+              </span>
+            </div >
+              
 
 
           </td>
@@ -184,7 +188,7 @@
                 <div class="many-dates"> <%= game.created_at.strftime(" %a, %b %d, %Y") %></div>
               </td>
               <td>
-                <div class="many-vs">VS.</div>
+                <div class="many-vs">VS</div>
               </td>
               <td>
                  <div>
