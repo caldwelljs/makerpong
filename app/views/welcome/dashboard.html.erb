@@ -184,7 +184,7 @@
             <tr class="final-title-row">
               <td class='final-title-data'>
                 <div class="prev-games-final-title"></div>
-                <div class="prev-games-date"><%= game.created_at.strftime("%a, %b %d %Y") %></div>
+                <div class="prev-games-date"><%= link_to game.created_at.strftime("%a, %b %d %Y"), game %></div>
                 <div class="total"></div>
               </td>
             </tr>
