@@ -4,7 +4,7 @@
 
   <div class="row">
 	  <div class="small-5  prof-name-wrap columns">
-    <h1 class="profile-name"><%= @game.player.name %> </h1>
+    <h1 class="game-show-name show-player-name"><%= @game.player.name %> </h1>
           <div class="the-border-after-game"></div>
     <!-- <h1 class="vs-after-game">VS</h1> -->
   </div>
@@ -13,7 +13,7 @@
   </div>
   <div class="row">
   	<div class="small-5  prof-name-wrap columns">
-      <h1 class="profile-name"><%= @game.opponent.name %> </h1>
+      <h1 class="game-show-name show-opponent-name"><%= @game.opponent.name %> </h1>
   		<div class="the-border-after-game"></div>
   	</div>
   </div>
@@ -28,7 +28,7 @@
   	<% end %>
   	<div class="form-wrap">
   		<div id="show-form">
-  	   <%= render 'form' %>
+  	    <%= render 'form' %>
   	  </div>
   	 </div>
   </div>
@@ -42,12 +42,10 @@
 		<table>
 			<tr class="first-row-after-game">
 				<td class="first-data-after-game">
-					<h2 class="final-after-game">Final</h2>
 					<h2 class="date-after-game"><%= @game.created_at.strftime(" %a, %b %Y \n %I:%M%p") %></h2>
-					<h2 class="t-after-game">T</h2>
 				</td>
 			</tr>
-			<tr class="second-row-after-game">
+			<tr class="second-row-after-game"> 
 				<td class="second-data-after-game">
 					<img class="hello" src=<%= @game.player.picture_url %>>
 					<h2 class="name1-after-game"><%= @game.player.name %></h2>
@@ -57,14 +55,14 @@
 			</tr>
 			<tr class="third-row-after-game">
 				<td class="third-data-after-game">
-					<img src=<%= @game.opponent.picture_url %>>
+					<img class="hello" src=<%= @game.opponent.picture_url %>>
 					<h2 class="name1-after-game"><%= @game.opponent.name %></h2>
 					<h2 class="record1-after-game">(<%= @game.opponent.wins %>-<%= @game.opponent.losses %>)</h2>
 					<h1 class="playerscore1-after-game"><%= @game.opponent_score %></h1>
 
 				</td>
 			</tr>
-			<tr class="fourth-row-after-game">
+			<!-- <tr class="fourth-row-after-game">
 				<td class="fourth-data-after-game">
 				  <h3 class="comment-after-game">
 				  	<% if @game.player_score > @game.opponent_score %>
@@ -80,43 +78,10 @@
 						<% end %>
 				   continues downward spiral</h3>
 			  </td>
-			</tr>
+			</tr> -->
 		</table>
 	</div>
 </div>
-
-  <!-- <div class="row">
-   <div class="small-12 small-centered columns after-game-column">
-    <div class="recent_game after-game-card_style">
-      <div class="date_row">
-        <%= @game.created_at.strftime("%I:%M%p - %a, %b %Y") %>
-      </div>
-      <div class="row" id="player_row">
-        <div class="game_card_pic small-2 medium-2 large-2 columns after-game-card_pic">
-          <img src=<%= @game.player.picture_url %>>
-        </div>
-        <div class="after-game_card_name small-8 medium-8 large-8 columns">
-          <%= @game.player.name %>
-          <div class="after-game_card_score small-2 medium-2 large-2 columns">
-            <%= @game.player_score %>
-          </div>
-        </div>
-    
-      </div>
-      <div class="row" id="opponent_row">
-        <div class="game_card_pic small-2 medium-2 large-2 columns after-game-card_pic">
-          <img class="after-game-card_pic" src=<%= @game.opponent.picture_url %>>
-        </div>
-        <div class="after-game_card_name small-8 medium-8 large-8 columns">
-          <%= @game.opponent.name %>
-          <div class="after-game_card_score small-2 medium-2 large-2 columns">
-            <%= @game.opponent_score %>
-          </div>
-        </div>
-      
-      </div>
-    </div> -->
-  <!-- </div> -->
   </div>
 
   <%= render "layouts/footer" %>
