@@ -241,11 +241,11 @@
               <div class="pct-title">PCT</div>
             </td>           
           </tr>
-          <% Player.power_ranking.first(20).each do |player| %>
+          <% leaders.power_ranking.first(20).each do |player| %>
           <tr class="dash-ranking-rollover">
             <td>
               <h3 class="ranking-items">
-                <%= ordinalize Player.power_ranking.find_index(player) + 1 %>
+                <%= ordinalize leaders.power_ranking.find_index(player) + 1 %>
               </h3>
            </td>
             <td>
@@ -259,7 +259,9 @@
             </td> 
           </tr>
           <% end %>
+          
         </table>
+        <div class="ranking-disclaimer">* Based on win% of players with 5+ games</div>
       </div>
     </div>
   </div>
