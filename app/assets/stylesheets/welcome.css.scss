@@ -267,7 +267,7 @@
 
 .home-new-acct {
   color: #fff;
-  margin-bottom: 0.75em;
+  margin-bottom: 0.3em;
   font-size: 2em;
   font-weight: 600;
   text-align: center;
@@ -339,7 +339,7 @@
   display:inline-block;
   font-family: "proxima-nova", "Helvetica Neue", helvetica, arial, sans-serif;
   color: #fff;
-  font-size: 1em;
+  font-size: 1.3em;
   margin-bottom: 4.4em;
 }
 .sign-in-link input{
@@ -429,6 +429,12 @@ a.about_link:link {color:#FF0000;}
 
 .power_ranking_card {
   padding: 20px 0 20px 0;
+}
+
+.ranking-disclaimer {
+  font-size: 0.6em;
+  margin-top: -0.5em;
+  margin-left: 2em;
 }
 
 .recent_game {

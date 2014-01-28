@@ -4,7 +4,7 @@
   </div>
     <div class="container">
       <div class="row">
-        <div class="small-5 medium-5 large-5 small-offset-1 columns">
+        <div class="medium-5 large-5 small-offset-1 columns">
           <div class="playerCard">
             <div class="changeScore leftScoreChange" id="increasePlayer1">
               <div>+</div>
@@ -17,7 +17,7 @@
             </div>
           </div>
         </div>
-        <div class="small-5 medium-5 large-5 columns">
+        <div class="medium-5 large-5 columns">
           <div class="playerCard">
             <div class="changeScore player2ScoreChange" id="increasePlayer2">
               <div>+</div>
@@ -62,7 +62,7 @@
 
 
 
-<div id="myModal" class="reveal-modal" data-reveal>
+<div id="myModal" class="reveal-modal medium" data-reveal>
   <h2>Choose Your Players</h2>
       <div class="player_selection">
         <div class="row">
@@ -72,16 +72,16 @@
 
             <%= f.collection_select :opponent_id, Player.all, :id, :name, prompt: "Choose Player 2" %>
 
-            <div class="start_game_button button">Start Game</a> 
+            <div class="start_game_button live-score-modal-button button">Start Game</div> 
             <% end %>
           </div>
+  <a class="close-reveal-modal">&#215;</a>
         </div>
       </div>
-  <a class="close-reveal-modal">&#215;</a>
 </div>
 
 
-<div id="myModal2" class="reveal-modal" data-reveal>
+<div id="myModal2" class="reveal-modal medium" data-reveal>
   
   <div class="results-popup"><span class="results-modal-winner">Player</span> wins!</div>
     <div class="results-modal">
@@ -92,7 +92,6 @@
         <span class="results-modal-opponent-name">Player 2</span>
       </div> 
     </div>
-    <h2 class="results-modal-title">Want to log your game?</h2>
       <div class="player_selection">
         <div class="row">
         </div>
@@ -101,7 +100,15 @@
             <%= f.hidden_field :opponent_id %>
             <%= f.hidden_field :player_score %><br />
             <%= f.hidden_field :opponent_score %><br />
-            <%= f.submit 'Log Game', :class => "button live-score-log-button" %>
+            
+            <div class="row">
+              <div class="large-6 medium-6 columns">
+                <div class="button live-score-dont-log-button live-score-modal-button">Don't Log</div>
+              </div>
+              <div class="large-6 medium-6 columns">
+                <%= f.submit 'Log Game', :class => "button live-score-log-button live-score-modal-button" %>
+              </div>
+            </div>
           <% end %>
         <a class="close-reveal-modal">&#215;</a>  
         </div>

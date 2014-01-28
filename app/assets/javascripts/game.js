@@ -12,7 +12,7 @@
 
     var gameStart = (function (e) {
       $('#myModal').foundation('reveal', 'open');
-        $('.close-reveal-modal').click(function(){
+        $('.close-reveal-modal, .live-score-dont-log-button').click(function(){
           $('#myModal').foundation('reveal', 'close');
       });
     });
@@ -20,6 +20,7 @@
     $('.start_game_button').click(function(e){
       $('#myModal').foundation('reveal', 'close');
     });
+
 
 
     var gameResult = (function (e) {

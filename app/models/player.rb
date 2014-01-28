@@ -19,6 +19,11 @@ class Player < ActiveRecord::Base
   mount_uploader :winning_pic3, ImageUploader
   mount_uploader :losing_pic3, ImageUploader
   
+
+  # def biggest_loser
+  #   Player.where('wins > ? or losses > ?', 0, 0).sort {|a, b| b.win_percentage <=> a.win_percentage}.last
+  # end
+
   def win_percentage
     if self.wins > 0 or self.losses > 0
       @calc_win_percentage ||= (self.wins.to_f / (self.wins + self.losses)).round(4)
