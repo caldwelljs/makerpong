@@ -179,7 +179,7 @@
           </tr>
         <% else %>
           <% @games.get_all_recent_games_for(@player).first(10).each do |game| %>
-            <tr>
+            <tr class="recent-games-rollover">
               <td>
                 <div class="many-dates"> <%= game.created_at.strftime(" %a, %b %d, %Y") %></div>
               </td>

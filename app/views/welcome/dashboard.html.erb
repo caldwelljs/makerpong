@@ -280,7 +280,7 @@
             </td>           
           </tr>
           <% Player.power_ranking.first(20).each do |player| %>
-          <tr>
+          <tr class="dash-ranking-rollover">
             <td>
               <h3 class="ranking-items">
                 <%= ordinalize Player.power_ranking.find_index(player) + 1 %>

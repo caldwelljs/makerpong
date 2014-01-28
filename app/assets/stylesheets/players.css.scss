@@ -49,6 +49,10 @@
 
 }
 
+.recent-games-rollover:hover td {
+   background-color: #a9eaed;
+}
+
 
 
 
@@ -111,12 +115,6 @@
   padding: 0;
   background-color: #47474f;
 }
-
-
-.profile-2nd-table-row{
-  
-}
-
 
 .profile-t{
         position: absolute;
@@ -340,9 +338,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  // position: absolute;
-  // top: 2.25em;
-  // left: 7em;
+  padding-bottom: 2em;
 }
 
 .last-game-pic-opponent img {
@@ -352,9 +348,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  // position: absolute;
-  // top: 2.25em;
-  // right: 7em;
+  padding-bottom: 2em;
 }
 
 
@@ -923,6 +917,8 @@
 
 
 
+
+
 .rank-player-name a {
   color: #47474f;
   font-weight: 500;
@@ -935,6 +931,10 @@
 
 .players-list {
   color: #47474f;
+}
+
+.players-list:hover td {
+  background-color: #a9eaed;
 }
 
 .rank-player-name a:hover {
