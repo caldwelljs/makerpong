@@ -35,6 +35,7 @@
         <td>
            <h4 class="rank-player-name"><%= link_to (image_tag(player.picture_url)), player %><%= link_to player.name, player %></h4>
         </td>
+
         <td>
           <h3 class="ranking-items">
             <%= ordinalize Player.power_ranking.find_index(player) + 1 %>

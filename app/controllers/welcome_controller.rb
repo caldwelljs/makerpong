@@ -41,6 +41,8 @@ class WelcomeController < ApplicationController
 
 
 
+
+
   end
 
   def new
@@ -50,7 +52,10 @@ class WelcomeController < ApplicationController
   def create
    @game = Game.new(game_params)
      if @game.save
-       redirect_to welcome_dashboard_path
+       redirect_to @game
+     else
+       render 'new' 
      end
   end
+
 end
