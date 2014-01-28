@@ -4,91 +4,78 @@
     <div class="large-7 columns dash-first-col  prof-name-wrap columns">
       <h1 class="profile-name">League MakerSquare</h1>
       <div class="the-border"></div>
+
       <!-- ******************* Last Game Table ****************** -->
 
-
-      <table class="dash-last-game" >
-        <tr>
-          <td>
-             <% if @games.last.player_score < @games.last.opponent_score %>
-            <h2 class="dash-last-game-title" ><%= @games.last.opponent.last_name %> wins!</h2>
+      <div class="large-12 medium-6">
+        <table class="dash-last-game" >
+          <tr>
+            <td>
+               <% if @games.last.player_score < @games.last.opponent_score %>
+              <h2 class="dash-last-game-title" ><%= @games.last.opponent.last_name %> wins!</h2>
+              <% else %>
+              <h2 class="dash-last-game-title"><%= @games.last.player.last_name %> wins!</h2>
+              <% end %>
+            </td>
+            <td   class="mr-winner">
+              Last Game
+            </td>
+            <td class="last-game-create-dash">
+              <%= @games.last.created_at.strftime(" %a, %b %d %Y") %>
+            </td>
+          </tr>
+          <tr>
+            <td class="dash-last-game-player-name">
+              <% if @games.last.player_score > @games.last.opponent_score %>
+                <%= @games.last.player.last_name %>
+              <% else %>
+                <%= @games.last.opponent.last_name %>
+              <% end %>
+            </td>
+            <td class="dash-vs">
+              VS
+            </td>
+            <td class="dash-last-game-opponent-name">
+              <% if @games.last.player_score < @games.last.opponent_score %>
+                <%= @games.last.player.last_name %>
+              <% else %>
+                <%= @games.last.opponent.last_name %>
+              <% end %>
+            </td>
+          </tr>
+          <tr>
+         <% if @games.last.player_score > @games.last.opponent_score %>
+            <td class="dash-last-game-pic1">
+              <img src=<%= @player_win_picture %>>
+            </td>
             <% else %>
-            <h2 class="dash-last-game-title"><%= @games.last.player.last_name %> wins!</h2>
+            <td class="dash-last-game-pic1">
+            <img src=<%= @opponent_win_picture %>>
+            </td>
             <% end %>
-          </td>
-          <td   class="mr-winner">
-            Last Game
-          </td>
-          <td class="last-game-create-dash">
-            <%= @games.last.created_at.strftime(" %a, %b %d %Y") %>
-          </td>
-        </tr>
-        <tr>
-          <td class="dash-last-game-player-name">
-            <% if @games.last.player_score > @games.last.opponent_score %>
-              <%= @games.last.player.last_name %>
-            <% else %>
-              <%= @games.last.opponent.last_name %>
-            <% end %>
-          </td>
-          <td class="dash-vs">
-            VS
-          </td>
-
-
-      <!-- *********************************************** -->
-          <td class="dash-last-game-opponent-name">
-            <% if @games.last.player_score < @games.last.opponent_score %>
-              <%= @games.last.player.last_name %>
-            <% else %>
-              <%= @games.last.opponent.last_name %>
-            <% end %>
-          </td>
-        </tr>
-        <tr>
-       <% if @games.last.player_score > @games.last.opponent_score %>
-          <td class="dash-last-game-pic1">
-            <img src=<%= @player_win_picture %>>
-          </td>
-          <% else %>
-          <td class="dash-last-game-pic1">
-          <img src=<%= @opponent_win_picture %>>
-          </td>
-          <% end %>
-
-          <td class="dash-last-game-score">
+        
+            <td class="dash-last-game-score">
               <% if @games.last.player_score > @games.last.opponent_score %>
                 <%= @games.last.player_score %> - <%= @games.last.opponent_score %>
               <% else %>
                 <%= @games.last.opponent_score %> - <%= @games.last.player_score %>
-          </td>
-            <% end %>
-
-       <% if @games.last.player_score < @games.last.opponent_score %>
-         <td class="dash-last-game-pic1">
-             <img src=<%= @player_lose_picture %>> 
-         </td>
-         <% else %>
-         <td class="dash-last-game-pic1">
-             <img src=<%= @opponent_lose_picture %>>
-         </td>
-           </tr>
-           <% end %>
-        </table>
-
-
-                
-
-
-
-
-
+              <% end %>
+            </td>
+         <% if @games.last.player_score < @games.last.opponent_score %>
+           <td class="dash-last-game-pic1">
+               <img src=<%= @player_lose_picture %>> 
+           </td>
+           <% else %>
+           <td class="dash-last-game-pic1">
+               <img src=<%= @opponent_lose_picture %>>
+           </td>
+             </tr>
+             <% end %>
+          </table>
+      </div>
             <!-- ******************* End of Last Game Table ****************** -->
-
-
-
     </div>
-    <div class="large-5 columns">
+    <div class="large-5 medium-6 small-11 left columns">
       <div class="log-game-form">
         <div class="log-game-title">Log Game<div class="blue-paddle"></div></div>
           <%= form_for @game do |f| %>
@@ -108,12 +95,6 @@
   </div>
   <div class="row">
     <div class="large-7 medium-7 prof-name-wrap title-holders-column columns">
-      
-
-
-
-
-
       <table class="table-style">
         <tr>
           <td colspan="4" class = "title-holders-header">
@@ -123,25 +104,21 @@
         <!-- Title Holders Table Labels of Titles -->
         <tr>
           <td class="king-wrap">
-            
             <div class="title-holder-title">
                King of the Hill
             </div>
           </td>
           <td class="king-wrap">
-            
             <div class="title-holder-title">Biggest Loser</div>
           </td>
           <td class="king-wrap">
-            
             <div class="title-holder-title">Longest Streak</div>
           </td>
           <td class="king-wrap">
-            
             <div class="title-holder-title"> Worst Loss</div>
           </td>
         </tr>
-        <!-- Title Holders Table Pictures of Players -->
+<!-- Title Holders Table Pictures of Players -->
         <tr>
           <td class="king-wrap">
             <div>
@@ -179,7 +156,7 @@
           </td>
           <td class="king-wrap">
             <div class="king">
-              <%= link_to Player.order('losses DESC').first.last_name, Player.power_ranking.last %> - <%= Player.order('losses DESC').last.losses %>   losses
+              <%= link_to Player.order('losses DESC').first.last_name, Player.order( 'losses DESC' ).first %> - <%= Player.order('losses DESC').first.losses %>   losses
             </div>
           </td>
           <td class="king-wrap">
@@ -195,12 +172,6 @@
         </tr>
       </table>
 <!-- Latest Games Table -->
-
-
-
-
-
-
       <h1 class="title-holders">Latest Games</h1>
         <% @games.last(14).reverse.each do |game| %>
         <div class="small-12 large-6 columns last-games-column-wrapper">
