@@ -17,15 +17,16 @@
               Last Game
             </td>
             <td class="last-game-create-dash">
-              <%= @games.last.created_at.strftime(" %a, %b %d %Y") %>
+              <%= @games.last.created_at.strftime(" %a, %b %d, %Y") %>
             </td>
           </tr>
           <tr>
             <td class="dash-last-game-player-name">
               <% if @games.last.player_score > @games.last.opponent_score %>
-                <%= @games.last.player.last_name %>
+                <%= link_to @games.last.player.last_name, @games.last.player  %>
+
               <% else %>
-                <%= @games.last.opponent.last_name %>
+                <%= link_to @games.last.opponent.last_name, @games.last.opponent %>
               <% end %>
             </td>
             <td class="dash-vs">
@@ -33,20 +34,21 @@
             </td>
             <td class="dash-last-game-opponent-name">
               <% if @games.last.player_score < @games.last.opponent_score %>
-                <%= @games.last.player.last_name %>
+                <%= link_to @games.last.player.last_name, @games.last.player %>
               <% else %>
-                <%= @games.last.opponent.last_name %>
+                <%= link_to @games.last.opponent.last_name, @games.last.opponent %>
               <% end %>
             </td>
           </tr>
           <tr>
          <% if @games.last.player_score > @games.last.opponent_score %>
             <td class="dash-last-game-pic1">
-              <img src=<%= @player_win_picture %>>
+            <%= link_to(image_tag(@player_win_picture, :alt => "profile pic", :title => "profile pic"), @games.last.player) %>
             </td>
             <% else %>
               <td class="dash-last-game-pic1">
-                <img src=<%= @opponent_win_picture %>>
+                
+                <%= link_to(image_tag(@opponent_win_picture, :alt => "profile pic", :title => "profile pic"), @games.last.opponent) %>
               </td>
             <% end %>
         
@@ -59,11 +61,14 @@
             </td>
          <% if @games.last.player_score < @games.last.opponent_score %>
            <td class="dash-last-game-pic1">
-               <img src=<%= @player_lose_picture %>> 
+               
+              <%= link_to(image_tag(@player_lose_picture, :alt => "profile pic", :title => "profile pic"), @games.last.player) %>
+
            </td>
            <% else %>
            <td class="dash-last-game-pic1">
-               <img src=<%= @opponent_lose_picture %>>
+               
+              <%= link_to(image_tag(@opponent_lose_picture, :alt => "profile pic", :title => "profile pic"), @games.last.opponent) %>
            </td>
              </tr>
              <% end %>
@@ -118,26 +123,26 @@
         <tr>
           <td class="king-wrap">
             <div>
-              <%= link_to(image_tag(Player.power_ranking.first.picture_url, :class => "title-holder-pics grow-rotate", :alt => "profile pic", :title => "profile pic"), Player.power_ranking.first) %>
+              <%= link_to(image_tag(Player.power_ranking.first.picture_url, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), Player.power_ranking.first) %>
             </div>
             <!-- <span class="crown">♕</span> -->
           </td>
           <td class="king-wrap">
             <div>      
 
-               <%= link_to(image_tag(Player.order( 'losses DESC' ).first.picture_url, :class => "title-holder-pics grow-rotate", :alt => "profile pic", :title => "profile pic"), Player.order( 'losses DESC' ).first) %>
+               <%= link_to(image_tag(Player.order( 'losses DESC' ).first.picture_url, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), Player.order( 'losses DESC' ).first) %>
                <!-- <span class="skull">☠</span> -->
             </div>
           </td>
           <td class="king-wrap">
             <div>              
-              <%= link_to(image_tag(Player.order( 'win_streak DESC' ).first.picture_url, :class => "title-holder-pics grow-rotate", :alt => "profile pic", :title => "profile pic"), Player.order( 'win_streak DESC' ).first) %>
+              <%= link_to(image_tag(Player.order( 'win_streak DESC' ).first.picture_url, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), Player.order( 'win_streak DESC' ).first) %>
               <!-- <span class="up-arrow">⬆</span> -->
             </div>
           </td>
           <td class="king-wrap">
             <div>          
-              <%= link_to(image_tag(worst_loss_display_pic, :class => "title-holder-pics grow-rotate", :alt => "profile pic", :title => "profile pic"), worst_loss_player) %>
+              <%= link_to(image_tag(worst_loss_display_pic, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), worst_loss_player) %>
               <!-- <i class="fa fa-thumbs-down"></i> -->
             </div>
           </td>

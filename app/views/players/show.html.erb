@@ -21,7 +21,7 @@
       <table class="table-style-profile">
         <tr>
           <td rowspan="4">
-            <%= image_tag @player.picture_url, :class => "grow-rotate" %>  
+            <%= image_tag @player.picture_url%>  
 
           </td>
           
@@ -101,7 +101,7 @@
 
 
               <div>
-                <%= link_to image_tag(@games.get_all_recent_games_for(@player).first.player.picture_url), @games.get_all_recent_games_for(@player).first.player, class: "last-game-pic-player grow-rotate" %>
+                <%= link_to image_tag(@games.get_all_recent_games_for(@player).first.player.picture_url), @games.get_all_recent_games_for(@player).first.player, class: "last-game-pic-player" %>
               </div>
 
           </td>
@@ -140,7 +140,7 @@
 
           <div>
             
-            <%= link_to image_tag(@games.get_all_recent_games_for(@player).first.opponent.picture_url), @games.get_all_recent_games_for(@player).first.opponent, class: "last-game-pic-opponent grow-rotate" %>
+            <%= link_to image_tag(@games.get_all_recent_games_for(@player).first.opponent.picture_url), @games.get_all_recent_games_for(@player).first.opponent, class: "last-game-pic-opponent" %>
           </div>
         </td>
           <% end %>
