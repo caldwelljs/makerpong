@@ -8,14 +8,10 @@
       <!-- ******************* Last Game Table ****************** -->
 
       <div class="large-12 medium-6">
-        <table class="dash-last-game" >
-          <tr>
-            <td>
-               <% if @games.last.player_score < @games.last.opponent_score %>
-              <h2 class="dash-last-game-title" ><%= @games.last.opponent.last_name %> wins!</h2>
-              <% else %>
-              <h2 class="dash-last-game-title"><%= @games.last.player.last_name %> wins!</h2>
-              <% end %>
+        <table class="dash-last-game table-style" >
+          <tr class="last-game-rowing">
+            <td class="delete-borders">
+            
             </td>
             <td   class="mr-winner">
               Last Game
@@ -96,9 +92,9 @@
   <div class="row">
     <div class="large-7 medium-7 prof-name-wrap title-holders-column columns">
       <table class="table-style">
-        <tr>
-          <td colspan="4" class = "title-holders-header">
-            <h1 class="title-holders">Title Holders</h1>
+        <tr class="last-game-rowing">
+          <td colspan="4" class = "title-holders-header last-game-rowing">
+            <h1 class="title-holders">Title Holders</h1><!-- -->
           </td>
         </tr>
         <!-- Title Holders Table Labels of Titles -->
@@ -219,9 +215,9 @@
         <% end %>
       </div>
       <div class="large-5 grab-pic columns" >      
-        <table class="rank-table">
-          <tr class= "title-row">
-            <td class="title-holders-header" colspan="6">
+        <table class="rank-table table-style">
+          <tr class= "title-row last-game-rowing">
+            <td class="title-holders-header last-game-rowing" colspan="6">
               <h1 class="title-holders">MakerSquare Rankings</h1>
             </td>
           </tr>
