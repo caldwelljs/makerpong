@@ -78,7 +78,7 @@
              <% end %>
           </table>
       </div>
-            <!-- ******************* End of Last Game Table ****************** -->
+            <!-- ******************* Log Game Table ****************** -->
     </div>
     <div class="large-5 medium-6 small-11 left columns">
       <div class="log-game-form">
@@ -106,7 +106,9 @@
             <h1 class="title-holders">Title Holders</h1>
           </td>
         </tr>
-        <!-- Title Holders Table Labels of Titles -->
+
+
+                    <!-- Title Holders Table Labels of Titles -->
         <tr>
           <td class="king-wrap">
             <div class="title-holder-title">
@@ -127,7 +129,7 @@
         <tr>
           <td class="king-wrap">
             <div>
-              <%= link_to(image_tag(Player.power_ranking.first.picture_url, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), Player.power_ranking.first) %>
+              <%= link_to(image_tag(leaders.power_ranking.first.picture_url, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), leaders.power_ranking.first) %>
             </div>
             <!-- <span class="crown">♕</span> -->
           </td>
@@ -154,27 +156,32 @@
         <tr>
           <td class="king-wrap">
             <div class="king">
-            <%= link_to Player.power_ranking.first.last_name, Player.power_ranking.first %> - Win%: <%= Player.power_ranking.first.win_percentage %>
+            <%= link_to leaders.power_ranking.first.last_name, leaders.power_ranking.first %></br>
+            Win%: <%= leaders.power_ranking.first.win_percentage %>
             </div>
 
           </td>
           <td class="king-wrap">
             <div class="king">
-              <%= link_to biggest_loser.last_name, biggest_loser %> - Win%: <%= biggest_loser.win_percentage %>
+              <%= link_to biggest_loser.last_name, biggest_loser %></br>
+              Win%: <%= biggest_loser.win_percentage %>
             </div>
           </td>
           <td class="king-wrap">
             <div class="king">
-              <%= link_to Player.order( 'win_streak DESC').first.last_name, Player.order( 'win_streak DESC' ).first %> - <%= Player.order( 'win_streak DESC').first.win_streak %> wins
+              <%= link_to Player.order( 'win_streak DESC').first.last_name, Player.order( 'win_streak DESC' ).first %></br>
+              <%= Player.order( 'win_streak DESC').first.win_streak %> wins
             </div>
           </td>
           <td class="king-wrap">
             <div class="king">
-              <%= link_to worst_loss_player.last_name, worst_loss_player %> by <%= Game.worst_loss.first.point_margin.abs %>
+              <%= link_to worst_loss_player.last_name, worst_loss_player %></br>
+               by <%= Game.worst_loss.first.point_margin.abs %>
             </div>
           </td>
         </tr>
       </table>
+
 <!-- Latest Games Table -->
       <h1 class="title-holders">Latest Games</h1>
         <% @games.last(14).reverse.each do |game| %>
@@ -222,6 +229,9 @@
         </div>
         <% end %>
       </div>
+      
+
+<!-- Power Rankings -->
       <div class="large-5 grab-pic columns" >      
         <table class="rank-table">
           <tr class= "title-row">

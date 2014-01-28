@@ -17,13 +17,6 @@
   margin:0 0 0 0.85em;
   border-radius: 5px;
 }
-.dash-last-game-opponent-name a{
-  font-family: proxima-nova;
-  font-weight: 800;
-  text-align: center;
-  font-size: 1.7em;
-  color: #47474f;
-}
 .dash-vs{
   font-family: proxima-nova;
   font-weight: 800;
@@ -34,10 +27,25 @@
 .dash-last-game-player-name a {
   font-family: proxima-nova;
   font-weight: 800;
-  text-align: center;
+  // text-align: center;
   font-size: 1.7em;
   color: #47474f;
+  float: left;
+  left: 35%;
+  position: relative;
 }
+
+.dash-last-game-opponent-name a {
+  font-family: proxima-nova;
+  font-weight: 800;
+  // text-align: center;
+  font-size: 1.7em;
+  color: #47474f;
+  float: right;
+  right: 30%;
+  position: relative;
+}
+
 .last-game-create-dash{
   color: white;
   font-family: proxima-nova;
@@ -578,8 +586,6 @@ a.about_link:link {color:#FF0000;}
   border-bottom: solid 1px #47474f;
 
 }
-
-
 
 .league-leader-percent{
   text-align: center;

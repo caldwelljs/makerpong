@@ -10,7 +10,7 @@
           </h3> 
           <div class="the-border"></div>       
         </div>
-        <% @games.each do |game| %>
+        <% @games.order('created_at DESC').each do |game| %>
         <div class="small-10 medium-6 large-6 columns left card_column">
           <div class="recent_game dash_card_style">
             <div class="date_row">
