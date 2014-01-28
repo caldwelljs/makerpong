@@ -17,28 +17,33 @@
   margin:0 0 0 0.85em;
   border-radius: 5px;
 }
-.dash-last-game-opponent-name{
+.dash-last-game-opponent-name a{
   font-family: proxima-nova;
   font-weight: 800;
   text-align: center;
   font-size: 1.7em;
+  color: #47474f;
 }
 .dash-vs{
   font-family: proxima-nova;
   font-weight: 800;
   text-align: center;
   font-size: 1.7em;
+  color: #47474f;
 }
-.dash-last-game-player-name{
+.dash-last-game-player-name a {
   font-family: proxima-nova;
   font-weight: 800;
   text-align: center;
   font-size: 1.7em;
+  color: #47474f;
 }
 .last-game-create-dash{
   color: white;
+  font-family: proxima-nova;
   text-align: center;
 }
+
 .mr-winner{
   color: white;
   font-size: 1.3em;
@@ -50,6 +55,8 @@
 .dash-last-game{
   width: 100%;
   background-color: #47474F;
+  border-spacing: 0 !important;
+
 }
 .dash-last-game-title{
   color: white;
