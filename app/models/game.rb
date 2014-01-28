@@ -15,6 +15,7 @@
   end
 
   after_create :logresults, :streak, :margin
+  after_update :logresults, :streak, :margin
 
   def logresults
     if self.player_score > self.opponent_score 

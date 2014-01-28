@@ -14,7 +14,7 @@
         <div class="small-10 medium-6 large-6 columns left card_column">
           <div class="recent_game dash_card_style">
             <div class="date_row">
-              <%= game.created_at.strftime("%a, %b %d, %Y") %>
+              <%= link_to game.created_at.strftime("%a, %b %d, %Y"), game %>
             </div>
             <div class="row player_row">
               <div class="game_card_pic small-2 medium-2 large-2 columns card_pic">
