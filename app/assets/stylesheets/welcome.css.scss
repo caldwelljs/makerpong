@@ -26,6 +26,7 @@
   text-align: center;
   font-size: 1.7em;
   color: #47474f;
+  margin-left: 2em;
 }
 .dash-vs{
   font-family: proxima-nova;
@@ -37,7 +38,7 @@
 .dash-last-game-player-name a {
   font-family: proxima-nova;
   font-weight: 800;
-  text-align: center;
+  margin-left: 2.2em;
   font-size: 1.7em;
   color: #47474f;
 }
@@ -587,11 +588,17 @@ a.about_link:link {color:#FF0000;}
   font-size: 1em;
 }
 .last-game-rowing{
-  background-color: #001759;
+  background-color: #003174;
 }
 
 .delete-borders{
-  border:none;
+  height: 4em;
+}
+.last-game-time{
+  margin-top: 2em;
+  color: #47474F;
+  font-family: proxima-nova;
+  font-size: 0.4em;
 }
 
 

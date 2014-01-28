@@ -17,7 +17,7 @@
               Last Game
             </td>
             <td class="last-game-create-dash">
-              <%= @games.last.created_at.strftime(" %a, %b %d, %Y") %>
+              
             </td>
           </tr>
           <tr>
@@ -58,6 +58,7 @@
               <% else %>
                 <%= @games.last.opponent_score %> - <%= @games.last.player_score %>
               <% end %>
+              <div class="last-game-time"><%= @games.last.created_at.strftime(" %a, %b %d, %Y") %></div>
             </td>
          <% if @games.last.player_score < @games.last.opponent_score %>
            <td class="dash-last-game-pic1">
