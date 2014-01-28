@@ -23,6 +23,12 @@ module ApplicationHelper
   def last_name
   end
 
+  def leaders
+    Player.where('wins + losses >= ?', 5)
+  end
+
+
+
   # def profile_pic_display
   #   if player.picture_url.empty?
   #     # images/default_profile_pic_big.jpg
