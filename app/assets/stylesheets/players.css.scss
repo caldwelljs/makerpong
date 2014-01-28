@@ -68,7 +68,7 @@
 .profile-last-game-table-top-middle {
   // background-color: #47474f;
   // width: 40%;
-
+  padding: 0;
 }
 
 .profile-last-game-table-top-right {
@@ -79,9 +79,9 @@
 
 .profile-last-game-title {
   color: white;
-  font-family: "proxima-nova";
-  font-weight: 500;
   font-size: 2em;
+  font-family: proxima-nova;
+  font-weight: 800;
   text-align: center;
 //   margin-left: 1em;
 //   position: absolute;
@@ -1011,5 +1011,5 @@
   font-family: proxima-nova;
   font-size: 1.4em;
   font-weight: 700;
-
+  margin-left: 7.4em;
  }
