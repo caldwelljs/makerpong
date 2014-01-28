@@ -52,6 +52,7 @@ $(document).ready(function() {
     	$('.form-wrap').fadeOut();
          return false;
     });
+
 	});
     $('.top-right-links a.active').on('click', function(){
     	$(this).removeClass('active');
@@ -76,3 +77,4 @@ $(document).ready(function() {
 //     $( this ).find( "span:last" ).remove();
 //   }
 // );
+

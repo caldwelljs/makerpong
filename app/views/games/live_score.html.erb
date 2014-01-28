@@ -2,58 +2,109 @@
   <div class="row small-offset-1">
     <%= render "layouts/header" %>
   </div>
-  <div class="row gameBlock">  
-    <div class="small-5 medium-5 medium-5 small-offset-1 columns playerCard">
-      <div class="changeScore leftScoreChange" id="increasePlayer1">
-        <div>+</div>
+    <div class="container">
+      <div class="row">
+        <div class="small-5 medium-5 large-5 small-offset-1 columns">
+          <div class="playerCard">
+            <div class="changeScore leftScoreChange" id="increasePlayer1">
+              <div>+</div>
+            </div>
+            <div class="scoreCard player1block" id="player_1_score">
+              <span>0</span>
+            </div>
+            <div class="changeScore leftScoreChange" id="decreasePlayer1">
+              <div>-</div>
+            </div>
+          </div>
+        </div>
+        <div class="small-5 medium-5 large-5 columns">
+          <div class="playerCard">
+            <div class="changeScore player2ScoreChange" id="increasePlayer2">
+              <div>+</div>
+            </div>
+            <div class="scoreCard player2block" id="player_2_score">
+              <span>0</span>
+            </div>
+            <div class="changeScore player2ScoreChange" id="decreasePlayer2">
+              <div>-</div>
+            </div>
+          </div>
+        </div>
+        <div class="small-1 medium-1 large-1 columns">
+          <a href="#" class="navText newGame" data-reveal-id="myModal">New Game</a>
+          <a href="#" class="navText" id="restartGame">Restart</a>
+        </div>
       </div>
-      <div class="scoreCard player1block" id="player_1_score">
-        <div class="score">0</div>
+      <div class="row">
+        <div class="small-5 medium-5 large-5 small-offset-1 columns">
+          <p class="player" id="player1">
+            Player 1
+          </p>
+        </div>
+        <div class="small-5 medium-5 large-5 columns">
+          <p class="player" id="player2">
+            Player 2
+          </p>
+        </div>
+        <div class="small-1 medium-1 large-1 columns">
+        </div>
       </div>
-      <div class="changeScore leftScoreChange" id="decreasePlayer1">
-        <div>-</div>
-      </div>
-    </div>
-    <div class="small-5 medium-5 large-5 columns playerCard">
-      <div class="changeScore player2ScoreChange" id="increasePlayer2">
-        <div>+</div>
-      </div>
-      <div class="scoreCard player2block" id="player_2_score">
-        <div class="score">0</div>
-      </div>
-      <div class="changeScore player2ScoreChange" id="decreasePlayer2">
-        <div>-</div>
-      </div>
-    </div>
-    <div class="small-1 medium-1 large-1 columns playerCard">
-      <div class="navLinks">
-        New Game
-      </div>
-      <div class="navLinks">
-        Restart
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="small-5 medium-5 large-5 small-offset-1 columns">
-      <p class="player" id="player1">
-        Player 1
-      </p>
-    </div>
-    <div class="small-5 medium-5 large-5 columns">
-      <p class="player" id="player2">
-        Player 2
-      </p>
-    </div>
-    <div class="small-1 medium-1 large-1 columns">
-    </div>
-  </div>
 
-  <div class="row">
-    <div class="small-12 medium-12 large-12 columns">
-      <h3 class="game-title">
-        Ping Pong Matchup
-      </h3>
-    </div>
+      <div class="row">
+        <div class="small-12 medium-12 large-12 columns">
+          <h3 class="game-title">
+            Ping Pong Matchup
+          </h3>
+        </div>
+      </div>
   </div>
+</div>
+
+
+
+<div id="myModal" class="reveal-modal" data-reveal>
+  <h2>Choose Your Players</h2>
+      <div class="player_selection">
+        <div class="row">
+          <%= form_for @game do |f| %>
+
+            <%= f.collection_select :player_id, Player.all, :id, :name, prompt: "Choose Player 1" %>
+
+            <%= f.collection_select :opponent_id, Player.all, :id, :name, prompt: "Choose Player 2" %>
+
+            <div class="start_game_button button">Start Game</a> 
+            <% end %>
+          </div>
+        </div>
+      </div>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+
+<div id="myModal2" class="reveal-modal" data-reveal>
+  
+  <div class="results-popup"><span class="results-modal-winner">Player</span> wins!</div>
+    <div class="results-modal">
+      <div class="results-modal-scores">
+        <span class="results-modal-player-name">Player 1</span>  
+        <span class="results-modal-player-score">0</span>    -    
+        <span class="results-modal-opponent-score">0</span>   
+        <span class="results-modal-opponent-name">Player 2</span>
+      </div> 
+    </div>
+    <h2 class="results-modal-title">Want to log your game?</h2>
+      <div class="player_selection">
+        <div class="row">
+        </div>
+          <%= form_for @game do |f| %>
+            <%= f.hidden_field :player_id %>
+            <%= f.hidden_field :opponent_id %>
+            <%= f.hidden_field :player_score %><br />
+            <%= f.hidden_field :opponent_score %><br />
+            <%= f.submit 'Log Game', :class => "button live-score-log-button" %>
+          <% end %>
+        <a class="close-reveal-modal">&#215;</a>  
+        </div>
+      </div>
+  
 </div>
