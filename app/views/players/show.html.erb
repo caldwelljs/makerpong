@@ -21,7 +21,7 @@
       <table class="table-style-profile">
         <tr>
           <td rowspan="4">
-            <%= image_tag @player.picture_url %>  
+            <%= image_tag @player.picture_url, :class => "grow-rotate" %>  
 
           </td>
           
@@ -101,7 +101,7 @@
 
 
               <div>
-                <%= link_to image_tag(@games.get_all_recent_games_for(@player).first.player.picture_url), @games.get_all_recent_games_for(@player).first.player, class: "last-game-pic-player" %>
+                <%= link_to image_tag(@games.get_all_recent_games_for(@player).first.player.picture_url), @games.get_all_recent_games_for(@player).first.player, class: "last-game-pic-player grow-rotate" %>
               </div>
 
           </td>
@@ -140,7 +140,7 @@
 
           <div>
             
-            <%= link_to image_tag(@games.get_all_recent_games_for(@player).first.opponent.picture_url), @games.get_all_recent_games_for(@player).first.opponent, class: "last-game-pic-opponent" %>
+            <%= link_to image_tag(@games.get_all_recent_games_for(@player).first.opponent.picture_url), @games.get_all_recent_games_for(@player).first.opponent, class: "last-game-pic-opponent grow-rotate" %>
           </div>
         </td>
           <% end %>
@@ -179,7 +179,7 @@
           </tr>
         <% else %>
           <% @games.get_all_recent_games_for(@player).first(10).each do |game| %>
-            <tr>
+            <tr class="recent-games-rollover">
               <td>
                 <div class="many-dates"> <%= game.created_at.strftime(" %a, %b %d, %Y") %></div>
               </td>

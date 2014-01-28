@@ -161,26 +161,26 @@
         <tr>
           <td class="king-wrap">
             <div>
-              <%= link_to(image_tag(Player.power_ranking.first.picture_url, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), Player.power_ranking.first) %>
+              <%= link_to(image_tag(Player.power_ranking.first.picture_url, :class => "title-holder-pics grow-rotate", :alt => "profile pic", :title => "profile pic"), Player.power_ranking.first) %>
             </div>
             <!-- <span class="crown">♕</span> -->
           </td>
           <td class="king-wrap">
             <div>      
 
-               <%= link_to(image_tag(Player.order( 'losses DESC' ).first.picture_url, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), Player.order( 'losses DESC' ).first) %>
+               <%= link_to(image_tag(Player.order( 'losses DESC' ).first.picture_url, :class => "title-holder-pics grow-rotate", :alt => "profile pic", :title => "profile pic"), Player.order( 'losses DESC' ).first) %>
                <!-- <span class="skull">☠</span> -->
             </div>
           </td>
           <td class="king-wrap">
             <div>              
-              <%= link_to(image_tag(Player.order( 'win_streak DESC' ).first.picture_url, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), Player.order( 'win_streak DESC' ).first) %>
+              <%= link_to(image_tag(Player.order( 'win_streak DESC' ).first.picture_url, :class => "title-holder-pics grow-rotate", :alt => "profile pic", :title => "profile pic"), Player.order( 'win_streak DESC' ).first) %>
               <!-- <span class="up-arrow">⬆</span> -->
             </div>
           </td>
           <td class="king-wrap">
             <div>          
-              <%= link_to(image_tag(worst_loss_display_pic, :class => "title-holder-pics", :alt => "profile pic", :title => "profile pic"), worst_loss_player) %>
+              <%= link_to(image_tag(worst_loss_display_pic, :class => "title-holder-pics grow-rotate", :alt => "profile pic", :title => "profile pic"), worst_loss_player) %>
               <!-- <i class="fa fa-thumbs-down"></i> -->
             </div>
           </td>
@@ -283,7 +283,7 @@
             </td>           
           </tr>
           <% Player.power_ranking.first(20).each do |player| %>
-          <tr>
+          <tr class="dash-ranking-rollover">
             <td>
               <h3 class="ranking-items">
                 <%= ordinalize Player.power_ranking.find_index(player) + 1 %>
