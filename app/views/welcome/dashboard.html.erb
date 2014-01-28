@@ -129,7 +129,7 @@
           <td class="king-wrap">
             <div>      
 
-               <%= link_to(image_tag(Player.order( 'losses DESC' ).first.picture_url, :class => "title-holder-pics grow-rotate", :alt => "profile pic", :title => "profile pic"), Player.order( 'losses DESC' ).first) %>
+               <%= link_to(image_tag(biggest_loser.picture_url, :class => "title-holder-pics grow-rotate", :alt => "profile pic", :title => "profile pic"), biggest_loser) %>
                <!-- <span class="skull">☠</span> -->
             </div>
           </td>
@@ -150,13 +150,13 @@
         <tr>
           <td class="king-wrap">
             <div class="king">
-            <%= link_to Player.power_ranking.first.last_name, Player.power_ranking.first %> - <%= Player.power_ranking.first.win_percentage %>
+            <%= link_to Player.power_ranking.first.last_name, Player.power_ranking.first %> - Win%: <%= Player.power_ranking.first.win_percentage %>
             </div>
 
           </td>
           <td class="king-wrap">
             <div class="king">
-              <%= link_to Player.order('losses DESC').first.last_name, Player.order( 'losses DESC' ).first %> - <%= Player.order('losses DESC').first.losses %>   losses
+              <%= link_to biggest_loser.last_name, biggest_loser %> - Win%: <%= biggest_loser.win_percentage %>
             </div>
           </td>
           <td class="king-wrap">
