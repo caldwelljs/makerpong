@@ -1,7 +1,7 @@
 
 // General and Welcome#Index styling
 .panel-hover:hover{
-  background:red;
+
 }
 .dash-last-game-score{
   background: white;
@@ -69,12 +69,14 @@
 }
 
 .dash-ranking-rollover:hover td {
-  background-color: #a9eaed;
+  box-shadow: 0 0 5px 2px #fff , 0 0 5px 1px rgba(0, 0, 0, 0.3) inset;
+
 }
 
 .log-game-form {
   // padding-top: 1em;
   // padding: 0.2em 0.2em 2em; 
+  width: 85%;
   margin: 9.75em 2em 0.5em 3em;
   // padding-left: 3em;
   // padding-bottom: 1em;
@@ -121,7 +123,7 @@
   border-radius: 5px;
   border: none;
   color: #ffffff;
-  width: 2em;
+  width: 1.5em;
 }
 
 #choose-player2, #choose-player1 {
@@ -455,6 +457,10 @@ a.about_link:link {color:#FF0000;}
   padding-bottom: 5px;
   border-bottom: solid 1px #A5A5A5;
   margin-bottom: 10px;
+}
+
+.date_row a {
+  color: #4b4b4b;
 }
 
 .dash-title-pic {

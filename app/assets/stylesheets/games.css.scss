@@ -55,6 +55,32 @@
 }
 
 
+// ----------------------------------  Game Show Styling  ----------------------------------
+.game-show-name {
+  font-size: 3em;
+  margin-top: 1em;
+  color: #fff;
+}
+
+.vs-after-game{
+  font-weight: 800;
+  color: white;
+  font-size: 3em;
+  width: 1em;
+  margin: 1em auto 0 auto;
+  display: block;
+}
+
+.show-player-name {
+  text-align: right;
+  margin-right: 1em;
+}
+
+.show-opponent-name {
+  text-align: left;
+  margin-left: 1em;
+}
+
 .the-border-after-game{
   // border: 0.07em solid #56645C;
   width: 100%;
@@ -71,14 +97,7 @@
   padding: 0;
   // box-shadow: 0 0 30px 10px #fff , 0 0 5px 2px rgba(0, 0, 0, 0.5) inset;
 }
-.vs-after-game{
-  font-weight: 800;
-  color: white;
-  font-size: 3em;
-  width: 1em;
-  margin: 2.84em auto 0 auto;
-  display: block;
-}
+
 .opponent-after-game-name{
   font-weight: 800;
   color: white;
@@ -87,32 +106,38 @@
   margin-bottom: 0.3em;
   text-align: right;
 }
+
 label .pic_upload_label {
   margin-top: 5em;
 }
+
 .who-won{
   font-weight: 800;
   color: #FFFED4;
   font-size: 2.6em;
-  margin-top: 1.6em;
+  margin-top: 1em;
   margin-bottom: 1em;
   text-align: center;
 }
-.final-after-game{
-  color: white;
-  font-size: 1.7em;
-  margin: 0 0 0 1.5em;
-}
+
 .first-row-after-game{
   background: linear-gradient(left, black, #4E4E4E);
-  background: -webkit-linear-gradient(left, black, #4E4E4E);
-  
+  background: -webkit-linear-gradient(left, black, #4E4E4E); 
 }
+
+.date-after-game{
+  color: white;
+  font-size: 1.3em;
+  text-align: right;
+  margin-right: 1em;
+}
+
 .first-data-after-game{
   width: 90em;
   height: 0.5em;
   position: relative;
 }
+
 .playerscore1-after-game{
   position: absolute;
   right: 0.8em;
@@ -121,38 +146,16 @@ label .pic_upload_label {
   color: #252525;
   font-size: 4.6em;
 }
+
 .record1-after-game{
   position: absolute;
   top: 2.15em;
   left: 6.5em;
 }
-.t-after-game{
-  color: white;
-  position: absolute;
-  top: 0.25em;
-  right: 2.6em;
-  font-weight: bold;
-  font-size: 2em;
-}
-
-
-.date-after-game{
-  color: white;
-  // position: absolute;
-  // left: 22.8em;
-  // top: 0.6em;
-  font-size: 1.3em;
-  text-align: center;
-}
-.second-row-after-game{
-  // background: linear-gradient(top, white, #FEFEFE);
-  // background: -webkit-linear-gradient(top, white, #FEFEFE);
-
-}
 
 .second-data-after-game{
   width: 90em;
-  height: 13em;
+  height: 10em;
   // background-color: black;
   background: -webkit-linear-gradient(top, white, #FEFEFE);
   background: linear-gradient(top, white, #FEFEFE);
@@ -165,37 +168,42 @@ label .pic_upload_label {
   height: 8em;
   border-radius: 5px;
 }
+
 .third-data-after-game img{
   width: 8em;
   height: 8em;
   border-radius: 5px;
 }
+
 .third-row-after-game{
   // background: linear-gradient(top, white, #FEFEFE);
-  // background: -webkit-linear-gradient(top, white, #FEFEFE);
-  
+  // background: -webkit-linear-gradient(top, white, #FEFEFE);  
   border-bottom: 1px solid red;
 }
+
 .third-data-after-game{
   width: 90em;
-  height: 13em;
+  height: 10em;
   // background-color: black;
   // background: -webkit-linear-gradient(top, #F5F5F5, #FEFEFE);
   // background: linear-gradient(top, #F5F5F5, #FEFEFE);
   background-color: #F5F5F5;
   position: relative;
 }
+
 .fourth-data-after-game{
   height: 6.5em;
   background-color: white;
   position: relative;
   border-top: 1px solid #E3E3E3;
 }
+
 .comment-after-game{
   color: #2A69BC;
   font-family: "proxima-nova";
   font-weight: 800;
 }
+
 .name1-after-game{
   font-family: "proxima-nova";
   font-weight: 800;
@@ -204,28 +212,33 @@ label .pic_upload_label {
   top: 1em;
   left: 4em;
 }
+
 .winner h1{
 	  font-family: "hwt-american-outline";
 	  color: white;
 	  float: left;
 	  margin-left: -0.5em;
 }
+
 .loser h1{
 	font-family: "hwt-american-outline";
 	color: white;
 	float: right;
 }
+
 .after-game-stats{
 	font-family: "proxima-nova";
 	font-weight: 800;
 	text-align: center;
 }
+
 .after-game-options a{
 	font-family: "proxima-nova";
 	font-weight: 800;
 	font-size: 2.5em;
 	color: white;
 }
+
 .after-game-options{
 	text-align: center;
 }
@@ -246,16 +259,16 @@ label .pic_upload_label {
   left: 0;
   background: linear-gradient(black, transparent 70%);
 }
+
 .after-game-row {
   padding: 15px 15px;
-  
   // border-radius: 3px;
-
   background-color: #EBEBEB;
   // border: solid 4px #ffffff;
   border-bottom-width: 2px;
   box-shadow: 0 1px 1px rgba(0,0,0,0.2);
 }
+
 .right-after-game-pic{
   min-height: 100%;
   opacity: 1;
