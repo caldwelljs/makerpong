@@ -377,19 +377,8 @@ label .pic_upload_label {
   //   color:#000000;
   //   }
 
-  .game_index_name {
-    margin-top: 15px;
-  }
-
-.game_index_name a {
+.game_index_name {
   margin-top: 15px;
-  color: #47474f;
-  font-weight: 500;
-  font-family: "proxima-nova";
-}
-
-.game_index_name a:hover {
-  border-bottom: solid 1px #47474f;
 }
 
 .game_index_score {
@@ -532,20 +521,13 @@ label .pic_upload_label {
   text-align: center;
   color: #47474f;
   padding-top: 1em;
-  font-size: 2.25em;
+  font-size: 1.3em;
 }
 
 .results-modal-title {
   padding-top: 1em;
   font-family: "proxima-nova", "Helvetica Neue", helvetica, arial, sans-serif;
   color: #47474f;
-}
-
-.results-score-card {
-  border: 1px solid #333333;
-  padding: 0.75em;
-  border-bottom-width: 2px;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
 }
 
 .live-score-log-button {
