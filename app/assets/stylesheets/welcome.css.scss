@@ -71,17 +71,92 @@
 
 .log-game-form {
   // padding-top: 1em;
-  padding: 0.2em 0.2em 2em; 
-  margin: 0 2em 0.5em 3em;
-  margin-left: 3em;
-  margin-right: 2em;
-  padding-left: 3em;
-  padding-bottom: 1em;
+  // padding: 0.2em 0.2em 2em; 
+  margin: 9.75em 2em 0.5em 3em;
+  // padding-left: 3em;
+  // padding-bottom: 1em;
   border-radius: 5px;
   -webkit-box-shadow: 0 1px 5px #ffffff;
   -moz-box-shadow: 0 1px 5px #ffffff;
   border: 1px solid #fff;
 }
+
+
+.log-game-title{
+  font-family: "hotel-open";
+  color: #A9EAED;
+  font-size: 1.25em; 
+  text-align: center;
+  margin: 1em 0 0.75em 0;
+}
+
+.log-new-game{
+  background-color: #cd3831;
+  color: white;
+  margin-left: 2em;
+}
+
+// For logging game on form partial
+.log-game-submit input{
+  width: 12em;
+  height: 4em;
+  background-color: #8EBDC9;
+  color: white;
+  margin-left: 9.25em;
+}
+
+
+.choose-player {
+  font-family: "proxima-nova", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin-left: 3.2em;
+  width: 9em;
+  float: left;
+}
+
+
+#input-player2-score, #input-player1-score {
+  border-radius: 5px;
+  border: none;
+  color: #ffffff;
+  width: 2em;
+}
+
+#choose-player2, #choose-player1 {
+  width: auto; 
+}
+
+
+.player-score-field{
+  float: left;
+  width: 3em;
+  margin-left: 0.7em;
+}
+
+.log-a-game-button  {
+   // border-top: 1px solid #96d1f8;
+   background-color: rgba(255,255,255,0.3);
+   color: white;
+   border-spacing: 0 !important;
+   border-radius: 5px;
+   border-style: none;
+   box-shadow: 2px 2px 2px #888888;
+   font-size: 14px;
+   font-family: "proxima-nova";
+   text-decoration: none;
+   vertical-align: middle;
+   padding: 11.5px 23px;
+   margin-left: 7em;
+   // margin-right: 8em;
+   }
+.log-a-game-button:hover {
+   border-top-color: #28597a;
+   background-color: rgba(255,255,255,0.6);
+   color: grey;
+   }
+.log-a-game-button:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
 
 .or-style {
   text-align: center;
@@ -104,71 +179,6 @@
     padding: 11.5px 23px;
     margin-left: 8em;
 }
-
-.dash-first-col{
-  // position: relative;
-}
-
-.dash-second-col{
-  // position: relative;
-}
-
-.choose-player{
-  width: 9em;
-  float: left;
-
-  // position: absolute;
-  // right: 11em;
-  // bottom: 0.35em;
-}
-.choose-player{
-  width: 9em;
-  float: left;
-  // position: absolute;
-  // right: 0em;
-  // bottom: 0.35em;
-}
-
-.player-score-field{
-  float: left;
-  width: 3em;
-  margin-left: 0.7em;
-}
-
-.log-a-game-button  {
-   // border-top: 1px solid #96d1f8;
-   background-color: rgba(255,255,255,0.3);
- 
-   color: white;
-   border-spacing: 0 !important;
-   border-radius: 5px;
-   border-style: none;
-   box-shadow: 2px 2px 2px #888888;
-   font-size: 14px;
-   font-family: "proxima-nova";
-   text-decoration: none;
-   vertical-align: middle;
-   padding: 11.5px 23px;
-   margin-left: 3.75em;
-   // margin-right: 8em;
-   }
-.log-a-game-button:hover {
-   border-top-color: #28597a;
-   background-color: rgba(255,255,255,0.6);
-   color: grey;
-   }
-.log-a-game-button:active {
-   border-top-color: #1b435e;
-   background: #1b435e;
-   }
-
-
-
-
-
-
-
-
 
 
 .page-wrapping{

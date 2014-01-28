@@ -4,6 +4,89 @@
     <div class="large-7 columns dash-first-col  prof-name-wrap columns">
       <h1 class="profile-name">League MakerSquare</h1>
       <div class="the-border"></div>
+      <!-- ******************* Last Game Table ****************** -->
+
+
+      <table class="dash-last-game" >
+        <tr>
+          <td>
+             <% if @games.last.player_score < @games.last.opponent_score %>
+            <h2 class="dash-last-game-title" ><%= @games.last.opponent.last_name %> wins!</h2>
+            <% else %>
+            <h2 class="dash-last-game-title"><%= @games.last.player.last_name %> wins!</h2>
+            <% end %>
+          </td>
+          <td   class="mr-winner">
+            Last Game
+          </td>
+          <td class="last-game-create-dash">
+            <%= @games.last.created_at.strftime(" %a, %b %d %Y") %>
+          </td>
+        </tr>
+        <tr>
+          <td class="dash-last-game-player-name">
+            <% if @games.last.player_score > @games.last.opponent_score %>
+              <%= @games.last.player.last_name %>
+            <% else %>
+              <%= @games.last.opponent.last_name %>
+            <% end %>
+          </td>
+          <td class="dash-vs">
+            VS
+          </td>
+
+
+      <!-- *********************************************** -->
+          <td class="dash-last-game-opponent-name">
+            <% if @games.last.player_score < @games.last.opponent_score %>
+              <%= @games.last.player.last_name %>
+            <% else %>
+              <%= @games.last.opponent.last_name %>
+            <% end %>
+          </td>
+        </tr>
+        <tr>
+       <% if @games.last.player_score > @games.last.opponent_score %>
+          <td class="dash-last-game-pic1">
+            <img src=<%= @player_win_picture %>>
+          </td>
+          <% else %>
+          <td class="dash-last-game-pic1">
+          <img src=<%= @opponent_win_picture %>>
+          </td>
+          <% end %>
+
+          <td class="dash-last-game-score">
+              <% if @games.last.player_score > @games.last.opponent_score %>
+                <%= @games.last.player_score %> - <%= @games.last.opponent_score %>
+              <% else %>
+                <%= @games.last.opponent_score %> - <%= @games.last.player_score %>
+          </td>
+            <% end %>
+
+       <% if @games.last.player_score < @games.last.opponent_score %>
+         <td class="dash-last-game-pic1">
+             <img src=<%= @player_lose_picture %>> 
+         </td>
+         <% else %>
+         <td class="dash-last-game-pic1">
+             <img src=<%= @opponent_lose_picture %>>
+         </td>
+           </tr>
+           <% end %>
+        </table>
+
+
+                
+
+
+
+
+
+            <!-- ******************* End of Last Game Table ****************** -->
+
+
+
     </div>
     <div class="large-5 columns">
       <div class="log-game-form">
@@ -26,114 +109,6 @@
   <div class="row">
     <div class="large-7 medium-7 prof-name-wrap title-holders-column columns">
       
-
-<!-- ******************* Last Game Table ****************** -->
-
-
-<table class="dash-last-game" >
-  <tr>
-    <td>
-       <% if @games.last.player_score < @games.last.opponent_score %>
-      <h2 class="dash-last-game-title" ><%= @games.last.opponent.last_name %> wins!</h2>
-      <% else %>
-      <h2 class="dash-last-game-title"><%= @games.last.player.last_name %> wins!</h2>
-      <% end %>
-      
-    </td>
-    <td   class="mr-winner">
-      Last Game
-    </td>
-    <td class="last-game-create-dash">
-      <%= @games.last.created_at.strftime(" %a, %b %d %Y") %>
-    </td>
-  </tr>
-  <tr>
-    <td class="dash-last-game-player-name">
-      <% if @games.last.player_score > @games.last.opponent_score %>
-        <%= @games.last.player.last_name %>
-      <% else %>
-        <%= @games.last.opponent.last_name %>
-      <% end %>
-    </td>
-    <td class="dash-vs">
-      VS
-    </td>
-
-
-<!-- *********************************************** -->
-    <td class="dash-last-game-opponent-name">
-      <% if @games.last.player_score < @games.last.opponent_score %>
-        <%= @games.last.player.last_name %>
-      <% else %>
-        <%= @games.last.opponent.last_name %>
-      <% end %>
-    </td>
-  </tr>
-  <tr>
- <% if @games.last.player_score > @games.last.opponent_score %>
-    <td class="dash-last-game-pic1">
-      <img src=<%= @player_win_picture %>>
-    </td>
-    <% else %>
-    <td class="dash-last-game-pic1">
-    <img src=<%= @opponent_win_picture %>>
-    </td>
-    <% end %>
-<!--   <td class="dash-last-game-pic1">
-    <img src=<%= @games.last.player.picture_url %>>
-  </td> -->
-
-
-
- <td class="dash-last-game-score">
-      <% if @games.last.player_score > @games.last.opponent_score %>
-          <%= @games.last.player_score %> - <%= @games.last.opponent_score %>
-        <% else %>
-          <%= @games.last.opponent_score %> - <%= @games.last.player_score %>
-    </td>
-    <% end %>
-
-  <!--  <td class="dash-last-game-pic1">
-      <img src=<%= @games.last.opponent.picture_url %>>
-    </td> -->
-
-
- <% if @games.last.player_score < @games.last.opponent_score %>
-   <td class="dash-last-game-pic1">
-     
-     
-       <img src=<%= @player_lose_picture %>> 
-     
-   </td>
-   <% else %>
-   <td class="dash-last-game-pic1">
-
-       <img src=<%= @opponent_lose_picture %>>
-   </td>
-     </tr>
-     <% end %> 
-
-
- 
-
-
-    
-  </tr>
-</table>
-
-
-    
-
-
-
-
-
-<!-- ******************* End of Last Game Table ****************** -->
-
-
-
-
-
 
 
 
