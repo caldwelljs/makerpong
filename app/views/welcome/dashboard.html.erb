@@ -4,128 +4,119 @@
     <div class="large-7 columns dash-first-col  prof-name-wrap columns">
       <h1 class="profile-name">League MakerSquare</h1>
       <div class="the-border"></div>
+      
+      <!-- ******************* Last Game Table ****************** -->
+
+
+      <table class="dash-last-game" >
+        <tr>
+          <td class="dash-last-game-title">
+            Last Game
+          </td>
+          <td>
+           <% if @games.last.player_score < @games.last.opponent_score %>
+          <h2 class="mr-winner"><%= @games.last.player.last_name %> wins!</h2>
+          <% else %>
+          <h2 class="mr-winner"><%= @games.last.opponent.last_name %> wins!</h2>
+          <% end %>
+
+
+          </td>
+          <td class="last-game-create-dash">
+            <%= @games.last.created_at.strftime(" %a, %b %d %Y") %>
+          </td>
+        </tr>         
+        <tr>
+          <td class="dash-last-game-player-name">
+            <%= @games.last.player.last_name %>
+          </td>
+          <td class="dash-vs">
+            VS
+          </td>
+          <td class="dash-last-game-opponent-name">
+            <%= @games.last.opponent.last_name %>
+          </td>
+        </tr>
+        <tr>
+      <!--     <% if @games.last.player_score < @games.last.opponent_score %>
+          <td class="dash-last-game-pic1">
+            <img src=<%= [@games.last.player.winning_pic1, @games.last.player.winning_pic2, @games.last.player.winning_pic3].sample %>>
+          </td>
+          <% else %>
+          <td class="dash-last-game-pic1">
+          <img src=<%= [@games.last.opponent.winning_pic1, @games.last.opponent.winning_pic2, @games.last.opponent.winning_pic3].sample %>>
+          </td>
+          <% end %> -->
+        <td class="dash-last-game-pic1">
+          <img src=<%= @games.last.player.picture_url %>>
+        </td>
+
+
+
+       <td class="dash-last-game-score">
+            <%= @games.last.player_score %> - <%= @games.last.opponent_score %>
+          </td>
+
+          <td class="dash-last-game-pic1">
+            <img src=<%= @games.last.opponent.picture_url %>>
+          </td>
+
+
+      <!--  <% if @games.last.player_score > @games.last.opponent_score %>
+         <td class="dash-last-game-pic1">
+           
+           
+             <img src=<%= [@games.last.player.losing_pic1, @games.last.player.losing_pic2, @games.last.player.losing_pic3].sample %>> 
+           
+         </td>
+         <% else %>
+         <td class="dash-last-game-pic1">
+             <img src=<%= [@games.last.opponent.losing_pic1, @games.last.opponent.losing_pic2, @games.last.opponent.losing_pic3].sample %>>
+         </td>
+           <% end %> 
+       -->
+
+        <td>
+          
+        </td>
+
+
+          
+        </tr>
+      </table>
+
+
+          
+
+
+
+
+
+      <!-- ******************* End of Last Game Table ****************** -->
+
+
+
+
     </div>
     <div class="large-5 columns">
       <div class="log-game-form">
         <div class="log-game-title">Log Game<div class="blue-paddle"></div></div>
           <%= form_for @game do |f| %>
-            <div class="choose-player"><%= f.collection_select :player_id, Player.all, :id, :name, prompt: "Choose Player 1" %></div>
-            <div class="player-score-field" ><%= f.text_field :opponent_score %></div> 
-        <div class="choose-player"><%= f.collection_select :opponent_id, Player.all, :id, :name, prompt: "Choose Player 2" %></div>
-        <div class="player-score-field" ><%= f.text_field :player_score %></div>
+            <div class="choose-player" id="choose-player1"><%= f.collection_select :player_id, Player.all, :id, :name, prompt: "Choose Player 1" %></div>
+            <div class="player-score-field" id="input-player1-score"><%= f.text_field :opponent_score %></div> 
+        <div class="choose-player" id="choose-player2"><%= f.collection_select :opponent_id, Player.all, :id, :name, prompt: "Choose Player 2" %></div>
+        <div class="player-score-field" id="input-player2-score"><%= f.text_field :player_score %></div>
         <button class="log-a-game-button">Submit</button>
         <% end %>
       </div>
       <div class="or-style">- or -</div>
       <div class="small-centered">
-        <%= link_to 'Live Score a Game', live_score_path, class: "button live-score-link"%>
+        <%= link_to 'Score a Game Live', live_score_path, class: "button live-score-link"%>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="large-7 medium-7 prof-name-wrap title-holders-column columns">
-      
-
-<!-- ******************* Last Game Table ****************** -->
-
-
-<table class="dash-last-game" >
-  <tr>
-    <td class="dash-last-game-title">
-      Last Game
-    </td>
-    <td>
-     <% if @games.last.player_score < @games.last.opponent_score %>
-    <h2 class="mr-winner"><%= @games.last.player.last_name %> wins!</h2>
-    <% else %>
-    <h2 class="mr-winner"><%= @games.last.opponent.last_name %> wins!</h2>
-    <% end %>
-
-
-
-
-
-
-    </td>
-    <td class="last-game-create-dash">
-      <%= @games.last.created_at.strftime(" %a, %b %d %Y") %>
-    </td>
-  </tr>
-   
-  <tr>
-    <td class="dash-last-game-player-name">
-      <%= @games.last.player.last_name %>
-    </td>
-    <td class="dash-vs">
-      VS
-    </td>
-
-    <td class="dash-last-game-opponent-name">
-      <%= @games.last.opponent.last_name %>
-    </td>
-  </tr>
-  <tr>
-<!--     <% if @games.last.player_score < @games.last.opponent_score %>
-    <td class="dash-last-game-pic1">
-      <img src=<%= [@games.last.player.winning_pic1, @games.last.player.winning_pic2, @games.last.player.winning_pic3].sample %>>
-    </td>
-    <% else %>
-    <td class="dash-last-game-pic1">
-    <img src=<%= [@games.last.opponent.winning_pic1, @games.last.opponent.winning_pic2, @games.last.opponent.winning_pic3].sample %>>
-    </td>
-    <% end %> -->
-  <td class="dash-last-game-pic1">
-    <img src=<%= @games.last.player.picture_url %>>
-  </td>
-
-
-
- <td class="dash-last-game-score">
-      <%= @games.last.player_score %> - <%= @games.last.opponent_score %>
-    </td>
-
-    <td class="dash-last-game-pic1">
-      <img src=<%= @games.last.opponent.picture_url %>>
-    </td>
-
-
-<!--  <% if @games.last.player_score > @games.last.opponent_score %>
-   <td class="dash-last-game-pic1">
-     
-     
-       <img src=<%= [@games.last.player.losing_pic1, @games.last.player.losing_pic2, @games.last.player.losing_pic3].sample %>> 
-     
-   </td>
-   <% else %>
-   <td class="dash-last-game-pic1">
-       <img src=<%= [@games.last.opponent.losing_pic1, @games.last.opponent.losing_pic2, @games.last.opponent.losing_pic3].sample %>>
-   </td>
-     <% end %> 
- -->
-
-  <td>
-    
-  </td>
-
-
-    
-  </tr>
-</table>
-
-
-    
-
-
-
-
-
-<!-- ******************* End of Last Game Table ****************** -->
-
-
-
-
-
-
 
 
 
