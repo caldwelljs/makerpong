@@ -273,7 +273,7 @@
                 <%= ordinalize Player.power_ranking.find_index(player) + 1 %>
               </h3>
            </td>
-            <td>
+            <td class="panel-hover">
                <h4 class="rank-player-name"><%= link_to (image_tag(player.picture_url)), player %><%= link_to player.last_name, player %></h4>
             </td>
             <td>
