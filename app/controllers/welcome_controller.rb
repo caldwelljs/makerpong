@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
- before_filter :authenticate_player!, except: [:index]
+ before_filter :authenticate_player!, except: [:index, :about]
 
   def index
   end
