@@ -388,9 +388,8 @@ label .pic_upload_label {
 
 
 
-// ------------------------------------------------------------
 
-// Live Scoring Style
+// ---------------------------------Live Scoring Style-----------------------------
 // body {
 //   font-family: 'Gill Sans', sans-serif;
 //   height: 100%;
@@ -481,7 +480,7 @@ label .pic_upload_label {
 }
 
 .player1block {
-  background: #cd3831;
+  background: #d1413c;
 }
 
 .player2block {
@@ -502,7 +501,6 @@ label .pic_upload_label {
   font-family: 'Gill Sans', sans-serif;
   color: #fff;
 }
-
 
 .results-popup {
   text-align: center;
@@ -527,6 +525,29 @@ label .pic_upload_label {
   color: #47474f;
 }
 
-.live-score-log-button {
+.live-score-modal-button {
+  background-color: #d1413c;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.start_game_button {
   float: right;
+  right: 15%;
+  position: relative;
+}
+
+.live-score-dont-log-button{
+  float: right;
+  right: 25%;
+  margin-left: 2em;
+  position: relative;
+}
+
+.live-score-log-button {
+  float: left;
+  left: 25%;
+  margin-right: 2em;
+  position: relative;
+  // margin-right: 3em; 
 }
