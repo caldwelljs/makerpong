@@ -29,15 +29,16 @@
 
 <table class="dash-last-game" >
   <tr>
-    <td class="dash-last-game-title">
-      Last Game
-    </td>
     <td>
-     <% if @games.last.player_score < @games.last.opponent_score %>
-    <h2 class="mr-winner"><%= @games.last.opponent.last_name %> wins!</h2>
-    <% else %>
-    <h2 class="mr-winner"><%= @games.last.player.last_name %> wins!</h2>
-    <% end %>
+       <% if @games.last.player_score < @games.last.opponent_score %>
+      <h2 class="dash-last-game-title" ><%= @games.last.opponent.last_name %> wins!</h2>
+      <% else %>
+      <h2 class="dash-last-game-title"><%= @games.last.player.last_name %> wins!</h2>
+      <% end %>
+      
+    </td>
+    <td   class="mr-winner">
+      Last Game
     </td>
     <td class="last-game-create-dash">
       <%= @games.last.created_at.strftime(" %a, %b %d %Y") %>
@@ -68,11 +69,11 @@
   <tr>
  <% if @games.last.player_score > @games.last.opponent_score %>
     <td class="dash-last-game-pic1">
-      <img src=<%= [@games.last.player.winning_pic1, @games.last.player.winning_pic2, @games.last.player.winning_pic3].sample %>>
+      <img src=<%= @player_win_picture %>>
     </td>
     <% else %>
     <td class="dash-last-game-pic1">
-    <img src=<%= [@games.last.opponent.winning_pic1, @games.last.opponent.winning_pic2, @games.last.opponent.winning_pic3].sample %>>
+    <img src=<%= @opponent_win_picture %>>
     </td>
     <% end %>
 <!--   <td class="dash-last-game-pic1">
@@ -98,19 +99,19 @@
    <td class="dash-last-game-pic1">
      
      
-       <img src=<%= [@games.last.player.losing_pic1, @games.last.player.losing_pic2, @games.last.player.losing_pic3].sample %>> 
+       <img src=<%= @player_lose_picture %>> 
      
    </td>
    <% else %>
    <td class="dash-last-game-pic1">
-       <img src=<%= [@games.last.opponent.losing_pic1, @games.last.opponent.losing_pic2, @games.last.opponent.losing_pic3].sample %>>
+
+       <img src=<%= @opponent_lose_picture %>>
    </td>
+     </tr>
      <% end %> 
 
 
-  <td>
-    
-  </td>
+ 
 
 
     
@@ -200,7 +201,7 @@
           </td>
           <td class="king-wrap">
             <div class="king">
-              <%= link_to Player.power_ranking.last.last_name, Player.power_ranking.last %> - <%= Player.power_ranking.last.win_percentage %>
+              <%= link_to Player.order('losses DESC').first.last_name, Player.power_ranking.last %> - <%= Player.order('losses DESC').last.losses %>   losses
             </div>
           </td>
           <td class="king-wrap">

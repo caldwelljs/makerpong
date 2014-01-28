@@ -9,10 +9,12 @@
 }
 .dash-last-game-pic1 {
   background: white;
+  border: none;
 }
 .dash-last-game-pic1 img{
   width: 12em;
   height: 12em;
+  margin:0 0 0 0.85em;
   border-radius: 5px;
 }
 .dash-last-game-opponent-name{
@@ -39,7 +41,7 @@
 }
 .mr-winner{
   color: white;
-  font-size: 1.6em;
+  font-size: 1.3em;
   font-family: proxima-nova;
   font-weight: 800;
   margin: 0;
