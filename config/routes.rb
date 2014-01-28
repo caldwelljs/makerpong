@@ -1,6 +1,7 @@
 Pong::Application.routes.draw do
 
   get 'games/live_score', as: :live_score
+  
   # get "players/:id/edit" => "players#edit"
  
 # The root path for logged in players will be the dashboard instead of the marketing page.

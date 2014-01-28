@@ -20,4 +20,6 @@ module GamesHelper
       Game.worst_loss.first.player.picture_url
     end
   end
+
 end
+

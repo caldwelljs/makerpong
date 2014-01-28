@@ -1,0 +1,15 @@
+<%= form_for @game do |f| %>
+
+  <%= f.collection_select :player_id, Player.all, :id, :name, prompt: "Choose Player 1" %>
+
+  <%= f.collection_select :opponent_id, Player.all, :id, :name, prompt: "Choose Player 2" %>
+
+  <%= f.label :player_one_score %>
+  <%= f.text_field :player_score %><br />
+
+  <%= f.label :player_two_score %>
+  <%= f.text_field :opponent_score %><br />
+
+  <%= f.submit %>
+
+<% end %>

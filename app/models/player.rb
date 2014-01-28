@@ -8,6 +8,7 @@ class Player < ActiveRecord::Base
          :validatable
 
   has_many :games
+  has_many :visits, class_name: "Game", foreign_key: :opponent_id
   has_many :opponents, through: :games
 
   mount_uploader :picture_url, ImageUploader
