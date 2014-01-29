@@ -37,37 +37,14 @@
 
   <div class="row">    
     <div class="small-6 columns">
-      <h3 class="lower_headers">Update your photo</h3>
+      <h3 class="lower_headers">Change Profile Pic</h3>
       
       <%= form_for @player do |f| %>
         <tr>
           <th><%= f.label(:upload_profile_pic, "Upload your profile pic") %></th>
           <td><%= f.file_field(:picture_url) %></td>
         </tr>
-        <!-- <tr>
-          <th><%= f.label(:upload_winning_pic1, "Upload Celebration Pic #1") %></th>
-          <td><%= f.file_field(:winning_pic1) %></td>
-        </tr>
-        <tr>
-          <th><%= f.label(:upload_winning_pic2, "Upload Celebration Pic #2") %></th>
-          <td><%= f.file_field(:winning_pic2) %></td>
-        </tr>
-        <tr>
-          <th><%= f.label(:upload_winning_pic3, "Upload Celebration Pic #3") %></th>
-          <td><%= f.file_field(:winning_pic3) %></td>
-        </tr>
-        <tr>
-          <th><%= f.label(:upload_losing_pic1, "Upload Losing Pic #1") %></th>
-          <td><%= f.file_field(:losing_pic1) %></td>
-        </tr>
-        <tr>
-          <th><%= f.label(:upload_losing_pic2, "Upload Losing Pic #2") %></th>
-          <td><%= f.file_field(:losing_pic2) %></td>
-        </tr>
-        <tr>
-          <th><%= f.label(:upload_losing_pic3, "Upload Losing Pic #3") %></th>
-          <td><%= f.file_field(:losing_pic3) %></td>
-        </tr> -->
+
         <div class="form-buttons">
           <%= f.submit "Update Profile", class: "button update-button" %>
         </div>
@@ -75,35 +52,35 @@
     </div>
 
     <div class="small-6 columns">
-      <h3 class="lower_headers">Update your photo</h3>
+      <h3 class="lower_headers">Upload Celebration Pics</h3>
         <%= form_for @player do |f| %>        
         <div class="small-6 columns">
           <tr>
-            <th><%= f.label(:upload_winning_pic1, "Upload Celebration Pic #1") %></th>
-            <td><%= f.file_field(:winning_pic1) %></td>
+            <th><%= f.label(:upload_winning_pic1, "Upload Celebration Pic #1", class: 'edit-pic') %></th>
+            <td><%= f.file_field(:winning_pic1) %><%= image_tag @player.winning_pic1, size: '15X15'%></td>
           </tr>
           <tr>
-            <th><%= f.label(:upload_winning_pic2, "Upload Celebration Pic #2") %></th>
-            <td><%= f.file_field(:winning_pic2) %></td>
+            <th><%= f.label(:upload_winning_pic2, "Upload Celebration Pic #2", class: 'edit-pic') %></th>
+            <td><%= f.file_field(:winning_pic2) %><%= image_tag @player.winning_pic2, size: '15X15'%></td>
           </tr>
           <tr>
-            <th><%= f.label(:upload_winning_pic3, "Upload Celebration Pic #3") %></th>
-            <td><%= f.file_field(:winning_pic3) %></td>
+            <th><%= f.label(:upload_winning_pic3, "Upload Celebration Pic #3", class: 'edit-pic') %></th>
+            <td><%= f.file_field(:winning_pic3) %><%= image_tag @player.winning_pic3, size: '15X15'%></td>
           </tr>
         </div>
 
         <div class="small-6 columns">  
           <tr>
-            <th><%= f.label(:upload_losing_pic1, "Upload Losing Pic #1") %></th>
-            <td><%= f.file_field(:losing_pic1) %></td>
+            <th><%= f.label(:upload_losing_pic1, "Upload Losing Pic #1", class: 'edit-pic') %></th>
+            <td><%= f.file_field(:losing_pic1) %><%= image_tag @player.losing_pic1, size: '15X15'%></td>
           </tr>
           <tr>
-            <th><%= f.label(:upload_losing_pic2, "Upload Losing Pic #2") %></th>
-            <td><%= f.file_field(:losing_pic2) %></td>
+            <th><%= f.label(:upload_losing_pic2, "Upload Losing Pic #2", class: 'edit-pic') %></th>
+            <td><%= f.file_field(:losing_pic2) %><%= image_tag @player.losing_pic2, size: '15X15'%></td>
           </tr>
           <tr>
-            <th><%= f.label(:upload_losing_pic3, "Upload Losing Pic #3") %></th>
-            <td><%= f.file_field(:losing_pic3) %></td>
+            <th><%= f.label(:upload_losing_pic3, "Upload Losing Pic #3", class: 'edit-pic') %></th>
+            <td><%= f.file_field(:losing_pic3) %><%= image_tag @player.losing_pic3, size: '15X15'%></td>
           </tr>
           <div class="form-buttons">
             <%= f.submit "Upload Pics", class: "button update-button" %>
