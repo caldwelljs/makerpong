@@ -78,4 +78,14 @@ module PlayersHelper
     end
   end
 
+# To check if player has 5 games or not before giving a rank on profile
+  def rank_check(player)
+    if player.wins + player.losses >= 5
+      ordinalize leaders.power_ranking.find_index(player) + 1
+    else 
+      "Amature"
+      # content_tag(:div, "Need 5 games to be ranked", class: "ranking_disclaimer")
+    end
+  end
+
 end
