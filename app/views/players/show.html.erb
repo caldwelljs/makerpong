@@ -91,14 +91,14 @@
                 <% if check_games(@player) %>
                   <%= %>
                 <% else %>
-                  <%= link_to @games.get_all_recent_games_for(@player).first.player.last_name, @games.get_all_recent_games_for(@player).first.player %>
+                  <%= link_to @games.get_all_recent_games_for(@player).last.player.last_name, @games.get_all_recent_games_for(@player).last.player %>
                 <% end %>
               </h3>
             </div>
 
 
               <div>
-                <%= link_to image_tag(@games.get_all_recent_games_for(@player).first.player.picture_url), @games.get_all_recent_games_for(@player).first.player, class: "last-game-pic-player" %>
+                <%= link_to image_tag(@games.get_all_recent_games_for(@player).last.player.picture_url), @games.get_all_recent_games_for(@player).last.player, class: "last-game-pic-player" %>
               </div>
 
           </td>
@@ -114,13 +114,13 @@
               
 
               <h3 class="last-game-title">
-                <%= @games.get_all_recent_games_for(@player).first.player_score %>-<%= @games.get_all_recent_games_for(@player).first.opponent_score %>
+                <%= @games.get_all_recent_games_for(@player).last.player_score %>-<%= @games.get_all_recent_games_for(@player).last.opponent_score %>
               </h3>
                 <span class="big-date" >
                   <% if check_games(@player) %>
                     <%=  %>
                   <% else %>
-                    <%= @games.get_all_recent_games_for(@player).first.created_at.strftime(" %a, %b %d, %Y") %>
+                    <%= @games.get_all_recent_games_for(@player).last.created_at.strftime(" %a, %b %d, %Y") %>
                   <% end %>
               </span>
             </div >
@@ -136,7 +136,7 @@
                 <% if check_games(@player) %>
                 <%= %>
                 <% else %>
-                <%= link_to @games.get_all_recent_games_for(@player).first.opponent.last_name, @games.get_all_recent_games_for(@player).first.opponent %>
+                <%= link_to @games.get_all_recent_games_for(@player).last.opponent.last_name, @games.get_all_recent_games_for(@player).last.opponent %>
               <% end %>
               </h3>
           </div>
@@ -144,7 +144,7 @@
 
           <div>
             
-            <%= link_to image_tag(@games.get_all_recent_games_for(@player).first.opponent.picture_url), @games.get_all_recent_games_for(@player).first.opponent, class: "last-game-pic-opponent" %>
+            <%= link_to image_tag(@games.get_all_recent_games_for(@player).last.opponent.picture_url), @games.get_all_recent_games_for(@player).last.opponent, class: "last-game-pic-opponent" %>
           </div>
         </td>
           <% end %>
