@@ -468,6 +468,7 @@ label .pic_upload_label {
 #decreasePlayer1 {
   margin-left: .75em;
   margin-top: -1.5em;
+  height: 2em;
 }
 
 #increasePlayer2 {
@@ -477,6 +478,7 @@ label .pic_upload_label {
 #decreasePlayer2 {
   margin-right: .75em;
   margin-top: -1.5em;
+  height: 2em;
 }
 
 .player1block {
@@ -493,6 +495,10 @@ label .pic_upload_label {
   text-align: center;
   font-family: 'Gill Sans', sans-serif;
   color: #fff;
+}
+
+.player-names {
+  margin-top: 1.5em;
 }
 
 .game-title {
