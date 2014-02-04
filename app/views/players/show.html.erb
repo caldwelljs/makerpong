@@ -58,23 +58,17 @@
   <div class="row">
     <div class="small-12 prof-name-wrap">
       <table class="profile-last-game-table table-style" >
- 
         <tr class="profile-1st-table-row">
-          
           <td class="profile-last-game-table-data">
-          
-          
           </td>
           <td class="profile-last-game-table-top-middle">
             <h3 class="date-after-game-profile-page">
-              <h2 class="profile-last-game-title">Last Game</h2>
-              
+              <h2 class="profile-last-game-title">Last Game</h2> 
             </h3>
           </td>
           <td class="profile-last-game-table-top-right">
           </td>
         </tr>
-      
         <tr class="profile-2nd-table-row">
           <% if check_games(@player) %>
             <td class="last-game-data">
@@ -83,9 +77,7 @@
               <div class="last-game-border"></div>
             </td>
           <% else %>
-
           <td class="profile-last-game-bottom-left">
-              
               <div>
               <h3 class="last-game-player-name">
                 <% if check_games(@player) %>
@@ -95,24 +87,15 @@
                 <% end %>
               </h3>
             </div>
-
-
-              <div>
-                <%= link_to image_tag(@games.get_all_recent_games_for(@player).last.player.picture_url), @games.get_all_recent_games_for(@player).last.player, class: "last-game-pic-player" %>
-              </div>
-
-          </td>
-          
-          <td class="last-game-data">
-            
+            <div>
+              <%= link_to image_tag(@games.get_all_recent_games_for(@player).last.player.picture_url), @games.get_all_recent_games_for(@player).last.player, class: "last-game-pic-player" %>
+            </div>
+          </td>          
+          <td class="last-game-data">            
              <div>
               <h3 class="last-game-vs">VS</h3>
             </div>
-
-
             <div>
-              
-
               <h3 class="last-game-title">
                 <%= @games.get_all_recent_games_for(@player).last.player_score %>-<%= @games.get_all_recent_games_for(@player).last.opponent_score %>
               </h3>
@@ -124,13 +107,8 @@
                   <% end %>
               </span>
             </div >
-              
-
-
           </td>
-
-          <td class="profile-last-game-bottom-right">
-          
+          <td class="profile-last-game-bottom-right">          
             <div>
               <h3 class="last-game-opponent-name">
                 <% if check_games(@player) %>
@@ -140,10 +118,7 @@
               <% end %>
               </h3>
           </div>
-
-
-          <div>
-            
+          <div>            
             <%= link_to image_tag(@games.get_all_recent_games_for(@player).last.opponent.picture_url), @games.get_all_recent_games_for(@player).last.opponent, class: "last-game-pic-opponent" %>
           </div>
         </td>
@@ -182,7 +157,7 @@
             </td>
           </tr>
         <% else %>
-          <% @games.get_all_recent_games_for(@player).first(10).each do |game| %>
+          <% @games.get_all_recent_games_for(@player).reverse.each do |game| %>
             <tr class="recent-games-rollover">
               <td>
                 <div class="many-dates"> <%= game.created_at.strftime(" %a, %b %d, %Y") %></div>
