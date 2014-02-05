@@ -5,7 +5,7 @@ CarrierWave.configure do |config|
     :aws_secret_access_key  => ENV['AS3_SECRET_ACCESS_KEY']      # required
   # optional, defaults to 'us-east-1'
   }
-  config.fog_directory  = ENV['AS3_BUCKET_NAME'] # required
+  config.fog_directory  = 'makerpong-1' # required
   # see https://github.com/jnicklas/carrierwave#using-amazon-s3
   # for more optional configuration
 end
