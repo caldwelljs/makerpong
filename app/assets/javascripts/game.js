@@ -22,7 +22,7 @@
     });
 
 
-
+// Live Scoring - Passing Player info and score to hidden form fields
     var gameResult = (function (e) {
       $('#myModal2 #game_player_score').val(player1score);
       $('#myModal2 #game_opponent_score').val(player2score);
@@ -32,9 +32,8 @@
       $('.results-modal-scores .results-modal-player-score').text(player1score)
       $('.results-modal-scores .results-modal-opponent-name').text(player2name)
       $('.results-modal-scores .results-modal-opponent-score').text(player2score)
-      
+    
       $('#myModal2').foundation('reveal', 'open');
-
         $('.close-reveal-modal').click(function(){
           $('#myModal').foundation('reveal', 'close');
         });
@@ -58,16 +57,7 @@
   // Player clicks 'New Game' and set usernames
   $('.newGame').click(function (e) {
     e.preventDefault();  
-    gameStart();  
-
-
-// Log Game Modal
-    // $('#myModal').foundation('reveal', 'open');
-    // $('.close-reveal-modal').click(function (e) {    
-    //   e.preventDefault();
-    //   $('#myModal').foundation('reveal', 'close');
-    // });
-
+    gameStart(); 
 
   // Click restart game - player scores set to 0
     $('#restartGame').click(function (e){

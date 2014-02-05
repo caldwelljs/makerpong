@@ -75,7 +75,9 @@
              <% end %>
           </table>
       </div>
-            <!-- ******************* Log Game Table ****************** -->
+  
+
+  <!-- ******************* Log Game Table ****************** -->
     </div>
     <div class="large-5 medium-6 small-11 left columns">
       <div class="log-game-form">
@@ -92,6 +94,9 @@
       <div class="or-style">- or -</div>
       <div class="small-centered">
         <%= link_to 'Live Score a Game', live_score_path, class: "button live-score-link"%>
+      </div>
+      <div class="small-centered">
+        <a href="#" class="log-a-game">Log a Game</a>
       </div>
     </div>
   </div>
@@ -273,4 +278,20 @@
   </div>
 </div>
 
+<div id="myModal3" class="reveal-modal medium" data-reveal>
+  <h2>Log Your Game</h2>
+      <div class="player_selection">
+        <div class="row">
+          <%= form_for @game do |f| %>
+            <%= f.collection_select :player_id, Player.all, :id, :name, prompt: "Choose Player 1" %>
+            <%= f.text_field :opponent_score %>
+            <%= f.collection_select :opponent_id, Player.all, :id, :name, prompt: "Choose Player 2" %>
+            <%= f.text_field :player_score %>
+            <button class="log-a-game-button">Submit</button>
+            <% end %>
+          </div>
+  <a class="close-reveal-modal">&#215;</a>
+        </div>
+      </div>
+</div>
 <%= render "layouts/footer" %>

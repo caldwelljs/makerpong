@@ -60,21 +60,13 @@ $(document).ready(function() {
 });
 
 
-
-
-// var addPic = 
-// $('.pic.empty').append('<div><%= link_to "Click Edit Profile to add a profile picture", edit_player_registration %></div>');
-
-// $('#profile-pic').hover(function(){
-//   $('#update-msg').toggle();
-// });
-
-
-// $( "li" ).hover(
-//   function() {
-//     $( this ).append( $( "<span> ***</span>" ) );
-//   }, function() {
-//     $( this ).find( "span:last" ).remove();
-//   }
-// );
+// Player clicks 'Log a Game' and renders Log a Game Modal
+  $('.log-a-game').click(function (e) {
+    e.preventDefault();  
+    $('#myModal3').foundation('reveal', 'open');
+    $('.close-reveal-modal').click(function (e) {    
+      e.preventDefault();
+      $('#myModal3').foundation('reveal', 'close');
+    });
+  });
 

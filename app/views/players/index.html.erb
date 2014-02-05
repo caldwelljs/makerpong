@@ -18,7 +18,7 @@
           <td class='sub-title'> 
           </td>
           <td class='sub-title'>
-            <div class="rk-title">Rank</div>
+            <div class="rk-title">Rank<span>*</span></div>
           </td>
           <td class='sub-title'>
             Record
@@ -34,7 +34,7 @@
           </td>
           <td>
             <h3 class="ranking-items">
-              <%= ordinalize Player.power_ranking.find_index(player) + 1 %>
+              <%= rank_check(player) %>
             </h3>
           </td>
           <td>
@@ -46,6 +46,7 @@
         </tr>       
       <% end %>
       </table>
+      <div class="ranking-disclaimer">* Ranks based on win% of players with 5+ games.</div>
     </div>
   </div>
 </div>
