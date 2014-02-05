@@ -1,8 +1,8 @@
 CarrierWave.configure do |config|
   config.fog_credentials = {
     :provider               => 'AWS',       # required
-    :aws_access_key_id      => 'AKIAIN7JH7LKO4I5BUHA',       # required
-    :aws_secret_access_key  => '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',       # required
+    :aws_access_key_id      => ENV['AS3_ACCESS_KEY'],       # required
+    :aws_secret_access_key  => ENV['AS3_SECRET_ACCESS_KEY']      # required
   # optional, defaults to 'us-east-1'
   }
   config.fog_directory  = 'makerpong-1' # required
